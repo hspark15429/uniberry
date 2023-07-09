@@ -62,7 +62,8 @@ class EmailValidator extends Validator {
   @override
   String? validate(String? value) {
     if (value == null) return errorText;
-    if (value == 'hello@hello.com') return errorText;
+    // Japanese school emails only
+    if (!value.endsWith("ac.jp")) return errorText;
     return e.EmailValidator.validate(value) ? null : errorText;
   }
 }

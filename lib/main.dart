@@ -3,13 +3,16 @@
 // found in the LICENSE file.
 
 import 'package:firebase_ui_auth/firebase_ui_auth.dart'; // new
+import 'package:firebase_ui_localizations/firebase_ui_localizations.dart'; // new
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart'; // new
 import 'package:go_router/go_router.dart'; // new
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart'; // new
 
 import 'app_state.dart'; // new
 import 'home_page.dart';
+import '../src/jp.dart'; // new
 
 void main() {
   // Modify from here...
@@ -119,6 +122,19 @@ class App extends StatelessWidget {
         useMaterial3: true,
       ),
       routerConfig: _router, // new
+
+      // Add the localization delegates
+      localizationsDelegates: [
+        // Creates an instance of FirebaseUILocalizationDelegate with overridden labels
+        FirebaseUILocalizations.withDefaultOverrides(const LabelOverrides()),
+
+        // Delegates below take care of built-in flutter widgets
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+
+        // This delegate is required to provide the labels that are not overridden by LabelOverrides
+        FirebaseUILocalizations.delegate,
+      ],
     );
   }
 }
