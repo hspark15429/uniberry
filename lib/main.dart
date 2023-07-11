@@ -12,6 +12,7 @@ import 'package:provider/provider.dart'; // new
 
 import 'app_state.dart'; // new
 import 'home_page.dart';
+import 'screens/login_page.dart';
 import '../src/jp.dart'; // new
 
 void main() {

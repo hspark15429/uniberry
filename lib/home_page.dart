@@ -18,14 +18,17 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Firebase Meetup'),
+        title: const Text('Uniberry'),
       ),
       body: ListView(
         children: <Widget>[
-          Image.asset('assets/codelab.png'),
+          Image.asset('assets/schoolLogo.png', height: 140),
           const SizedBox(height: 8),
-          const IconAndDetail(Icons.calendar_today, 'October 30'),
-          const IconAndDetail(Icons.location_city, 'San Francisco'),
+          Consumer<ApplicationState>(
+              builder: (context, appState, _) => Center(
+                  child: Header(appState.loggedIn ? 'JAEJIN PARK' : ''))),
+          // const IconAndDetail(Icons.calendar_today, 'October 30'),
+          // const IconAndDetail(Icons.location_city, 'San Francisco'),
           // Add from here
           Consumer<ApplicationState>(
             builder: (context, appState, _) => AuthFunc(
@@ -42,40 +45,56 @@ class HomePage extends StatelessWidget {
             endIndent: 8,
             color: Colors.grey,
           ),
-          const Header("What we'll be doing"),
-          const Paragraph(
-            'Join us for a day full of Firebase Workshops and Pizza!',
-          ),
-          // Modify from here...
-          Consumer<ApplicationState>(
-            builder: (context, appState, _) => Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // Add from here...
-                switch (appState.attendees) {
-                  1 => const Paragraph('1 person going'),
-                  >= 2 => Paragraph('${appState.attendees} people going'),
-                  _ => const Paragraph('No one going'),
-                },
-                // ...to here.
-                if (appState.loggedIn) ...[
-                  // Add from here...
-                  YesNoSelection(
-                    state: appState.attending,
-                    onSelection: (attending) => appState.attending = attending,
-                  ),
-                  // ...to here.
-                  const Header('Discussion'),
-                  GuestBook(
-                    addMessage: (message) =>
-                        appState.addMessageToGuestBook(message),
-                    messages: appState.guestBookMessages,
-                  ),
-                ],
+
+          // const Paragraph(
+          //   'Join us for a day full of Firebase Workshops and Pizza!',
+          // ),
+          Container(
+            width: 100, // specify the width of the box
+            height: 500, // specify the height of the box
+            child: GridView.count(
+              primary: false,
+              padding: const EdgeInsets.all(0),
+              crossAxisSpacing: 0,
+              mainAxisSpacing: 0,
+              crossAxisCount: 2, // adjust this as per your requirement
+              children: <Widget>[
+                Image.asset('assets/school1.png', fit: BoxFit.cover),
+                Image.asset('assets/school2.png', fit: BoxFit.cover),
+                Image.asset('assets/school3.png', fit: BoxFit.cover),
               ],
             ),
           ),
-          // ...to here.
+          // // Modify from here...
+          // Consumer<ApplicationState>(
+          //   builder: (context, appState, _) => Column(
+          //     crossAxisAlignment: CrossAxisAlignment.start,
+          //     children: [
+          //       // Add from here...
+          //       switch (appState.attendees) {
+          //         1 => const Paragraph('1 person going'),
+          //         >= 2 => Paragraph('${appState.attendees} people going'),
+          //         _ => const Paragraph('No one going'),
+          //       },
+          //       // ...to here.
+          //       if (appState.loggedIn) ...[
+          //         // Add from here...
+          //         YesNoSelection(
+          //           state: appState.attending,
+          //           onSelection: (attending) => appState.attending = attending,
+          //         ),
+          //         // ...to here.
+          //         const Header('Discussion'),
+          //         GuestBook(
+          //           addMessage: (message) =>
+          //               appState.addMessageToGuestBook(message),
+          //           messages: appState.guestBookMessages,
+          //         ),
+          //       ],
+          //     ],
+          //   ),
+          // ),
+          // // ...to here.
         ],
       ),
     );
