@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart'; // new
 import 'package:go_router/go_router.dart'; // new
 import 'package:google_fonts/google_fonts.dart';
+import 'package:gtk_flutter/screens/top_page.dart';
 import 'package:provider/provider.dart'; // new
 
 import 'app_state.dart'; // new
@@ -31,7 +32,7 @@ final _router = GoRouter(
   routes: [
     GoRoute(
       path: '/',
-      builder: (context, state) => const HomePage(),
+      builder: (context, appState) => const HomePage(),
       routes: [
         GoRoute(
           path: 'sign-in',
@@ -97,7 +98,14 @@ final _router = GoRouter(
             );
           },
         ),
+        GoRoute(
+          path: 'top',
+          builder: (context, state) {
+            return TopPage();
+          },
+        ),
       ],
+      // redirect: (context, appState) => true ? '/sign-in' : null,
     ),
   ],
 );

@@ -25,8 +25,15 @@ class HomePage extends StatelessWidget {
           Image.asset('assets/schoolLogo.png', height: 140),
           const SizedBox(height: 8),
           Consumer<ApplicationState>(
-              builder: (context, appState, _) => Center(
-                  child: Header(appState.loggedIn ? 'JAEJIN PARK' : ''))),
+            builder: (context, appState, _) {
+              String displayName = '';
+              if (appState.loggedIn &&
+                  FirebaseAuth.instance.currentUser!.displayName != null) {
+                displayName = FirebaseAuth.instance.currentUser!.displayName!;
+              }
+              return Center(child: Header(displayName));
+            },
+          ),
           // const IconAndDetail(Icons.calendar_today, 'October 30'),
           // const IconAndDetail(Icons.location_city, 'San Francisco'),
           // Add from here
