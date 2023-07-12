@@ -1,13 +1,26 @@
 import 'package:flutter/material.dart';
 
-class TopPage extends StatefulWidget {
-  const TopPage({Key? key}) : super(key: key);
+/// Flutter code sample for [NavigationBar].
+
+void main() => runApp(const NavigationBarApp());
+
+class NavigationBarApp extends StatelessWidget {
+  const NavigationBarApp({super.key});
 
   @override
-  State<TopPage> createState() => _TopPageState();
+  Widget build(BuildContext context) {
+    return const MaterialApp(home: NavigationExample());
+  }
 }
 
-class _TopPageState extends State<TopPage> {
+class NavigationExample extends StatefulWidget {
+  const NavigationExample({super.key});
+
+  @override
+  State<NavigationExample> createState() => _NavigationExampleState();
+}
+
+class _NavigationExampleState extends State<NavigationExample> {
   int currentPageIndex = 0;
 
   @override
@@ -23,21 +36,16 @@ class _TopPageState extends State<TopPage> {
         destinations: const <Widget>[
           NavigationDestination(
             icon: Icon(Icons.explore),
-            label: '홈',
+            label: 'Explore',
           ),
           NavigationDestination(
             icon: Icon(Icons.commute),
-            label: '시간표',
+            label: 'Commute',
           ),
           NavigationDestination(
             selectedIcon: Icon(Icons.bookmark),
             icon: Icon(Icons.bookmark_border),
-            label: '익명게시판',
-          ),
-          NavigationDestination(
-            selectedIcon: Icon(Icons.bookmark),
-            icon: Icon(Icons.bookmark_border),
-            label: '급식표/강의평가/중고거래',
+            label: 'Saved',
           ),
         ],
       ),
@@ -56,11 +64,6 @@ class _TopPageState extends State<TopPage> {
           color: Colors.blue,
           alignment: Alignment.center,
           child: const Text('Page 3'),
-        ),
-        Container(
-          color: Colors.black,
-          alignment: Alignment.center,
-          child: const Text('Page 4'),
         ),
       ][currentPageIndex],
     );
