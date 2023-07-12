@@ -46,6 +46,9 @@ dependencies:
   cloud_firestore: ^4.8.2
   provider: ^6.0.5
   firebase_ui_auth: ^1.5.0
+
+  time_planner: ^0.1.1
+
 dependency_overrides:
   firebase_ui_auth:
     path: ./packages/firebase_ui_auth
