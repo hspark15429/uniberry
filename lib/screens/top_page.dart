@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gtk_flutter/screens/timetable_page.dart';
 
 class TopPage extends StatefulWidget {
   const TopPage({Key? key}) : super(key: key);
@@ -50,7 +51,7 @@ class _TopPageState extends State<TopPage> {
         Container(
           color: Colors.green,
           alignment: Alignment.center,
-          child: const Text('Page 2'),
+          child: const TimetablePage(),
         ),
         Container(
           color: Colors.blue,

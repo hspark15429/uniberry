@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:gtk_flutter/screens/timetable_page.dart';
 
 /// Flutter code sample for [NavigationBar].
 
-void main() => runApp(const NavigationBarApp());
+// void main() => runApp(const NavigationBarApp());
 
 class NavigationBarApp extends StatelessWidget {
   const NavigationBarApp({super.key});
@@ -56,9 +57,9 @@ class _NavigationExampleState extends State<NavigationExample> {
           child: const Text('Page 1'),
         ),
         Container(
-          color: Colors.green,
+          color: Colors.yellow,
           alignment: Alignment.center,
-          child: const Text('Page 2'),
+          child: const TimetablePage(),
         ),
         Container(
           color: Colors.blue,
