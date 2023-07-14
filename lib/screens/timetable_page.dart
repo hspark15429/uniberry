@@ -8,22 +8,39 @@ class TimetablePage extends StatefulWidget {
 
 class _TimetablePageState extends State<TimetablePage> {
   Map<String, bool> cellTaps = {};
+  String cellNow = 'Cell 13';
 
   Widget _buildCell(String text,
       {double height = 120, double width = 100, color = Colors.white}) {
     return GestureDetector(
       onTap: () {
-        print(text);
+        // open pop up window to add event
         setState(() {
           cellTaps[text] = true;
-          print(cellTaps);
         });
       },
       child: Container(
         color: color,
         width: width,
         height: height,
-        child: Center(child: Text(text)),
+        // if text matches cellNow, it should have the current time indicator
+        child: text == cellNow
+            ? Stack(
+                children: [
+                  Center(child: Text(text)),
+                  Positioned(
+                    top: height / 2,
+                    left: 0,
+                    child: Container(
+                      clipBehavior: Clip.none,
+                      width: width * 3,
+                      height: 4,
+                      color: Colors.blue,
+                    ),
+                  ),
+                ],
+              )
+            : Center(child: Text(text)),
       ),
     );
   }
@@ -51,25 +68,27 @@ class _TimetablePageState extends State<TimetablePage> {
                         _buildCell('09:00\n10:30'),
                       ]),
                       TableRow(children: [
-                        _buildCell('10:40\12:10'),
+                        _buildCell('10:40\n12:10'),
                       ]),
                       TableRow(children: [
-                        _buildCell('13:00\14:30'),
+                        _buildCell('13:00\n14:30'),
                       ]),
                       TableRow(children: [
-                        _buildCell('14:40\16:10'),
+                        _buildCell('14:40\n16:10'),
                       ]),
                       TableRow(children: [
-                        _buildCell('16:20\17:50'),
+                        _buildCell('16:20\n17:50'),
                       ])
                     ],
                   ),
                 ),
               ),
               Expanded(
-                flex: 9,
-                child: LayoutBuilder(
-                  builder: (context, constraints) => Table(
+                flex: 10,
+                child: LayoutBuilder(builder: (context, constraints) {
+                  final now = DateTime.now();
+                  print(now);
+                  return Table(
                     border: TableBorder.all(),
                     children: [
                       TableRow(children: [
@@ -85,48 +104,48 @@ class _TimetablePageState extends State<TimetablePage> {
                       ]),
                       TableRow(children: [
                         _buildCell('Cell 1'),
-                        _buildCell('Cell 1'),
-                        _buildCell('Cell 1'),
-                        _buildCell('Cell 1'),
-                        _buildCell('Cell 1'),
+                        _buildCell('Cell 2'),
+                        _buildCell('Cell 3'),
+                        _buildCell('Cell 4'),
+                        _buildCell('Cell 5'),
                       ]),
                       TableRow(children: [
-                        _buildCell('Cell 1'),
-                        _buildCell('Cell 1'),
-                        _buildCell('Cell 1',
-                            color: cellTaps['Cell 1'] == true
+                        _buildCell('Cell 6'),
+                        _buildCell('Cell 7'),
+                        _buildCell('Cell 8',
+                            color: cellTaps['Cell 9'] == true
                                 ? Colors.green
                                 : Colors.white),
-                        _buildCell('Cell 1'),
-                        _buildCell('Cell 1'),
+                        _buildCell('Cell 9'),
+                        _buildCell('Cell 10'),
                       ]),
                       TableRow(children: [
-                        _buildCell('Cell 1'),
-                        _buildCell('Cell 1'),
-                        _buildCell('Cell 1'),
-                        _buildCell('Cell 1'),
-                        _buildCell('Cell 1'),
+                        _buildCell('Cell 11'),
+                        _buildCell('Cell 12'),
+                        _buildCell('Cell 13'),
+                        _buildCell('Cell 14'),
+                        _buildCell('Cell 15'),
                       ]),
                       TableRow(children: [
-                        _buildCell('Cell 1'),
-                        _buildCell('Cell 1'),
-                        _buildCell('Cell 1',
+                        _buildCell('Cell 16'),
+                        _buildCell('Cell 17'),
+                        _buildCell('Cell 18',
                             color: cellTaps['Mon'] == true
                                 ? Colors.green
                                 : Colors.white),
-                        _buildCell('Cell 1'),
-                        _buildCell('Cell 1'),
+                        _buildCell('Cell 19'),
+                        _buildCell('Cell 20'),
                       ]),
                       TableRow(children: [
-                        _buildCell('Cell 1'),
-                        _buildCell('Cell 1'),
-                        _buildCell('Cell 1'),
-                        _buildCell('Cell 1'),
-                        _buildCell('Cell 1'),
+                        _buildCell('Cell 21'),
+                        _buildCell('Cell 22'),
+                        _buildCell('Cell 23'),
+                        _buildCell('Cell 24'),
+                        _buildCell('Cell 25'),
                       ])
                     ],
-                  ),
-                ),
+                  );
+                }),
               ),
             ],
           ),
@@ -135,3 +154,23 @@ class _TimetablePageState extends State<TimetablePage> {
     );
   }
 }
+
+// var array = List<List<String>>.generate(
+//   5,
+//   (i) => List<String>.generate(
+//     5,
+//     (j) => 'Cell ${i * 5 + j + 1}',
+//   ),
+// );
+
+// if (istimeNow){
+//   position(
+//     top: (controller.cellHeight*0.5)
+//     left: cellWidth*Day
+//   )
+
+// }
+
+//       if (number >= 900 && number <= 1030) {
+//       print('The number is between 1000 and 2000.');
+//     }

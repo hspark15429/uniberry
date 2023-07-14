@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart'; // new
 import 'package:go_router/go_router.dart'; // new
 import 'package:google_fonts/google_fonts.dart';
+import 'package:gtk_flutter/screens/timetable_page.dart';
 import 'package:gtk_flutter/screens/top_page.dart';
 import 'package:provider/provider.dart'; // new
 
@@ -32,7 +33,8 @@ final _router = GoRouter(
   routes: [
     GoRoute(
       path: '/',
-      builder: (context, appState) => const HomePage(),
+      builder: (context, appState) => const TopPage(),
+      //builder: (context, appState) => const HomePage(),
       routes: [
         GoRoute(
           path: 'sign-in',
