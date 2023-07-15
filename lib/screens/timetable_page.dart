@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class TimetablePage extends StatefulWidget {
   const TimetablePage({Key? key}) : super(key: key);
@@ -7,40 +8,94 @@ class TimetablePage extends StatefulWidget {
 }
 
 class _TimetablePageState extends State<TimetablePage> {
+  int day = DateTime.now().weekday;
+  int time = int.parse(DateFormat('HHmm').format(DateTime.now()));
   Map<String, bool> cellTaps = {};
-  String cellNow = 'Cell 13';
+  int cellNow = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    day = 5;
+    if (time < 900) {
+      cellNow = 0;
+    } else if (time <= 1030) {
+      cellNow = 5 * 0 + day;
+    } else if (time <= 1210) {
+      cellNow = 5 * 1 + day;
+    } else if (time <= 1430) {
+      cellNow = 5 * 2 + day;
+    } else if (time <= 1610) {
+      cellNow = 5 * 3 + day;
+    } else if (time <= 1750) {
+      cellNow = 5 * 4 + day;
+    } else {
+      cellNow = 0;
+    }
+    cellNow = 7 < day ? 0 : cellNow;
+  }
 
   Widget _buildCell(String text,
-      {double height = 120, double width = 100, color = Colors.white}) {
+      {double height = 120,
+      double width = 100,
+      color = Colors.white,
+      bool interactable = false}) {
     return GestureDetector(
       onTap: () {
         // open pop up window to add event
         setState(() {
-          cellTaps[text] = true;
+          cellTaps[text] = cellTaps[text] == true ? false : true;
         });
+        print(cellNow);
       },
       child: Container(
         color: color,
         width: width,
         height: height,
         // if text matches cellNow, it should have the current time indicator
-        child: text == cellNow
-            ? Stack(
-                children: [
-                  Center(child: Text(text)),
-                  Positioned(
-                    top: height / 2,
-                    left: 0,
-                    child: Container(
-                      clipBehavior: Clip.none,
-                      width: width * 3,
-                      height: 4,
-                      color: Colors.blue,
-                    ),
-                  ),
-                ],
-              )
-            : Center(child: Text(text)),
+        child: Stack(children: [
+          Center(child: Text(text)),
+          if (text == '$cellNow')
+            Positioned(
+              top: 0,
+              left: 0,
+              child: IgnorePointer(
+                child: Container(
+                    clipBehavior: Clip.none,
+                    width: width,
+                    height: height,
+                    color: Colors.blue.withOpacity(0.5),
+                    child: Text('Now')),
+              ),
+            ),
+          if (cellTaps[text] == true && interactable)
+            Positioned(
+              top: 0,
+              left: 0,
+              child: Container(
+                clipBehavior: Clip.none,
+                width: width,
+                height: height * 1,
+                child: ElevatedButton(
+                    child: const Text('Filled'),
+                    onPressed: () {
+                      print('pressed');
+                      setState(() {
+                        cellTaps[text] = false;
+                      });
+                    },
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          Colors.red), // Set the button color
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                      ),
+                    )),
+              ),
+            ),
+        ]),
       ),
     );
   }
@@ -86,63 +141,26 @@ class _TimetablePageState extends State<TimetablePage> {
               Expanded(
                 flex: 10,
                 child: LayoutBuilder(builder: (context, constraints) {
+                  double expandedWidth = constraints.maxWidth * 0.2;
                   final now = DateTime.now();
                   print(now);
                   return Table(
                     border: TableBorder.all(),
                     children: [
                       TableRow(children: [
-                        _buildCell('Mon',
-                            height: 50,
-                            color: cellTaps['Mon'] == true
-                                ? Colors.green
-                                : Colors.white),
+                        _buildCell('Mon', height: 50),
                         _buildCell('Tue', height: 50),
                         _buildCell('Wed', height: 50),
                         _buildCell('Thur', height: 50),
                         _buildCell('Fri', height: 50),
                       ]),
-                      TableRow(children: [
-                        _buildCell('Cell 1'),
-                        _buildCell('Cell 2'),
-                        _buildCell('Cell 3'),
-                        _buildCell('Cell 4'),
-                        _buildCell('Cell 5'),
-                      ]),
-                      TableRow(children: [
-                        _buildCell('Cell 6'),
-                        _buildCell('Cell 7'),
-                        _buildCell('Cell 8',
-                            color: cellTaps['Cell 9'] == true
-                                ? Colors.green
-                                : Colors.white),
-                        _buildCell('Cell 9'),
-                        _buildCell('Cell 10'),
-                      ]),
-                      TableRow(children: [
-                        _buildCell('Cell 11'),
-                        _buildCell('Cell 12'),
-                        _buildCell('Cell 13'),
-                        _buildCell('Cell 14'),
-                        _buildCell('Cell 15'),
-                      ]),
-                      TableRow(children: [
-                        _buildCell('Cell 16'),
-                        _buildCell('Cell 17'),
-                        _buildCell('Cell 18',
-                            color: cellTaps['Mon'] == true
-                                ? Colors.green
-                                : Colors.white),
-                        _buildCell('Cell 19'),
-                        _buildCell('Cell 20'),
-                      ]),
-                      TableRow(children: [
-                        _buildCell('Cell 21'),
-                        _buildCell('Cell 22'),
-                        _buildCell('Cell 23'),
-                        _buildCell('Cell 24'),
-                        _buildCell('Cell 25'),
-                      ])
+                      // 25 cells in total
+                      for (int i = 0; i <= 4; i++)
+                        TableRow(children: [
+                          for (int j = 1; j <= 5; j++)
+                            _buildCell('${i * 5 + j}',
+                                width: expandedWidth, interactable: true)
+                        ]),
                     ],
                   );
                 }),
