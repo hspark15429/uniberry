@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart'; // new
 import 'package:go_router/go_router.dart'; // new
 import 'package:google_fonts/google_fonts.dart';
+import 'package:gtk_flutter/color_schemes.g.dart';
 import 'package:gtk_flutter/screens/timetable_page.dart';
 import 'package:gtk_flutter/screens/top_page.dart';
 import 'package:provider/provider.dart'; // new
@@ -122,15 +123,15 @@ class App extends StatelessWidget {
     return MaterialApp.router(
       title: 'Firebase Meetup',
       theme: ThemeData(
-        buttonTheme: Theme.of(context).buttonTheme.copyWith(
-              highlightColor: Colors.deepPurple,
-            ),
-        primarySwatch: Colors.deepPurple,
-        textTheme: GoogleFonts.robotoTextTheme(
-          Theme.of(context).textTheme,
-        ),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
         useMaterial3: true,
+        // buttonTheme: Theme.of(context).buttonTheme.copyWith(
+        //       highlightColor: Colors.deepPurple,
+        //     ),
+        // textTheme: GoogleFonts.robotoTextTheme(
+        //   Theme.of(context).textTheme,
+        // ),
+        colorScheme: darkColorScheme,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       routerConfig: _router, // new
 

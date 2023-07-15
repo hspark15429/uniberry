@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+import 'dialog_builder.dart';
+
 class TimetablePage extends StatefulWidget {
   const TimetablePage({Key? key}) : super(key: key);
   @override
@@ -33,71 +35,6 @@ class _TimetablePageState extends State<TimetablePage> {
       cellNow = 0;
     }
     cellNow = 7 < day ? 0 : cellNow;
-  }
-
-  Widget _buildCell(String text,
-      {double height = 120,
-      double width = 100,
-      color = Colors.white,
-      bool interactable = false}) {
-    return GestureDetector(
-      onTap: () {
-        // open pop up window to add event
-        setState(() {
-          cellTaps[text] = cellTaps[text] == true ? false : true;
-        });
-        print(cellNow);
-      },
-      child: Container(
-        color: color,
-        width: width,
-        height: height,
-        // if text matches cellNow, it should have the current time indicator
-        child: Stack(children: [
-          Center(child: Text(text)),
-          if (text == '$cellNow')
-            Positioned(
-              top: 0,
-              left: 0,
-              child: IgnorePointer(
-                child: Container(
-                    clipBehavior: Clip.none,
-                    width: width,
-                    height: height,
-                    color: Colors.blue.withOpacity(0.5),
-                    child: Text('Now')),
-              ),
-            ),
-          if (cellTaps[text] == true && interactable)
-            Positioned(
-              top: 0,
-              left: 0,
-              child: Container(
-                clipBehavior: Clip.none,
-                width: width,
-                height: height * 1,
-                child: ElevatedButton(
-                    child: const Text('Filled'),
-                    onPressed: () {
-                      print('pressed');
-                      setState(() {
-                        cellTaps[text] = false;
-                      });
-                    },
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.red), // Set the button color
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                        ),
-                      ),
-                    )),
-              ),
-            ),
-        ]),
-      ),
-    );
   }
 
   @override
@@ -168,6 +105,84 @@ class _TimetablePageState extends State<TimetablePage> {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildCell(String text,
+      {double height = 120,
+      double width = 100,
+      color = Colors.white,
+      bool interactable = false}) {
+    return GestureDetector(
+      onTap: () async {
+        // open pop up window to add event
+        final result = await dialogBuilder(context);
+        if (result == 'Enable') {
+          setState(() {
+            cellTaps[text] = true;
+          });
+        } else if (result == 'Disable') {
+          setState(() {
+            cellTaps[text] = false;
+          });
+        }
+        print(result);
+      },
+      child: Container(
+        color: color,
+        width: width,
+        height: height,
+        // if text matches cellNow, it should have the current time indicator
+        child: Stack(children: [
+          Center(child: Text(text)),
+          if (text == '$cellNow')
+            Positioned(
+              top: 0,
+              left: 0,
+              child: IgnorePointer(
+                child: Container(
+                    clipBehavior: Clip.none,
+                    width: width,
+                    height: height,
+                    color: Colors.blue.withOpacity(0.5),
+                    child: Text('Now')),
+              ),
+            ),
+          if (cellTaps[text] == true && interactable)
+            Positioned(
+              top: 0,
+              left: 0,
+              child: Container(
+                clipBehavior: Clip.none,
+                width: width,
+                height: height * 1,
+                child: ElevatedButton(
+                    child: const Text('Filled'),
+                    onPressed: () async {
+                      final result = await dialogBuilder(context);
+                      if (result == 'Enable') {
+                        setState(() {
+                          cellTaps[text] = true;
+                        });
+                      } else if (result == 'Disable') {
+                        setState(() {
+                          cellTaps[text] = false;
+                        });
+                      }
+                    },
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          Colors.red), // Set the button color
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                      ),
+                    )),
+              ),
+            ),
+        ]),
       ),
     );
   }
