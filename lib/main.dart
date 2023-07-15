@@ -34,8 +34,8 @@ final _router = GoRouter(
   routes: [
     GoRoute(
       path: '/',
-      builder: (context, appState) => const TopPage(),
-      //builder: (context, appState) => const HomePage(),
+      // builder: (context, appState) => const TopPage(),
+      builder: (context, appState) => const HomePage(),
       routes: [
         GoRoute(
           path: 'sign-in',
