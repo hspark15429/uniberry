@@ -118,6 +118,7 @@ class _TimetablePageState extends State<TimetablePage> {
       onTap: () async {
         // open pop up window to add event
         final result = await dialogBuilder(context);
+
         if (result == 'Enable') {
           setState(() {
             cellTaps[text] = true;
