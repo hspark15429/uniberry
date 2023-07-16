@@ -80,6 +80,7 @@ flutter:
     - assets/school1.png
     - assets/school2.png
     - assets/school3.png
+    - assets/lectures.json
 
   # To add assets to your application, add an assets section, like this:
   # assets:

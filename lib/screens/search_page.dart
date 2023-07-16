@@ -12,8 +12,7 @@ class CustomSearchDelegate extends SearchDelegate {
   }
 
   Future<void> loadSearchTerms() async {
-    String jsonString =
-        await rootBundle.loadString('../../assets/lectures.json');
+    String jsonString = await rootBundle.loadString('assets/lectures.json');
 
     List<dynamic> lectureData = jsonDecode(jsonString);
 
