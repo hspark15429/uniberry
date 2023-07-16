@@ -75,6 +75,7 @@ class ApplicationState extends ChangeNotifier {
               GuestBookMessage(
                 name: document.data()['name'] as String,
                 message: document.data()['text'] as String,
+                time: "DateTime.now().millisecondsSinceEpoch as String",
               ),
             );
           }
@@ -120,6 +121,7 @@ class ApplicationState extends ChangeNotifier {
       'timestamp': DateTime.now().millisecondsSinceEpoch,
       'name': FirebaseAuth.instance.currentUser!.displayName,
       'userId': FirebaseAuth.instance.currentUser!.uid,
+      'time': "DateTime.now().millisecondsSinceEpoch as String",
     });
   }
   // ...to here.

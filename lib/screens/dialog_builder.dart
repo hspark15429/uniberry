@@ -3,7 +3,7 @@ import 'package:gtk_flutter/screens/search_page.dart';
 import 'package:gtk_flutter/src/widgets.dart';
 
 Future<String?> dialogBuilder(
-    BuildContext context, String currentLecture, int day, int period) async {
+    BuildContext context, String currentLecture, String cellText) async {
   return showDialog<String>(
     context: context,
     builder: (BuildContext context) {
@@ -44,8 +44,7 @@ Future<String?> dialogBuilder(
                       onPressed: () async {
                         searchResult = await showSearch(
                           context: context,
-                          delegate:
-                              CustomSearchDelegate(day: day, period: period),
+                          delegate: CustomSearchDelegate(cellText: cellText),
                         );
                         setState(() {
                           searchResult = searchResult;
@@ -58,7 +57,10 @@ Future<String?> dialogBuilder(
                 SafeArea(
                   child: Row(
                     children: [
-                      Flexible(child: Text('Your lecture: $searchResult')),
+                      Flexible(
+                          child: Text(searchResult.isEmpty
+                              ? 'Your lecture: $currentLecture'
+                              : 'Your lecture: $searchResult')),
                     ],
                   ),
                 ),

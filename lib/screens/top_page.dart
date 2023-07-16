@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gtk_flutter/screens/anonymous_board.dart';
 import 'package:gtk_flutter/screens/cafeteria_page.dart';
 import 'package:gtk_flutter/screens/timetable_page.dart';
 
@@ -57,7 +58,7 @@ class _TopPageState extends State<TopPage> {
         Container(
           color: Colors.blue,
           alignment: Alignment.center,
-          child: const Text('Page 3'),
+          child: const AnonymousBoard(),
         ),
         Container(
           color: Colors.black,

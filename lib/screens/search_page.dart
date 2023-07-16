@@ -4,11 +4,11 @@ import 'package:flutter/services.dart' show rootBundle;
 
 class CustomSearchDelegate extends SearchDelegate {
   List<String> searchTerms = [];
-  final day;
-  final period;
+  final cellText;
 
-  CustomSearchDelegate({required this.day, required this.period}) {
+  CustomSearchDelegate({required this.cellText}) {
     loadSearchTerms();
+    // print(cellText);
   }
 
   Future<void> loadSearchTerms() async {
@@ -18,10 +18,15 @@ class CustomSearchDelegate extends SearchDelegate {
     List<dynamic> lectureData = jsonDecode(jsonString);
 
     for (var lecture in lectureData) {
-      if (day == lecture['day'] && period == lecture['period']) {
-        String term =
-            "${lecture['title']} | ${lecture['lecturer']} | ${lecture['lecturer code']}";
-        searchTerms.add(term);
+      if (lecture['periods'][0].isNotEmpty) {
+        if (lecture['periods']
+            .map((period) => convertPeriodToInt(period))
+            .toList()
+            .contains(int.parse(cellText))) {
+          String term =
+              "${lecture['course']['titles']} | ${lecture['professors']} | ${lecture['codes']}";
+          searchTerms.add(term);
+        }
       }
     }
   }
@@ -41,7 +46,7 @@ class CustomSearchDelegate extends SearchDelegate {
   Widget buildLeading(BuildContext context) {
     return IconButton(
         onPressed: () {
-          close(context, null);
+          close(context, "");
         },
         icon: Icon(Icons.arrow_back));
   }
@@ -87,5 +92,22 @@ class CustomSearchDelegate extends SearchDelegate {
   }
 }
 
-// Future dialogBuilder
-//
+// this method converts string to int. Example: 月, 火, 水, 木, 金 as 1, 2, 3, 4, 5
+int convertPeriodToInt(String period) {
+  int day = 0;
+  int timeslot;
+  switch (period[0]) {
+    case '月':
+      day = 1;
+    case '火':
+      day = 2;
+    case '水':
+      day = 3;
+    case '木':
+      day = 4;
+    case '金':
+      day = 5;
+  }
+  timeslot = int.parse(period[1]);
+  return (timeslot - 1) * 5 + day;
+}

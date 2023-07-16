@@ -119,11 +119,7 @@ class _TimetablePageState extends State<TimetablePage> {
       onTap: () async {
         // open pop up window to add event
         // dialogBuilder passes in the selected time slot's day and period
-        final result = await dialogBuilder(
-            context,
-            "",
-            (int.parse(text) % 5) != 0 ? (int.parse(text) % 5) : 5,
-            ((int.parse(text) - 1) ~/ 5) + 1);
+        final result = await dialogBuilder(context, "", text);
 
         if (result!.contains('Save')) {
           setState(() {
@@ -134,7 +130,6 @@ class _TimetablePageState extends State<TimetablePage> {
             cellTaps[text] = "";
           });
         }
-        print(result);
       },
       child: Container(
         color: color,
@@ -168,13 +163,8 @@ class _TimetablePageState extends State<TimetablePage> {
                   child: ElevatedButton(
                       child: Text(cellTaps[text]!),
                       onPressed: () async {
-                        final result = await dialogBuilder(
-                            context,
-                            cellTaps[text]!,
-                            (int.parse(text) % 5) != 0
-                                ? (int.parse(text) % 5)
-                                : 5,
-                            ((int.parse(text) - 1) ~/ 5) + 1);
+                        final result =
+                            await dialogBuilder(context, cellTaps[text]!, text);
                         if (result!.contains('Save')) {
                           setState(() {
                             cellTaps[text] = result.substring(4);
