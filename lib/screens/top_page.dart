@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gtk_flutter/screens/cafeteria_page.dart';
 import 'package:gtk_flutter/screens/timetable_page.dart';
 
 class TopPage extends StatefulWidget {
@@ -9,7 +10,7 @@ class TopPage extends StatefulWidget {
 }
 
 class _TopPageState extends State<TopPage> {
-  int currentPageIndex = 1;
+  int currentPageIndex = 3;
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +62,7 @@ class _TopPageState extends State<TopPage> {
         Container(
           color: Colors.black,
           alignment: Alignment.center,
-          child: const Text('Page 4'),
+          child: const CafeteriaPage(),
         ),
       ][currentPageIndex],
     );

@@ -43,6 +43,7 @@ class _TimetablePageState extends State<TimetablePage> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Timetable'),
+          backgroundColor: Colors.black,
         ),
         body: SingleChildScrollView(
           child: Row(

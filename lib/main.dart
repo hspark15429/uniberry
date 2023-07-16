@@ -9,13 +9,14 @@ import 'package:flutter_localizations/flutter_localizations.dart'; // new
 import 'package:go_router/go_router.dart'; // new
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gtk_flutter/color_schemes.g.dart';
+import 'package:gtk_flutter/screens/cafeteria_page.dart';
 import 'package:gtk_flutter/screens/timetable_page.dart';
 import 'package:gtk_flutter/screens/top_page.dart';
 import 'package:provider/provider.dart'; // new
 
 import 'app_state.dart'; // new
 import 'home_page.dart';
-import 'screens/login_page.dart';
+
 import '../src/jp.dart'; // new
 
 void main() {
@@ -34,8 +35,8 @@ final _router = GoRouter(
   routes: [
     GoRoute(
       path: '/',
-      // builder: (context, appState) => const TopPage(),
-      builder: (context, appState) => const HomePage(),
+      builder: (context, appState) => const TopPage(),
+      // builder: (context, appState) => const HomePage(),
       routes: [
         GoRoute(
           path: 'sign-in',
@@ -121,7 +122,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Firebase Meetup',
+      title: 'Uniberry',
       theme: ThemeData(
         useMaterial3: true,
         // buttonTheme: Theme.of(context).buttonTheme.copyWith(
