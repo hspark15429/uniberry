@@ -130,7 +130,7 @@ class App extends StatelessWidget {
         // textTheme: GoogleFonts.robotoTextTheme(
         //   Theme.of(context).textTheme,
         // ),
-        colorScheme: darkColorScheme,
+        colorScheme: lightColorScheme,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       routerConfig: _router, // new

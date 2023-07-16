@@ -1,0 +1,44 @@
+[
+    {
+    "title": "経営戦略論",
+    "lecturer": "善本 哲夫",
+    "lecturer code": "50904",
+    "day": 1,
+    "period": 1,
+    "credit": 2,
+    "link": "https://ct.ritsumei.ac.jp/syllabuspage/bd/ed/6b/00_pc_ja.html"
+    },
+    {
+    "title": "アントレプレナーシップ論(E)(BB)",
+    "lecturer": "桐畑 哲也",
+    "lecturer code": "50909",
+    "day": 3,
+    "period": 2,
+    "credit": 2
+    },
+    {
+    "title": "流通論(BB)",
+    "lecturer": "石井 隆太",
+    "lecturer code": "50903",
+    "day": 5,
+    "period": 1,
+    "credit": 2
+    },
+    {
+    "title": "現代の世界経済(B)",
+    "lecturer": "杉本 良雄",
+    "lecturer code": "53391",
+    "date": "月4",
+    "day": 1,
+    "period": 4,
+    "credit": 2
+    },
+    {
+    "title": "Business English A1(ZA)",
+    "lecturer": "林 正人",
+    "lecturer code": "51772",
+    "day": 3,
+    "period": 4,
+    "credit": 1
+    }
+    ]

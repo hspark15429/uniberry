@@ -1,15 +1,31 @@
 import 'package:flutter/material.dart';
+import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle;
 
 class CustomSearchDelegate extends SearchDelegate {
-  List<String> searchTerms = [
-    // fruits
-    'Introduction to Physics | Professor A | An introduction to the fundamental concepts...',
-    'Programming 101 | Professor B | An introduction to the fundamental concepts...',
-    'Cherry',
-    'Durian',
-    'Fig',
-    'Grape',
-  ];
+  List<String> searchTerms = [];
+  final day;
+  final period;
+
+  CustomSearchDelegate({required this.day, required this.period}) {
+    loadSearchTerms();
+  }
+
+  Future<void> loadSearchTerms() async {
+    String jsonString =
+        await rootBundle.loadString('../../assets/lectures.json');
+
+    List<dynamic> lectureData = jsonDecode(jsonString);
+
+    for (var lecture in lectureData) {
+      if (day == lecture['day'] && period == lecture['period']) {
+        String term =
+            "${lecture['title']} | ${lecture['lecturer']} | ${lecture['lecturer code']}";
+        searchTerms.add(term);
+      }
+    }
+  }
+
   @override
   List<Widget> buildActions(BuildContext context) {
     return [
@@ -33,9 +49,9 @@ class CustomSearchDelegate extends SearchDelegate {
   @override
   Widget buildResults(BuildContext context) {
     List<String> matchQuery = [];
-    for (var fruit in searchTerms) {
-      if (fruit.toLowerCase().contains(query.toLowerCase())) {
-        matchQuery.add(fruit);
+    for (var lecture in searchTerms) {
+      if (lecture.toLowerCase().contains(query.toLowerCase())) {
+        matchQuery.add(lecture);
       }
     }
     return ListView.builder(
@@ -53,9 +69,9 @@ class CustomSearchDelegate extends SearchDelegate {
   @override
   Widget buildSuggestions(BuildContext context) {
     List<String> matchQuery = [];
-    for (var fruit in searchTerms) {
-      if (fruit.toLowerCase().contains(query.toLowerCase())) {
-        matchQuery.add(fruit);
+    for (var lecture in searchTerms) {
+      if (lecture.toLowerCase().contains(query.toLowerCase())) {
+        matchQuery.add(lecture);
       }
     }
     return ListView.builder(
@@ -71,6 +87,5 @@ class CustomSearchDelegate extends SearchDelegate {
   }
 }
 
-
 // Future dialogBuilder
-// 
+//

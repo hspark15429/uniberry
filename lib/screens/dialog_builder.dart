@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:gtk_flutter/screens/search_page.dart';
 import 'package:gtk_flutter/src/widgets.dart';
 
-Future<String?> dialogBuilder(BuildContext context) async {
+Future<String?> dialogBuilder(
+    BuildContext context, String currentLecture, int day, int period) async {
   return showDialog<String>(
     context: context,
     builder: (BuildContext context) {
-      String searchResult = '';
+      String searchResult = currentLecture;
       return StatefulBuilder(builder: (context, setState) {
         return Dialog.fullscreen(
           child: Container(
@@ -22,12 +23,12 @@ Future<String?> dialogBuilder(BuildContext context) async {
                     Header('Search Lecture'),
                     TextButton(
                         onPressed: () {
-                          Navigator.of(context).pop('Enable');
+                          Navigator.of(context).pop('Save$searchResult');
                         },
                         child: Text('Save')),
                     TextButton(
                         onPressed: () {
-                          Navigator.of(context).pop('Disable');
+                          Navigator.of(context).pop('Delete');
                         },
                         child: Text('Delete')),
                   ],
@@ -43,7 +44,8 @@ Future<String?> dialogBuilder(BuildContext context) async {
                       onPressed: () async {
                         searchResult = await showSearch(
                           context: context,
-                          delegate: CustomSearchDelegate(),
+                          delegate:
+                              CustomSearchDelegate(day: day, period: period),
                         );
                         setState(() {
                           searchResult = searchResult;
@@ -53,10 +55,12 @@ Future<String?> dialogBuilder(BuildContext context) async {
                     )
                   ],
                 ),
-                Row(
-                  children: [
-                    Paragraph('Your lecture: $searchResult'),
-                  ],
+                SafeArea(
+                  child: Row(
+                    children: [
+                      Flexible(child: Text('Your lecture: $searchResult')),
+                    ],
+                  ),
                 ),
               ],
             ),

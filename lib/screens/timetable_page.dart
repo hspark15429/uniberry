@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'dart:math' as math;
 
 import 'dialog_builder.dart';
 
@@ -12,13 +13,12 @@ class TimetablePage extends StatefulWidget {
 class _TimetablePageState extends State<TimetablePage> {
   int day = DateTime.now().weekday;
   int time = int.parse(DateFormat('HHmm').format(DateTime.now()));
-  Map<String, bool> cellTaps = {};
+  Map<String, String> cellTaps = {};
   int cellNow = 0;
 
   @override
   void initState() {
     super.initState();
-    day = 5;
     if (time < 900) {
       cellNow = 0;
     } else if (time <= 1030) {
@@ -34,7 +34,7 @@ class _TimetablePageState extends State<TimetablePage> {
     } else {
       cellNow = 0;
     }
-    cellNow = 7 < day ? 0 : cellNow;
+    cellNow = 5 < day ? 0 : cellNow;
   }
 
   @override
@@ -117,15 +117,20 @@ class _TimetablePageState extends State<TimetablePage> {
     return GestureDetector(
       onTap: () async {
         // open pop up window to add event
-        final result = await dialogBuilder(context);
+        // dialogBuilder passes in the selected time slot's day and period
+        final result = await dialogBuilder(
+            context,
+            "",
+            (int.parse(text) % 5) != 0 ? (int.parse(text) % 5) : 5,
+            ((int.parse(text) - 1) ~/ 5) + 1);
 
-        if (result == 'Enable') {
+        if (result!.contains('Save')) {
           setState(() {
-            cellTaps[text] = true;
+            cellTaps[text] = result.substring(4);
           });
-        } else if (result == 'Disable') {
+        } else if (result == 'Delete') {
           setState(() {
-            cellTaps[text] = false;
+            cellTaps[text] = "";
           });
         }
         print(result);
@@ -146,43 +151,52 @@ class _TimetablePageState extends State<TimetablePage> {
                     clipBehavior: Clip.none,
                     width: width,
                     height: height,
-                    color: Colors.blue.withOpacity(0.5),
-                    child: Text('Now')),
+                    color: Colors.blue,
+                    child: Text('')),
               ),
             ),
-          if (cellTaps[text] == true && interactable)
-            Positioned(
-              top: 0,
-              left: 0,
-              child: Container(
-                clipBehavior: Clip.none,
-                width: width,
-                height: height * 1,
-                child: ElevatedButton(
-                    child: const Text('Filled'),
-                    onPressed: () async {
-                      final result = await dialogBuilder(context);
-                      if (result == 'Enable') {
-                        setState(() {
-                          cellTaps[text] = true;
-                        });
-                      } else if (result == 'Disable') {
-                        setState(() {
-                          cellTaps[text] = false;
-                        });
-                      }
-                    },
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.red), // Set the button color
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0),
+          if (cellTaps[text] != null && interactable)
+            if (cellTaps[text]!.isNotEmpty)
+              Positioned(
+                top: 0,
+                left: 0,
+                child: Container(
+                  clipBehavior: Clip.none,
+                  width: width,
+                  height: height * 1,
+                  child: ElevatedButton(
+                      child: Text(cellTaps[text]!),
+                      onPressed: () async {
+                        final result = await dialogBuilder(
+                            context,
+                            cellTaps[text]!,
+                            (int.parse(text) % 5) != 0
+                                ? (int.parse(text) % 5)
+                                : 5,
+                            ((int.parse(text) - 1) ~/ 5) + 1);
+                        if (result!.contains('Save')) {
+                          setState(() {
+                            cellTaps[text] = result.substring(4);
+                          });
+                        } else if (result == 'Delete') {
+                          setState(() {
+                            cellTaps[text] = "";
+                          });
+                        }
+                      },
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(Color(
+                                (math.Random().nextDouble() * 0xFFFFFF).toInt())
+                            .withOpacity(1.0)), // Set the button color
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
                         ),
-                      ),
-                    )),
+                      )),
+                ),
               ),
-            ),
         ]),
       ),
     );
