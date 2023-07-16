@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart'; // NEW
+import '../model/app_state_model.dart'; // NEW
 
 class CafeteriaPage extends StatefulWidget {
   const CafeteriaPage({super.key});
@@ -15,6 +17,11 @@ class _nameState extends State<CafeteriaPage> {
         appBar: AppBar(
           title: Text('OIC Cafeteria'),
           backgroundColor: Colors.black,
+        ),
+        body: ChangeNotifierProvider<AppStateModel>(
+          // NEW
+          create: (_) => AppStateModel()..loadProducts(), // NEW
+          child: const Placeholder(), // NEW
         ),
       ),
     );

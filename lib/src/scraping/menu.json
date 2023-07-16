@@ -1,0 +1,535 @@
+[
+    {
+        "link": "detail.php?t=650337&c=814279",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814279.png",
+        "name_jp": "チキン甘辛ステーキ",
+        "name_en": "Grilled fried chicken",
+        "price": 363,
+        "evaluation": {
+            "good": 38,
+            "average": 4,
+            "bad": 4
+        },
+        "category": "主菜　Main dish"
+    },
+    {
+        "link": "detail.php?t=650337&c=814012",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814012.png",
+        "name_jp": "ササミチーズタルタルソース",
+        "name_en": "Fried chicken cutlet and cheese with tartarsauce",
+        "price": 275,
+        "evaluation": {
+            "good": 60,
+            "average": 6,
+            "bad": 29
+        },
+        "category": "主菜　Main dish"
+    },
+    {
+        "link": "detail.php?t=650337&c=814111",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814111.png",
+        "name_jp": "ねぎ塩ハンバーグ",
+        "name_en": "Hamburg steak with vegetable and salt sauce",
+        "price": 275,
+        "evaluation": {
+            "good": 62,
+            "average": 1,
+            "bad": 1
+        },
+        "category": "主菜　Main dish"
+    },
+    {
+        "link": "detail.php?t=650337&c=814267",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814267.png",
+        "name_jp": "チゲ豆腐",
+        "name_en": "Simmered pork tofu and vegetables in chili based soup",
+        "price": 275,
+        "evaluation": {
+            "good": 46,
+            "average": 3,
+            "bad": 0
+        },
+        "category": "主菜　Main dish"
+    },
+    {
+        "link": "detail.php?t=650337&c=814298",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814298.png",
+        "name_jp": "鯖生姜煮",
+        "name_en": "Simmered mackerel in soy sauce",
+        "price": 187,
+        "evaluation": {
+            "good": 11,
+            "average": 4,
+            "bad": 0
+        },
+        "category": "主菜　Main dish"
+    },
+    {
+        "link": "detail.php?t=650337&c=814421",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814421.png",
+        "name_jp": "海老クリームコロッケ",
+        "name_en": "Fried shrimp cream croquette",
+        "price": 121,
+        "evaluation": {
+            "good": 1,
+            "average": 0,
+            "bad": 0
+        },
+        "category": "主菜　Main dish"
+    },
+    {
+        "link": "detail.php?t=650337&c=814524",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814524.png",
+        "name_jp": "鶏きも煮",
+        "name_en": "Simmered chicken liver in soy sauce and sugar",
+        "price": 99,
+        "evaluation": {
+            "good": 4,
+            "average": 0,
+            "bad": 0
+        },
+        "category": "副菜　Side dish"
+    },
+    {
+        "link": "detail.php?t=650337&c=814447",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814447.png",
+        "name_jp": "オクラ巣ごもり玉子",
+        "name_en": "Okra and half boiled egg with soy sauce",
+        "price": 99,
+        "evaluation": {
+            "good": 530,
+            "average": 16,
+            "bad": 8
+        },
+        "category": "副菜　Side dish"
+    },
+    {
+        "link": "detail.php?t=650337&c=814505",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814505.png",
+        "name_jp": "さっぱり揚げ出し茄子",
+        "name_en": "Fried eggplant with grated Japanese radish sauce and soysauce",
+        "price": 99,
+        "evaluation": {
+            "good": 428,
+            "average": 10,
+            "bad": 4
+        },
+        "category": "副菜　Side dish"
+    },
+    {
+        "link": "detail.php?t=650337&c=814413",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814413.png",
+        "name_jp": "ブロッコリーピーナッツ和え",
+        "name_en": "Boiled broccoli with peanut paste",
+        "price": 99,
+        "evaluation": {
+            "good": 7,
+            "average": 2,
+            "bad": 0
+        },
+        "category": "副菜　Side dish"
+    },
+    {
+        "link": "detail.php?t=650337&c=814456",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814456.png",
+        "name_jp": "温泉玉子",
+        "name_en": "Half boiled egg with soy sauce",
+        "price": 55,
+        "evaluation": {
+            "good": 23,
+            "average": 7,
+            "bad": 0
+        },
+        "category": "副菜　Side dish"
+    },
+    {
+        "link": "detail.php?t=650337&c=814453",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814453.png",
+        "name_jp": "だし巻き",
+        "name_en": "Omlet with japanese soup",
+        "price": 77,
+        "evaluation": {
+            "good": 32,
+            "average": 27,
+            "bad": 6
+        },
+        "category": "副菜　Side dish"
+    },
+    {
+        "link": "detail.php?t=650337&c=814452",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814452.png",
+        "name_jp": "きんぴらごぼう",
+        "name_en": "Fried burdock in soy sauce and sugar",
+        "price": 77,
+        "evaluation": {
+            "good": 13,
+            "average": 7,
+            "bad": 0
+        },
+        "category": "副菜　Side dish"
+    },
+    {
+        "link": "detail.php?t=650337&c=814551",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814551.png",
+        "name_jp": "ポテトサラダ",
+        "name_en": "Potato salad with mayonnaise based sauce",
+        "price": 77,
+        "evaluation": {
+            "good": 81,
+            "average": 8,
+            "bad": 0
+        },
+        "category": "副菜　Side dish"
+    },
+    {
+        "link": "detail.php?t=650337&c=814455",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814455.png",
+        "name_jp": "冷奴",
+        "name_en": "Tofu with ginger leek",
+        "price": 55,
+        "evaluation": {
+            "good": 11,
+            "average": 8,
+            "bad": 0
+        },
+        "category": "副菜　Side dish"
+    },
+    {
+        "link": "detail.php?t=650337&c=814468",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814468.png",
+        "name_jp": "夏のさっぱり豚汁",
+        "name_en": "Japanese soup with pork vegetables and deepfried tofu",
+        "price": 121,
+        "evaluation": {
+            "good": 198,
+            "average": 1,
+            "bad": 7
+        },
+        "category": "副菜　Side dish"
+    },
+    {
+        "link": "detail.php?t=650337&c=814458",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814458.png",
+        "name_jp": "味噌汁",
+        "name_en": "Miso soup",
+        "price": 44,
+        "evaluation": {
+            "good": 13,
+            "average": 32,
+            "bad": 26
+        },
+        "category": "副菜　Side dish"
+    },
+    {
+        "link": "detail.php?t=650337&c=814457",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814457.png",
+        "name_jp": "納豆",
+        "name_en": "Fermented soybeans",
+        "price": 55,
+        "evaluation": {
+            "good": 3,
+            "average": 2,
+            "bad": 0
+        },
+        "category": "副菜　Side dish"
+    },
+    {
+        "link": "detail.php?t=650337&c=819385",
+        "image": "https://west2-univ.jp/menu_img/png_sp/819385.png",
+        "name_jp": "冷やしかき揚げうどん",
+        "name_en": "Cold whitewheat noodles with Tempurafried vegetables and grated Japanese radish in Japanese soup",
+        "price": 363,
+        "evaluation": {
+            "good": 1,
+            "average": 0,
+            "bad": 0
+        },
+        "category": "麺類　Noodles"
+    },
+    {
+        "link": "detail.php?t=650337&c=819386",
+        "image": "https://west2-univ.jp/menu_img/png_sp/819386.png",
+        "name_jp": "冷やしかき揚げそば",
+        "name_en": "Cold buckwheat noodles with Tempurafried vegetables and grated Japanese radish in Japanese soup",
+        "price": 363,
+        "evaluation": {
+            "good": 0,
+            "average": 0,
+            "bad": 0
+        },
+        "category": "麺類　Noodles"
+    },
+    {
+        "link": "detail.php?t=650337&c=819354",
+        "image": "https://west2-univ.jp/menu_img/png_sp/819354.png",
+        "name_jp": "冷やしうどん",
+        "name_en": "Cold whitewheat noodles in Japanese soup",
+        "price": 319,
+        "evaluation": {
+            "good": 129,
+            "average": 1,
+            "bad": 0
+        },
+        "category": "麺類　Noodles"
+    },
+    {
+        "link": "detail.php?t=650337&c=819355",
+        "image": "https://west2-univ.jp/menu_img/png_sp/819355.png",
+        "name_jp": "冷やしそば",
+        "name_en": "Cold buckwheat noodles in Japanese soup",
+        "price": 319,
+        "evaluation": {
+            "good": 115,
+            "average": 1,
+            "bad": 1
+        },
+        "category": "麺類　Noodles"
+    },
+    {
+        "link": "detail.php?t=650337&c=819328",
+        "image": "https://west2-univ.jp/menu_img/png_sp/819328.png",
+        "name_jp": "かけうどん",
+        "name_en": "Hot whitewheat noodles in Japanese soup",
+        "price": 231,
+        "evaluation": {
+            "good": 20,
+            "average": 7,
+            "bad": 1
+        },
+        "category": "麺類　Noodles"
+    },
+    {
+        "link": "detail.php?t=650337&c=819329",
+        "image": "https://west2-univ.jp/menu_img/png_sp/819329.png",
+        "name_jp": "かけそば",
+        "name_en": "Hot buckwheat noodles in Japanese soup",
+        "price": 231,
+        "evaluation": {
+            "good": 9,
+            "average": 3,
+            "bad": 0
+        },
+        "category": "麺類　Noodles"
+    },
+    {
+        "link": "detail.php?t=650337&c=819376",
+        "image": "https://west2-univ.jp/menu_img/png_sp/819376.png",
+        "name_jp": "蒸し鶏胡麻冷麺",
+        "name_en": "Cold Chinese noodles with steamed chicken and leek in sweet and sour soup",
+        "price": 473,
+        "evaluation": {
+            "good": 0,
+            "average": 2,
+            "bad": 0
+        },
+        "category": "麺類　Noodles"
+    },
+    {
+        "link": "detail.php?t=650337&c=819079",
+        "image": "https://west2-univ.jp/menu_img/png_sp/819079.png",
+        "name_jp": "温玉ねぎとろ丼",
+        "name_en": "Bowl of rice with raw tuna and half boiled egg with soysauce",
+        "price": 473,
+        "evaluation": {
+            "good": 68,
+            "average": 9,
+            "bad": 1
+        },
+        "category": "丼・カレー　Rice bowl / Curry"
+    },
+    {
+        "link": "detail.php?t=650337&c=819046",
+        "image": "https://west2-univ.jp/menu_img/png_sp/819046.png",
+        "name_jp": "豚塩カルビ丼",
+        "name_en": "Bowl of rice with grilled pork with salt based sauce",
+        "price": 418,
+        "evaluation": {
+            "good": 148,
+            "average": 3,
+            "bad": 2
+        },
+        "category": "丼・カレー　Rice bowl / Curry"
+    },
+    {
+        "link": "detail.php?t=650337&c=819217",
+        "image": "https://west2-univ.jp/menu_img/png_sp/819217.png",
+        "name_jp": "豚塩カルビペッパーカレー",
+        "name_en": "Curry rice with grilled pork",
+        "price": 418,
+        "evaluation": {
+            "good": 2,
+            "average": 0,
+            "bad": 0
+        },
+        "category": "丼・カレー　Rice bowl / Curry"
+    },
+    {
+        "link": "detail.php?t=650337&c=819272",
+        "image": "https://west2-univ.jp/menu_img/png_sp/819272.png",
+        "name_jp": "カレーライス",
+        "name_en": "Curry rice",
+        "price": 319,
+        "evaluation": {
+            "good": 12,
+            "average": 16,
+            "bad": 2
+        },
+        "category": "丼・カレー　Rice bowl / Curry"
+    },
+    {
+        "link": "detail.php?t=650337&c=814702",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814702.png",
+        "name_jp": "ライス",
+        "name_en": "Boiled rice",
+        "price": 115,
+        "evaluation": {
+            "good": 3,
+            "average": 0,
+            "bad": 2
+        },
+        "category": "丼・カレー　Rice bowl / Curry"
+    },
+    {
+        "link": "detail.php?t=650337&c=814886",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814886.png",
+        "name_jp": "スフレチーズケーキ",
+        "name_en": "Baked cheese cake",
+        "price": 231,
+        "evaluation": {
+            "good": 4,
+            "average": 0,
+            "bad": 0
+        },
+        "category": "デザート　Dessert"
+    },
+    {
+        "link": "detail.php?t=650337&c=814808",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814808.png",
+        "name_jp": "フルーツヨーグルト",
+        "name_en": "Yogurt with peach pineapple orange",
+        "price": 121,
+        "evaluation": {
+            "good": 33,
+            "average": 15,
+            "bad": 11
+        },
+        "category": "デザート　Dessert"
+    },
+    {
+        "link": "detail.php?t=650337&c=814874",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814874.png",
+        "name_jp": "あまおうクレープ",
+        "name_en": "Strawberry flavor crepe",
+        "price": 77,
+        "evaluation": {
+            "good": 1,
+            "average": 2,
+            "bad": 2
+        },
+        "category": "デザート　Dessert"
+    },
+    {
+        "link": "detail.php?t=650337&c=814817",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814817.png",
+        "name_jp": "大学芋",
+        "name_en": "Fried sweetpotato with sugar",
+        "price": 99,
+        "evaluation": {
+            "good": 89,
+            "average": 14,
+            "bad": 3
+        },
+        "category": "デザート　Dessert"
+    },
+    {
+        "link": "detail.php?t=650337&c=814816",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814816.png",
+        "name_jp": "牛乳",
+        "name_en": "Milk",
+        "price": 85,
+        "evaluation": {
+            "good": 8,
+            "average": 1,
+            "bad": 1
+        },
+        "category": "デザート　Dessert"
+    },
+    {
+        "link": "detail.php?t=650337&c=814818",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814818.png",
+        "name_jp": "大学生協コーヒー",
+        "name_en": "Coffee milk",
+        "price": 95,
+        "evaluation": {
+            "good": 2,
+            "average": 10,
+            "bad": 1
+        },
+        "category": "デザート　Dessert"
+    },
+    {
+        "link": "detail.php?t=650337&c=819256",
+        "image": "https://west2-univ.jp/menu_img/png_sp/819256.png",
+        "name_jp": "唐揚げカレー",
+        "name_en": "Curry rice with fried chicken",
+        "price": 418,
+        "evaluation": {
+            "good": 2,
+            "average": 3,
+            "bad": 0
+        },
+        "category": "エスニック・スペシャルコーナー"
+    },
+    {
+        "link": "detail.php?t=650337&c=819272",
+        "image": "https://west2-univ.jp/menu_img/png_sp/819272.png",
+        "name_jp": "カレーライス",
+        "name_en": "Curry rice",
+        "price": 319,
+        "evaluation": {
+            "good": 12,
+            "average": 16,
+            "bad": 2
+        },
+        "category": "エスニック・スペシャルコーナー"
+    },
+    {
+        "link": "detail.php?t=650337&c=814243",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814243.png",
+        "name_jp": "ダッカルビ風野菜炒め",
+        "name_en": "Stir fried chicken and vegetables with sweet chili sauce",
+        "price": 275,
+        "evaluation": {
+            "good": 0,
+            "average": 0,
+            "bad": 0
+        },
+        "category": "クイック・ファストレーン"
+    },
+    {
+        "link": "detail.php?t=650337&c=814702",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814702.png",
+        "name_jp": "ライス",
+        "name_en": "Boiled rice",
+        "price": 115,
+        "evaluation": {
+            "good": 3,
+            "average": 0,
+            "bad": 2
+        },
+        "category": "クイック・ファストレーン"
+    },
+    {
+        "link": "detail.php?t=650337&c=814458",
+        "image": "https://west2-univ.jp/menu_img/png_sp/814458.png",
+        "name_jp": "味噌汁",
+        "name_en": "Miso soup",
+        "price": 44,
+        "evaluation": {
+            "good": 13,
+            "average": 32,
+            "bad": 26
+        },
+        "category": "クイック・ファストレーン"
+    }
+]
