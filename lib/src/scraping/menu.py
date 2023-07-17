@@ -25,6 +25,7 @@ for category_tag in category_tags:
         h3_tag = a_tag.find('h3')
         evaluation_tags = a_tag.find_all('span', {'id': lambda x: x and x.startswith('rate_')})
         data = {
+            "id" : data_list.__len__(),
             "link": a_tag.get('href'),
             "image": a_tag.find('img').get('src'),
             "name_jp": h3_tag.contents[0],

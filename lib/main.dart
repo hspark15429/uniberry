@@ -13,6 +13,7 @@ import 'package:gtk_flutter/screens/cafeteria_page.dart';
 import 'package:gtk_flutter/screens/timetable_page.dart';
 import 'package:gtk_flutter/screens/top_page.dart';
 import 'package:provider/provider.dart'; // new
+import 'package:flutter/services.dart';
 
 import 'app_state.dart'; // new
 import 'home_page.dart';
@@ -121,6 +122,9 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // SystemChrome.setPreferredOrientations(
+    //     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+
     return MaterialApp.router(
       title: 'Uniberry',
       theme: ThemeData(

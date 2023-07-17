@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart'; // NEW
-import '../model/app_state_model.dart'; // NEW
+import '../model/app_state_model.dart';
+import '../product_list_tab.dart'; // NEW
 
 class CafeteriaPage extends StatefulWidget {
   const CafeteriaPage({super.key});
@@ -21,9 +23,23 @@ class _nameState extends State<CafeteriaPage> {
         body: ChangeNotifierProvider<AppStateModel>(
           // NEW
           create: (_) => AppStateModel()..loadProducts(), // NEW
-          child: const Placeholder(), // NEW
+          child: const ProductListTab(), // NEW
         ),
       ),
+    );
+  }
+}
+
+class CupertinoStoreHomePage extends StatelessWidget {
+  const CupertinoStoreHomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: Text('Cupertino Store'),
+      ),
+      child: SizedBox(),
     );
   }
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gtk_flutter/app_state.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 import 'dart:math' as math;
 
 import 'dialog_builder.dart';
@@ -13,8 +15,17 @@ class TimetablePage extends StatefulWidget {
 class _TimetablePageState extends State<TimetablePage> {
   int day = DateTime.now().weekday;
   int time = int.parse(DateFormat('HHmm').format(DateTime.now()));
-  Map<String, String> cellTaps = {};
+
+  late ApplicationState appState;
+  late Map<String, String> cellTaps;
   int cellNow = 0;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    appState = Provider.of<ApplicationState>(context);
+    cellTaps = appState.cellTaps;
+  }
 
   @override
   void initState() {

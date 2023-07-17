@@ -1,10 +1,10 @@
+import 'dart:convert';
+
 import 'package:flutter/foundation.dart' as foundation;
+import 'package:flutter/services.dart';
 
 import 'product.dart';
 import 'products_repository.dart';
-
-double _salesTaxRate = 0.06;
-double _shippingCostPerItem = 7;
 
 class AppStateModel extends foundation.ChangeNotifier {
   // All the available products.
@@ -31,33 +31,20 @@ class AppStateModel extends foundation.ChangeNotifier {
     return _selectedCategory;
   }
 
-  // Totaled prices of the items in the cart.
-  double get subtotalCost {
-    return _productsInCart.keys.map((id) {
-      // Extended price for product line
-      return getProductById(id).price * _productsInCart[id]!;
-    }).fold(0, (accumulator, extendedPrice) {
-      return accumulator + extendedPrice;
-    });
-  }
+  // // Totaled prices of the items in the cart.
+  // double get subtotalCost {
+  //   return _productsInCart.keys.map((id) {
+  //     // Extended price for product line
+  //     return getProductById(id).price * _productsInCart[id]!;
+  //   }).fold(0, (accumulator, extendedPrice) {
+  //     return accumulator + extendedPrice;
+  //   });
+  // }
 
-  // Total shipping cost for the items in the cart.
-  double get shippingCost {
-    return _shippingCostPerItem *
-        _productsInCart.values.fold(0.0, (accumulator, itemCount) {
-          return accumulator + itemCount;
-        });
-  }
-
-  // Sales tax for the items in the cart
-  double get tax {
-    return subtotalCost * _salesTaxRate;
-  }
-
-  // Total cost to order everything in the cart.
-  double get totalCost {
-    return subtotalCost + shippingCost + tax;
-  }
+  // // Total cost to order everything in the cart.
+  // double get totalCost {
+  //   return subtotalCost;
+  // }
 
   // Returns a copy of the list of available products, filtered by category.
   List<Product> getProducts() => switch (_selectedCategory) {
@@ -70,7 +57,7 @@ class AppStateModel extends foundation.ChangeNotifier {
   // Search the product catalog
   List<Product> search(String searchTerms) {
     return getProducts().where((product) {
-      return product.name.toLowerCase().contains(searchTerms.toLowerCase());
+      return product.name_en.toLowerCase().contains(searchTerms.toLowerCase());
     }).toList();
   }
 
@@ -98,10 +85,10 @@ class AppStateModel extends foundation.ChangeNotifier {
     notifyListeners();
   }
 
-  // Returns the Product instance matching the provided id.
-  Product getProductById(int id) {
-    return _availableProducts.firstWhere((p) => p.id == id);
-  }
+  // // Returns the Product instance matching the provided id.
+  // Product getProductById(int id) {
+  //   return _availableProducts.firstWhere((p) => p.id == id);
+  // }
 
   // Removes everything from the cart.
   void clearCart() {
@@ -110,8 +97,10 @@ class AppStateModel extends foundation.ChangeNotifier {
   }
 
   // Loads the list of available products from the repo.
-  void loadProducts() {
-    _availableProducts = ProductsRepository.loadProducts(Category.all);
+  void loadProducts() async {
+    ProductsRepository repository =
+        ProductsRepository(products: await loadMenuItems());
+    _availableProducts = repository.loadProducts(Category.all);
     notifyListeners();
   }
 
@@ -119,4 +108,29 @@ class AppStateModel extends foundation.ChangeNotifier {
     _selectedCategory = newCategory;
     notifyListeners();
   }
+}
+
+Future<List<Product>> loadMenuItems() async {
+  List<Product> allMenuItems = [];
+
+  String jsonString = await rootBundle.loadString('assets/menuitems.json');
+  List<dynamic> menuData = jsonDecode(jsonString);
+  for (var menu in menuData) {
+    allMenuItems.add(
+      Product(
+        category: Category.noodle,
+        id: menu['id'],
+        name_jp: menu['name_jp'],
+        name_en: menu['name_en'],
+        price: menu['price'],
+        image: menu['image'],
+        evaluation: Evaluation(
+          good: menu['evaluation']['good'],
+          average: menu['evaluation']['average'],
+          bad: menu['evaluation']['bad'],
+        ),
+      ),
+    );
+  }
+  return allMenuItems;
 }

@@ -43,6 +43,12 @@ class ApplicationState extends ChangeNotifier {
   List<GuestBookMessage> get guestBookMessages => _guestBookMessages;
   // ...to here.
 
+  //timetable to firestore sync
+  StreamSubscription<DocumentSnapshot>? _cellTapsSubscription;
+  Map<String, String> _cellTaps = {};
+  Map<String, String> get cellTaps => _cellTaps;
+  late List<String> docIDs = [];
+
   Future<void> init() async {
     await Firebase.initializeApp(
         options: DefaultFirebaseOptions.currentPlatform);
@@ -64,6 +70,8 @@ class ApplicationState extends ChangeNotifier {
     FirebaseAuth.instance.userChanges().listen((user) {
       if (user != null) {
         _loggedIn = true;
+        getTimeTable();
+
         _guestBookSubscription = FirebaseFirestore.instance
             .collection('guestbook')
             .orderBy('timestamp', descending: true)
@@ -75,7 +83,7 @@ class ApplicationState extends ChangeNotifier {
               GuestBookMessage(
                 name: document.data()['name'] as String,
                 message: document.data()['text'] as String,
-                time: "DateTime.now().millisecondsSinceEpoch as String",
+                time: "time",
               ),
             );
           }
@@ -98,12 +106,18 @@ class ApplicationState extends ChangeNotifier {
           }
           notifyListeners();
         });
+
         // ...to here.
+        // saveTimeTable(_cellTaps);
       } else {
         _loggedIn = false;
         _guestBookMessages = [];
         _guestBookSubscription?.cancel();
       }
+      docIDs.length == 0
+          ? saveTimeTable(_cellTaps)
+          : saveOrUpdateTimeTable(docIDs[0], _cellTaps);
+
       notifyListeners();
     });
   }
@@ -124,5 +138,45 @@ class ApplicationState extends ChangeNotifier {
       'time': "DateTime.now().millisecondsSinceEpoch as String",
     });
   }
+
   // ...to here.
+  // addcellTaps to Firestore
+  Future<DocumentReference> saveTimeTable(Map<String, String> timetable) {
+    if (!_loggedIn) {
+      throw Exception('Must be logged in');
+    }
+    return FirebaseFirestore.instance
+        .collection('timetable')
+        .add(<String, dynamic>{
+      'courses': timetable,
+      'timestamp': DateTime.now().millisecondsSinceEpoch,
+      'userId': FirebaseAuth.instance.currentUser!.uid,
+    });
+  }
+
+  Future<void> saveOrUpdateTimeTable(
+      String documentId, Map<String, String> timetable) async {
+    if (!_loggedIn) {
+      throw Exception('Must be logged in');
+    }
+
+    await FirebaseFirestore.instance
+        .collection('timetable')
+        .doc(documentId)
+        .set({
+      'courses': timetable,
+      'timestamp': DateTime.now().millisecondsSinceEpoch,
+      'userId': FirebaseAuth.instance.currentUser!.uid,
+    }, SetOptions(merge: true));
+  }
+
+  Future getTimeTable() async {
+    await FirebaseFirestore.instance
+        .collection('timetable')
+        .where('userId', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
+        .get()
+        .then((snapshot) => snapshot.docs.forEach((document) {
+              docIDs.add(document.reference.id);
+            }));
+  }
 }
