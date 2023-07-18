@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:gtk_flutter/screens/search_page.dart';
 import 'package:gtk_flutter/src/widgets.dart';
 
-Future<String?> dialogBuilder(
-    BuildContext context, String currentLecture, String cellText) async {
+Future<String?> timetableEntryDialogBuilder(
+  BuildContext context,
+  String currentLecture,
+  String cellText,
+) async {
   return showDialog<String>(
     context: context,
     builder: (BuildContext context) {

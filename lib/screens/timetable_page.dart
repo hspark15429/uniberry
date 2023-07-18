@@ -121,16 +121,18 @@ class _TimetablePageState extends State<TimetablePage> {
     );
   }
 
-  Widget _buildCell(String text,
-      {double height = 120,
-      double width = 100,
-      color = Colors.white,
-      bool interactable = false}) {
+  Widget _buildCell(
+    String text, {
+    double height = 120,
+    double width = 100,
+    color = Colors.white,
+    bool interactable = false,
+  }) {
     return GestureDetector(
       onTap: () async {
         // open pop up window to add event
         // dialogBuilder passes in the selected time slot's day and period
-        final result = await dialogBuilder(context, "", text);
+        final result = await timetableEntryDialogBuilder(context, "", text);
 
         if (result!.contains('Save')) {
           setState(() {
@@ -174,8 +176,8 @@ class _TimetablePageState extends State<TimetablePage> {
                   child: ElevatedButton(
                       child: Text(cellTaps[text]!),
                       onPressed: () async {
-                        final result =
-                            await dialogBuilder(context, cellTaps[text]!, text);
+                        final result = await timetableEntryDialogBuilder(
+                            context, cellTaps[text]!, text);
                         if (result!.contains('Save')) {
                           setState(() {
                             cellTaps[text] = result.substring(4);
