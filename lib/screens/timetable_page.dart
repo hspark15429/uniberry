@@ -122,87 +122,89 @@ class _TimetablePageState extends State<TimetablePage> {
   }
 
   Widget _buildCell(
-    String text, {
+    String cellNum, {
     double height = 120,
     double width = 100,
     color = Colors.white,
     bool interactable = false,
   }) {
-    return GestureDetector(
-      onTap: () async {
-        // open pop up window to add event
-        // dialogBuilder passes in the selected time slot's day and period
-        final result = await timetableEntryDialogBuilder(context, "", text);
+    // bool _hasEntry = cellTaps[cellNum]!.isNotEmpty;
+    bool _canHaveEntry = cellTaps.containsKey(cellNum);
+    _openEntryDialog() async {
+      final dialogResult = await timetableEntryDialogBuilder(context,
+          currentLecture: cellTaps[cellNum]!, currentCellNum: cellNum);
 
-        if (result!.contains('Save')) {
-          setState(() {
-            cellTaps[text] = result.substring(4);
-          });
-        } else if (result == 'Delete') {
-          setState(() {
-            cellTaps[text] = "";
-          });
-        }
-      },
-      child: Container(
-        color: color,
-        width: width,
-        height: height,
-        // if text matches cellNow, it should have the current time indicator
-        child: Stack(children: [
-          Center(child: Text(text)),
-          if (text == '$cellNow')
-            Positioned(
-              top: 0,
-              left: 0,
-              child: IgnorePointer(
-                child: Container(
+      if (dialogResult!.isEmpty) return;
+      setState(() {
+        if (dialogResult.contains('Save'))
+          cellTaps[cellNum] = dialogResult.substring(4);
+        else if (dialogResult == 'Delete')
+          cellTaps[cellNum] = "";
+        else
+          throw Exception('Invalid dialogResult');
+      });
+    }
+
+    return Container(
+      color: color,
+      width: width,
+      height: height,
+      // if text matches cellNow, it should have the current time indicator
+      child: Stack(children: [
+        Center(child: Text(cellNum)),
+        if (_canHaveEntry)
+          cellTaps[cellNum]!.isEmpty
+              ? GestureDetector(
+                  onTap: _openEntryDialog,
+                  child: Positioned(
+                    top: 0,
+                    left: 0,
+                    child: Container(
+                        clipBehavior: Clip.none,
+                        width: width,
+                        height: height,
+                        color: Colors.white,
+                        child: Text('')),
+                  ),
+                )
+              : Positioned(
+                  top: 0,
+                  left: 0,
+                  child: Container(
                     clipBehavior: Clip.none,
                     width: width,
                     height: height,
-                    color: Colors.blue,
-                    child: Text('')),
-              ),
-            ),
-          if (cellTaps[text] != null && interactable)
-            if (cellTaps[text]!.isNotEmpty)
-              Positioned(
-                top: 0,
-                left: 0,
-                child: Container(
+                    child: ElevatedButton(
+                        child: Text(cellTaps[cellNum]!),
+                        onPressed: _openEntryDialog,
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              Color((math.Random().nextDouble() * 0xFFFFFF)
+                                      .toInt())
+                                  .withOpacity(1.0)), // Set the button color
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0),
+                            ),
+                          ),
+                        )),
+                  ),
+                ),
+        if (cellNum == '13')
+          Positioned(
+            top: 0,
+            left: 0,
+            child: IgnorePointer(
+              child: Container(
                   clipBehavior: Clip.none,
                   width: width,
-                  height: height * 1,
-                  child: ElevatedButton(
-                      child: Text(cellTaps[text]!),
-                      onPressed: () async {
-                        final result = await timetableEntryDialogBuilder(
-                            context, cellTaps[text]!, text);
-                        if (result!.contains('Save')) {
-                          setState(() {
-                            cellTaps[text] = result.substring(4);
-                          });
-                        } else if (result == 'Delete') {
-                          setState(() {
-                            cellTaps[text] = "";
-                          });
-                        }
-                      },
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(Color(
-                                (math.Random().nextDouble() * 0xFFFFFF).toInt())
-                            .withOpacity(1.0)), // Set the button color
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30.0),
-                          ),
-                        ),
-                      )),
-                ),
-              ),
-        ]),
-      ),
+                  height: height,
+                  color: Colors.blue.withOpacity(0.3),
+                  child: Text('')),
+            ),
+          ),
+      ]),
     );
   }
 }

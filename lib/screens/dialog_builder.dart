@@ -3,10 +3,10 @@ import 'package:gtk_flutter/screens/search_page.dart';
 import 'package:gtk_flutter/src/widgets.dart';
 
 Future<String?> timetableEntryDialogBuilder(
-  BuildContext context,
-  String currentLecture,
-  String cellText,
-) async {
+  BuildContext context, {
+  required String currentLecture,
+  required String currentCellNum,
+}) async {
   return showDialog<String>(
     context: context,
     builder: (BuildContext context) {
@@ -47,7 +47,8 @@ Future<String?> timetableEntryDialogBuilder(
                       onPressed: () async {
                         searchResult = await showSearch(
                           context: context,
-                          delegate: CustomSearchDelegate(cellText: cellText),
+                          delegate:
+                              CustomSearchDelegate(cellText: currentCellNum),
                         );
                         setState(() {
                           searchResult = searchResult;
