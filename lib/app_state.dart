@@ -67,11 +67,28 @@ class ApplicationState extends ChangeNotifier {
     });
     // ...to here.
 
-    FirebaseAuth.instance.userChanges().listen((user) {
+    FirebaseAuth.instance.userChanges().asyncMap((user) async {
       if (user != null) {
         _loggedIn = true;
-        getTimeTable();
+        print(await checkIfTimeTableExists());
+      }
 
+      // if (user != null) {
+      //   print(user.uid);
+      //   _loggedIn = true;
+      //   // if user's timetable is empty, create empty timetable to firestore, otherwise fetch timetable from firestore
+      //   await sortTimeTable();
+      //   if (docIDs.length == 0) {
+      //     saveTimeTable(_cellTaps);
+      //   } else if (docIDs.length > 0) {
+      //     DocumentSnapshot document = await fetchTimeTable(docIDs[0]);
+      //     print(document.data());
+      //   }
+      // }
+      return user;
+    }).listen((user) {
+      if (user != null) {
+        _loggedIn = true;
         _guestBookSubscription = FirebaseFirestore.instance
             .collection('guestbook')
             .orderBy('timestamp', descending: true)
@@ -106,7 +123,6 @@ class ApplicationState extends ChangeNotifier {
           }
           notifyListeners();
         });
-
         // ...to here.
         // saveTimeTable(_cellTaps);
       } else {
@@ -114,9 +130,6 @@ class ApplicationState extends ChangeNotifier {
         _guestBookMessages = [];
         _guestBookSubscription?.cancel();
       }
-      docIDs.length == 0
-          ? saveTimeTable(_cellTaps)
-          : saveOrUpdateTimeTable(docIDs[0], _cellTaps);
 
       notifyListeners();
     });
@@ -170,13 +183,50 @@ class ApplicationState extends ChangeNotifier {
     }, SetOptions(merge: true));
   }
 
-  Future getTimeTable() async {
-    await FirebaseFirestore.instance
+  Future<bool> checkIfTimeTableExists() async {
+    if (!_loggedIn) {
+      throw Exception('Must be logged in');
+    }
+
+    final user = FirebaseAuth.instance.currentUser;
+
+    if (user != null) {
+      final userId = user.uid;
+      final querySnapshot = await FirebaseFirestore.instance
+          .collection('guestbook')
+          .where('userId', isEqualTo: userId)
+          .get();
+
+      // If the query finds any documents, then a timetable exists for the user
+      if (querySnapshot.docs.isNotEmpty) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  Future<DocumentSnapshot> fetchTimeTable(String documentId) async {
+    if (!_loggedIn) {
+      throw Exception('Must be logged in');
+    }
+    DocumentSnapshot document = await FirebaseFirestore.instance
         .collection('timetable')
-        .where('userId', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
-        .get()
-        .then((snapshot) => snapshot.docs.forEach((document) {
-              docIDs.add(document.reference.id);
-            }));
+        .doc(documentId)
+        .get();
+
+    return document;
   }
 }
+
+// get the user's time table that is unique to them, and there's only one of them.
+// Future getTimeTable() async {
+//   await FirebaseFirestore.instance
+//       .collection('timetable')
+//       .where('userId', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
+//       .orderBy('timestamp', descending: false)
+//       .get()
+//       .then((snapshot) => snapshot.docs.forEach((document) {
+//             docIDs.add(document.reference.id);
+//           }));
+
