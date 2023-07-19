@@ -122,24 +122,24 @@ class _TimetablePageState extends State<TimetablePage> {
   }
 
   Widget _buildCell(
-    String cellNum, {
+    String cellIndex, {
     double height = 120,
     double width = 100,
     color = Colors.white,
     bool interactable = false,
   }) {
-    // bool _hasEntry = cellTaps[cellNum]!.isNotEmpty;
-    bool _canHaveEntry = cellTaps.containsKey(cellNum);
+    // bool _hasEntry = cellTaps[cellIndex]!.isNotEmpty;
+    bool _canHaveEntry = cellTaps.containsKey(cellIndex);
     _openEntryDialog() async {
       final dialogResult = await timetableEntryDialogBuilder(context,
-          currentLecture: cellTaps[cellNum]!, currentCellNum: cellNum);
+          currentLecture: cellTaps[cellIndex]!, currentCellNum: cellIndex);
 
       if (dialogResult!.isEmpty) return;
       setState(() {
         if (dialogResult.contains('Save'))
-          cellTaps[cellNum] = dialogResult.substring(4);
+          cellTaps[cellIndex] = dialogResult.substring(4);
         else if (dialogResult == 'Delete')
-          cellTaps[cellNum] = "";
+          cellTaps[cellIndex] = "";
         else
           throw Exception('Invalid dialogResult');
       });
@@ -151,14 +151,14 @@ class _TimetablePageState extends State<TimetablePage> {
       height: height,
       // if text matches cellNow, it should have the current time indicator
       child: Stack(children: [
-        Center(child: Text(cellNum)),
+        Center(child: Text(cellIndex)),
         if (_canHaveEntry)
-          cellTaps[cellNum]!.isEmpty
-              ? GestureDetector(
-                  onTap: _openEntryDialog,
-                  child: Positioned(
-                    top: 0,
-                    left: 0,
+          cellTaps[cellIndex]!.isEmpty
+              ? Positioned(
+                  top: 0,
+                  left: 0,
+                  child: GestureDetector(
+                    onTap: _openEntryDialog,
                     child: Container(
                         clipBehavior: Clip.none,
                         width: width,
@@ -175,7 +175,7 @@ class _TimetablePageState extends State<TimetablePage> {
                     width: width,
                     height: height,
                     child: ElevatedButton(
-                        child: Text(cellTaps[cellNum]!),
+                        child: Text(cellTaps[cellIndex]!),
                         onPressed: _openEntryDialog,
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all<Color>(
@@ -191,7 +191,7 @@ class _TimetablePageState extends State<TimetablePage> {
                         )),
                   ),
                 ),
-        if (cellNum == '13')
+        if (cellIndex == '$cellNow')
           Positioned(
             top: 0,
             left: 0,

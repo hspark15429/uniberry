@@ -35,5 +35,10 @@ timetablepage renders a timetable based on the localtimetablestate until the use
 when the user leaves the page, timetablepage uploads the latest timetable to the server
     TimetablePage.uploadTimetable(localtimetablestate)
 
+Timetable
+    Cell
+        Button
+
+dialogResultString()
 
 
