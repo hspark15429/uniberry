@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:gtk_flutter/app_state.dart';
 import 'package:intl/intl.dart';
@@ -30,26 +32,15 @@ class _TimetablePageState extends State<TimetablePage> {
   @override
   void initState() {
     super.initState();
-    if (time < 900) {
-      cellNow = 0;
-    } else if (time <= 1030) {
-      cellNow = 5 * 0 + day;
-    } else if (time <= 1210) {
-      cellNow = 5 * 1 + day;
-    } else if (time <= 1430) {
-      cellNow = 5 * 2 + day;
-    } else if (time <= 1610) {
-      cellNow = 5 * 3 + day;
-    } else if (time <= 1750) {
-      cellNow = 5 * 4 + day;
-    } else {
-      cellNow = 0;
-    }
-    cellNow = 5 < day ? 0 : cellNow;
+    setCurrentTimeSlot();
+    loadServerTimetable();
   }
 
   @override
   Widget build(BuildContext context) {
+    // save current timetable to firestore
+    uploadLocalTimetable();
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -91,8 +82,6 @@ class _TimetablePageState extends State<TimetablePage> {
                 flex: 10,
                 child: LayoutBuilder(builder: (context, constraints) {
                   double expandedWidth = constraints.maxWidth * 0.2;
-                  final now = DateTime.now();
-                  print(now);
                   return Table(
                     border: TableBorder.all(),
                     children: [
@@ -152,6 +141,8 @@ class _TimetablePageState extends State<TimetablePage> {
       // if text matches cellNow, it should have the current time indicator
       child: Stack(children: [
         Center(child: Text(cellIndex)),
+        // if the cell is a slot and has no entry, it's an interactable white cell,
+        // if it has an entry, it has a colored button instead
         if (_canHaveEntry)
           cellTaps[cellIndex]!.isEmpty
               ? Positioned(
@@ -191,6 +182,7 @@ class _TimetablePageState extends State<TimetablePage> {
                         )),
                   ),
                 ),
+        // if the cell is the current time, it should have the current time indicator
         if (cellIndex == '$cellNow')
           Positioned(
             top: 0,
@@ -206,6 +198,65 @@ class _TimetablePageState extends State<TimetablePage> {
           ),
       ]),
     );
+  }
+
+  void setCurrentTimeSlot() {
+    if (time < 900) {
+      cellNow = 0;
+    } else if (time <= 1030) {
+      cellNow = 5 * 0 + day;
+    } else if (time <= 1210) {
+      cellNow = 5 * 1 + day;
+    } else if (time <= 1430) {
+      cellNow = 5 * 2 + day;
+    } else if (time <= 1610) {
+      cellNow = 5 * 3 + day;
+    } else if (time <= 1750) {
+      cellNow = 5 * 4 + day;
+    } else {
+      cellNow = 0;
+    }
+    cellNow = 5 < day ? 0 : cellNow;
+  }
+
+  void loadServerTimetable() {
+    FirebaseFirestore.instance
+        .collection('users')
+        .where('userId', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
+        .get()
+        .then((QuerySnapshot querySnapshot) {
+      cellTaps = appState.cellTaps;
+      if (querySnapshot.docs.isNotEmpty) {
+        for (var doc in querySnapshot.docs) {
+          Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
+
+          for (String key in data['currentTimetable'].keys) {
+            cellTaps[key] = data['currentTimetable'][key];
+          }
+        }
+        setState(() {});
+      } else {
+        print('No documents found for this user');
+        cellTaps = appState.cellTaps;
+        uploadLocalTimetable();
+      }
+    });
+  }
+
+  void uploadLocalTimetable() {
+    FirebaseFirestore.instance
+        .collection('users')
+        .where('userId', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
+        .get()
+        .then((QuerySnapshot querySnapshot) {
+      if (querySnapshot.docs.isNotEmpty) {
+        for (var doc in querySnapshot.docs) {
+          doc.reference.update({'currentTimetable': cellTaps});
+        }
+      } else {
+        print('No documents found for this user.');
+      }
+    });
   }
 }
 
