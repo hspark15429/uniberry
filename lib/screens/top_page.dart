@@ -13,7 +13,7 @@ class TopPage extends StatefulWidget {
 }
 
 class _TopPageState extends State<TopPage> {
-  int currentPageIndex = 1;
+  int currentPageIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class _TopPageState extends State<TopPage> {
       ),
       body: <Widget>[
         Container(
-          color: Colors.red,
+          color: Colors.yellow,
           alignment: Alignment.center,
           child: const Text('Page 1'),
         ),

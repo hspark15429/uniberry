@@ -27,16 +27,16 @@ class HomePage extends StatelessWidget {
           Consumer<ApplicationState>(
             builder: (context, appState, _) {
               String displayName = '';
-              if (appState.loggedIn &&
-                  FirebaseAuth.instance.currentUser!.displayName != null) {
+              var _canShowDisplayName = appState.loggedIn &&
+                  FirebaseAuth.instance.currentUser!.displayName != null;
+
+              if (_canShowDisplayName)
                 displayName = FirebaseAuth.instance.currentUser!.displayName!;
-              }
+
               return Center(child: Header(displayName));
             },
           ),
-          // const IconAndDetail(Icons.calendar_today, 'October 30'),
-          // const IconAndDetail(Icons.location_city, 'San Francisco'),
-          // Add from here
+
           Consumer<ApplicationState>(
             builder: (context, appState, _) => AuthFunc(
                 loggedIn: appState.loggedIn,
@@ -72,36 +72,6 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-          // // Modify from here...
-          // Consumer<ApplicationState>(
-          //   builder: (context, appState, _) => Column(
-          //     crossAxisAlignment: CrossAxisAlignment.start,
-          //     children: [
-          //       // Add from here...
-          //       switch (appState.attendees) {
-          //         1 => const Paragraph('1 person going'),
-          //         >= 2 => Paragraph('${appState.attendees} people going'),
-          //         _ => const Paragraph('No one going'),
-          //       },
-          //       // ...to here.
-          //       if (appState.loggedIn) ...[
-          //         // Add from here...
-          //         YesNoSelection(
-          //           state: appState.attending,
-          //           onSelection: (attending) => appState.attending = attending,
-          //         ),
-          //         // ...to here.
-          //         const Header('Discussion'),
-          //         GuestBook(
-          //           addMessage: (message) =>
-          //               appState.addMessageToGuestBook(message),
-          //           messages: appState.guestBookMessages,
-          //         ),
-          //       ],
-          //     ],
-          //   ),
-          // ),
-          // // ...to here.
         ],
       ),
     );
