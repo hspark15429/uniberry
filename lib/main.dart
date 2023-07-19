@@ -2,6 +2,8 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart'; // new
 import 'package:firebase_ui_localizations/firebase_ui_localizations.dart'; // new
 import 'package:flutter/material.dart';
@@ -64,6 +66,14 @@ final _router = GoRouter(
                   }
                   if (state is UserCreated) {
                     user.updateDisplayName(user.email!.split('@')[0]);
+                    FirebaseFirestore.instance.collection('users').add({
+                      'userId': FirebaseAuth.instance.currentUser!.uid,
+                      'currentTimetable': {},
+                    }).then((value) {
+                      print("User Added");
+                    }).catchError((error) {
+                      print("Failed to add user: $error");
+                    });
                   }
                   if (!user.emailVerified) {
                     user.sendEmailVerification();
