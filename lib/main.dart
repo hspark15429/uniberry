@@ -68,6 +68,7 @@ final _router = GoRouter(
                     user.updateDisplayName(user.email!.split('@')[0]);
                     FirebaseFirestore.instance.collection('users').add({
                       'userId': FirebaseAuth.instance.currentUser!.uid,
+                      'email': FirebaseAuth.instance.currentUser!.email,
                       'currentTimetable': {},
                     }).then((value) {
                       print("User Added");
