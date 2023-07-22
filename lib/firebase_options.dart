@@ -66,7 +66,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '78639101948',
     projectId: 'fir-flutter-codelab-39c7d',
     storageBucket: 'fir-flutter-codelab-39c7d.appspot.com',
-    iosClientId: '78639101948-uss9ssv9a9nq49pugfhrnrs737k4q9i2.apps.googleusercontent.com',
+    iosClientId:
+        '78639101948-uss9ssv9a9nq49pugfhrnrs737k4q9i2.apps.googleusercontent.com',
     iosBundleId: 'com.example.gtkFlutter',
   );
 
@@ -76,7 +77,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '78639101948',
     projectId: 'fir-flutter-codelab-39c7d',
     storageBucket: 'fir-flutter-codelab-39c7d.appspot.com',
-    iosClientId: '78639101948-4p2edrkb8m7sb14uv6bg5bhlvrdjj8r7.apps.googleusercontent.com',
+    iosClientId:
+        '78639101948-4p2edrkb8m7sb14uv6bg5bhlvrdjj8r7.apps.googleusercontent.com',
     iosBundleId: 'com.example.gtkFlutter.RunnerTests',
   );
 }
