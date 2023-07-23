@@ -23,14 +23,12 @@ import 'home_page.dart';
 import '../src/jp.dart'; // new
 
 void main() {
-  // Modify from here...
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(ChangeNotifierProvider(
     create: (context) => ApplicationState(),
     builder: ((context, child) => const App()),
   ));
-  // ...to here.
 }
 
 // Add GoRouter configuration outside the App class
@@ -38,7 +36,6 @@ final _router = GoRouter(
   routes: [
     GoRoute(
       path: '/',
-      // builder: (context, appState) => const TopPage(),
       builder: (context, appState) => const HomePage(),
       routes: [
         GoRoute(
@@ -65,11 +62,12 @@ final _router = GoRouter(
                     return;
                   }
                   if (state is UserCreated) {
+                    // create user in firestore
                     user.updateDisplayName(user.email!.split('@')[0]);
                     FirebaseFirestore.instance.collection('users').add({
                       'userId': FirebaseAuth.instance.currentUser!.uid,
                       'email': FirebaseAuth.instance.currentUser!.email,
-                      'currentTimetable': {},
+                      'currentTimetable': {'1': ''},
                     }).then((value) {
                       print("User Added");
                     }).catchError((error) {
@@ -133,19 +131,10 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // SystemChrome.setPreferredOrientations(
-    //     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
-
     return MaterialApp.router(
       title: 'Uniberry',
       theme: ThemeData(
         useMaterial3: true,
-        // buttonTheme: Theme.of(context).buttonTheme.copyWith(
-        //       highlightColor: Colors.deepPurple,
-        //     ),
-        // textTheme: GoogleFonts.robotoTextTheme(
-        //   Theme.of(context).textTheme,
-        // ),
         colorScheme: lightColorScheme,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
