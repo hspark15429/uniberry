@@ -259,23 +259,3 @@ class _TimetablePageState extends State<TimetablePage> {
     });
   }
 }
-
-// var array = List<List<String>>.generate(
-//   5,
-//   (i) => List<String>.generate(
-//     5,
-//     (j) => 'Cell ${i * 5 + j + 1}',
-//   ),
-// );
-
-// if (istimeNow){
-//   position(
-//     top: (controller.cellHeight*0.5)
-//     left: cellWidth*Day
-//   )
-
-// }
-
-//       if (number >= 900 && number <= 1030) {
-//       print('The number is between 1000 and 2000.');
-//     }
