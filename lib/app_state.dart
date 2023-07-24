@@ -59,20 +59,19 @@ class ApplicationState extends ChangeNotifier {
       EmailAuthProvider(),
     ]);
     // Add from here...
-    FirebaseFirestore.instance
-        .collection('attendees')
-        .where('attending', isEqualTo: true)
-        .snapshots()
-        .listen((snapshot) {
-      _attendees = snapshot.docs.length;
-      notifyListeners();
-    });
+    // FirebaseFirestore.instance
+    //     .collection('attendees')
+    //     .where('attending', isEqualTo: true)
+    //     .snapshots()
+    //     .listen((snapshot) {
+    //   _attendees = snapshot.docs.length;
+    //   notifyListeners();
+    // });
     // ...to here.
 
     FirebaseAuth.instance.userChanges().asyncMap((user) async {
       if (user != null) {
         _loggedIn = true;
-        print(await checkIfTimeTableExists());
       }
 
       // if (user != null) {
@@ -131,6 +130,7 @@ class ApplicationState extends ChangeNotifier {
         _loggedIn = false;
         _guestBookMessages = [];
         _guestBookSubscription?.cancel();
+        _attendingSubscription?.cancel();
       }
 
       notifyListeners();

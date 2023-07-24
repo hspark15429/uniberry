@@ -24,19 +24,7 @@ class HomePage extends StatelessWidget {
         children: <Widget>[
           Image.asset('assets/schoolLogo.png', height: 140),
           const SizedBox(height: 8),
-          Consumer<ApplicationState>(
-            builder: (context, appState, _) {
-              String displayName = '';
-              var _canShowDisplayName = appState.loggedIn &&
-                  FirebaseAuth.instance.currentUser!.displayName != null;
-
-              if (_canShowDisplayName)
-                displayName = FirebaseAuth.instance.currentUser!.displayName!;
-
-              return Center(child: Header(displayName));
-            },
-          ),
-
+          DisplayName(),
           Consumer<ApplicationState>(
             builder: (context, appState, _) => AuthFunc(
                 loggedIn: appState.loggedIn,
@@ -44,7 +32,6 @@ class HomePage extends StatelessWidget {
                   FirebaseAuth.instance.signOut();
                 }),
           ),
-          // to here
           const Divider(
             height: 8,
             thickness: 1,
@@ -52,10 +39,7 @@ class HomePage extends StatelessWidget {
             endIndent: 8,
             color: Colors.grey,
           ),
-
-          // const Paragraph(
-          //   'Join us for a day full of Firebase Workshops and Pizza!',
-          // ),
+          // Show school photos, front page.
           Container(
             width: 100, // specify the width of the box
             height: 500, // specify the height of the box
@@ -74,6 +58,28 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class DisplayName extends StatelessWidget {
+  const DisplayName({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Consumer<ApplicationState>(
+      builder: (context, appState, _) {
+        String displayName = '';
+        print("Hello World");
+        var _canShowDisplayName = appState.loggedIn;
+
+        if (_canShowDisplayName)
+          displayName = FirebaseAuth.instance.currentUser!.displayName!;
+
+        return Center(child: Header(displayName));
+      },
     );
   }
 }
