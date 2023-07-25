@@ -6,10 +6,8 @@ import 'package:flutter/material.dart'; // new
 import 'package:provider/provider.dart'; // new
 
 import 'app_state.dart'; // new
-import 'guest_book.dart'; // new
 import 'src/authentication.dart'; // new
 import 'src/widgets.dart';
-import 'yes_no_selection.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -72,12 +70,13 @@ class DisplayName extends StatelessWidget {
     return Consumer<ApplicationState>(
       builder: (context, appState, _) {
         String displayName = '';
-        print("Hello World");
+
         var _canShowDisplayName = appState.loggedIn;
 
-        if (_canShowDisplayName)
-          displayName = FirebaseAuth.instance.currentUser!.displayName!;
-
+        // if (_canShowDisplayName) {
+        //   // displayName = FirebaseAuth.instance.currentUser!.displayName!;
+        //   print(_canShowDisplayName);
+        // }
         return Center(child: Header(displayName));
       },
     );
