@@ -1,26 +1,19 @@
-// Copyright 2022 The Flutter Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart'; // new
 import 'package:firebase_ui_localizations/firebase_ui_localizations.dart'; // new
+
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart'; // new
-import 'package:go_router/go_router.dart'; // new
-import 'package:google_fonts/google_fonts.dart';
 import 'package:gtk_flutter/color_schemes.g.dart';
-import 'package:gtk_flutter/screens/cafeteria_page.dart';
-import 'package:gtk_flutter/screens/timetable_page.dart';
+import '../src/jp.dart'; // new
+
+import 'package:go_router/go_router.dart'; // new
 import 'package:gtk_flutter/screens/top_page.dart';
 import 'package:provider/provider.dart'; // new
-import 'package:flutter/services.dart';
 
 import 'app_state.dart'; // new
 import 'home_page.dart';
-
-import '../src/jp.dart'; // new
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -138,17 +131,15 @@ class App extends StatelessWidget {
         colorScheme: lightColorScheme,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      routerConfig: _router, // new
+      routerConfig: _router,
 
       // Add the localization delegates
       localizationsDelegates: [
         // Creates an instance of FirebaseUILocalizationDelegate with overridden labels
         FirebaseUILocalizations.withDefaultOverrides(const LabelOverrides()),
-
         // Delegates below take care of built-in flutter widgets
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
-
         // This delegate is required to provide the labels that are not overridden by LabelOverrides
         FirebaseUILocalizations.delegate,
       ],
