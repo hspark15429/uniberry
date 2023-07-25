@@ -73,10 +73,10 @@ class DisplayName extends StatelessWidget {
 
         var _canShowDisplayName = appState.loggedIn;
 
-        if (_canShowDisplayName) {
-          // displayName = FirebaseAuth.instance.currentUser!.displayName!;
-          print(_canShowDisplayName);
-        }
+        // if (_canShowDisplayName) {
+        //   final displayName = FirebaseAuth.instance.currentUser!.displayName!;
+        //   print(_canShowDisplayName);
+        // }
         return Center(child: Header(displayName));
       },
     );
