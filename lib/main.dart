@@ -74,13 +74,13 @@ final _router = GoRouter(
                       print("Failed to add user: $error");
                     });
                   }
-                  if (!user.emailVerified) {
-                    user.sendEmailVerification();
-                    const snackBar = SnackBar(
-                        content: Text(
-                            'Please check your email to verify your email address'));
-                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                  }
+                  // if (!user.emailVerified) {
+                  //   user.sendEmailVerification();
+                  //   const snackBar = SnackBar(
+                  //       content: Text(
+                  //           'Please check your email to verify your email address'));
+                  //   ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  // }
                   context.pushReplacement('/');
                 })),
               ],

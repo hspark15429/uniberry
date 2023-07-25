@@ -25,6 +25,8 @@ class ApplicationState extends ChangeNotifier {
 
   Attending _attending = Attending.unknown;
   StreamSubscription<DocumentSnapshot>? _attendingSubscription;
+  StreamSubscription<DocumentSnapshot>? get attendingSubscription =>
+      _attendingSubscription;
   Attending get attending => _attending;
   set attending(Attending attending) {
     final userDoc = FirebaseFirestore.instance
@@ -44,7 +46,7 @@ class ApplicationState extends ChangeNotifier {
   // ...to here.
 
   //timetable to firestore sync
-  StreamSubscription<DocumentSnapshot>? _cellTapsSubscription;
+  // StreamSubscription<DocumentSnapshot>? _cellTapsSubscription;
   Map<String, String> _cellTaps = {
     for (int i = 1; i <= 25; i++) i.toString(): ""
   };
@@ -69,6 +71,7 @@ class ApplicationState extends ChangeNotifier {
     }).listen((user) {
       if (user != null) {
         _loggedIn = true;
+        _guestBookSubscription?.cancel(); // prevents multiple streams
         _guestBookSubscription = FirebaseFirestore.instance
             .collection('guestbook')
             .orderBy('timestamp', descending: true)
@@ -87,6 +90,7 @@ class ApplicationState extends ChangeNotifier {
           notifyListeners();
         });
         // Add from here...
+        _attendingSubscription?.cancel();
         _attendingSubscription = FirebaseFirestore.instance
             .collection('attendees')
             .doc(user.uid)

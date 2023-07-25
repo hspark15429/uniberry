@@ -2,6 +2,8 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -37,9 +39,13 @@ class AuthFunc extends StatelessWidget {
             padding: const EdgeInsets.only(right: 24, left: 24, bottom: 8),
             child: ElevatedButton(
                 onPressed: () {
-                  !loggedIn ? context.push('/sign-in') : signOut();
+                  if (loggedIn) {
+                    signOut();
+                  } else {
+                    context.push('/sign-in');
+                  }
                 },
-                child: !loggedIn ? const Text('Login') : const Text('Logout')),
+                child: loggedIn ? const Text('Logout') : const Text('Login')),
           )
         ],
       ),
