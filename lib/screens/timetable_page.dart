@@ -20,7 +20,7 @@ class _TimetablePageState extends State<TimetablePage> {
 
   late ApplicationState appState;
   late Map<String, String> cellTaps;
-  int cellNow = 0;
+  late int cellNow;
 
   @override
   void didChangeDependencies() {

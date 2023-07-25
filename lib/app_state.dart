@@ -58,34 +58,13 @@ class ApplicationState extends ChangeNotifier {
     FirebaseUIAuth.configureProviders([
       EmailAuthProvider(),
     ]);
-    // Add from here...
-    // FirebaseFirestore.instance
-    //     .collection('attendees')
-    //     .where('attending', isEqualTo: true)
-    //     .snapshots()
-    //     .listen((snapshot) {
-    //   _attendees = snapshot.docs.length;
-    //   notifyListeners();
-    // });
-    // ...to here.
 
+    // Creates a stream of user changes to Firebase Auth and listens to it Fires
+    // rebuild to listeners whenever there's a change in the user's login state.
     FirebaseAuth.instance.userChanges().asyncMap((user) async {
       if (user != null) {
         _loggedIn = true;
       }
-
-      // if (user != null) {
-      //   print(user.uid);
-      //   _loggedIn = true;
-      //   // if user's timetable is empty, create empty timetable to firestore, otherwise fetch timetable from firestore
-      //   await sortTimeTable();
-      //   if (docIDs.length == 0) {
-      //     saveTimeTable(_cellTaps);
-      //   } else if (docIDs.length > 0) {
-      //     DocumentSnapshot document = await fetchTimeTable(docIDs[0]);
-      //     print(document.data());
-      //   }
-      // }
       return user;
     }).listen((user) {
       if (user != null) {
@@ -132,12 +111,10 @@ class ApplicationState extends ChangeNotifier {
         _guestBookSubscription?.cancel();
         _attendingSubscription?.cancel();
       }
-
       notifyListeners();
     });
   }
 
-  // Add from here...
   Future<DocumentReference> addMessageToGuestBook(String message) {
     if (!_loggedIn) {
       throw Exception('Must be logged in');
@@ -150,7 +127,6 @@ class ApplicationState extends ChangeNotifier {
       'timestamp': DateTime.now().millisecondsSinceEpoch,
       'name': FirebaseAuth.instance.currentUser!.displayName,
       'userId': FirebaseAuth.instance.currentUser!.uid,
-      'time': "DateTime.now().millisecondsSinceEpoch as String",
     });
   }
 
@@ -220,15 +196,3 @@ class ApplicationState extends ChangeNotifier {
     return document;
   }
 }
-
-// get the user's time table that is unique to them, and there's only one of them.
-// Future getTimeTable() async {
-//   await FirebaseFirestore.instance
-//       .collection('timetable')
-//       .where('userId', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
-//       .orderBy('timestamp', descending: false)
-//       .get()
-//       .then((snapshot) => snapshot.docs.forEach((document) {
-//             docIDs.add(document.reference.id);
-//           }));
-
