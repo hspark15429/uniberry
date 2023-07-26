@@ -24,12 +24,6 @@ class ApplicationState extends ChangeNotifier {
   List<GuestBookMessage> get guestBookMessages => _guestBookMessages;
   // ...to here.
 
-  //timetable to firestore sync
-  // StreamSubscription<DocumentSnapshot>? _cellTapsSubscription;
-  Map<String, String> _cellTaps = {
-    for (int i = 1; i <= 25; i++) i.toString(): ""
-  };
-  Map<String, String> get cellTaps => _cellTaps;
   late List<String> docIDs = [];
 
   Future<void> init() async {
@@ -67,8 +61,6 @@ class ApplicationState extends ChangeNotifier {
           }
           notifyListeners();
         });
-
-        // saveTimeTable(_cellTaps);
       } else {
         _loggedIn = false;
         _guestBookMessages = [];

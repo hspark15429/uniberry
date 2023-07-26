@@ -8,14 +8,9 @@ import 'package:provider/provider.dart';
 
 import '../src/authentication.dart'; // new
 
-class AnonymousBoard extends StatefulWidget {
+class AnonymousBoard extends StatelessWidget {
   const AnonymousBoard({super.key});
 
-  @override
-  State<AnonymousBoard> createState() => _nameState();
-}
-
-class _nameState extends State<AnonymousBoard> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

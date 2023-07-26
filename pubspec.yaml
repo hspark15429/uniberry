@@ -86,6 +86,8 @@ flutter:
     - assets/school3.png
     - assets/lectures.json
     - assets/menuitems.json
+    - assets/foodpics/
+
 # flutter:
   # assets:
     - packages/shrine_images/0-0.jpg

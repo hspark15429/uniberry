@@ -19,13 +19,13 @@ class _TimetablePageState extends State<TimetablePage> {
   int time = int.parse(DateFormat('HHmm').format(DateTime.now()));
 
   // late ApplicationState appState;
-  late Map<String, String> cellTaps;
+  late Map<String, String> localTimetable;
   late int cellNow;
 
   @override
   void initState() {
     super.initState();
-    cellTaps = {for (int i = 1; i <= 25; i++) i.toString(): ""};
+    localTimetable = {for (int i = 1; i <= 25; i++) i.toString(): ""};
     setCurrentTimeSlot();
     loadServerTimetable();
   }
@@ -111,18 +111,18 @@ class _TimetablePageState extends State<TimetablePage> {
     color = Colors.white,
     bool interactable = false,
   }) {
-    // bool _hasEntry = cellTaps[cellIndex]!.isNotEmpty;
-    bool _canHaveEntry = cellTaps.containsKey(cellIndex);
+    bool _canHaveEntry = localTimetable.containsKey(cellIndex);
     _openEntryDialog() async {
       final dialogResult = await timetableEntryDialogBuilder(context,
-          currentLecture: cellTaps[cellIndex]!, currentCellNum: cellIndex);
+          currentLecture: localTimetable[cellIndex]!,
+          currentCellNum: cellIndex);
 
       if (dialogResult!.isEmpty) return;
       setState(() {
         if (dialogResult.contains('Save'))
-          cellTaps[cellIndex] = dialogResult.substring(4);
+          localTimetable[cellIndex] = dialogResult.substring(4);
         else if (dialogResult == 'Delete')
-          cellTaps[cellIndex] = "";
+          localTimetable[cellIndex] = "";
         else
           throw Exception('Invalid dialogResult');
       });
@@ -138,7 +138,7 @@ class _TimetablePageState extends State<TimetablePage> {
         // if the cell is a slot and has no entry, it's an interactable white cell,
         // if it has an entry, it has a colored button instead
         if (_canHaveEntry)
-          cellTaps[cellIndex]!.isEmpty
+          localTimetable[cellIndex]!.isEmpty
               ? Positioned(
                   top: 0,
                   left: 0,
@@ -160,7 +160,7 @@ class _TimetablePageState extends State<TimetablePage> {
                     width: width,
                     height: height,
                     child: ElevatedButton(
-                        child: Text(cellTaps[cellIndex]!),
+                        child: Text(localTimetable[cellIndex]!),
                         onPressed: _openEntryDialog,
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all<Color>(
@@ -219,19 +219,18 @@ class _TimetablePageState extends State<TimetablePage> {
         .where('userId', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
         .get()
         .then((QuerySnapshot querySnapshot) {
-      // cellTaps = appState.cellTaps;
       if (querySnapshot.docs.isNotEmpty) {
         for (var doc in querySnapshot.docs) {
           Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
 
           for (String key in data['currentTimetable'].keys) {
-            cellTaps[key] = data['currentTimetable'][key];
+            localTimetable[key] = data['currentTimetable'][key];
           }
         }
         setState(() {});
       } else {
         print('No documents found for this user');
-        // cellTaps = appState.cellTaps;
+
         uploadLocalTimetable();
       }
     });
@@ -245,7 +244,7 @@ class _TimetablePageState extends State<TimetablePage> {
         .then((QuerySnapshot querySnapshot) {
       if (querySnapshot.docs.isNotEmpty) {
         for (var doc in querySnapshot.docs) {
-          doc.reference.update({'currentTimetable': cellTaps});
+          doc.reference.update({'currentTimetable': localTimetable});
         }
       } else {
         print('No documents found for this user.');

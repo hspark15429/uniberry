@@ -66,8 +66,6 @@ class ApplicationState extends ChangeNotifier {
           }
           notifyListeners();
         });
-        // ...to here.
-        // saveTimeTable(_cellTaps);
       } else {
         _loggedIn = false;
         _attendingSubscription?.cancel();
