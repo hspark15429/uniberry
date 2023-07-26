@@ -34,6 +34,7 @@ class _TimetablePageState extends State<TimetablePage> {
     super.initState();
     setCurrentTimeSlot();
     loadServerTimetable();
+    cellTaps = {for (int i = 1; i <= 25; i++) i.toString(): ""};
   }
 
   @override

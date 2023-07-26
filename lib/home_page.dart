@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
         children: <Widget>[
           Image.asset('assets/schoolLogo.png', height: 140),
           const SizedBox(height: 8),
-          // DisplayName(),
+          DisplayName(),
           Consumer<ApplicationState>(
             builder: (context, appState, _) => AuthFunc(
                 loggedIn: appState.loggedIn,
@@ -73,10 +73,9 @@ class DisplayName extends StatelessWidget {
 
         var _canShowDisplayName = appState.loggedIn;
 
-        // if (_canShowDisplayName) {
-        //   final displayName = FirebaseAuth.instance.currentUser!.displayName!;
-        //   print(_canShowDisplayName);
-        // }
+        if (_canShowDisplayName) {
+          displayName = FirebaseAuth.instance.currentUser!.displayName!;
+        }
         return Center(child: Header(displayName));
       },
     );
