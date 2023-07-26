@@ -18,23 +18,16 @@ class _TimetablePageState extends State<TimetablePage> {
   int day = DateTime.now().weekday;
   int time = int.parse(DateFormat('HHmm').format(DateTime.now()));
 
-  late ApplicationState appState;
+  // late ApplicationState appState;
   late Map<String, String> cellTaps;
   late int cellNow;
 
   @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    appState = Provider.of<ApplicationState>(context);
-    cellTaps = appState.cellTaps;
-  }
-
-  @override
   void initState() {
     super.initState();
+    cellTaps = {for (int i = 1; i <= 25; i++) i.toString(): ""};
     setCurrentTimeSlot();
     loadServerTimetable();
-    cellTaps = {for (int i = 1; i <= 25; i++) i.toString(): ""};
   }
 
   @override
@@ -226,7 +219,7 @@ class _TimetablePageState extends State<TimetablePage> {
         .where('userId', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
         .get()
         .then((QuerySnapshot querySnapshot) {
-      cellTaps = appState.cellTaps;
+      // cellTaps = appState.cellTaps;
       if (querySnapshot.docs.isNotEmpty) {
         for (var doc in querySnapshot.docs) {
           Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
@@ -238,7 +231,7 @@ class _TimetablePageState extends State<TimetablePage> {
         setState(() {});
       } else {
         print('No documents found for this user');
-        cellTaps = appState.cellTaps;
+        // cellTaps = appState.cellTaps;
         uploadLocalTimetable();
       }
     });

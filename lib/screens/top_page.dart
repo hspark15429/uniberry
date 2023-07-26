@@ -55,9 +55,7 @@ class _TopPageState extends State<TopPage> {
         Container(
           color: Colors.green,
           alignment: Alignment.center,
-          child: Consumer<ApplicationState>(
-            builder: (context, appState, _) => TimetablePage(),
-          ),
+          child: const TimetablePage(),
         ),
         Container(
           color: Colors.blue,
