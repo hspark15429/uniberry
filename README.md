@@ -44,3 +44,28 @@ App Widget Tree
 ![Uniberry](https://github.com/hspark15429/uniberry/assets/10104871/6015cfbe-182b-47ac-bbee-bfb795d88523)
 
 
+TimeTable
+    multiple timetables
+    many states
+    timetables = { timetable1, timetable2,}
+    chooseTimeTable
+    loadtimetable
+
+User enters timetable page. before loading another timetable, save current timetable
+statefulwidget timetable
+    from Appstate = servertimetable
+    save to server everytime there's a change in the timetable
+    max 10 timetables
+
+Consumer<ApplicationState>
+    localTimetable = appState.timetables[i]
+
+userDatauserData (same in server and client)
+    user.uid
+    user.email
+    user.name
+    user.timetables
+        timetable1 : {lastUpdated: 123123, timetable: Map}
+        timetable2 : {lastUpdated: 123123, timetable: Map}
+
+AppState.localTimetable(int index) = 0

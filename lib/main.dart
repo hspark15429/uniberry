@@ -58,9 +58,11 @@ final _router = GoRouter(
                     // create user in firestore
                     user.updateDisplayName(user.email!.split('@')[0]);
                     FirebaseFirestore.instance.collection('users').add({
-                      'userId': FirebaseAuth.instance.currentUser!.uid,
+                      'uid': FirebaseAuth.instance.currentUser!.uid,
                       'email': FirebaseAuth.instance.currentUser!.email,
-                      'currentTimetable': {'1': ''},
+                      'timetables': {
+                        'timetable1': {"1": ""}
+                      },
                     }).then((value) {
                       print("User Added");
                     }).catchError((error) {

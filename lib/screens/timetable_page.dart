@@ -216,17 +216,22 @@ class _TimetablePageState extends State<TimetablePage> {
   void loadServerTimetable() {
     FirebaseFirestore.instance
         .collection('users')
-        .where('userId', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
+        .where('uid', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
         .get()
         .then((QuerySnapshot querySnapshot) {
       if (querySnapshot.docs.isNotEmpty) {
         for (var doc in querySnapshot.docs) {
           Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
 
-          for (String key in data['currentTimetable'].keys) {
-            localTimetable[key] = data['currentTimetable'][key];
+          for (String timetable in data['timetables'].keys) {
+            if (timetable == "timetable1") {
+              for (String key in data['timetables']['timetable1'].keys) {
+                localTimetable[key] = data['timetables']['timetable1'][key];
+              }
+            }
           }
         }
+
         setState(() {});
       } else {
         print('No documents found for this user');
@@ -239,12 +244,12 @@ class _TimetablePageState extends State<TimetablePage> {
   void uploadLocalTimetable() {
     FirebaseFirestore.instance
         .collection('users')
-        .where('userId', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
+        .where('uid', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
         .get()
         .then((QuerySnapshot querySnapshot) {
       if (querySnapshot.docs.isNotEmpty) {
         for (var doc in querySnapshot.docs) {
-          doc.reference.update({'currentTimetable': localTimetable});
+          doc.reference.update({'timetables.timetable1': localTimetable});
         }
       } else {
         print('No documents found for this user.');

@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
         children: <Widget>[
           Image.asset('assets/schoolLogo.png', height: 140),
           const SizedBox(height: 8),
-          DisplayName(),
+          // DisplayName(),
           Consumer<ApplicationState>(
             builder: (context, appState, _) => AuthFunc(
                 loggedIn: appState.loggedIn,

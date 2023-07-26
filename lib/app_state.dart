@@ -8,7 +8,8 @@ import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'firebase_options.dart';
-import 'guest_book_message.dart'; // new
+import 'guest_book_message.dart';
+import 'model/timetable_events_set.dart'; // new
 
 class ApplicationState extends ChangeNotifier {
   ApplicationState() {
@@ -17,6 +18,25 @@ class ApplicationState extends ChangeNotifier {
 
   bool _loggedIn = false;
   bool get loggedIn => _loggedIn;
+
+  final List<TimetableEventsSet> eventSets = [];
+
+  TimetableEventsSet? _currentEventsSet;
+  TimetableEventsSet? get currentEventsSet => _currentEventsSet;
+  set currentEventsSet(TimetableEventsSet? value) {
+    _currentEventsSet = value;
+    notifyListeners();
+  }
+
+  void loadEventsSets() {
+    // fetch events sets from firestore
+    notifyListeners();
+  }
+
+  void removeEventSet(String setId) {
+    eventSets.removeWhere((set) => set.id == setId);
+    notifyListeners();
+  }
 
   // Add from here...
   StreamSubscription<QuerySnapshot>? _guestBookSubscription;
