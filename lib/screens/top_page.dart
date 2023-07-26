@@ -4,6 +4,7 @@ import 'package:gtk_flutter/screens/anonymous_board.dart';
 import 'package:gtk_flutter/screens/cafeteria_page.dart';
 import 'package:gtk_flutter/screens/timetable_page.dart';
 import 'package:provider/provider.dart';
+import 'package:gtk_flutter/src/widgets.dart';
 
 class TopPage extends StatefulWidget {
   const TopPage({Key? key}) : super(key: key);
@@ -13,7 +14,7 @@ class TopPage extends StatefulWidget {
 }
 
 class _TopPageState extends State<TopPage> {
-  int currentPageIndex = 0;
+  int currentPageIndex = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +49,9 @@ class _TopPageState extends State<TopPage> {
       ),
       body: <Widget>[
         Container(
-          color: Colors.yellow,
+          // color: Colors.yellow,
           alignment: Alignment.center,
-          child: const Text('Page 1'),
+          child: const Header('Work In Progress'),
         ),
         Container(
           color: Colors.green,
