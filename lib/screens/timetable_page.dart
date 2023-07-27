@@ -40,26 +40,125 @@ class _TimetablePageState extends State<TimetablePage> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-            title: Text('Timetable'),
+            title: Text('Timetable$_timetableIndex'),
             backgroundColor: Colors.black,
             actions: [
               IconButton(
-                  icon: const Icon(CupertinoIcons.trash),
-                  tooltip: 'Open shopping cart',
+                  icon: const Icon(Icons.cleaning_services_outlined),
+                  tooltip: 'Clean up',
                   onPressed: () {
-                    // handle the press
+                    setState(() {
+                      localTimetable = {
+                        for (int i = 1; i <= 25; i++) i.toString(): ""
+                      };
+                    });
                   }),
               IconButton(
                   icon: const Icon(CupertinoIcons.settings),
-                  tooltip: 'Open shopping cart',
+                  tooltip: 'More options',
                   onPressed: () {
                     // handle the press
+                    showModalBottomSheet(
+                        context: context,
+                        builder: (builder) {
+                          return Wrap(
+                            children: [
+                              ListTile(
+                                leading: Icon(Icons.share),
+                                title: Text('Share'),
+                              ),
+                              ListTile(
+                                leading: Icon(Icons.copy),
+                                title: Text('Copy Link'),
+                              ),
+                              ListTile(
+                                leading: Icon(Icons.edit),
+                                title: Text('Edit'),
+                              ),
+                            ],
+                          );
+                        });
                   }),
               IconButton(
                   icon: const Icon(CupertinoIcons.bars),
-                  tooltip: 'Open shopping cart',
+                  tooltip: 'Timetable List',
                   onPressed: () {
                     // handle the press
+                    showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            title: Text('Timetable List'),
+                            content: Text('Select a timetable to view'),
+                            actions: [
+                              TextButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      _timetableIndex = 1;
+                                      localTimetable = {
+                                        for (int i = 1; i <= 25; i++)
+                                          i.toString(): ""
+                                      };
+                                      loadServerTimetable();
+                                    });
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: Text('Timetable 1')),
+                              TextButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      _timetableIndex = 2;
+                                      localTimetable = {
+                                        for (int i = 1; i <= 25; i++)
+                                          i.toString(): ""
+                                      };
+                                      loadServerTimetable();
+                                    });
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: Text('Timetable 2')),
+                              TextButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      _timetableIndex = 3;
+                                      localTimetable = {
+                                        for (int i = 1; i <= 25; i++)
+                                          i.toString(): ""
+                                      };
+                                      loadServerTimetable();
+                                    });
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: Text('Timetable 3')),
+                              TextButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      _timetableIndex = 4;
+                                      localTimetable = {
+                                        for (int i = 1; i <= 25; i++)
+                                          i.toString(): ""
+                                      };
+                                      loadServerTimetable();
+                                    });
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: Text('Timetable 4')),
+                              TextButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      _timetableIndex = 5;
+                                      localTimetable = {
+                                        for (int i = 1; i <= 25; i++)
+                                          i.toString(): ""
+                                      };
+                                      loadServerTimetable();
+                                    });
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: Text('Timetable 5')),
+                            ],
+                          );
+                        });
                   })
             ]),
         body: SingleChildScrollView(
@@ -125,6 +224,7 @@ class _TimetablePageState extends State<TimetablePage> {
               SizedBox(height: 20),
               Row(
                 children: [
+                  SizedBox(width: 20),
                   BottomInfo(),
                 ],
               ),

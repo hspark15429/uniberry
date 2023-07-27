@@ -28,22 +28,20 @@ class _TopPageState extends State<TopPage> {
         selectedIndex: currentPageIndex,
         destinations: const <Widget>[
           NavigationDestination(
-            icon: Icon(Icons.explore),
-            label: '홈',
+            icon: Icon(Icons.home),
+            label: 'Home',
           ),
           NavigationDestination(
-            icon: Icon(Icons.commute),
-            label: '시간표',
+            icon: Icon(Icons.school),
+            label: 'TimeTable',
           ),
           NavigationDestination(
-            selectedIcon: Icon(Icons.bookmark),
-            icon: Icon(Icons.bookmark_border),
-            label: '익명게시판',
+            icon: Icon(Icons.forum),
+            label: 'Chat',
           ),
           NavigationDestination(
-            selectedIcon: Icon(Icons.bookmark),
-            icon: Icon(Icons.bookmark_border),
-            label: '급식표/강의평가/중고거래',
+            icon: Icon(Icons.ramen_dining),
+            label: 'Cafeteria',
           ),
         ],
       ),
