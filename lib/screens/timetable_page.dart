@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gtk_flutter/app_state.dart';
 import 'package:intl/intl.dart';
@@ -39,64 +40,93 @@ class _TimetablePageState extends State<TimetablePage> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Timetable'),
-          backgroundColor: Colors.black,
-        ),
+            title: Text('Timetable'),
+            backgroundColor: Colors.black,
+            actions: [
+              IconButton(
+                  icon: const Icon(CupertinoIcons.trash),
+                  tooltip: 'Open shopping cart',
+                  onPressed: () {
+                    // handle the press
+                  }),
+              IconButton(
+                  icon: const Icon(CupertinoIcons.settings),
+                  tooltip: 'Open shopping cart',
+                  onPressed: () {
+                    // handle the press
+                  }),
+              IconButton(
+                  icon: const Icon(CupertinoIcons.bars),
+                  tooltip: 'Open shopping cart',
+                  onPressed: () {
+                    // handle the press
+                  })
+            ]),
         body: SingleChildScrollView(
-          child: Row(
-            children: <Widget>[
-              Expanded(
-                flex: 1,
-                child: LayoutBuilder(
-                  builder: (context, constraints) => Table(
-                    border: TableBorder.all(),
-                    children: [
-                      TableRow(children: [
-                        _buildCell('', height: 50),
-                      ]),
-                      TableRow(children: [
-                        _buildCell('09:00\n10:30'),
-                      ]),
-                      TableRow(children: [
-                        _buildCell('10:40\n12:10'),
-                      ]),
-                      TableRow(children: [
-                        _buildCell('13:00\n14:30'),
-                      ]),
-                      TableRow(children: [
-                        _buildCell('14:40\n16:10'),
-                      ]),
-                      TableRow(children: [
-                        _buildCell('16:20\n17:50'),
-                      ])
-                    ],
+          child: Column(
+            children: [
+              Row(
+                children: <Widget>[
+                  Expanded(
+                    flex: 1,
+                    child: LayoutBuilder(
+                      builder: (context, constraints) => Table(
+                        border: TableBorder.all(),
+                        children: [
+                          TableRow(children: [
+                            _buildCell('', height: 50),
+                          ]),
+                          TableRow(children: [
+                            _buildCell('09:00\n10:30'),
+                          ]),
+                          TableRow(children: [
+                            _buildCell('10:40\n12:10'),
+                          ]),
+                          TableRow(children: [
+                            _buildCell('13:00\n14:30'),
+                          ]),
+                          TableRow(children: [
+                            _buildCell('14:40\n16:10'),
+                          ]),
+                          TableRow(children: [
+                            _buildCell('16:20\n17:50'),
+                          ])
+                        ],
+                      ),
+                    ),
                   ),
-                ),
+                  Expanded(
+                    flex: 8,
+                    child: LayoutBuilder(builder: (context, constraints) {
+                      double expandedWidth = constraints.maxWidth * 0.2;
+                      return Table(
+                        border: TableBorder.all(),
+                        children: [
+                          TableRow(children: [
+                            _buildCell('Mon', height: 50),
+                            _buildCell('Tue', height: 50),
+                            _buildCell('Wed', height: 50),
+                            _buildCell('Thur', height: 50),
+                            _buildCell('Fri', height: 50),
+                          ]),
+                          // 25 cells in total
+                          for (int i = 0; i <= 4; i++)
+                            TableRow(children: [
+                              for (int j = 1; j <= 5; j++)
+                                _buildCell('${i * 5 + j}',
+                                    width: expandedWidth, interactable: true)
+                            ]),
+                        ],
+                      );
+                    }),
+                  ),
+                ],
               ),
-              Expanded(
-                flex: 10,
-                child: LayoutBuilder(builder: (context, constraints) {
-                  double expandedWidth = constraints.maxWidth * 0.2;
-                  return Table(
-                    border: TableBorder.all(),
-                    children: [
-                      TableRow(children: [
-                        _buildCell('Mon', height: 50),
-                        _buildCell('Tue', height: 50),
-                        _buildCell('Wed', height: 50),
-                        _buildCell('Thur', height: 50),
-                        _buildCell('Fri', height: 50),
-                      ]),
-                      // 25 cells in total
-                      for (int i = 0; i <= 4; i++)
-                        TableRow(children: [
-                          for (int j = 1; j <= 5; j++)
-                            _buildCell('${i * 5 + j}',
-                                width: expandedWidth, interactable: true)
-                        ]),
-                    ],
-                  );
-                }),
+              SizedBox(height: 20),
+              Row(
+                children: [
+                  BottomInfo(),
+                ],
               ),
             ],
           ),
@@ -107,8 +137,8 @@ class _TimetablePageState extends State<TimetablePage> {
 
   Widget _buildCell(
     String cellIndex, {
-    double height = 120,
-    double width = 100,
+    double height = 80,
+    double width = 50,
     color = Colors.white,
     bool interactable = false,
   }) {
@@ -161,7 +191,10 @@ class _TimetablePageState extends State<TimetablePage> {
                     width: width,
                     height: height,
                     child: ElevatedButton(
-                        child: Text(localTimetable[cellIndex]!),
+                        child: Text(
+                          localTimetable[cellIndex]!,
+                          style: TextStyle(fontSize: 8),
+                        ),
                         onPressed: _openEntryDialog,
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all<Color>(
@@ -257,5 +290,56 @@ class _TimetablePageState extends State<TimetablePage> {
         print('No documents found for this user.');
       }
     });
+  }
+}
+
+class BottomInfo extends StatelessWidget {
+  const BottomInfo({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Table(
+      defaultColumnWidth:
+          FixedColumnWidth(MediaQuery.of(context).size.width / 4),
+      children: const [
+        TableRow(children: [
+          Text(
+            "GPA",
+            style: TextStyle(fontSize: 25.0),
+          ),
+          Text(
+            "Credits",
+            style: TextStyle(fontSize: 25.0),
+          ),
+          Text(
+            "Notes",
+            style: TextStyle(fontSize: 25.0),
+            textAlign: TextAlign.right,
+          ),
+        ]),
+        TableRow(children: [
+          TableCell(child: SizedBox(height: 20)),
+          TableCell(child: SizedBox(height: 20)),
+          TableCell(child: SizedBox(height: 20)),
+        ]),
+        TableRow(children: [
+          Text(
+            "0.00/0.00",
+            style: TextStyle(fontSize: 15.0),
+          ),
+          Text(
+            "80/124",
+            style: TextStyle(fontSize: 15.0),
+          ),
+          Text(
+            "",
+            style: TextStyle(fontSize: 15.0),
+            textAlign: TextAlign.right,
+          ),
+        ]),
+      ],
+    );
   }
 }
