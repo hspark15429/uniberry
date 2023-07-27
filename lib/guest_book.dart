@@ -61,9 +61,15 @@ class _GuestBookState extends State<GuestBook> {
                   },
                   child: Row(
                     children: const [
-                      Icon(Icons.send),
+                      Icon(
+                        color: Colors.black,
+                        Icons.send,
+                      ),
                       SizedBox(width: 4),
-                      Text('SEND'),
+                      Text(
+                        style: TextStyle(color: Colors.black),
+                        'SEND',
+                      ),
                     ],
                   ),
                 ),
@@ -74,7 +80,7 @@ class _GuestBookState extends State<GuestBook> {
         // Modify from here...
         const SizedBox(height: 8),
         for (var message in widget.messages) ...[
-          Paragraph('익명: ${message.message}'),
+          Paragraph('Anon: ${message.message}'),
           // Paragraph('${message.message}')
         ],
         const SizedBox(height: 8),
