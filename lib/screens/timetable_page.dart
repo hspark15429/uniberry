@@ -17,6 +17,7 @@ class TimetablePage extends StatefulWidget {
 class _TimetablePageState extends State<TimetablePage> {
   int day = DateTime.now().weekday;
   int time = int.parse(DateFormat('HHmm').format(DateTime.now()));
+  int _timetableIndex = 1;
 
   // late ApplicationState appState;
   late Map<String, String> localTimetable;
@@ -224,9 +225,9 @@ class _TimetablePageState extends State<TimetablePage> {
           Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
 
           for (String timetable in data['timetables'].keys) {
-            if (timetable == "timetable1") {
-              for (String key in data['timetables']['timetable1'].keys) {
-                localTimetable[key] = data['timetables']['timetable1'][key];
+            if (timetable == "timetable$_timetableIndex") {
+              for (String key in data['timetables'][timetable].keys) {
+                localTimetable[key] = data['timetables'][timetable][key];
               }
             }
           }
@@ -249,7 +250,8 @@ class _TimetablePageState extends State<TimetablePage> {
         .then((QuerySnapshot querySnapshot) {
       if (querySnapshot.docs.isNotEmpty) {
         for (var doc in querySnapshot.docs) {
-          doc.reference.update({'timetables.timetable1': localTimetable});
+          doc.reference
+              .update({'timetables.timetable$_timetableIndex': localTimetable});
         }
       } else {
         print('No documents found for this user.');

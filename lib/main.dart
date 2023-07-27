@@ -61,7 +61,7 @@ final _router = GoRouter(
                       'uid': FirebaseAuth.instance.currentUser!.uid,
                       'email': FirebaseAuth.instance.currentUser!.email,
                       'timetables': {
-                        'timetable1': {"1": ""}
+                        for (var i = 1; i <= 10; i++) 'timetable$i': {"1": ""}
                       },
                     }).then((value) {
                       print("User Added");
