@@ -12,7 +12,7 @@
             "average": 0,
             "bad": 10
         },
-        "category": "主菜　Main dish"
+        "category": "主菜 Main dish"
     },
     {
         "id": 1,
@@ -27,7 +27,7 @@
             "average": 1,
             "bad": 0
         },
-        "category": "主菜　Main dish"
+        "category": "主菜 Main dish"
     },
     {
         "id": 2,
@@ -42,7 +42,7 @@
             "average": 0,
             "bad": 0
         },
-        "category": "主菜　Main dish"
+        "category": "主菜 Main dish"
     },
     {
         "id": 3,
@@ -57,7 +57,7 @@
             "average": 6,
             "bad": 0
         },
-        "category": "主菜　Main dish"
+        "category": "主菜 Main dish"
     },
     {
         "id": 4,
@@ -72,7 +72,7 @@
             "average": 4,
             "bad": 1
         },
-        "category": "主菜　Main dish"
+        "category": "主菜 Main dish"
     },
     {
         "id": 5,
@@ -87,7 +87,7 @@
             "average": 3,
             "bad": 1
         },
-        "category": "主菜　Main dish"
+        "category": "主菜 Main dish"
     },
     {
         "id": 6,
@@ -102,7 +102,7 @@
             "average": 16,
             "bad": 8
         },
-        "category": "副菜　Side dish"
+        "category": "副菜 Side dish"
     },
     {
         "id": 7,
@@ -117,7 +117,7 @@
             "average": 0,
             "bad": 0
         },
-        "category": "副菜　Side dish"
+        "category": "副菜 Side dish"
     },
     {
         "id": 8,
@@ -132,7 +132,7 @@
             "average": 28,
             "bad": 6
         },
-        "category": "副菜　Side dish"
+        "category": "副菜 Side dish"
     },
     {
         "id": 9,
@@ -147,7 +147,7 @@
             "average": 7,
             "bad": 0
         },
-        "category": "副菜　Side dish"
+        "category": "副菜 Side dish"
     },
     {
         "id": 10,
@@ -162,7 +162,7 @@
             "average": 6,
             "bad": 0
         },
-        "category": "副菜　Side dish"
+        "category": "副菜 Side dish"
     },
     {
         "id": 11,
@@ -177,7 +177,7 @@
             "average": 7,
             "bad": 0
         },
-        "category": "副菜　Side dish"
+        "category": "副菜 Side dish"
     },
     {
         "id": 12,
@@ -192,7 +192,7 @@
             "average": 8,
             "bad": 0
         },
-        "category": "副菜　Side dish"
+        "category": "副菜 Side dish"
     },
     {
         "id": 13,
@@ -207,7 +207,7 @@
             "average": 1,
             "bad": 7
         },
-        "category": "副菜　Side dish"
+        "category": "副菜 Side dish"
     },
     {
         "id": 14,
@@ -222,7 +222,7 @@
             "average": 32,
             "bad": 28
         },
-        "category": "副菜　Side dish"
+        "category": "副菜 Side dish"
     },
     {
         "id": 15,
@@ -237,7 +237,7 @@
             "average": 2,
             "bad": 0
         },
-        "category": "副菜　Side dish"
+        "category": "副菜 Side dish"
     },
     {
         "id": 16,
@@ -252,7 +252,7 @@
             "average": 3,
             "bad": 0
         },
-        "category": "麺類　Noodles"
+        "category": "麺類 Noodles"
     },
     {
         "id": 17,
@@ -267,7 +267,7 @@
             "average": 0,
             "bad": 0
         },
-        "category": "麺類　Noodles"
+        "category": "麺類 Noodles"
     },
     {
         "id": 18,
@@ -282,7 +282,7 @@
             "average": 1,
             "bad": 0
         },
-        "category": "麺類　Noodles"
+        "category": "麺類 Noodles"
     },
     {
         "id": 19,
@@ -297,7 +297,7 @@
             "average": 1,
             "bad": 1
         },
-        "category": "麺類　Noodles"
+        "category": "麺類 Noodles"
     },
     {
         "id": 20,
@@ -312,7 +312,7 @@
             "average": 1,
             "bad": 1
         },
-        "category": "麺類　Noodles"
+        "category": "麺類 Noodles"
     },
     {
         "id": 21,
@@ -327,7 +327,7 @@
             "average": 9,
             "bad": 1
         },
-        "category": "丼・カレー　Rice bowl / Curry"
+        "category": "丼・カレー Rice bowl / Curry"
     },
     {
         "id": 22,
@@ -342,7 +342,7 @@
             "average": 3,
             "bad": 2
         },
-        "category": "丼・カレー　Rice bowl / Curry"
+        "category": "丼・カレー Rice bowl / Curry"
     },
     {
         "id": 23,
@@ -357,7 +357,7 @@
             "average": 0,
             "bad": 0
         },
-        "category": "丼・カレー　Rice bowl / Curry"
+        "category": "丼・カレー Rice bowl / Curry"
     },
     {
         "id": 24,
@@ -372,7 +372,7 @@
             "average": 18,
             "bad": 2
         },
-        "category": "丼・カレー　Rice bowl / Curry"
+        "category": "丼・カレー Rice bowl / Curry"
     },
     {
         "id": 25,
@@ -387,7 +387,7 @@
             "average": 0,
             "bad": 2
         },
-        "category": "丼・カレー　Rice bowl / Curry"
+        "category": "丼・カレー Rice bowl / Curry"
     },
     {
         "id": 26,
@@ -402,7 +402,7 @@
             "average": 1,
             "bad": 0
         },
-        "category": "デザート　Dessert"
+        "category": "デザート Dessert"
     },
     {
         "id": 27,
@@ -417,7 +417,7 @@
             "average": 15,
             "bad": 11
         },
-        "category": "デザート　Dessert"
+        "category": "デザート Dessert"
     },
     {
         "id": 28,
@@ -432,7 +432,7 @@
             "average": 1,
             "bad": 0
         },
-        "category": "デザート　Dessert"
+        "category": "デザート Dessert"
     },
     {
         "id": 29,
@@ -447,7 +447,7 @@
             "average": 14,
             "bad": 3
         },
-        "category": "デザート　Dessert"
+        "category": "デザート Dessert"
     },
     {
         "id": 30,
@@ -462,7 +462,7 @@
             "average": 1,
             "bad": 1
         },
-        "category": "デザート　Dessert"
+        "category": "デザート Dessert"
     },
     {
         "id": 31,
@@ -477,6 +477,6 @@
             "average": 10,
             "bad": 1
         },
-        "category": "デザート　Dessert"
+        "category": "デザート Dessert"
     }
 ]

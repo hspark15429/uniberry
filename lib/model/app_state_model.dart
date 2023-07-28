@@ -112,13 +112,23 @@ class AppStateModel extends foundation.ChangeNotifier {
 
 Future<List<Product>> loadMenuItems() async {
   List<Product> allMenuItems = [];
+  final categoryMapping = {
+    "デザート Dessert": Category.dessert,
+    "丼・カレー Rice bowl / Curry": Category.rice,
+    "麺類 Noodles": Category.noodle,
+    "副菜 Side dish": Category.sideDish,
+    "主菜 Main dish": Category.mainDish,
+    // add the rest of your mappings here
+  };
 
   String jsonString = await rootBundle.loadString('assets/menuitems.json');
   List<dynamic> menuData = jsonDecode(jsonString);
   for (var menu in menuData) {
     allMenuItems.add(
       Product(
-        category: Category.noodle,
+        category: categoryMapping[menu['category']] == null
+            ? Category.all
+            : categoryMapping[menu['category']]!,
         id: menu['id'],
         name_jp: menu['name_jp'],
         name_en: menu['name_en'],
