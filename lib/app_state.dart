@@ -94,7 +94,6 @@ class ApplicationState extends ChangeNotifier {
     if (!_loggedIn) {
       throw Exception('Must be logged in');
     }
-
     return FirebaseFirestore.instance
         .collection('guestbook')
         .add(<String, dynamic>{
