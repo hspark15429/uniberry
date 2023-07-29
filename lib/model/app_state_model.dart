@@ -119,6 +119,9 @@ Future<List<Product>> loadMenuItems() async {
     "副菜 Side dish": Category.sideDish,
     "主菜 Main dish": Category.mainDish,
     // add the rest of your mappings here
+    "All": Category.all,
+    "Ethnic": Category.ethnic,
+    "Quickbite": Category.quickbite,
   };
 
   String jsonString = await rootBundle.loadString('assets/menuitems.json');

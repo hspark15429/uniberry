@@ -8,10 +8,10 @@ class CafeteriaPage extends StatefulWidget {
   const CafeteriaPage({super.key});
 
   @override
-  State<CafeteriaPage> createState() => _nameState();
+  State<CafeteriaPage> createState() => menuState();
 }
 
-class _nameState extends State<CafeteriaPage> {
+class menuState extends State<CafeteriaPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
