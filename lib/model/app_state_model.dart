@@ -31,20 +31,20 @@ class AppStateModel extends foundation.ChangeNotifier {
     return _selectedCategory;
   }
 
-  // // Totaled prices of the items in the cart.
-  // double get subtotalCost {
-  //   return _productsInCart.keys.map((id) {
-  //     // Extended price for product line
-  //     return getProductById(id).price * _productsInCart[id]!;
-  //   }).fold(0, (accumulator, extendedPrice) {
-  //     return accumulator + extendedPrice;
-  //   });
-  // }
+  // Totaled prices of the items in the cart.
+  double get subtotalCost {
+    return _productsInCart.keys.map((id) {
+      // Extended price for product line
+      return getProductById(id).price * _productsInCart[id]!;
+    }).fold(0, (accumulator, extendedPrice) {
+      return accumulator + extendedPrice;
+    });
+  }
 
-  // // Total cost to order everything in the cart.
-  // double get totalCost {
-  //   return subtotalCost;
-  // }
+  // Total cost to order everything in the cart.
+  double get totalCost {
+    return subtotalCost;
+  }
 
   // Returns a copy of the list of available products, filtered by category.
   List<Product> getProducts() => switch (_selectedCategory) {
@@ -85,10 +85,10 @@ class AppStateModel extends foundation.ChangeNotifier {
     notifyListeners();
   }
 
-  // // Returns the Product instance matching the provided id.
-  // Product getProductById(int id) {
-  //   return _availableProducts.firstWhere((p) => p.id == id);
-  // }
+  // Returns the Product instance matching the provided id.
+  Product getProductById(int id) {
+    return _availableProducts.firstWhere((p) => p.id == id);
+  }
 
   // Removes everything from the cart.
   void clearCart() {
