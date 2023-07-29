@@ -403,7 +403,7 @@ class BottomInfo extends StatelessWidget {
     return Table(
       defaultColumnWidth:
           FixedColumnWidth(MediaQuery.of(context).size.width / 4),
-      children: const [
+      children: [
         TableRow(children: [
           Text(
             "GPA",
@@ -416,7 +416,7 @@ class BottomInfo extends StatelessWidget {
           Text(
             "Notes",
             style: TextStyle(fontSize: 25.0),
-            textAlign: TextAlign.right,
+            // textAlign: TextAlign.right,
           ),
         ]),
         TableRow(children: [
@@ -425,21 +425,39 @@ class BottomInfo extends StatelessWidget {
           TableCell(child: SizedBox(height: 20)),
         ]),
         TableRow(children: [
-          Text(
-            "0.00/0.00",
+          TextField(
+            controller: TextEditingController()..text = '0.00/0.00',
             style: TextStyle(fontSize: 15.0),
           ),
-          Text(
-            "80/124",
+          TextField(
+            controller: TextEditingController()..text = '0/0',
             style: TextStyle(fontSize: 15.0),
           ),
-          Text(
-            "",
+          TextField(
+            controller: TextEditingController()..text = 'abc...',
             style: TextStyle(fontSize: 15.0),
-            textAlign: TextAlign.right,
+            // textAlign: TextAlign.right,
           ),
         ]),
       ],
     );
+  }
+
+  void uploadBottomInfo() {
+    FirebaseFirestore.instance
+        .collection('users')
+        .where('uid', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
+        .get()
+        .then((QuerySnapshot querySnapshot) {
+      if (querySnapshot.docs.isNotEmpty) {
+        for (var doc in querySnapshot.docs) {
+          doc.reference.update({'GPA': "2.0/4.5"});
+          doc.reference.update({'credits': "80/124"});
+          doc.reference.update({'notes': "OK..."});
+        }
+      } else {
+        print('No documents found for this user.');
+      }
+    });
   }
 }

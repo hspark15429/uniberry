@@ -7,16 +7,19 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Column(
-        children: [
-          // SizedBox(
-          //   height: 1,
-          // ),
-          ElevatedButton(
-            onPressed: () => openUrl('https://en.ritsumei.ac.jp/'),
-            child: Text('School Website'),
-          ),
-        ],
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // SizedBox(
+            //   height: 1,
+            // ),
+            ElevatedButton(
+              onPressed: () => openUrl('https://en.ritsumei.ac.jp/'),
+              child: Text('School Website'),
+            ),
+          ],
+        ),
       ),
     );
   }
