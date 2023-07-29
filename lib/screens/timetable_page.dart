@@ -23,20 +23,23 @@ class _TimetablePageState extends State<TimetablePage> {
   // late ApplicationState appState;
   late Map<String, String> localTimetable;
   late int cellNow;
+  late List<String> bottomInfo;
 
   @override
   void initState() {
     super.initState();
     localTimetable = {for (int i = 1; i <= 25; i++) i.toString(): ""};
+    bottomInfo = ["0.00/0.00", "0/0", "abc..."];
     setCurrentTimeSlot();
     loadServerTimetable();
+    loadServerBottomInfo();
   }
 
   @override
   Widget build(BuildContext context) {
     // save current timetable to firestore
     uploadLocalTimetable();
-
+    uploadBottomInfo();
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -225,7 +228,56 @@ class _TimetablePageState extends State<TimetablePage> {
               Row(
                 children: [
                   SizedBox(width: 20),
-                  BottomInfo(),
+                  Table(
+                    defaultColumnWidth:
+                        FixedColumnWidth(MediaQuery.of(context).size.width / 4),
+                    children: [
+                      TableRow(children: [
+                        Text(
+                          "GPA",
+                          style: TextStyle(fontSize: 25.0),
+                        ),
+                        Text(
+                          "Credits",
+                          style: TextStyle(fontSize: 25.0),
+                        ),
+                        Text(
+                          "Notes",
+                          style: TextStyle(fontSize: 25.0),
+                          // textAlign: TextAlign.right,
+                        ),
+                      ]),
+                      TableRow(children: [
+                        TableCell(child: SizedBox(height: 20)),
+                        TableCell(child: SizedBox(height: 20)),
+                        TableCell(child: SizedBox(height: 20)),
+                      ]),
+                      TableRow(children: [
+                        TextField(
+                          onChanged: (value) =>
+                              {bottomInfo[0] = value, uploadBottomInfo()},
+                          controller: TextEditingController()
+                            ..text = bottomInfo[0],
+                          style: TextStyle(fontSize: 15.0),
+                        ),
+                        TextField(
+                          onChanged: (value) =>
+                              {bottomInfo[1] = value, uploadBottomInfo()},
+                          controller: TextEditingController()
+                            ..text = bottomInfo[1],
+                          style: TextStyle(fontSize: 15.0),
+                        ),
+                        TextField(
+                          onChanged: (value) =>
+                              {bottomInfo[2] = value, uploadBottomInfo()},
+                          controller: TextEditingController()
+                            ..text = bottomInfo[2],
+                          style: TextStyle(fontSize: 15.0),
+                          // textAlign: TextAlign.right,
+                        ),
+                      ]),
+                    ],
+                  ),
                 ],
               ),
             ],
@@ -391,6 +443,45 @@ class _TimetablePageState extends State<TimetablePage> {
       }
     });
   }
+
+  void uploadBottomInfo() {
+    FirebaseFirestore.instance
+        .collection('users')
+        .where('uid', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
+        .get()
+        .then((QuerySnapshot querySnapshot) {
+      if (querySnapshot.docs.isNotEmpty) {
+        for (var doc in querySnapshot.docs) {
+          doc.reference.update({'GPA': bottomInfo[0]});
+          doc.reference.update({'credits': bottomInfo[1]});
+          doc.reference.update({'notes': bottomInfo[2]});
+        }
+      } else {
+        print('No documents found for this user.');
+      }
+    });
+  }
+
+  void loadServerBottomInfo() {
+    FirebaseFirestore.instance
+        .collection('users')
+        .where('uid', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
+        .get()
+        .then((QuerySnapshot querySnapshot) {
+      if (querySnapshot.docs.isNotEmpty) {
+        for (var doc in querySnapshot.docs) {
+          Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
+          bottomInfo[0] = data['GPA'];
+          bottomInfo[1] = data['credits'];
+          bottomInfo[2] = data['notes'];
+        }
+        setState(() {});
+      } else {
+        print('No documents found for this user');
+        uploadBottomInfo();
+      }
+    });
+  }
 }
 
 class BottomInfo extends StatelessWidget {
@@ -441,23 +532,5 @@ class BottomInfo extends StatelessWidget {
         ]),
       ],
     );
-  }
-
-  void uploadBottomInfo() {
-    FirebaseFirestore.instance
-        .collection('users')
-        .where('uid', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
-        .get()
-        .then((QuerySnapshot querySnapshot) {
-      if (querySnapshot.docs.isNotEmpty) {
-        for (var doc in querySnapshot.docs) {
-          doc.reference.update({'GPA': "2.0/4.5"});
-          doc.reference.update({'credits': "80/124"});
-          doc.reference.update({'notes': "OK..."});
-        }
-      } else {
-        print('No documents found for this user.');
-      }
-    });
   }
 }
