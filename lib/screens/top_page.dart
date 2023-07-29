@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gtk_flutter/app_state.dart';
 import 'package:gtk_flutter/screens/anonymous_board.dart';
 import 'package:gtk_flutter/screens/cafeteria_page.dart';
+import 'package:gtk_flutter/screens/main_page.dart';
 import 'package:gtk_flutter/screens/timetable_page.dart';
 import 'package:provider/provider.dart';
 import 'package:gtk_flutter/src/widgets.dart';
@@ -29,7 +30,7 @@ class _TopPageState extends State<TopPage> {
         destinations: const <Widget>[
           NavigationDestination(
             icon: Icon(Icons.home),
-            label: 'Home',
+            label: 'Main',
           ),
           NavigationDestination(
             icon: Icon(Icons.school),
@@ -49,7 +50,7 @@ class _TopPageState extends State<TopPage> {
         Container(
           // color: Colors.yellow,
           alignment: Alignment.center,
-          child: const Header('Work In Progress'),
+          child: const MainPage(),
         ),
         Container(
           color: Colors.green,

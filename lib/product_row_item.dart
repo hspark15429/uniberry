@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:gtk_flutter/screens/main_page.dart';
 import 'package:provider/provider.dart';
 
 import 'model/app_state_model.dart';
@@ -26,11 +28,19 @@ class ProductRowItem extends StatelessWidget {
       child: CupertinoListTile(
         leading: ClipRRect(
           borderRadius: BorderRadius.circular(4),
-          child: Image.network(
-            product.image,
-            fit: BoxFit.cover,
-            width: 68,
-            height: 68,
+          child: InkWell(
+            onTap: () {
+              final exp = RegExp(r'(\d+).png');
+              final match = exp.firstMatch(product.image);
+              openUrl(
+                  'https://west2-univ.jp/sp/detail.php?t=650337&c=${match!.group(1)}');
+            },
+            child: Image.network(
+              product.image,
+              fit: BoxFit.cover,
+              width: 68,
+              height: 68,
+            ),
           ),
         ),
         leadingSize: 68,
