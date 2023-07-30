@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:provider/provider.dart'; // new
-
-import 'app_state.dart'; // new
 import 'home_page.dart';
 
 void main() {

@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:gtk_flutter/model/app_state.dart';
+
 import 'package:gtk_flutter/screens/anonymous_board.dart';
 import 'package:gtk_flutter/screens/cafeteria_page.dart';
 import 'package:gtk_flutter/screens/main_page.dart';
 import 'package:gtk_flutter/screens/timetable_page.dart';
-import 'package:provider/provider.dart';
-import 'package:gtk_flutter/src/widgets.dart';
 
 class TopPage extends StatefulWidget {
   const TopPage({Key? key}) : super(key: key);

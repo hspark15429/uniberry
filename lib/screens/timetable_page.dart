@@ -2,9 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gtk_flutter/model/app_state.dart';
+import 'package:gtk_flutter/src/timetable_service.dart';
 import 'package:intl/intl.dart';
-import 'package:provider/provider.dart';
 import 'dart:math' as math;
 
 import 'dialog_builder.dart';
@@ -21,25 +20,45 @@ class _TimetablePageState extends State<TimetablePage> {
   int _timetableIndex = 1;
 
   // late ApplicationState appState;
-  late Map<String, String> localTimetable;
+  late Future<Map<String, String>> localTimetableFuture;
+  Map<String, String> localTimetable = {
+    for (int i = 1; i <= 25; i++) i.toString(): ""
+  };
   late int cellNow;
-  late List<String> bottomInfo;
+  late Future<List<String>> bottomInfoFuture;
+  late List<String> bottomInfo = ["", "", ""];
 
   @override
   void initState() {
     super.initState();
-    localTimetable = {for (int i = 1; i <= 25; i++) i.toString(): ""};
-    bottomInfo = ["0.00/0.00", "0/0", "abc..."];
-    setCurrentTimeSlot();
-    loadServerTimetable();
-    loadServerBottomInfo();
+
+    cellNow = TimetableService.getCurrentTimeSlot();
+
+    localTimetableFuture = TimetableService.getServerTimetable(_timetableIndex);
+    localTimetableFuture.then((value) {
+      setState(() {
+        localTimetable = value;
+      });
+    });
+    bottomInfoFuture = TimetableService.getServerBottomInfo();
+    bottomInfoFuture.then((value) {
+      setState(() {
+        bottomInfo = value;
+      });
+    });
+
+    // loadServerBottomInfo();
   }
 
   @override
   Widget build(BuildContext context) {
     // save current timetable to firestore
-    uploadLocalTimetable();
-    uploadBottomInfo();
+    // uploadLocalTimetable();
+    TimetableService.uploadTimetable(
+      timetable: localTimetable,
+      index: _timetableIndex,
+    );
+    TimetableService.uploadBottomInfo(bottomInfo);
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -93,73 +112,14 @@ class _TimetablePageState extends State<TimetablePage> {
                           return AlertDialog(
                             title: Text('Timetable List'),
                             content: Text('Select a timetable to view'),
-                            actions: [
-                              TextButton(
-                                  onPressed: () {
-                                    setState(() {
-                                      _timetableIndex = 1;
-                                      localTimetable = {
-                                        for (int i = 1; i <= 25; i++)
-                                          i.toString(): ""
-                                      };
-                                      loadServerTimetable();
-                                    });
-                                    Navigator.of(context).pop();
-                                  },
-                                  child: Text('Timetable 1')),
-                              TextButton(
-                                  onPressed: () {
-                                    setState(() {
-                                      _timetableIndex = 2;
-                                      localTimetable = {
-                                        for (int i = 1; i <= 25; i++)
-                                          i.toString(): ""
-                                      };
-                                      loadServerTimetable();
-                                    });
-                                    Navigator.of(context).pop();
-                                  },
-                                  child: Text('Timetable 2')),
-                              TextButton(
-                                  onPressed: () {
-                                    setState(() {
-                                      _timetableIndex = 3;
-                                      localTimetable = {
-                                        for (int i = 1; i <= 25; i++)
-                                          i.toString(): ""
-                                      };
-                                      loadServerTimetable();
-                                    });
-                                    Navigator.of(context).pop();
-                                  },
-                                  child: Text('Timetable 3')),
-                              TextButton(
-                                  onPressed: () {
-                                    setState(() {
-                                      _timetableIndex = 4;
-                                      localTimetable = {
-                                        for (int i = 1; i <= 25; i++)
-                                          i.toString(): ""
-                                      };
-                                      loadServerTimetable();
-                                    });
-                                    Navigator.of(context).pop();
-                                  },
-                                  child: Text('Timetable 4')),
-                              TextButton(
-                                  onPressed: () {
-                                    setState(() {
-                                      _timetableIndex = 5;
-                                      localTimetable = {
-                                        for (int i = 1; i <= 25; i++)
-                                          i.toString(): ""
-                                      };
-                                      loadServerTimetable();
-                                    });
-                                    Navigator.of(context).pop();
-                                  },
-                                  child: Text('Timetable 5')),
-                            ],
+                            actions: List<Widget>.generate(
+                              5,
+                              (index) => TextButton(
+                                onPressed: () =>
+                                    timetableSwitch(context, index: index + 1),
+                                child: Text('Timetable ${index + 1}'),
+                              ),
+                            ),
                           );
                         });
                   })
@@ -254,22 +214,28 @@ class _TimetablePageState extends State<TimetablePage> {
                       ]),
                       TableRow(children: [
                         TextField(
-                          onChanged: (value) =>
-                              {bottomInfo[0] = value, uploadBottomInfo()},
+                          onChanged: (value) => {
+                            bottomInfo[0] = value,
+                            TimetableService.uploadBottomInfo(bottomInfo)
+                          },
                           controller: TextEditingController()
                             ..text = bottomInfo[0],
                           style: TextStyle(fontSize: 15.0),
                         ),
                         TextField(
-                          onChanged: (value) =>
-                              {bottomInfo[1] = value, uploadBottomInfo()},
+                          onChanged: (value) => {
+                            bottomInfo[1] = value,
+                            TimetableService.uploadBottomInfo(bottomInfo)
+                          },
                           controller: TextEditingController()
                             ..text = bottomInfo[1],
                           style: TextStyle(fontSize: 15.0),
                         ),
                         TextField(
-                          onChanged: (value) =>
-                              {bottomInfo[2] = value, uploadBottomInfo()},
+                          onChanged: (value) => {
+                            bottomInfo[2] = value,
+                            TimetableService.uploadBottomInfo(bottomInfo)
+                          },
                           controller: TextEditingController()
                             ..text = bottomInfo[2],
                           style: TextStyle(fontSize: 15.0),
@@ -285,6 +251,19 @@ class _TimetablePageState extends State<TimetablePage> {
         ),
       ),
     );
+  }
+
+  Future<void> timetableSwitch(BuildContext context,
+      {required int index}) async {
+    {
+      _timetableIndex = index;
+      final _newTimetable =
+          await TimetableService.getServerTimetable(_timetableIndex);
+      setState(() {
+        localTimetable = _newTimetable;
+      });
+      Navigator.of(context).pop();
+    }
   }
 
   Widget _buildCell(
@@ -378,108 +357,5 @@ class _TimetablePageState extends State<TimetablePage> {
           ),
       ]),
     );
-  }
-
-  void setCurrentTimeSlot() {
-    if (time < 900) {
-      cellNow = 0;
-    } else if (time <= 1030) {
-      cellNow = 5 * 0 + day;
-    } else if (time <= 1210) {
-      cellNow = 5 * 1 + day;
-    } else if (time <= 1430) {
-      cellNow = 5 * 2 + day;
-    } else if (time <= 1610) {
-      cellNow = 5 * 3 + day;
-    } else if (time <= 1750) {
-      cellNow = 5 * 4 + day;
-    } else {
-      cellNow = 0;
-    }
-    cellNow = 5 < day ? 0 : cellNow;
-  }
-
-  void loadServerTimetable() {
-    FirebaseFirestore.instance
-        .collection('users')
-        .where('uid', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
-        .get()
-        .then((QuerySnapshot querySnapshot) {
-      if (querySnapshot.docs.isNotEmpty) {
-        for (var doc in querySnapshot.docs) {
-          Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
-
-          for (String timetable in data['timetables'].keys) {
-            if (timetable == "timetable$_timetableIndex") {
-              for (String key in data['timetables'][timetable].keys) {
-                localTimetable[key] = data['timetables'][timetable][key];
-              }
-            }
-          }
-        }
-
-        setState(() {});
-      } else {
-        print('No documents found for this user');
-
-        uploadLocalTimetable();
-      }
-    });
-  }
-
-  void uploadLocalTimetable() {
-    FirebaseFirestore.instance
-        .collection('users')
-        .where('uid', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
-        .get()
-        .then((QuerySnapshot querySnapshot) {
-      if (querySnapshot.docs.isNotEmpty) {
-        for (var doc in querySnapshot.docs) {
-          doc.reference
-              .update({'timetables.timetable$_timetableIndex': localTimetable});
-        }
-      } else {
-        print('No documents found for this user.');
-      }
-    });
-  }
-
-  void uploadBottomInfo() {
-    FirebaseFirestore.instance
-        .collection('users')
-        .where('uid', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
-        .get()
-        .then((QuerySnapshot querySnapshot) {
-      if (querySnapshot.docs.isNotEmpty) {
-        for (var doc in querySnapshot.docs) {
-          doc.reference.update({'GPA': bottomInfo[0]});
-          doc.reference.update({'credits': bottomInfo[1]});
-          doc.reference.update({'notes': bottomInfo[2]});
-        }
-      } else {
-        print('No documents found for this user.');
-      }
-    });
-  }
-
-  void loadServerBottomInfo() {
-    FirebaseFirestore.instance
-        .collection('users')
-        .where('uid', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
-        .get()
-        .then((QuerySnapshot querySnapshot) {
-      if (querySnapshot.docs.isNotEmpty) {
-        for (var doc in querySnapshot.docs) {
-          Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
-          bottomInfo[0] = data['GPA'];
-          bottomInfo[1] = data['credits'];
-          bottomInfo[2] = data['notes'];
-        }
-        setState(() {});
-      } else {
-        print('No documents found for this user');
-        uploadBottomInfo();
-      }
-    });
   }
 }
