@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart'; // new
 
 import 'package:flutter/material.dart';
-import 'package:gtk_flutter/app_state.dart';
+import 'package:gtk_flutter/model/app_state.dart';
 import 'package:gtk_flutter/guest_book.dart';
 import 'package:gtk_flutter/src/widgets.dart';
 import 'package:provider/provider.dart';

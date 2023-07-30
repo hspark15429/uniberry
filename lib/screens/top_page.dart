@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gtk_flutter/app_state.dart';
+import 'package:gtk_flutter/model/app_state.dart';
 import 'package:gtk_flutter/screens/anonymous_board.dart';
 import 'package:gtk_flutter/screens/cafeteria_page.dart';
 import 'package:gtk_flutter/screens/main_page.dart';

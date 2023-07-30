@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gtk_flutter/app_state.dart';
+import 'package:gtk_flutter/model/app_state.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'dart:math' as math;
@@ -481,56 +481,5 @@ class _TimetablePageState extends State<TimetablePage> {
         uploadBottomInfo();
       }
     });
-  }
-}
-
-class BottomInfo extends StatelessWidget {
-  const BottomInfo({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Table(
-      defaultColumnWidth:
-          FixedColumnWidth(MediaQuery.of(context).size.width / 4),
-      children: [
-        TableRow(children: [
-          Text(
-            "GPA",
-            style: TextStyle(fontSize: 25.0),
-          ),
-          Text(
-            "Credits",
-            style: TextStyle(fontSize: 25.0),
-          ),
-          Text(
-            "Notes",
-            style: TextStyle(fontSize: 25.0),
-            // textAlign: TextAlign.right,
-          ),
-        ]),
-        TableRow(children: [
-          TableCell(child: SizedBox(height: 20)),
-          TableCell(child: SizedBox(height: 20)),
-          TableCell(child: SizedBox(height: 20)),
-        ]),
-        TableRow(children: [
-          TextField(
-            controller: TextEditingController()..text = '0.00/0.00',
-            style: TextStyle(fontSize: 15.0),
-          ),
-          TextField(
-            controller: TextEditingController()..text = '0/0',
-            style: TextStyle(fontSize: 15.0),
-          ),
-          TextField(
-            controller: TextEditingController()..text = 'abc...',
-            style: TextStyle(fontSize: 15.0),
-            // textAlign: TextAlign.right,
-          ),
-        ]),
-      ],
-    );
   }
 }
