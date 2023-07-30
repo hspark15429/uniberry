@@ -26,9 +26,20 @@ class AuthFunc extends StatelessWidget {
               padding: const EdgeInsets.only(right: 24, left: 24, bottom: 8),
               child: ElevatedButton(
                   onPressed: () {
-                    context.push('/top');
+                    context.go('/top');
                   },
                   child: const Text('Start')),
+            ),
+          ),
+          Visibility(
+            visible: loggedIn,
+            child: Padding(
+              padding: const EdgeInsets.only(right: 24, left: 24, bottom: 8),
+              child: ElevatedButton(
+                  onPressed: () {
+                    context.go('/profile');
+                  },
+                  child: const Text('Profile')),
             ),
           ),
           Padding(

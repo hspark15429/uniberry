@@ -1,5 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gtk_flutter/src/timetable_service.dart';
@@ -27,6 +25,8 @@ class _TimetablePageState extends State<TimetablePage> {
   late int cellNow;
   late Future<List<String>> bottomInfoFuture;
   late List<String> bottomInfo = ["", "", ""];
+  bool _isEnable = false;
+  late int selectedMajor = 0;
 
   @override
   void initState() {
@@ -53,7 +53,6 @@ class _TimetablePageState extends State<TimetablePage> {
   @override
   Widget build(BuildContext context) {
     // save current timetable to firestore
-    // uploadLocalTimetable();
     TimetableService.uploadTimetable(
       timetable: localTimetable,
       index: _timetableIndex,
@@ -86,17 +85,21 @@ class _TimetablePageState extends State<TimetablePage> {
                           return Wrap(
                             children: [
                               ListTile(
-                                leading: Icon(Icons.share),
-                                title: Text('Share'),
+                                leading: Icon(Icons.settings),
+                                title: Text('Select Major'),
+                                onTap: () {
+                                  selectedMajor =
+                                      TimetableService.showPicker(context, 0);
+                                },
                               ),
-                              ListTile(
-                                leading: Icon(Icons.copy),
-                                title: Text('Copy Link'),
-                              ),
-                              ListTile(
-                                leading: Icon(Icons.edit),
-                                title: Text('Edit'),
-                              ),
+                              // ListTile(
+                              //   leading: Icon(Icons.copy),
+                              //   title: Text('Copy Link'),
+                              // ),
+                              // ListTile(
+                              //   leading: Icon(Icons.edit),
+                              //   title: Text('Edit'),
+                              // ),
                             ],
                           );
                         });
@@ -185,66 +188,74 @@ class _TimetablePageState extends State<TimetablePage> {
                 ],
               ),
               SizedBox(height: 20),
-              Row(
-                children: [
-                  SizedBox(width: 20),
-                  Table(
-                    defaultColumnWidth:
-                        FixedColumnWidth(MediaQuery.of(context).size.width / 4),
-                    children: [
-                      TableRow(children: [
-                        Text(
-                          "GPA",
-                          style: TextStyle(fontSize: 25.0),
-                        ),
-                        Text(
-                          "Credits",
-                          style: TextStyle(fontSize: 25.0),
-                        ),
-                        Text(
-                          "Notes",
-                          style: TextStyle(fontSize: 25.0),
-                          // textAlign: TextAlign.right,
-                        ),
-                      ]),
-                      TableRow(children: [
-                        TableCell(child: SizedBox(height: 20)),
-                        TableCell(child: SizedBox(height: 20)),
-                        TableCell(child: SizedBox(height: 20)),
-                      ]),
-                      TableRow(children: [
-                        TextField(
-                          onChanged: (value) => {
-                            bottomInfo[0] = value,
-                            TimetableService.uploadBottomInfo(bottomInfo)
-                          },
-                          controller: TextEditingController()
-                            ..text = bottomInfo[0],
-                          style: TextStyle(fontSize: 15.0),
-                        ),
-                        TextField(
-                          onChanged: (value) => {
-                            bottomInfo[1] = value,
-                            TimetableService.uploadBottomInfo(bottomInfo)
-                          },
-                          controller: TextEditingController()
-                            ..text = bottomInfo[1],
-                          style: TextStyle(fontSize: 15.0),
-                        ),
-                        TextField(
-                          onChanged: (value) => {
-                            bottomInfo[2] = value,
-                            TimetableService.uploadBottomInfo(bottomInfo)
-                          },
-                          controller: TextEditingController()
-                            ..text = bottomInfo[2],
-                          style: TextStyle(fontSize: 15.0),
-                          // textAlign: TextAlign.right,
-                        ),
-                      ]),
-                    ],
-                  ),
-                ],
+              SafeArea(
+                child: Row(
+                  children: [
+                    SizedBox(width: 10),
+                    Table(
+                      defaultColumnWidth: FixedColumnWidth(
+                          MediaQuery.of(context).size.width / 5),
+                      children: [
+                        TableRow(children: [
+                          Text(
+                            "GPA",
+                            style: TextStyle(fontSize: 15.0),
+                          ),
+                          Text(
+                            "Credits",
+                            style: TextStyle(fontSize: 15.0),
+                          ),
+                          Text(
+                            "Notes",
+                            style: TextStyle(fontSize: 15.0),
+                            textAlign: TextAlign.center,
+                          ),
+                        ]),
+                        TableRow(children: [
+                          TableCell(child: SizedBox(height: 20)),
+                          TableCell(child: SizedBox(height: 20)),
+                          TableCell(child: SizedBox(height: 20)),
+                        ]),
+                        TableRow(children: [
+                          TextField(
+                            onChanged: (value) => {
+                              bottomInfo[0] = value,
+                              TimetableService.uploadBottomInfo(bottomInfo)
+                            },
+                            controller: TextEditingController()
+                              ..text = bottomInfo[0],
+                            style: TextStyle(fontSize: 15.0),
+                          ),
+                          TextField(
+                            onChanged: (value) => {
+                              bottomInfo[1] = value,
+                              TimetableService.uploadBottomInfo(bottomInfo)
+                            },
+                            controller: TextEditingController()
+                              ..text = bottomInfo[1],
+                            style: TextStyle(fontSize: 15.0),
+                          ),
+                          TextField(
+                            onChanged: (value) => {
+                              bottomInfo[2] = value,
+                              TimetableService.uploadBottomInfo(bottomInfo)
+                            },
+                            controller: TextEditingController()
+                              ..text = bottomInfo[2],
+                            style: TextStyle(fontSize: 15.0),
+                            // textAlign: TextAlign.right,
+                          ),
+                        ]),
+                      ],
+                    ),
+                    Spacer(),
+                    Text(
+                      "Major: $selectedMajor",
+                      textAlign: TextAlign.start,
+                    ),
+                    SizedBox(width: 10)
+                  ],
+                ),
               ),
             ],
           ),

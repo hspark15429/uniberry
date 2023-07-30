@@ -20,6 +20,7 @@ class _AnonymousBoardState extends State<AnonymousBoard> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          centerTitle: false,
           title: Text('Anonymous Board'),
           backgroundColor: Colors.black,
         ),

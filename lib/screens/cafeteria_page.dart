@@ -34,6 +34,7 @@ class CafeteriaAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      centerTitle: false,
       title: Text('OIC Cafeteria'),
       backgroundColor: Colors.black,
       actions: [

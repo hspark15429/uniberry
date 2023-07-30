@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class TimetableService {
@@ -106,5 +108,30 @@ class TimetableService {
         print('No documents found for this user.');
       }
     });
+  }
+
+  static int showPicker(BuildContext ctx, int currentMajor) {
+    int _selectedMajor = currentMajor;
+    showCupertinoModalPopup(
+        context: ctx,
+        builder: (_) => SizedBox(
+              width: 300,
+              height: 250,
+              child: CupertinoPicker(
+                backgroundColor: Colors.white,
+                itemExtent: 30,
+                scrollController:
+                    FixedExtentScrollController(initialItem: currentMajor),
+                children: const [
+                  Text('경영학부'),
+                  Text('심리학부'),
+                  Text('정책과학부'),
+                ],
+                onSelectedItemChanged: (value) {
+                  _selectedMajor = value;
+                },
+              ),
+            ));
+    return _selectedMajor;
   }
 }
