@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:gtk_flutter/screens/home_page.dart';
+import 'package:gtk_flutter/services/firebase_service.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MainPage extends StatelessWidget {

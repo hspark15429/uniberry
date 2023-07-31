@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:http/http.dart' as http;
 
 import 'package:flutter/foundation.dart' as foundation;
 import 'package:flutter/services.dart';
@@ -124,7 +125,8 @@ Future<List<Product>> loadMenuItems() async {
     "Quickbite": Category.quickbite,
   };
 
-  String jsonString = await rootBundle.loadString('assets/menuitems.json');
+  String jsonString = await fetchJsonFromUrl();
+  print(jsonString);
   List<dynamic> menuData = jsonDecode(jsonString);
   for (var menu in menuData) {
     allMenuItems.add(
@@ -146,4 +148,17 @@ Future<List<Product>> loadMenuItems() async {
     );
   }
   return allMenuItems;
+}
+
+Future<String> fetchJsonFromUrl() async {
+  final response = await http.get(Uri.parse(
+      'https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menuitems.json?alt=media&token=2886306d-4d44-494a-a6a6-6985834b635c'));
+
+  if (response.statusCode == 200) {
+    // If the server returns a 200 OK response, then parse the JSON.
+    return utf8.decode(response.bodyBytes);
+  } else {
+    // If the server did not return a 200 OK response, then throw an exception.
+    throw Exception('Failed to load data from server');
+  }
 }

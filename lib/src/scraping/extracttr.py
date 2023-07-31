@@ -10,7 +10,7 @@ def extract_tr_tags_from_html_file(file_path):
     return tr_tags
 
 # Replace 'your_file.html' with your actual html file path
-tr_tags = extract_tr_tags_from_html_file('output1.html')
+tr_tags = extract_tr_tags_from_html_file('output2.html')
 data_list = []
 
 for tr in tr_tags:

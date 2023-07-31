@@ -19,6 +19,7 @@ class CustomSearchDelegate extends SearchDelegate {
 
     var appState = Provider.of<ApplicationState>(context, listen: false);
     int _schoolIndex = appState.getSchoolIndex;
+    // 경영학과, 심리학과, 정책학과
     List<String> _schoolList = ["経営学部", "総合心理学部", "政策科学部"];
 
     for (var lecture in lectureData) {
@@ -29,11 +30,12 @@ class CustomSearchDelegate extends SearchDelegate {
             .contains(int.parse(cellText))) {
           String term =
               "${lecture['course']['titles']} | ${lecture['professors']} | ${lecture['codes']}";
-          if (lecture['schools'].contains(_schoolList[_schoolIndex]))
-            searchTerms.add(term);
+          if (lecture['schools'].contains(_schoolList[_schoolIndex]) &&
+              lecture['term'].contains('秋セメスター')) searchTerms.add(term);
         }
       }
     }
+    searchTerms = searchTerms.toSet().toList();
   }
 
   @override
