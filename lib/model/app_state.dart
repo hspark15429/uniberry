@@ -19,13 +19,27 @@ class ApplicationState extends ChangeNotifier {
   bool _loggedIn = false;
   bool get loggedIn => _loggedIn;
 
+  int _timetableIndex = 1;
+  int get timetableIndex => _timetableIndex;
+  set timetableIndex(int value) {
+    _timetableIndex = value;
+    notifyListeners();
+  }
+
+  int schoolIndex = 0;
+  int get getSchoolIndex => schoolIndex;
+  set setSchoolIndex(int value) {
+    schoolIndex = value;
+    notifyListeners();
+  }
+
   final List<TimetableEventsSet> eventSets = [];
 
   TimetableEventsSet? _currentEventsSet;
   TimetableEventsSet? get currentEventsSet => _currentEventsSet;
   set currentEventsSet(TimetableEventsSet? value) {
     _currentEventsSet = value;
-    notifyListeners();
+    // notifyListeners();
   }
 
   void loadEventsSets() {

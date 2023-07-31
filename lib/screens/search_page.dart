@@ -1,20 +1,25 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:gtk_flutter/model/app_state.dart';
+import 'package:provider/provider.dart';
 
 class CustomSearchDelegate extends SearchDelegate {
   List<String> searchTerms = [];
   final cellText;
 
   CustomSearchDelegate({required this.cellText}) {
-    loadSearchTerms();
     // print(cellText);
   }
 
-  Future<void> loadSearchTerms() async {
+  Future<void> loadSearchTerms(BuildContext context) async {
     String jsonString = await rootBundle.loadString('assets/lectures.json');
 
     List<dynamic> lectureData = jsonDecode(jsonString);
+
+    var appState = Provider.of<ApplicationState>(context, listen: false);
+    int _schoolIndex = appState.getSchoolIndex;
+    List<String> _schoolList = ["経営学部", "総合心理学部", "政策科学部"];
 
     for (var lecture in lectureData) {
       if (lecture['periods'][0].isNotEmpty) {
@@ -24,7 +29,8 @@ class CustomSearchDelegate extends SearchDelegate {
             .contains(int.parse(cellText))) {
           String term =
               "${lecture['course']['titles']} | ${lecture['professors']} | ${lecture['codes']}";
-          searchTerms.add(term);
+          if (lecture['schools'].contains(_schoolList[_schoolIndex]))
+            searchTerms.add(term);
         }
       }
     }
@@ -32,6 +38,7 @@ class CustomSearchDelegate extends SearchDelegate {
 
   @override
   List<Widget> buildActions(BuildContext context) {
+    loadSearchTerms(context);
     return [
       IconButton(
           onPressed: () {

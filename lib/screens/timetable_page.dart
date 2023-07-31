@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gtk_flutter/model/app_state.dart';
 import 'package:gtk_flutter/src/timetable_service.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 import 'dart:math' as math;
 
 import 'dialog_builder.dart';
@@ -15,7 +17,7 @@ class TimetablePage extends StatefulWidget {
 class _TimetablePageState extends State<TimetablePage> {
   int day = DateTime.now().weekday;
   int time = int.parse(DateFormat('HHmm').format(DateTime.now()));
-  int _timetableIndex = 1;
+  late int _timetableIndex;
 
   // late ApplicationState appState;
   late Future<Map<String, String>> localTimetableFuture;
@@ -26,12 +28,12 @@ class _TimetablePageState extends State<TimetablePage> {
   late Future<List<String>> bottomInfoFuture;
   late List<String> bottomInfo = ["", "", ""];
   bool _isEnable = false;
-  late int selectedMajor = 0;
+  late int selectedSchool = 0;
 
   @override
   void initState() {
     super.initState();
-
+    _timetableIndex = context.read<ApplicationState>().timetableIndex;
     cellNow = TimetableService.getCurrentTimeSlot();
 
     localTimetableFuture = TimetableService.getServerTimetable(_timetableIndex);
@@ -79,30 +81,32 @@ class _TimetablePageState extends State<TimetablePage> {
                   tooltip: 'More options',
                   onPressed: () {
                     // handle the press
-                    showModalBottomSheet(
-                        context: context,
-                        builder: (builder) {
-                          return Wrap(
-                            children: [
-                              ListTile(
-                                leading: Icon(Icons.settings),
-                                title: Text('Select Major'),
-                                onTap: () {
-                                  selectedMajor =
-                                      TimetableService.showPicker(context, 0);
-                                },
-                              ),
-                              // ListTile(
-                              //   leading: Icon(Icons.copy),
-                              //   title: Text('Copy Link'),
-                              // ),
-                              // ListTile(
-                              //   leading: Icon(Icons.edit),
-                              //   title: Text('Edit'),
-                              // ),
-                            ],
-                          );
-                        });
+                    TimetableService.showPicker(context,
+                        context.read<ApplicationState>().getSchoolIndex);
+                    // showModalBottomSheet(
+                    //     context: context,
+                    //     builder: (builder) {
+                    //       return Wrap(
+                    //         children: [
+                    //           ListTile(
+                    //             leading: Icon(Icons.settings),
+                    //             title: Text('Select Major'),
+                    //             onTap: () {
+                    //               selectedMajor =
+                    //                   TimetableService.showPicker(context, 0);
+                    //             },
+                    //           ),
+                    //           // ListTile(
+                    //           //   leading: Icon(Icons.copy),
+                    //           //   title: Text('Copy Link'),
+                    //           // ),
+                    //           // ListTile(
+                    //           //   leading: Icon(Icons.edit),
+                    //           //   title: Text('Edit'),
+                    //           // ),
+                    //         ],
+                    //       );
+                    //     });
                   }),
               IconButton(
                   icon: const Icon(CupertinoIcons.bars),
@@ -249,11 +253,14 @@ class _TimetablePageState extends State<TimetablePage> {
                       ],
                     ),
                     Spacer(),
-                    Text(
-                      "Major: $selectedMajor",
-                      textAlign: TextAlign.start,
-                    ),
-                    SizedBox(width: 10)
+                    Consumer<ApplicationState>(builder: (context, appState, _) {
+                      List<String> _schoolList = ["경영학부", "심리학부", "정책과학부"];
+                      return Text(
+                        "School: ${_schoolList[appState.schoolIndex]}",
+                        textAlign: TextAlign.start,
+                      );
+                    }),
+                    SizedBox(width: 20)
                   ],
                 ),
               ),
@@ -267,6 +274,7 @@ class _TimetablePageState extends State<TimetablePage> {
   Future<void> timetableSwitch(BuildContext context,
       {required int index}) async {
     {
+      context.read<ApplicationState>().timetableIndex = index;
       _timetableIndex = index;
       final _newTimetable =
           await TimetableService.getServerTimetable(_timetableIndex);

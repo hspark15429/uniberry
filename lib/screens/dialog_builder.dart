@@ -49,8 +49,9 @@ Future<String?> timetableEntryDialogBuilder(
                         onPressed: () async {
                           searchResult = await showSearch(
                             context: context,
-                            delegate:
-                                CustomSearchDelegate(cellText: currentCellNum),
+                            delegate: CustomSearchDelegate(
+                              cellText: currentCellNum,
+                            ),
                           );
                           setState(() {
                             searchResult = searchResult;

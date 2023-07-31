@@ -2,7 +2,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gtk_flutter/model/app_state.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 
 class TimetableService {
   static int getCurrentTimeSlot() {
@@ -110,10 +112,10 @@ class TimetableService {
     });
   }
 
-  static int showPicker(BuildContext ctx, int currentMajor) {
+  static int showPicker(BuildContext context, int currentMajor) {
     int _selectedMajor = currentMajor;
     showCupertinoModalPopup(
-        context: ctx,
+        context: context,
         builder: (_) => SizedBox(
               width: 300,
               height: 250,
@@ -129,6 +131,7 @@ class TimetableService {
                 ],
                 onSelectedItemChanged: (value) {
                   _selectedMajor = value;
+                  context.read<ApplicationState>().setSchoolIndex = value;
                 },
               ),
             ));
