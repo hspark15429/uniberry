@@ -126,7 +126,7 @@ Future<List<Product>> loadMenuItems() async {
   };
 
   String jsonString = await fetchJsonFromUrl();
-  print(jsonString);
+
   List<dynamic> menuData = jsonDecode(jsonString);
   for (var menu in menuData) {
     allMenuItems.add(
