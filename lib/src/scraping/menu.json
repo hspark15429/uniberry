@@ -14,20 +14,25 @@
         },
         "category": "主菜　Main dish",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 391.0,
+            "protein": 25.5,
+            "fat": 25.8,
+            "carbohydrates": 15.3,
+            "salt": 1.8,
+            "calcium": 25.0,
+            "veg": 33.0,
+            "iron": 1.2,
+            "vitA": 54.0,
+            "vitB1": 0.14,
+            "vitB2": 0.21,
+            "vitC": 19.0
         },
-        "origin": "일본"
+        "allergy": [
+            "wheat",
+            "soybean",
+            "chicken"
+        ],
+        "origin": "鶏肉（タイ）"
     },
     {
         "id": 1,
@@ -44,20 +49,28 @@
         },
         "category": "主菜　Main dish",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 408.0,
+            "protein": 15.5,
+            "fat": 26.1,
+            "carbohydrates": 27.2,
+            "salt": 2.4,
+            "calcium": 29.0,
+            "veg": 49.0,
+            "iron": 0.6,
+            "vitA": 7.0,
+            "vitB1": 0.42,
+            "vitB2": 0.1,
+            "vitC": 17.0
         },
-        "origin": "일본"
+        "allergy": [
+            "apple",
+            "egg",
+            "pork",
+            "milk",
+            "soybean",
+            "wheat"
+        ],
+        "origin": "豚肉（アメリカ、その他）"
     },
     {
         "id": 2,
@@ -74,20 +87,27 @@
         },
         "category": "主菜　Main dish",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 261.0,
+            "protein": 21.0,
+            "fat": 14.4,
+            "carbohydrates": 14.3,
+            "salt": 2.3,
+            "calcium": 87.0,
+            "veg": 77.0,
+            "iron": 2.7,
+            "vitA": 59.0,
+            "vitB1": 0.52,
+            "vitB2": 0.29,
+            "vitC": 14.0
         },
-        "origin": "일본"
+        "allergy": [
+            "egg",
+            "pork",
+            "soybean",
+            "wheat",
+            "mackerel"
+        ],
+        "origin": "豆腐（大豆：カナダ、アメリカ）豚肉（メキシコ）"
     },
     {
         "id": 3,
@@ -104,20 +124,30 @@
         },
         "category": "主菜　Main dish",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 241.0,
+            "protein": 15.3,
+            "fat": 11.1,
+            "carbohydrates": 19.6,
+            "salt": 2.1,
+            "calcium": 47.0,
+            "veg": 56.0,
+            "iron": 1.4,
+            "vitA": 23.0,
+            "vitB1": 0.13,
+            "vitB2": 0.13,
+            "vitC": 16.0
         },
-        "origin": "일본"
+        "allergy": [
+            "apple",
+            "pork",
+            "milk",
+            "soybean",
+            "wheat",
+            "beef",
+            "chicken",
+            "sesame"
+        ],
+        "origin": "鶏肉（国産）玉葱（中国）"
     },
     {
         "id": 4,
@@ -134,20 +164,25 @@
         },
         "category": "主菜　Main dish",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 209.0,
+            "protein": 10.0,
+            "fat": 15.1,
+            "carbohydrates": 6.7,
+            "salt": 0.7,
+            "calcium": 8.0,
+            "veg": 0.0,
+            "iron": 0.6,
+            "vitA": 25.0,
+            "vitB1": 0.08,
+            "vitB2": 0.2,
+            "vitC": 1.0
         },
-        "origin": "일본"
+        "allergy": [
+            "wheat",
+            "mackerel",
+            "soybean"
+        ],
+        "origin": "鯖（国産）"
     },
     {
         "id": 5,
@@ -164,20 +199,27 @@
         },
         "category": "主菜　Main dish",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 252.0,
+            "protein": 3.4,
+            "fat": 17.5,
+            "carbohydrates": 20.3,
+            "salt": 0.9,
+            "calcium": 11.0,
+            "veg": 9.0,
+            "iron": 0.4,
+            "vitA": 19.0,
+            "vitB1": 0.06,
+            "vitB2": 0.03,
+            "vitC": 5.0
         },
-        "origin": "일본"
+        "allergy": [
+            "egg",
+            "pork",
+            "milk",
+            "soybean",
+            "wheat"
+        ],
+        "origin": "じゃが芋（国産）玉葱（国産、その他）"
     },
     {
         "id": 6,
@@ -194,20 +236,26 @@
         },
         "category": "副菜　Side dish",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 94.0,
+            "protein": 7.8,
+            "fat": 6.4,
+            "carbohydrates": 3.4,
+            "salt": 0.7,
+            "calcium": 60.0,
+            "veg": 33.0,
+            "iron": 1.4,
+            "vitA": 108.0,
+            "vitB1": 0.06,
+            "vitB2": 0.25,
+            "vitC": 2.0
         },
-        "origin": "일본"
+        "allergy": [
+            "wheat",
+            "mackerel",
+            "soybean",
+            "egg"
+        ],
+        "origin": "鶏卵（国産）オクラ（インドネシア）"
     },
     {
         "id": 7,
@@ -224,20 +272,25 @@
         },
         "category": "副菜　Side dish",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 27.0,
+            "protein": 1.6,
+            "fat": 0.1,
+            "carbohydrates": 5.9,
+            "salt": 0.4,
+            "calcium": 74.0,
+            "veg": 60.0,
+            "iron": 0.4,
+            "vitA": 175.0,
+            "vitB1": 0.05,
+            "vitB2": 0.07,
+            "vitC": 5.0
         },
-        "origin": "일본"
+        "allergy": [
+            "wheat",
+            "milk",
+            "soybean"
+        ],
+        "origin": "モロヘイヤ（タイ、インドネシア）オクラ（インドネシア）"
     },
     {
         "id": 8,
@@ -254,20 +307,25 @@
         },
         "category": "副菜　Side dish",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 98.0,
+            "protein": 6.2,
+            "fat": 6.1,
+            "carbohydrates": 3.5,
+            "salt": 1.0,
+            "calcium": 25.0,
+            "veg": 0.0,
+            "iron": 0.8,
+            "vitA": 111.0,
+            "vitB1": 0.04,
+            "vitB2": 0.04,
+            "vitC": 0.0
         },
-        "origin": "일본"
+        "allergy": [
+            "wheat",
+            "soybean",
+            "egg"
+        ],
+        "origin": "鶏卵（国産、その他）"
     },
     {
         "id": 9,
@@ -284,20 +342,26 @@
         },
         "category": "副菜　Side dish",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 57.0,
+            "protein": 2.0,
+            "fat": 3.0,
+            "carbohydrates": 5.5,
+            "salt": 0.9,
+            "calcium": 36.0,
+            "veg": 5.0,
+            "iron": 0.4,
+            "vitA": 45.0,
+            "vitB1": 0.02,
+            "vitB2": 0.02,
+            "vitC": 0.0
         },
-        "origin": "일본"
+        "allergy": [
+            "seafood",
+            "wheat",
+            "soybean",
+            "chicken"
+        ],
+        "origin": "ひじき（中国）大豆（中国、カナダ、他）"
     },
     {
         "id": 10,
@@ -314,20 +378,26 @@
         },
         "category": "副菜　Side dish",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 104.0,
+            "protein": 1.1,
+            "fat": 7.0,
+            "carbohydrates": 9.0,
+            "salt": 0.3,
+            "calcium": 7.0,
+            "veg": 33.0,
+            "iron": 0.2,
+            "vitA": 112.0,
+            "vitB1": 0.03,
+            "vitB2": 0.04,
+            "vitC": 14.0
         },
-        "origin": "일본"
+        "allergy": [
+            "wheat",
+            "milk",
+            "soybean",
+            "egg"
+        ],
+        "origin": "南瓜（ニュージーランド、その他）"
     },
     {
         "id": 11,
@@ -344,20 +414,26 @@
         },
         "category": "副菜　Side dish",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 83.0,
+            "protein": 7.0,
+            "fat": 6.4,
+            "carbohydrates": 0.7,
+            "salt": 0.5,
+            "calcium": 30.0,
+            "veg": 0.0,
+            "iron": 1.2,
+            "vitA": 88.0,
+            "vitB1": 0.03,
+            "vitB2": 0.22,
+            "vitC": 0.0
         },
-        "origin": "일본"
+        "allergy": [
+            "wheat",
+            "mackerel",
+            "soybean",
+            "egg"
+        ],
+        "origin": "鶏卵（国産）"
     },
     {
         "id": 12,
@@ -374,20 +450,23 @@
         },
         "category": "副菜　Side dish",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 47.0,
+            "protein": 4.4,
+            "fat": 2.9,
+            "carbohydrates": 2.0,
+            "salt": 0.1,
+            "calcium": 26.0,
+            "veg": 1.0,
+            "iron": 1.0,
+            "vitA": 1.0,
+            "vitB1": 0.09,
+            "vitB2": 0.03,
+            "vitC": 8.0
         },
-        "origin": "일본"
+        "allergy": [
+            "soybean"
+        ],
+        "origin": "豆腐（大豆：カナダ、アメリカ）"
     },
     {
         "id": 13,
@@ -404,20 +483,26 @@
         },
         "category": "副菜　Side dish",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 75.0,
+            "protein": 5.4,
+            "fat": 4.2,
+            "carbohydrates": 5.5,
+            "salt": 1.8,
+            "calcium": 37.0,
+            "veg": 65.0,
+            "iron": 0.4,
+            "vitA": 109.0,
+            "vitB1": 0.16,
+            "vitB2": 0.07,
+            "vitC": 7.0
         },
-        "origin": "일본"
+        "allergy": [
+            "wheat",
+            "mackerel",
+            "soybean",
+            "pork"
+        ],
+        "origin": "大根（国産）豚肉（スペイン）人参（国産）オクラ（中国）"
     },
     {
         "id": 14,
@@ -434,20 +519,23 @@
         },
         "category": "副菜　Side dish",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 38.0,
+            "protein": 2.1,
+            "fat": 1.9,
+            "carbohydrates": 2.8,
+            "salt": 1.2,
+            "calcium": 28.0,
+            "veg": 0.0,
+            "iron": 0.5,
+            "vitA": 1.0,
+            "vitB1": 0.0,
+            "vitB2": 0.01,
+            "vitC": 0.0
         },
-        "origin": "일본"
+        "allergy": [
+            "soybean"
+        ],
+        "origin": "わかめ（中国）油揚げ（加工地：国産）"
     },
     {
         "id": 15,
@@ -464,20 +552,24 @@
         },
         "category": "副菜　Side dish",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 63.0,
+            "protein": 5.5,
+            "fat": 3.2,
+            "carbohydrates": 4.3,
+            "salt": 0.4,
+            "calcium": 28.0,
+            "veg": 0.0,
+            "iron": 1.0,
+            "vitA": 0.0,
+            "vitB1": 0.02,
+            "vitB2": 0.17,
+            "vitC": 0.0
         },
-        "origin": "일본"
+        "allergy": [
+            "wheat",
+            "soybean"
+        ],
+        "origin": "大豆（国産）"
     },
     {
         "id": 16,
@@ -494,20 +586,26 @@
         },
         "category": "麺類　Noodles",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 373.0,
+            "protein": 9.7,
+            "fat": 1.5,
+            "carbohydrates": 81.1,
+            "salt": 3.9,
+            "calcium": 40.0,
+            "veg": 5.0,
+            "iron": 1.0,
+            "vitA": 29.0,
+            "vitB1": 0.12,
+            "vitB2": 0.09,
+            "vitC": 7.0
         },
-        "origin": "일본"
+        "allergy": [
+            "wheat",
+            "mackerel",
+            "soybean",
+            "yam"
+        ],
+        "origin": "うどん（国産）長芋（国産）"
     },
     {
         "id": 17,
@@ -524,20 +622,28 @@
         },
         "category": "麺類　Noodles",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 363.0,
+            "protein": 15.8,
+            "fat": 2.2,
+            "carbohydrates": 71.2,
+            "salt": 3.1,
+            "calcium": 40.0,
+            "veg": 5.0,
+            "iron": 1.9,
+            "vitA": 29.0,
+            "vitB1": 0.17,
+            "vitB2": 0.1,
+            "vitC": 7.0
         },
-        "origin": "일본"
+        "allergy": [
+            "egg",
+            "soybean",
+            "wheat",
+            "mackerel",
+            "buckwheat",
+            "yam"
+        ],
+        "origin": "そば（国産）長芋（国産）"
     },
     {
         "id": 18,
@@ -554,20 +660,25 @@
         },
         "category": "麺類　Noodles",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 341.0,
+            "protein": 8.7,
+            "fat": 1.4,
+            "carbohydrates": 73.8,
+            "salt": 3.9,
+            "calcium": 31.0,
+            "veg": 5.0,
+            "iron": 0.8,
+            "vitA": 29.0,
+            "vitB1": 0.06,
+            "vitB2": 0.08,
+            "vitC": 4.0
         },
-        "origin": "일본"
+        "allergy": [
+            "wheat",
+            "mackerel",
+            "soybean"
+        ],
+        "origin": "うどん（国産）"
     },
     {
         "id": 19,
@@ -584,20 +695,27 @@
         },
         "category": "麺類　Noodles",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 331.0,
+            "protein": 14.8,
+            "fat": 2.1,
+            "carbohydrates": 63.9,
+            "salt": 3.1,
+            "calcium": 31.0,
+            "veg": 5.0,
+            "iron": 1.7,
+            "vitA": 29.0,
+            "vitB1": 0.11,
+            "vitB2": 0.09,
+            "vitC": 4.0
         },
-        "origin": "일본"
+        "allergy": [
+            "egg",
+            "soybean",
+            "wheat",
+            "mackerel",
+            "buckwheat"
+        ],
+        "origin": "そば（国産）"
     },
     {
         "id": 20,
@@ -614,20 +732,31 @@
         },
         "category": "麺類　Noodles",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 570.0,
+            "protein": 21.9,
+            "fat": 15.5,
+            "carbohydrates": 85.8,
+            "salt": 4.7,
+            "calcium": 169.0,
+            "veg": 60.0,
+            "iron": 2.2,
+            "vitA": 132.0,
+            "vitB1": 0.21,
+            "vitB2": 0.17,
+            "vitC": 10.0
         },
-        "origin": "일본"
+        "allergy": [
+            "apple",
+            "egg",
+            "pork",
+            "gelatin",
+            "soybean",
+            "wheat",
+            "chicken",
+            "almond",
+            "sesame"
+        ],
+        "origin": "中華麺（国産）チンゲン菜（中国）鶏肉（国産、ブラジル、その他）"
     },
     {
         "id": 21,
@@ -644,20 +773,25 @@
         },
         "category": "丼・カレー　Rice bowl / Curry",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 588.0,
+            "protein": 24.1,
+            "fat": 13.0,
+            "carbohydrates": 97.3,
+            "salt": 2.5,
+            "calcium": 54.0,
+            "veg": 10.0,
+            "iron": 2.5,
+            "vitA": 125.0,
+            "vitB1": 0.17,
+            "vitB2": 0.33,
+            "vitC": 5.0
         },
-        "origin": "일본"
+        "allergy": [
+            "wheat",
+            "soybean",
+            "egg"
+        ],
+        "origin": "米（国産）鮪（国産、台湾、その他）鶏卵（国産）"
     },
     {
         "id": 22,
@@ -674,20 +808,30 @@
         },
         "category": "丼・カレー　Rice bowl / Curry",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 571.0,
+            "protein": 13.8,
+            "fat": 17.7,
+            "carbohydrates": 92.6,
+            "salt": 1.9,
+            "calcium": 51.0,
+            "veg": 40.0,
+            "iron": 1.0,
+            "vitA": 180.0,
+            "vitB1": 0.53,
+            "vitB2": 0.12,
+            "vitC": 9.0
         },
-        "origin": "일본"
+        "allergy": [
+            "egg",
+            "pork",
+            "milk",
+            "soybean",
+            "wheat",
+            "mackerel",
+            "chicken",
+            "sesame"
+        ],
+        "origin": "米（国産）豚肉（スペイン）"
     },
     {
         "id": 23,
@@ -704,20 +848,30 @@
         },
         "category": "丼・カレー　Rice bowl / Curry",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 695.0,
+            "protein": 15.1,
+            "fat": 22.2,
+            "carbohydrates": 111.4,
+            "salt": 4.8,
+            "calcium": 42.0,
+            "veg": 12.0,
+            "iron": 1.6,
+            "vitA": 56.0,
+            "vitB1": 0.41,
+            "vitB2": 0.1,
+            "vitC": 2.0
         },
-        "origin": "일본"
+        "allergy": [
+            "egg",
+            "pork",
+            "milk",
+            "soybean",
+            "wheat",
+            "beef",
+            "chicken",
+            "sesame"
+        ],
+        "origin": "米（国産）豚肉（スペイン）"
     },
     {
         "id": 24,
@@ -734,20 +888,28 @@
         },
         "category": "丼・カレー　Rice bowl / Curry",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 566.0,
+            "protein": 10.5,
+            "fat": 10.6,
+            "carbohydrates": 109.9,
+            "salt": 3.8,
+            "calcium": 37.0,
+            "veg": 12.0,
+            "iron": 1.3,
+            "vitA": 53.0,
+            "vitB1": 0.09,
+            "vitB2": 0.06,
+            "vitC": 1.0
         },
-        "origin": "일본"
+        "allergy": [
+            "pork",
+            "soybean",
+            "wheat",
+            "beef",
+            "chicken",
+            "sesame"
+        ],
+        "origin": "米（国産）じゃが芋（国産）人参（国産）"
     },
     {
         "id": 25,
@@ -764,20 +926,21 @@
         },
         "category": "丼・カレー　Rice bowl / Curry",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 374.0,
+            "protein": 6.0,
+            "fat": 0.7,
+            "carbohydrates": 89.0,
+            "salt": 0.0,
+            "calcium": 7.0,
+            "veg": 0.0,
+            "iron": 0.2,
+            "vitA": 0.0,
+            "vitB1": 0.05,
+            "vitB2": 0.02,
+            "vitC": 0.0
         },
-        "origin": "일본"
+        "allergy": [],
+        "origin": "米（国産）"
     },
     {
         "id": 26,
@@ -794,20 +957,26 @@
         },
         "category": "デザート　Dessert",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 197.0,
+            "protein": 2.4,
+            "fat": 11.6,
+            "carbohydrates": 21.2,
+            "salt": 0.1,
+            "calcium": 23.0,
+            "veg": 0.0,
+            "iron": 0.5,
+            "vitA": 76.0,
+            "vitB1": 0.05,
+            "vitB2": 0.04,
+            "vitC": 1.0
         },
-        "origin": "일본"
+        "allergy": [
+            "wheat",
+            "milk",
+            "soybean",
+            "egg"
+        ],
+        "origin": "白あん（国産）栗（国産、その他）"
     },
     {
         "id": 27,
@@ -824,20 +993,24 @@
         },
         "category": "デザート　Dessert",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 78.0,
+            "protein": 2.7,
+            "fat": 2.2,
+            "carbohydrates": 12.9,
+            "salt": 0.1,
+            "calcium": 89.0,
+            "veg": 0.0,
+            "iron": 0.1,
+            "vitA": 29.0,
+            "vitB1": 0.04,
+            "vitB2": 0.1,
+            "vitC": 20.0
         },
-        "origin": "일본"
+        "allergy": [
+            "milk",
+            "peach"
+        ],
+        "origin": "生乳（国産）みかん（中国）黄桃（中国）"
     },
     {
         "id": 28,
@@ -854,20 +1027,26 @@
         },
         "category": "デザート　Dessert",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 125.0,
+            "protein": 1.8,
+            "fat": 7.0,
+            "carbohydrates": 13.3,
+            "salt": 0.1,
+            "calcium": 42.0,
+            "veg": 0.0,
+            "iron": 0.1,
+            "vitA": 13.0,
+            "vitB1": 0.02,
+            "vitB2": 0.06,
+            "vitC": 0.0
         },
-        "origin": "일본"
+        "allergy": [
+            "wheat",
+            "milk",
+            "soybean",
+            "egg"
+        ],
+        "origin": "タルト（国産）"
     },
     {
         "id": 29,
@@ -884,20 +1063,21 @@
         },
         "category": "デザート　Dessert",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 157.0,
+            "protein": 0.6,
+            "fat": 3.2,
+            "carbohydrates": 31.7,
+            "salt": 0.0,
+            "calcium": 15.0,
+            "veg": 0.0,
+            "iron": 0.3,
+            "vitA": 1.0,
+            "vitB1": 0.05,
+            "vitB2": 0.03,
+            "vitC": 10.0
         },
-        "origin": "일본"
+        "allergy": [],
+        "origin": "さつま芋（国産）"
     },
     {
         "id": 30,
@@ -914,20 +1094,23 @@
         },
         "category": "デザート　Dessert",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 138.0,
+            "protein": 6.8,
+            "fat": 7.8,
+            "carbohydrates": 10.0,
+            "salt": 0.2,
+            "calcium": 228.0,
+            "veg": 0.0,
+            "iron": 0.0,
+            "vitA": 76.0,
+            "vitB1": 0.08,
+            "vitB2": 0.3,
+            "vitC": 2.0
         },
-        "origin": "일본"
+        "allergy": [
+            "milk"
+        ],
+        "origin": "生乳（国産）"
     },
     {
         "id": 31,
@@ -944,19 +1127,22 @@
         },
         "category": "デザート　Dessert",
         "nutrition": {
-            "energy": 1,
-            "protein": 2,
-            "fat": 3,
-            "carbonhydrates": 4,
-            "salt": 5,
-            "calcium": 6,
-            "veg": 7,
-            "iron": 8,
-            "VitA": 9,
-            "VitB1": 10,
-            "VitB2": 11,
-            "VitC": 12
+            "energy": 136.0,
+            "protein": 4.6,
+            "fat": 5.0,
+            "carbohydrates": 18.0,
+            "salt": 0.2,
+            "calcium": 154.0,
+            "veg": 0.0,
+            "iron": 0.0,
+            "vitA": 54.0,
+            "vitB1": 0.06,
+            "vitB2": 0.22,
+            "vitC": 2.0
         },
-        "origin": "일본"
+        "allergy": [
+            "milk"
+        ],
+        "origin": "生乳（国産）"
     }
 ]

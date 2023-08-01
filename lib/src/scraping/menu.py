@@ -1,3 +1,4 @@
+import re
 import requests
 import os
 
@@ -25,6 +26,47 @@ def extract_li_tags_from_html_file(file_path):
     category_tags = soup.find_all('p', class_='toggleTitle open')
     return category_tags
 
+def extract_li_tags_from_html_url(url):
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, 'html.parser')
+
+    # Extract the category
+    category = soup.find('h1').text.split()[0]
+
+    # Extract the nutrition data
+    detail_list = soup.find_all('li')
+    nutrition = {
+        "energy": float(re.findall(r'\d+\.?\d*', detail_list[1].find(class_='price').text)[0]),
+        "protein": float(re.findall(r'\d+\.?\d*', detail_list[2].find(class_='price').text)[0]),
+        "fat": float(re.findall(r'\d+\.?\d*', detail_list[3].find(class_='price').text)[0]),
+        "carbohydrates": float(re.findall(r'\d+\.?\d*', detail_list[4].find(class_='price').text)[0]),
+        "salt": float(re.findall(r'\d+\.?\d*', detail_list[5].find(class_='price').text)[0]),
+        "calcium": float(re.findall(r'\d+\.?\d*', detail_list[6].find(class_='price').text)[0]),
+        "veg": float(re.findall(r'\d+\.?\d*', detail_list[7].find(class_='price').text)[0]),
+        "iron": float(re.findall(r'\d+\.?\d*', detail_list[8].find(class_='price').text)[0]),
+        "vitA": float(re.findall(r'\d+\.?\d*', detail_list[9].find(class_='price').text)[0]),
+        "vitB1": float(re.findall(r'\d+\.?\d*', detail_list[10].find(class_='price').text)[0]),
+        "vitB2": float(re.findall(r'\d+\.?\d*', detail_list[11].find(class_='price').text)[0]),
+        "vitC": float(re.findall(r'\d+\.?\d*', detail_list[12].find(class_='price').text)[0]),
+    }
+
+    # Extract the allergy data
+    allergy_items = soup.find(class_='icon-list').find_all('li')
+    allergy = list({item.get('class')[0].split('_')[1] for item in allergy_items}) # Assuming the class name is "icon_{allergen}"
+
+    # Extract the origin data
+    origin = detail_list[13].find(class_='price').text
+
+    # Construct the data dictionary
+    data = {
+
+        "nutrition": nutrition,
+        "allergy": allergy,
+        "origin": origin
+    }
+
+    return data
+
 # Replace 'your_file.html' with your actual html file path
 category_tags = extract_li_tags_from_html_file('menuraw.html')
 data_list = []
@@ -40,6 +82,9 @@ for category_tag in category_tags:
         a_tag = li.find('a')
         h3_tag = a_tag.find('h3')
         evaluation_tags = a_tag.find_all('span', {'id': lambda x: x and x.startswith('rate_')})
+
+        data2 = extract_li_tags_from_html_url("https://west2-univ.jp/sp/" + a_tag.get('href'))
+
         data = {
             "id" : data_list.__len__(),
             "link": "https://west2-univ.jp/sp/" + a_tag.get('href'),
@@ -54,29 +99,19 @@ for category_tag in category_tags:
                 "bad": int(evaluation_tags[2].text),
             },
             "category": category,
-            "nutrition": {
-                'energy': 1,
-                'protein': 2,
-                'fat': 3,
-                'carbonhydrates': 4,
-                'salt': 5,
-                'calcium': 6,
-                'veg': 7,
-                'iron': 8,
-                'VitA': 9,
-                'VitB1': 10,
-                'VitB2': 11,
-                'VitC': 12,
-            },
-            'origin': '일본'
+
         }
 
-        url = a_tag.find('img').get('src')
-        target_folder = 'assets/foodpics'
-        os.makedirs(target_folder, exist_ok=True)
+        data.update(data2)
+        
 
-        download_file(url, target_folder)
+        # url = a_tag.find('img').get('src')
+        # target_folder = 'assets/foodpics'
+        # os.makedirs(target_folder, exist_ok=True)
+
+        # download_file(url, target_folder)
         data_list.append(data) 
+        
 
 json_data = json.dumps(data_list, ensure_ascii=False, indent=4)
 

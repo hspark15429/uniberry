@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:gtk_flutter/src/widgets.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
@@ -17,7 +18,8 @@ class ShoppingCartTab extends StatefulWidget {
 }
 
 class _ShoppingCartTabState extends State<ShoppingCartTab> {
-  final _currencyFormat = NumberFormat.currency(symbol: '¥'); // NEW
+  final _currencyFormat = NumberFormat.currency(
+      symbol: '¥', decimalDigits: 0, locale: 'ja_JP'); // NEW
 
   SliverChildBuilderDelegate _buildSliverChildBuilderDelegate(
       AppStateModel model) {
@@ -40,10 +42,10 @@ class _ShoppingCartTabState extends State<ShoppingCartTab> {
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         // Text(
                         //   'Shipping '
@@ -60,8 +62,60 @@ class _ShoppingCartTabState extends State<ShoppingCartTab> {
                           'Total ${_currencyFormat.format(model.totalCost)}',
                           style: Styles.productRowTotal,
                         ),
-                        Text('Nutrition: ${model.totalCost}Kcal',
-                            style: Styles.deliveryTime),
+                        SizedBox(height: 10),
+                        Row(
+                          children: [
+                            DefaultTextStyle(
+                              style: Styles.nutrition,
+                              child: Column(children: [
+                                Text('Total calories'),
+                                Text('Total Protein'),
+                                Text('Total Fat'),
+                                Text('Total Carbohydrates'),
+                                Text('Total Salt'),
+                                Text('Total calcium'),
+                                Text('Total Veg'),
+                                Text('Total Iron'),
+                                Text('Total VitaminA'),
+                                Text('Total VitaminB1'),
+                                Text('Total VitaminB2'),
+                                Text('Total VitaminC'),
+                              ]),
+                            ),
+                            SizedBox(width: 10),
+                            DefaultTextStyle(
+                              style: Styles.nutrition,
+                              child: Column(
+                                children: [
+                                  Text(
+                                      '${model.subtotalNutrition.energy.toStringAsFixed(0)} Kcal'),
+                                  Text(
+                                      '${model.subtotalNutrition.protein.toStringAsFixed(1)} g'),
+                                  Text(
+                                      '${model.subtotalNutrition.fat.toStringAsFixed(1)} g'),
+                                  Text(
+                                      '${model.subtotalNutrition.carbohydrates.toStringAsFixed(1)} g'),
+                                  Text(
+                                      '${model.subtotalNutrition.salt.toStringAsFixed(1)} g'),
+                                  Text(
+                                      '${model.subtotalNutrition.calcium.toStringAsFixed(1)} mg'),
+                                  Text(
+                                      '${model.subtotalNutrition.veg.toStringAsFixed(1)} g'),
+                                  Text(
+                                      '${model.subtotalNutrition.iron.toStringAsFixed(1)} mg'),
+                                  Text(
+                                      '${model.subtotalNutrition.vitA.toStringAsFixed(1)} μg'),
+                                  Text(
+                                      '${model.subtotalNutrition.vitB1.toStringAsFixed(1)} mg'),
+                                  Text(
+                                      '${model.subtotalNutrition.vitB2.toStringAsFixed(1)} mg'),
+                                  Text(
+                                      '${model.subtotalNutrition.vitC.toStringAsFixed(1)} mg'),
+                                ],
+                              ),
+                            ),
+                          ],
+                        )
                       ],
                     )
                   ],
@@ -130,7 +184,7 @@ class ShoppingCartItem extends StatelessWidget {
         ),
         leadingSize: 40,
         title: Text(
-          product.name_en,
+          product.name_jp,
           style: Styles.productRowItemName,
         ),
         subtitle: Text(

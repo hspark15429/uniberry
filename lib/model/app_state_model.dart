@@ -42,6 +42,51 @@ class AppStateModel extends foundation.ChangeNotifier {
     });
   }
 
+  Nutrition get subtotalNutrition {
+    var subtotalEnergy = 0.0;
+    var subtotalProtein = 0.0;
+    var subtotalFat = 0.0;
+    var subtotalCarbohydrates = 0.0;
+    var subtotalSalt = 0.0;
+    var subtotalCalcium = 0.0;
+    var subtotalVeg = 0.0;
+    var subtotalIron = 0.0;
+    var subtotalVitA = 0.0;
+    var subtotalVitB1 = 0.0;
+    var subtotalVitB2 = 0.0;
+    var subtotalVitC = 0.0;
+    _productsInCart.keys.forEach((id) {
+      var product = getProductById(id);
+      var quantity = _productsInCart[id]!;
+      subtotalEnergy += product.nutrition.energy * quantity;
+      subtotalProtein += product.nutrition.protein * quantity;
+      subtotalFat += product.nutrition.fat * quantity;
+      subtotalCarbohydrates += product.nutrition.carbohydrates * quantity;
+      subtotalSalt += product.nutrition.salt * quantity;
+      subtotalCalcium += product.nutrition.calcium * quantity;
+      subtotalVeg += product.nutrition.veg * quantity;
+      subtotalIron += product.nutrition.iron * quantity;
+      subtotalVitA += product.nutrition.vitA * quantity;
+      subtotalVitB1 += product.nutrition.vitB1 * quantity;
+      subtotalVitB2 += product.nutrition.vitB2 * quantity;
+      subtotalVitC += product.nutrition.vitC * quantity;
+    });
+    return Nutrition(
+      energy: subtotalEnergy,
+      protein: subtotalProtein,
+      fat: subtotalFat,
+      carbohydrates: subtotalCarbohydrates,
+      salt: subtotalSalt,
+      calcium: subtotalCalcium,
+      veg: subtotalVeg,
+      iron: subtotalIron,
+      vitA: subtotalVitA,
+      vitB1: subtotalVitB1,
+      vitB2: subtotalVitB2,
+      vitC: subtotalVitC,
+    );
+  }
+
   // Total cost to order everything in the cart.
   double get totalCost {
     return subtotalCost;
@@ -153,6 +198,22 @@ Future<List<Product>> loadMenuItems() async {
           average: menu['evaluation']['average'],
           bad: menu['evaluation']['bad'],
         ),
+        nutrition: Nutrition(
+          energy: menu['nutrition']['energy'],
+          protein: menu['nutrition']['protein'],
+          fat: menu['nutrition']['fat'],
+          carbohydrates: menu['nutrition']['carbohydrates'],
+          salt: menu['nutrition']['salt'],
+          calcium: menu['nutrition']['calcium'],
+          veg: menu['nutrition']['veg'],
+          iron: menu['nutrition']['iron'],
+          vitA: menu['nutrition']['vitA'],
+          vitB1: menu['nutrition']['vitB1'],
+          vitB2: menu['nutrition']['vitB2'],
+          vitC: menu['nutrition']['vitC'],
+        ),
+        allergy: menu['allergy'],
+        origin: menu['origin'],
       ),
     );
   }
@@ -161,7 +222,7 @@ Future<List<Product>> loadMenuItems() async {
 
 Future<String> fetchJsonFromUrl() async {
   final response = await http.get(Uri.parse(
-      'https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menuitems2.json?alt=media&token=7688b72f-a49d-4583-8686-ec252c2262d6'));
+      'https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menuitems3.json?alt=media&token=6aa2f59f-1253-4a9f-828d-61bfb9be69fc'));
 
   if (response.statusCode == 200) {
     // If the server returns a 200 OK response, then parse the JSON.

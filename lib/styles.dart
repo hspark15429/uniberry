@@ -41,6 +41,11 @@ abstract class Styles {
     color: CupertinoColors.inactiveGray,
   );
 
+  static const TextStyle nutrition = TextStyle(
+    fontSize: 10,
+    color: CupertinoColors.inactiveGray,
+  );
+
   static const Color productRowDivider = Color(0xFFD9D9D9);
 
   static const Color scaffoldBackground = Color(0xfff0f0f0);
