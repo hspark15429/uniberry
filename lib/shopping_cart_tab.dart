@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:gtk_flutter/src/widgets.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'model/product.dart'; // NEW
@@ -59,6 +60,8 @@ class _ShoppingCartTabState extends State<ShoppingCartTab> {
                           'Total ${_currencyFormat.format(model.totalCost)}',
                           style: Styles.productRowTotal,
                         ),
+                        Text('Nutrition: ${model.totalCost}Kcal',
+                            style: Styles.deliveryTime),
                       ],
                     )
                   ],

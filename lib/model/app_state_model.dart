@@ -47,6 +47,15 @@ class AppStateModel extends foundation.ChangeNotifier {
     return subtotalCost;
   }
 
+  double get subNutrition {
+    return _productsInCart.keys.map((id) {
+      // Extended price for product line
+      return getProductById(id).price * _productsInCart[id]!;
+    }).fold(0, (accumulator, extendedPrice) {
+      return accumulator + extendedPrice;
+    });
+  }
+
   // Returns a copy of the list of available products, filtered by category.
   List<Product> getProducts() => switch (_selectedCategory) {
         Category.all => List.from(_availableProducts),
@@ -152,7 +161,7 @@ Future<List<Product>> loadMenuItems() async {
 
 Future<String> fetchJsonFromUrl() async {
   final response = await http.get(Uri.parse(
-      'https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menuitems.json?alt=media&token=2886306d-4d44-494a-a6a6-6985834b635c'));
+      'https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menuitems2.json?alt=media&token=7688b72f-a49d-4583-8686-ec252c2262d6'));
 
   if (response.statusCode == 200) {
     // If the server returns a 200 OK response, then parse the JSON.

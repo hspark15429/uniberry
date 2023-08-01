@@ -42,7 +42,7 @@ for category_tag in category_tags:
         evaluation_tags = a_tag.find_all('span', {'id': lambda x: x and x.startswith('rate_')})
         data = {
             "id" : data_list.__len__(),
-            "link": a_tag.get('href'),
+            "link": "https://west2-univ.jp/sp/" + a_tag.get('href'),
             "image": a_tag.find('img').get('src').replace("west2-univ.jp/menu_img/png_sp", "fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics"),
             "image_origin": a_tag.find('img').get('src'),
             "name_jp": h3_tag.contents[0],
@@ -53,7 +53,22 @@ for category_tag in category_tags:
                 "average": int(evaluation_tags[1].text),
                 "bad": int(evaluation_tags[2].text),
             },
-            "category": category
+            "category": category,
+            "nutrition": {
+                'energy': 1,
+                'protein': 2,
+                'fat': 3,
+                'carbonhydrates': 4,
+                'salt': 5,
+                'calcium': 6,
+                'veg': 7,
+                'iron': 8,
+                'VitA': 9,
+                'VitB1': 10,
+                'VitB2': 11,
+                'VitC': 12,
+            },
+            'origin': '일본'
         }
 
         url = a_tag.find('img').get('src')

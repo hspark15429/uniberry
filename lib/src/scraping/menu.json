@@ -1,7 +1,7 @@
 [
     {
         "id": 0,
-        "link": "detail.php?t=650337&c=814280",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814280",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814280.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814280.png",
         "name_jp": "ジューシー唐揚げ",
@@ -12,11 +12,26 @@
             "average": 0,
             "bad": 10
         },
-        "category": "主菜　Main dish"
+        "category": "主菜　Main dish",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 1,
-        "link": "detail.php?t=650337&c=814022",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814022",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814022.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814022.png",
         "name_jp": "ローストンカツおろしソース",
@@ -27,11 +42,26 @@
             "average": 1,
             "bad": 0
         },
-        "category": "主菜　Main dish"
+        "category": "主菜　Main dish",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 2,
-        "link": "detail.php?t=650337&c=814066",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814066",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814066.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814066.png",
         "name_jp": "豚すき煮",
@@ -42,11 +72,26 @@
             "average": 0,
             "bad": 0
         },
-        "category": "主菜　Main dish"
+        "category": "主菜　Main dish",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 3,
-        "link": "detail.php?t=650337&c=814231",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814231",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814231.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814231.png",
         "name_jp": "ハンバーグペッパーソース",
@@ -57,11 +102,26 @@
             "average": 6,
             "bad": 0
         },
-        "category": "主菜　Main dish"
+        "category": "主菜　Main dish",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 4,
-        "link": "detail.php?t=650337&c=814297",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814297",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814297.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814297.png",
         "name_jp": "鯖味噌煮",
@@ -72,11 +132,26 @@
             "average": 4,
             "bad": 1
         },
-        "category": "主菜　Main dish"
+        "category": "主菜　Main dish",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 5,
-        "link": "detail.php?t=650337&c=814407",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814407",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814407.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814407.png",
         "name_jp": "肉じゃがコロッケ",
@@ -87,11 +162,26 @@
             "average": 3,
             "bad": 1
         },
-        "category": "主菜　Main dish"
+        "category": "主菜　Main dish",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 6,
-        "link": "detail.php?t=650337&c=814447",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814447",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814447.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814447.png",
         "name_jp": "オクラ巣ごもり玉子",
@@ -102,11 +192,26 @@
             "average": 16,
             "bad": 8
         },
-        "category": "副菜　Side dish"
+        "category": "副菜　Side dish",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 7,
-        "link": "detail.php?t=650337&c=814530",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814530",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814530.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814530.png",
         "name_jp": "モロヘイヤとオクラのおひたし",
@@ -117,11 +222,26 @@
             "average": 0,
             "bad": 0
         },
-        "category": "副菜　Side dish"
+        "category": "副菜　Side dish",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 8,
-        "link": "detail.php?t=650337&c=814453",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814453",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814453.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814453.png",
         "name_jp": "だし巻き",
@@ -132,11 +252,26 @@
             "average": 28,
             "bad": 6
         },
-        "category": "副菜　Side dish"
+        "category": "副菜　Side dish",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 9,
-        "link": "detail.php?t=650337&c=814451",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814451",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814451.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814451.png",
         "name_jp": "ひじき煮",
@@ -147,11 +282,26 @@
             "average": 7,
             "bad": 0
         },
-        "category": "副菜　Side dish"
+        "category": "副菜　Side dish",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 10,
-        "link": "detail.php?t=650337&c=814420",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814420",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814420.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814420.png",
         "name_jp": "南瓜サラダ",
@@ -162,11 +312,26 @@
             "average": 6,
             "bad": 0
         },
-        "category": "副菜　Side dish"
+        "category": "副菜　Side dish",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 11,
-        "link": "detail.php?t=650337&c=814456",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814456",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814456.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814456.png",
         "name_jp": "温泉玉子",
@@ -177,11 +342,26 @@
             "average": 7,
             "bad": 0
         },
-        "category": "副菜　Side dish"
+        "category": "副菜　Side dish",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 12,
-        "link": "detail.php?t=650337&c=814455",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814455",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814455.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814455.png",
         "name_jp": "冷奴",
@@ -192,11 +372,26 @@
             "average": 8,
             "bad": 0
         },
-        "category": "副菜　Side dish"
+        "category": "副菜　Side dish",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 13,
-        "link": "detail.php?t=650337&c=814468",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814468",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814468.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814468.png",
         "name_jp": "夏のさっぱり豚汁",
@@ -207,11 +402,26 @@
             "average": 1,
             "bad": 7
         },
-        "category": "副菜　Side dish"
+        "category": "副菜　Side dish",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 14,
-        "link": "detail.php?t=650337&c=814458",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814458",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814458.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814458.png",
         "name_jp": "味噌汁",
@@ -222,11 +432,26 @@
             "average": 32,
             "bad": 28
         },
-        "category": "副菜　Side dish"
+        "category": "副菜　Side dish",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 15,
-        "link": "detail.php?t=650337&c=814457",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814457",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814457.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814457.png",
         "name_jp": "納豆",
@@ -237,11 +462,26 @@
             "average": 2,
             "bad": 0
         },
-        "category": "副菜　Side dish"
+        "category": "副菜　Side dish",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 16,
-        "link": "detail.php?t=650337&c=819380",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=819380",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/819380.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/819380.png",
         "name_jp": "冷やし山かけうどん",
@@ -252,11 +492,26 @@
             "average": 3,
             "bad": 0
         },
-        "category": "麺類　Noodles"
+        "category": "麺類　Noodles",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 17,
-        "link": "detail.php?t=650337&c=819381",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=819381",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/819381.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/819381.png",
         "name_jp": "冷やし山かけそば",
@@ -267,11 +522,26 @@
             "average": 0,
             "bad": 0
         },
-        "category": "麺類　Noodles"
+        "category": "麺類　Noodles",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 18,
-        "link": "detail.php?t=650337&c=819354",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=819354",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/819354.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/819354.png",
         "name_jp": "冷やしうどん",
@@ -282,11 +552,26 @@
             "average": 1,
             "bad": 0
         },
-        "category": "麺類　Noodles"
+        "category": "麺類　Noodles",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 19,
-        "link": "detail.php?t=650337&c=819355",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=819355",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/819355.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/819355.png",
         "name_jp": "冷やしそば",
@@ -297,11 +582,26 @@
             "average": 1,
             "bad": 1
         },
-        "category": "麺類　Noodles"
+        "category": "麺類　Noodles",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 20,
-        "link": "detail.php?t=650337&c=819389",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=819389",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/819389.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/819389.png",
         "name_jp": "冷やし担々麺",
@@ -312,11 +612,26 @@
             "average": 1,
             "bad": 1
         },
-        "category": "麺類　Noodles"
+        "category": "麺類　Noodles",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 21,
-        "link": "detail.php?t=650337&c=819079",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=819079",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/819079.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/819079.png",
         "name_jp": "温玉ねぎとろ丼",
@@ -327,11 +642,26 @@
             "average": 9,
             "bad": 1
         },
-        "category": "丼・カレー　Rice bowl / Curry"
+        "category": "丼・カレー　Rice bowl / Curry",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 22,
-        "link": "detail.php?t=650337&c=819046",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=819046",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/819046.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/819046.png",
         "name_jp": "豚塩カルビ丼",
@@ -342,11 +672,26 @@
             "average": 3,
             "bad": 2
         },
-        "category": "丼・カレー　Rice bowl / Curry"
+        "category": "丼・カレー　Rice bowl / Curry",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 23,
-        "link": "detail.php?t=650337&c=819217",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=819217",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/819217.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/819217.png",
         "name_jp": "豚塩カルビペッパーカレー",
@@ -357,11 +702,26 @@
             "average": 0,
             "bad": 0
         },
-        "category": "丼・カレー　Rice bowl / Curry"
+        "category": "丼・カレー　Rice bowl / Curry",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 24,
-        "link": "detail.php?t=650337&c=819272",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=819272",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/819272.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/819272.png",
         "name_jp": "カレーライス",
@@ -372,11 +732,26 @@
             "average": 18,
             "bad": 2
         },
-        "category": "丼・カレー　Rice bowl / Curry"
+        "category": "丼・カレー　Rice bowl / Curry",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 25,
-        "link": "detail.php?t=650337&c=814702",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814702",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814702.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814702.png",
         "name_jp": "ライス",
@@ -387,11 +762,26 @@
             "average": 0,
             "bad": 2
         },
-        "category": "丼・カレー　Rice bowl / Curry"
+        "category": "丼・カレー　Rice bowl / Curry",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 26,
-        "link": "detail.php?t=650337&c=814880",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814880",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814880.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814880.png",
         "name_jp": "和栗モンブラン",
@@ -402,11 +792,26 @@
             "average": 1,
             "bad": 0
         },
-        "category": "デザート　Dessert"
+        "category": "デザート　Dessert",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 27,
-        "link": "detail.php?t=650337&c=814808",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814808",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814808.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814808.png",
         "name_jp": "フルーツヨーグルト",
@@ -417,11 +822,26 @@
             "average": 15,
             "bad": 11
         },
-        "category": "デザート　Dessert"
+        "category": "デザート　Dessert",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 28,
-        "link": "detail.php?t=650337&c=814813",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814813",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814813.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814813.png",
         "name_jp": "焼きプリンタルト",
@@ -432,11 +852,26 @@
             "average": 1,
             "bad": 0
         },
-        "category": "デザート　Dessert"
+        "category": "デザート　Dessert",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 29,
-        "link": "detail.php?t=650337&c=814817",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814817",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814817.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814817.png",
         "name_jp": "大学芋",
@@ -447,11 +882,26 @@
             "average": 14,
             "bad": 3
         },
-        "category": "デザート　Dessert"
+        "category": "デザート　Dessert",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 30,
-        "link": "detail.php?t=650337&c=814816",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814816",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814816.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814816.png",
         "name_jp": "牛乳",
@@ -462,11 +912,26 @@
             "average": 1,
             "bad": 1
         },
-        "category": "デザート　Dessert"
+        "category": "デザート　Dessert",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     },
     {
         "id": 31,
-        "link": "detail.php?t=650337&c=814818",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650337&c=814818",
         "image": "https://fir-flutter-codelab-39c7d.web.app/assets/assets/foodpics/814818.png",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814818.png",
         "name_jp": "大学生協コーヒー",
@@ -477,6 +942,21 @@
             "average": 10,
             "bad": 1
         },
-        "category": "デザート　Dessert"
+        "category": "デザート　Dessert",
+        "nutrition": {
+            "energy": 1,
+            "protein": 2,
+            "fat": 3,
+            "carbonhydrates": 4,
+            "salt": 5,
+            "calcium": 6,
+            "veg": 7,
+            "iron": 8,
+            "VitA": 9,
+            "VitB1": 10,
+            "VitB2": 11,
+            "VitC": 12
+        },
+        "origin": "일본"
     }
 ]
