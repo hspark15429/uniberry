@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gtk_flutter/shopping_cart_tab.dart';
 import 'package:gtk_flutter/src/widgets.dart';
 import 'package:provider/provider.dart'; // NEW
 import '../model/app_state_model.dart';
@@ -11,12 +12,9 @@ class CafeteriaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ChangeNotifierProvider<AppStateModel>(
-        create: (_) => AppStateModel()..loadProducts(), // NEW
-        child: Scaffold(
-          appBar: CafeteriaAppBar(),
-          body: const ProductListTab(), // NEW
-        ),
+      home: Scaffold(
+        appBar: CafeteriaAppBar(),
+        body: const ProductListTab(), // NEW
       ),
     );
   }
@@ -52,25 +50,21 @@ class CafeteriaAppBar extends StatelessWidget implements PreferredSizeWidget {
             ),
             IconButton(
               icon: const Icon(Icons.shopping_cart),
-              onPressed: () {},
+              onPressed: () async {
+                return showModalBottomSheet(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return WillPopScope(
+                      onWillPop: () async => true,
+                      child: ShoppingCartTab(),
+                    );
+                  },
+                );
+              },
             ),
           ],
         ),
       ],
-    );
-  }
-}
-
-class CupertinoStoreHomePage extends StatelessWidget {
-  const CupertinoStoreHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        middle: Text('Cupertino Store'),
-      ),
-      child: SizedBox(),
     );
   }
 }

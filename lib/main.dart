@@ -13,15 +13,22 @@ import 'package:gtk_flutter/screens/top_page.dart';
 import 'package:provider/provider.dart'; // new
 
 import 'model/app_state.dart'; // new
+import 'model/app_state_model.dart';
 import 'screens/home_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(ChangeNotifierProvider(
-    create: (context) => ApplicationState(),
-    builder: ((context, child) => const App()),
-  ));
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => ApplicationState()),
+        ChangeNotifierProvider(
+            create: (context) => AppStateModel()..loadProducts()),
+      ],
+      child: const App(),
+    ),
+  );
 }
 
 // Add GoRouter configuration outside the App class

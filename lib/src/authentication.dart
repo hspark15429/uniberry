@@ -31,17 +31,17 @@ class AuthFunc extends StatelessWidget {
                   child: const Text('Start')),
             ),
           ),
-          Visibility(
-            visible: loggedIn,
-            child: Padding(
-              padding: const EdgeInsets.only(right: 24, left: 24, bottom: 8),
-              child: ElevatedButton(
-                  onPressed: () {
-                    context.go('/profile');
-                  },
-                  child: const Text('Profile')),
-            ),
-          ),
+          // Visibility(
+          //   visible: loggedIn,
+          //   child: Padding(
+          //     padding: const EdgeInsets.only(right: 24, left: 24, bottom: 8),
+          //     child: ElevatedButton(
+          //         onPressed: () {
+          //           context.go('/profile');
+          //         },
+          //         child: const Text('Profile')),
+          //   ),
+          // ),
           Padding(
             padding: const EdgeInsets.only(right: 24, left: 24, bottom: 8),
             child: ElevatedButton(
