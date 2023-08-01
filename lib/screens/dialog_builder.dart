@@ -25,22 +25,22 @@ Future<String?> timetableEntryDialogBuilder(
                             Navigator.of(context).pop('');
                           },
                           icon: Icon(Icons.cancel)),
-                      Header('Search Lecture'),
+                      Header('講義検索'),
                       TextButton(
                           onPressed: () {
                             Navigator.of(context).pop('Save$searchResult');
                           },
-                          child: Text('Save')),
+                          child: Text('保存')),
                       TextButton(
                           onPressed: () {
                             Navigator.of(context).pop('Delete');
                           },
-                          child: Text('Delete')),
+                          child: Text('削除')),
                     ],
                   ),
                   Row(
                     children: [
-                      Paragraph('Find lecture by name or professor'),
+                      Paragraph('講義名または教授名で検索'),
                     ],
                   ),
                   Row(
@@ -66,8 +66,8 @@ Future<String?> timetableEntryDialogBuilder(
                       children: [
                         Flexible(
                             child: Text(searchResult.isEmpty
-                                ? 'Your lecture: $currentLecture'
-                                : 'Your lecture: $searchResult')),
+                                ? '講義名: $currentLecture'
+                                : '講義名: $searchResult')),
                       ],
                     ),
                   ),

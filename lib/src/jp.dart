@@ -4,5 +4,6 @@ class LabelOverrides extends DefaultLocalizations {
   const LabelOverrides();
 
   @override
-  String get isNotAValidEmailErrorText => "ac.jp로 끝나는 학교 이메일을 사용하여 주십시오.";
+  String get isNotAValidEmailErrorText =>
+      "学校のメール（＠ed.ritsumei.ac.jp)を入力してください。";
 }

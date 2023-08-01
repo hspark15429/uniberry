@@ -179,11 +179,11 @@ class _TimetablePageState extends State<TimetablePage> {
                         border: TableBorder.all(),
                         children: [
                           TableRow(children: [
-                            _buildCell('Mon', height: 50),
-                            _buildCell('Tue', height: 50),
-                            _buildCell('Wed', height: 50),
-                            _buildCell('Thur', height: 50),
-                            _buildCell('Fri', height: 50),
+                            _buildCell('月', height: 50),
+                            _buildCell('火', height: 50),
+                            _buildCell('水', height: 50),
+                            _buildCell('木', height: 50),
+                            _buildCell('金', height: 50),
                           ]),
                           // 25 cells in total
                           for (int i = 0; i <= 4; i++)

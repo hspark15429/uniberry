@@ -32,15 +32,15 @@ class _TopPageState extends State<TopPage> {
           ),
           NavigationDestination(
             icon: Icon(Icons.school),
-            label: 'TimeTable',
+            label: '時間割',
           ),
           NavigationDestination(
             icon: Icon(Icons.forum),
-            label: 'Chat',
+            label: '匿名チャット',
           ),
           NavigationDestination(
             icon: Icon(Icons.ramen_dining),
-            label: 'Cafeteria',
+            label: '学食メニュー',
           ),
         ],
       ),
