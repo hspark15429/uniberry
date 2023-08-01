@@ -9,68 +9,86 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(right: 24, left: 24, bottom: 8),
-              child: ListTile(
-                leading: CircleAvatar(child: Text('A')),
-                title: Text('Manaba'),
-                subtitle: Text('Supporting text'),
-                onTap: () => openUrl('https://ct.ritsumei.ac.jp/ct/'),
-              ),
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: false,
+        title: Text('Main Page',
+            style: TextStyle(
+              color: Colors.white,
+            )),
+        backgroundColor: Colors.black,
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding:
+                      const EdgeInsets.only(right: 24, left: 24, bottom: 4),
+                  child: ListTile(
+                    leading: CircleAvatar(child: Text('A')),
+                    title: Text('Manaba'),
+                    subtitle: Text('Supporting text'),
+                    onTap: () => openUrl('https://ct.ritsumei.ac.jp/ct/'),
+                  ),
+                ),
+                Padding(
+                  padding:
+                      const EdgeInsets.only(right: 24, left: 24, bottom: 4),
+                  child: ListTile(
+                    leading: CircleAvatar(child: Text('B')),
+                    title: Text('학사력'),
+                    subtitle: Text('Supporting text'),
+                    onTap: () => openUrl(
+                        'https://www.ritsumei.ac.jp/profile/info/calendar/'),
+                  ),
+                ),
+                Padding(
+                  padding:
+                      const EdgeInsets.only(right: 24, left: 24, bottom: 4),
+                  child: ListTile(
+                    leading: CircleAvatar(child: Text('C')),
+                    title: Text('학부수업스케줄'),
+                    subtitle: Text('Supporting text'),
+                    onTap: () => openUrl(
+                        'https://www.ritsumei.ac.jp/file.jsp?id=562469'),
+                  ),
+                ),
+                Padding(
+                  padding:
+                      const EdgeInsets.only(right: 24, left: 24, bottom: 4),
+                  child: ListTile(
+                    leading: CircleAvatar(child: Text('D')),
+                    title: Text('대학도서관'),
+                    subtitle: Text('Supporting text'),
+                    onTap: () => openUrl(
+                        'https://runners.ritsumei.ac.jp/opac/opac_search/?lang=0'),
+                  ),
+                ),
+                Padding(
+                  padding:
+                      const EdgeInsets.only(right: 24, left: 24, bottom: 4),
+                  child: ListTile(
+                    leading: CircleAvatar(child: Text('E')),
+                    title: Text('학교홈페이지'),
+                    subtitle: Text('Supporting text'),
+                    onTap: () => openUrl('https://en.ritsumei.ac.jp/'),
+                  ),
+                ),
+                // go to /
+                Padding(
+                  padding:
+                      const EdgeInsets.only(right: 24, left: 24, bottom: 4),
+                  child: ElevatedButton(
+                    onPressed: () => context.go('/'),
+                    child: Text('Back'),
+                  ),
+                ),
+              ],
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 24, left: 24, bottom: 8),
-              child: ListTile(
-                leading: CircleAvatar(child: Text('B')),
-                title: Text('학사력'),
-                subtitle: Text('Supporting text'),
-                onTap: () => openUrl(
-                    'https://www.ritsumei.ac.jp/profile/info/calendar/'),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 24, left: 24, bottom: 8),
-              child: ListTile(
-                leading: CircleAvatar(child: Text('C')),
-                title: Text('학부수업스케줄'),
-                subtitle: Text('Supporting text'),
-                onTap: () =>
-                    openUrl('https://www.ritsumei.ac.jp/file.jsp?id=562469'),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 24, left: 24, bottom: 8),
-              child: ListTile(
-                leading: CircleAvatar(child: Text('D')),
-                title: Text('대학도서관'),
-                subtitle: Text('Supporting text'),
-                onTap: () => openUrl(
-                    'https://runners.ritsumei.ac.jp/opac/opac_search/?lang=0'),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 24, left: 24, bottom: 8),
-              child: ListTile(
-                leading: CircleAvatar(child: Text('E')),
-                title: Text('학교홈페이지'),
-                subtitle: Text('Supporting text'),
-                onTap: () => openUrl('https://en.ritsumei.ac.jp/'),
-              ),
-            ),
-            // go to /
-            Padding(
-              padding: const EdgeInsets.only(right: 24, left: 24, bottom: 8),
-              child: ElevatedButton(
-                onPressed: () => context.go('/'),
-                child: Text('Back'),
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );

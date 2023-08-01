@@ -21,7 +21,7 @@ class _TimetablePageState extends State<TimetablePage> {
 
   // late ApplicationState appState;
   late Future<Map<String, String>> localTimetableFuture;
-  Map<String, String> localTimetable = {
+  late Map<String, String> localTimetable = {
     for (int i = 1; i <= 25; i++) i.toString(): ""
   };
   late int cellNow;
@@ -35,31 +35,34 @@ class _TimetablePageState extends State<TimetablePage> {
     super.initState();
     _timetableIndex = context.read<ApplicationState>().timetableIndex;
     cellNow = TimetableService.getCurrentTimeSlot();
-
-    localTimetableFuture = TimetableService.getServerTimetable(_timetableIndex);
-    localTimetableFuture.then((value) {
-      setState(() {
-        localTimetable = value;
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      localTimetableFuture =
+          TimetableService.getServerTimetable(_timetableIndex);
+      localTimetableFuture.then((value) {
+        setState(() {
+          localTimetable = value;
+        });
       });
     });
-    bottomInfoFuture = TimetableService.getServerBottomInfo();
-    bottomInfoFuture.then((value) {
-      setState(() {
-        bottomInfo = value;
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      bottomInfoFuture = TimetableService.getServerBottomInfo();
+      bottomInfoFuture.then((value) {
+        setState(() {
+          bottomInfo = value;
+        });
       });
     });
-
     // loadServerBottomInfo();
   }
 
   @override
   Widget build(BuildContext context) {
     // save current timetable to firestore
-    TimetableService.uploadTimetable(
-      timetable: localTimetable,
-      index: _timetableIndex,
-    );
-    TimetableService.uploadBottomInfo(bottomInfo);
+    // TimetableService.uploadTimetable(
+    //   timetable: localTimetable,
+    //   index: _timetableIndex,
+    // );
+    // TimetableService.uploadBottomInfo(bottomInfo);
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -74,6 +77,10 @@ class _TimetablePageState extends State<TimetablePage> {
                       localTimetable = {
                         for (int i = 1; i <= 25; i++) i.toString(): ""
                       };
+                      TimetableService.uploadTimetable(
+                        timetable: localTimetable,
+                        index: _timetableIndex,
+                      );
                     });
                   }),
               IconButton(
@@ -224,7 +231,9 @@ class _TimetablePageState extends State<TimetablePage> {
                           TextField(
                             onChanged: (value) => {
                               bottomInfo[0] = value,
-                              TimetableService.uploadBottomInfo(bottomInfo)
+                              setState(() {
+                                TimetableService.uploadBottomInfo(bottomInfo);
+                              })
                             },
                             controller: TextEditingController()
                               ..text = bottomInfo[0],
@@ -233,7 +242,9 @@ class _TimetablePageState extends State<TimetablePage> {
                           TextField(
                             onChanged: (value) => {
                               bottomInfo[1] = value,
-                              TimetableService.uploadBottomInfo(bottomInfo)
+                              setState(() {
+                                TimetableService.uploadBottomInfo(bottomInfo);
+                              })
                             },
                             controller: TextEditingController()
                               ..text = bottomInfo[1],
@@ -242,7 +253,9 @@ class _TimetablePageState extends State<TimetablePage> {
                           TextField(
                             onChanged: (value) => {
                               bottomInfo[2] = value,
-                              TimetableService.uploadBottomInfo(bottomInfo)
+                              setState(() {
+                                TimetableService.uploadBottomInfo(bottomInfo);
+                              })
                             },
                             controller: TextEditingController()
                               ..text = bottomInfo[2],
@@ -306,6 +319,10 @@ class _TimetablePageState extends State<TimetablePage> {
           localTimetable[cellIndex] = "";
         else
           throw Exception('Invalid dialogResult');
+        TimetableService.uploadTimetable(
+          timetable: localTimetable,
+          index: _timetableIndex,
+        );
       });
     }
 
@@ -348,9 +365,7 @@ class _TimetablePageState extends State<TimetablePage> {
                         onPressed: _openEntryDialog,
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all<Color>(
-                              Color((math.Random().nextDouble() * 0xFFFFFF)
-                                      .toInt())
-                                  .withOpacity(1.0)), // Set the button color
+                              getColorByIndex(int.parse(cellIndex))),
                           shape:
                               MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
@@ -378,3 +393,36 @@ class _TimetablePageState extends State<TimetablePage> {
     );
   }
 }
+
+// Function to get a color by index
+Color getColorByIndex(int index) {
+  return colors[index % colors.length];
+}
+
+List<Color> colors = [
+  Colors.red,
+  Colors.pink,
+  Colors.purple,
+  Colors.deepPurple,
+  Colors.indigo,
+  Colors.blue,
+  Colors.lightBlue,
+  Colors.cyan,
+  Colors.teal,
+  Colors.green,
+  Colors.lightGreen,
+  Colors.lime,
+  Colors.yellow,
+  Colors.amber,
+  Colors.orange,
+  Colors.deepOrange,
+  Colors.brown,
+  Colors.grey,
+  Colors.blueGrey,
+  Colors.redAccent,
+  Colors.pinkAccent,
+  Colors.purpleAccent,
+  Colors.deepPurpleAccent,
+  Colors.indigoAccent,
+  Colors.blueAccent
+];

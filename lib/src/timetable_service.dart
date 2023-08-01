@@ -51,6 +51,7 @@ class TimetableService {
       }
     } else {
       print('No documents found for this user');
+      uploadTimetable(index: index, timetable: serverTimetable);
     }
 
     return serverTimetable;
@@ -73,6 +74,7 @@ class TimetableService {
       }
     } else {
       print('No documents found for this user');
+      uploadBottomInfo(bottomInfo);
     }
     return bottomInfo;
   }
