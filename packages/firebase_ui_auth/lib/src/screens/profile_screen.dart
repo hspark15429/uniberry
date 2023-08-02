@@ -414,25 +414,25 @@ class _EmailVerificationBadgeState extends State<_EmailVerificationBadge> {
                       setState(service.dismiss);
                     },
                   ),
-                if (state != EmailVerificationState.sent)
-                  LoadingButton(
-                    isLoading: state == EmailVerificationState.sending,
-                    label: 'Send verification email',
-                    onTap: () {
-                      service.sendVerificationEmail(
-                        platform,
-                        widget.actionCodeSettings,
-                      );
-                    },
-                  )
-                else
-                  UniversalButton(
-                    variant: ButtonVariant.text,
-                    text: 'Ok',
-                    onPressed: () {
-                      setState(service.dismiss);
-                    },
-                  )
+                // if (state != EmailVerificationState.sent)
+                //   LoadingButton(
+                //     isLoading: state == EmailVerificationState.sending,
+                //     label: 'Send verification email',
+                //     onTap: () {
+                //       service.sendVerificationEmail(
+                //         platform,
+                //         widget.actionCodeSettings,
+                //       );
+                //     },
+                //   )
+                // else
+                //   UniversalButton(
+                //     variant: ButtonVariant.text,
+                //     text: 'Ok',
+                //     onPressed: () {
+                //       setState(service.dismiss);
+                //     },
+                //   )
               ],
             )
         ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gtk_flutter/main.dart';
 import 'package:gtk_flutter/model/app_state.dart';
 
 import 'package:gtk_flutter/screens/anonymous_board.dart';
@@ -27,7 +28,7 @@ class _TopPageState extends State<TopPage> {
     // Check if the user is authenticated when the widget is initialized
     if (!isUserAuthenticated(context)) {
       WidgetsBinding.instance?.addPostFrameCallback((_) {
-        Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
+        router.go('/'); // navigate to "/"
       });
     }
     return Scaffold(
@@ -83,7 +84,7 @@ class _TopPageState extends State<TopPage> {
   }
 
   bool isUserAuthenticated(BuildContext context) {
-    final appState = context.watch<ApplicationState>();
+    final appState = context.read<ApplicationState>();
     return appState.loggedIn;
   }
 }

@@ -78,6 +78,7 @@ final _router = GoRouter(
                       'timetables': {
                         for (var i = 1; i <= 10; i++) 'timetable$i': {"1": ""}
                       },
+                      'bottomInfo': ["", "", ""]
                     }).then((value) {
                       print("User Added");
                       if (!user.emailVerified) {
@@ -135,6 +136,7 @@ final _router = GoRouter(
   ],
 );
 // end of GoRouter configuration
+GoRouter get router => _router;
 
 // Change MaterialApp to MaterialApp.router and add the routerConfig
 class App extends StatelessWidget {
