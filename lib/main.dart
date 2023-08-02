@@ -33,6 +33,14 @@ void main() {
 
 // Add GoRouter configuration outside the App class
 final _router = GoRouter(
+  // redirect: (BuildContext context, GoRouterState state) {
+  //   final isAuthenticated =  // your logic to check if user is authenticated
+  //   if (!isAuthenticated) {
+  //     return '/';
+  //   } else {
+  //     return null; // return "null" to display the intended route without redirecting
+  //   }
+  // },
   routes: [
     GoRoute(
       path: '/',
@@ -72,17 +80,18 @@ final _router = GoRouter(
                       },
                     }).then((value) {
                       print("User Added");
+                      if (!user.emailVerified) {
+                        user.sendEmailVerification();
+                        const snackBar = SnackBar(
+                            content: Text(
+                                'Please check your email to verify your email address'));
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      }
                     }).catchError((error) {
                       print("Failed to add user: $error");
                     });
                   }
-                  // if (!user.emailVerified) {
-                  //   user.sendEmailVerification();
-                  //   const snackBar = SnackBar(
-                  //       content: Text(
-                  //           'Please check your email to verify your email address'));
-                  //   ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                  // }
+
                   context.go('/');
                 })),
               ],

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:gtk_flutter/model/app_state.dart';
 
 import 'package:gtk_flutter/screens/anonymous_board.dart';
 import 'package:gtk_flutter/screens/cafeteria_page.dart';
 import 'package:gtk_flutter/screens/main_page.dart';
 import 'package:gtk_flutter/screens/timetable_page.dart';
+import 'package:provider/provider.dart';
 
 class TopPage extends StatefulWidget {
   const TopPage({Key? key}) : super(key: key);
@@ -16,7 +18,18 @@ class _TopPageState extends State<TopPage> {
   int currentPageIndex = 0;
 
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    // Check if the user is authenticated when the widget is initialized
+    if (!isUserAuthenticated(context)) {
+      WidgetsBinding.instance?.addPostFrameCallback((_) {
+        Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
+      });
+    }
     return Scaffold(
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: (int index) {
@@ -67,5 +80,10 @@ class _TopPageState extends State<TopPage> {
         ),
       ][currentPageIndex],
     );
+  }
+
+  bool isUserAuthenticated(BuildContext context) {
+    final appState = context.watch<ApplicationState>();
+    return appState.loggedIn;
   }
 }
