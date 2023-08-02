@@ -63,7 +63,7 @@ class EmailValidator extends Validator {
   String? validate(String? value) {
     if (value == null) return errorText;
     // Japanese school emails only
-    // if (!value.endsWith("@ed.ritsumei.ac.jp")) return errorText;
+    if (!value.endsWith("@ed.ritsumei.ac.jp")) return errorText;
     return e.EmailValidator.validate(value) ? null : errorText;
   }
 }
