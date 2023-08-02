@@ -199,11 +199,20 @@ class _TimetablePageState extends State<TimetablePage> {
                 ],
               ),
               SizedBox(height: 20),
+              Consumer<ApplicationState>(builder: (context, appState, _) {
+                List<String> _schoolList = ["경영학부", "심리학부", "정책과학부"];
+                return Text(
+                  "School: ${_schoolList[appState.schoolIndex]}",
+                  textAlign: TextAlign.start,
+                );
+              }),
+              SizedBox(height: 20),
               SafeArea(
                 child: Row(
                   children: [
                     SizedBox(width: 10),
                     Table(
+                      border: TableBorder.all(),
                       defaultColumnWidth: FixedColumnWidth(
                           MediaQuery.of(context).size.width / 5),
                       children: [
@@ -211,10 +220,12 @@ class _TimetablePageState extends State<TimetablePage> {
                           Text(
                             "GPA",
                             style: TextStyle(fontSize: 15.0),
+                            textAlign: TextAlign.center,
                           ),
                           Text(
                             "Credits",
                             style: TextStyle(fontSize: 15.0),
+                            textAlign: TextAlign.center,
                           ),
                           Text(
                             "Notes",
@@ -223,13 +234,8 @@ class _TimetablePageState extends State<TimetablePage> {
                           ),
                         ]),
                         TableRow(children: [
-                          TableCell(child: SizedBox(height: 20)),
-                          TableCell(child: SizedBox(height: 20)),
-                          TableCell(child: SizedBox(height: 20)),
-                        ]),
-                        TableRow(children: [
                           TextField(
-                            onChanged: (value) => {
+                            onSubmitted: (value) => {
                               bottomInfo[0] = value,
                               setState(() {
                                 TimetableService.uploadBottomInfo(bottomInfo);
@@ -240,7 +246,7 @@ class _TimetablePageState extends State<TimetablePage> {
                             style: TextStyle(fontSize: 15.0),
                           ),
                           TextField(
-                            onChanged: (value) => {
+                            onSubmitted: (value) => {
                               bottomInfo[1] = value,
                               setState(() {
                                 TimetableService.uploadBottomInfo(bottomInfo);
@@ -251,7 +257,7 @@ class _TimetablePageState extends State<TimetablePage> {
                             style: TextStyle(fontSize: 15.0),
                           ),
                           TextField(
-                            onChanged: (value) => {
+                            onSubmitted: (value) => {
                               bottomInfo[2] = value,
                               setState(() {
                                 TimetableService.uploadBottomInfo(bottomInfo);
@@ -265,14 +271,6 @@ class _TimetablePageState extends State<TimetablePage> {
                         ]),
                       ],
                     ),
-                    Spacer(),
-                    Consumer<ApplicationState>(builder: (context, appState, _) {
-                      List<String> _schoolList = ["경영학부", "심리학부", "정책과학부"];
-                      return Text(
-                        "School: ${_schoolList[appState.schoolIndex]}",
-                        textAlign: TextAlign.start,
-                      );
-                    }),
                     SizedBox(width: 20)
                   ],
                 ),
