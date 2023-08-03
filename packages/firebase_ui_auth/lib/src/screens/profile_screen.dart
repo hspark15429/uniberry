@@ -886,6 +886,13 @@ class ProfileScreen extends MultiProviderScreen {
             return _reauthenticate(context);
           },
         ),
+        Padding(
+          padding: const EdgeInsets.only(right: 24, left: 24, bottom: 4),
+          child: ElevatedButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: const Text('戻る'), // 'back'
+          ),
+        ),
       ],
     );
     final body = Padding(

@@ -36,11 +36,11 @@ class _AnonymousBoardState extends State<AnonymousBoard> {
                       child: TextFormField(
                         controller: _controller,
                         decoration: const InputDecoration(
-                          hintText: 'Leave a message',
+                          hintText: "伝言を残す。", // 'Leave a message',
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
-                            return 'Enter your message to continue';
+                            return "続行するにはメッセージを入力してください"; // 'Enter your message to continue';
                           }
                           return null;
                         },
@@ -65,9 +65,9 @@ class _AnonymousBoardState extends State<AnonymousBoard> {
                           ),
                           SizedBox(width: 4),
                           Text(
-                            style: TextStyle(color: Colors.black),
-                            'SEND',
-                          ),
+                              style: TextStyle(color: Colors.black),
+                              "送信" // 'SEND',
+                              ),
                         ],
                       ),
                     ),

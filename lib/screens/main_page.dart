@@ -85,7 +85,7 @@ class MainPage extends StatelessWidget {
                       const EdgeInsets.only(right: 24, left: 24, bottom: 4),
                   child: ElevatedButton(
                     onPressed: () => context.go('/'),
-                    child: Text('Back'),
+                    child: Text('戻る'), // 'back'
                   ),
                 ),
               ],
