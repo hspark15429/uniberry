@@ -39,7 +39,7 @@ class CafeteriaAppBar extends StatelessWidget implements PreferredSizeWidget {
         Row(
           children: [
             Paragraph(
-                'Total: ${context.select((AppStateModel m) => m.totalCost)}¥'),
+                'Total: ${context.select((AppStateModel m) => m.totalCost).toStringAsFixed(0)}¥'),
             IconButton(
               icon: const Icon(Icons.cleaning_services_outlined),
               onPressed: () {

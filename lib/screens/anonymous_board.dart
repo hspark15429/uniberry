@@ -21,7 +21,7 @@ class _AnonymousBoardState extends State<AnonymousBoard> {
       home: Scaffold(
         appBar: AppBar(
           centerTitle: false,
-          title: Text('Anonymous Board'),
+          title: Text('匿名チャット'),
           backgroundColor: Colors.black,
         ),
         body: Column(

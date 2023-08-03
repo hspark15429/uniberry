@@ -42,7 +42,7 @@ class _TopPageState extends State<TopPage> {
         destinations: const <Widget>[
           NavigationDestination(
             icon: Icon(Icons.home),
-            label: 'Main',
+            label: 'ホーム',
           ),
           NavigationDestination(
             icon: Icon(Icons.school),

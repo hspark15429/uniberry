@@ -66,7 +66,7 @@ class _TimetablePageState extends State<TimetablePage> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-            title: Text('Timetable$_timetableIndex'),
+            title: Text(getTimetableByIndex(_timetableIndex)),
             backgroundColor: Colors.black,
             actions: [
               IconButton(
@@ -117,21 +117,21 @@ class _TimetablePageState extends State<TimetablePage> {
                   }),
               IconButton(
                   icon: const Icon(CupertinoIcons.bars),
-                  tooltip: 'Timetable List',
+                  tooltip: '時間割リスト',
                   onPressed: () {
                     // handle the press
                     showDialog(
                         context: context,
                         builder: (context) {
                           return AlertDialog(
-                            title: Text('Timetable List'),
-                            content: Text('Select a timetable to view'),
+                            title: Text('時間割リスト'),
+                            content: Text('時間割リストから選択 '),
                             actions: List<Widget>.generate(
-                              5,
+                              6,
                               (index) => TextButton(
                                 onPressed: () =>
                                     timetableSwitch(context, index: index + 1),
-                                child: Text('Timetable ${index + 1}'),
+                                child: Text(getTimetableByIndex(index)),
                               ),
                             ),
                           );
@@ -200,9 +200,9 @@ class _TimetablePageState extends State<TimetablePage> {
               ),
               SizedBox(height: 20),
               Consumer<ApplicationState>(builder: (context, appState, _) {
-                List<String> _schoolList = ["경영학부", "심리학부", "정책과학부"];
+                List<String> _schoolList = ["経営学部", "総合心理学部", "政策科学部"];
                 return Text(
-                  "School: ${_schoolList[appState.schoolIndex]}",
+                  "専攻: ${_schoolList[appState.schoolIndex]}",
                   textAlign: TextAlign.start,
                 );
               }),
@@ -312,7 +312,7 @@ class _TimetablePageState extends State<TimetablePage> {
       if (dialogResult!.isEmpty) return;
       setState(() {
         if (dialogResult.contains('Save'))
-          localTimetable[cellIndex] = dialogResult.substring(4);
+          localTimetable[cellIndex] = dialogResult.substring(4).split('|')[0];
         else if (dialogResult == 'Delete')
           localTimetable[cellIndex] = "";
         else
@@ -424,3 +424,15 @@ List<Color> colors = [
   Colors.indigoAccent,
   Colors.blueAccent
 ];
+
+String getTimetableByIndex(int index) {
+  List<String> _timetableList = [
+    "2023年春学期",
+    "2023年秋学期",
+    "2024年春学期",
+    "2024年秋学期",
+    "2025年春学期",
+    "2025年春学期"
+  ];
+  return _timetableList[index];
+}

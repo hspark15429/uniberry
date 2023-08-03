@@ -59,32 +59,32 @@ class _ShoppingCartTabState extends State<ShoppingCartTab> {
                         // ),
                         const SizedBox(height: 6),
                         Text(
-                          'Total ${_currencyFormat.format(model.totalCost)}',
+                          '合計（税込） ${_currencyFormat.format(model.totalCost)}',
                           style: Styles.productRowTotal,
                         ),
                         SizedBox(height: 10),
                         Row(
                           children: [
                             DefaultTextStyle(
-                              style: Styles.nutrition,
+                              style: Styles.nutritionName,
                               child: Column(children: [
-                                Text('Total calories'),
-                                Text('Total Protein'),
-                                Text('Total Fat'),
-                                Text('Total Carbohydrates'),
-                                Text('Total Salt'),
-                                Text('Total calcium'),
-                                Text('Total Veg'),
-                                Text('Total Iron'),
-                                Text('Total VitaminA'),
-                                Text('Total VitaminB1'),
-                                Text('Total VitaminB2'),
-                                Text('Total VitaminC'),
+                                Text('合計（税込） カロリー'),
+                                Text('合計（税込） タンパク質'),
+                                Text('合計（税込） 脂質'),
+                                Text('合計（税込） 炭水化物'),
+                                Text('合計（税込） 食塩相当量'),
+                                Text('合計（税込） カルシウム'),
+                                Text('合計（税込） 野菜量'),
+                                Text('合計（税込） 鉄'),
+                                Text('合計（税込） ビタミン A'),
+                                Text('合計（税込） ビタミン B1'),
+                                Text('合計（税込） ビタミン B2'),
+                                Text('合計（税込） ビタミン C'),
                               ]),
                             ),
                             SizedBox(width: 10),
                             DefaultTextStyle(
-                              style: Styles.nutrition,
+                              style: Styles.nutritionValue,
                               child: Column(
                                 children: [
                                   Text(
@@ -135,7 +135,7 @@ class _ShoppingCartTabState extends State<ShoppingCartTab> {
         return CustomScrollView(
           slivers: <Widget>[
             const CupertinoSliverNavigationBar(
-              largeTitle: Text('Shopping Cart'),
+              largeTitle: Text('カート'),
             ),
             SliverSafeArea(
               top: false,

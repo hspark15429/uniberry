@@ -127,9 +127,9 @@ class TimetableService {
                 scrollController:
                     FixedExtentScrollController(initialItem: currentMajor),
                 children: const [
-                  Text('경영학부'),
-                  Text('심리학부'),
-                  Text('정책과학부'),
+                  Text('経営学部'),
+                  Text('総合心理学部'),
+                  Text('政策科学部'),
                 ],
                 onSelectedItemChanged: (value) {
                   _selectedMajor = value;
