@@ -300,6 +300,13 @@ class _TimetablePageState extends State<TimetablePage> {
     }
   }
 
+  String truncate(String text, {length = 30, omission = '...'}) {
+    if (length >= text.length) {
+      return text;
+    }
+    return text.replaceRange(length, text.length, omission);
+  }
+
   Widget _buildCell(
     String cellIndex, {
     double height = 80,
@@ -316,7 +323,8 @@ class _TimetablePageState extends State<TimetablePage> {
       if (dialogResult!.isEmpty) return;
       setState(() {
         if (dialogResult.contains('Save'))
-          localTimetable[cellIndex] = dialogResult.substring(4).split('|')[0];
+          localTimetable[cellIndex] =
+              (dialogResult.substring(4)).split('|')[0].toString();
         else if (dialogResult == 'Delete')
           localTimetable[cellIndex] = "";
         else
