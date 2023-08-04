@@ -144,11 +144,15 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Brightness brightnessValue =
+        MediaQuery.of(context).platformBrightness;
     return MaterialApp.router(
       title: 'Uniberry',
       theme: ThemeData(
         useMaterial3: true,
-        colorScheme: lightColorScheme,
+        colorScheme: brightnessValue == Brightness.dark
+            ? darkColorScheme
+            : lightColorScheme,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       routerConfig: _router,

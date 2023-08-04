@@ -60,62 +60,131 @@ class _ShoppingCartTabState extends State<ShoppingCartTab> {
                         const SizedBox(height: 6),
                         Text(
                           '合計（税込） ${_currencyFormat.format(model.totalCost)}',
-                          style: Styles.productRowTotal,
+                          // style: Styles.productRowTotal,
                         ),
-                        SizedBox(height: 10),
-                        Row(
-                          children: [
-                            DefaultTextStyle(
-                              style: Styles.nutritionName,
-                              child: Column(children: [
-                                Text('合計（税込） カロリー'),
-                                Text('合計（税込） タンパク質'),
-                                Text('合計（税込） 脂質'),
-                                Text('合計（税込） 炭水化物'),
-                                Text('合計（税込） 食塩相当量'),
-                                Text('合計（税込） カルシウム'),
-                                Text('合計（税込） 野菜量'),
-                                Text('合計（税込） 鉄'),
-                                Text('合計（税込） ビタミン A'),
-                                Text('合計（税込） ビタミン B1'),
-                                Text('合計（税込） ビタミン B2'),
-                                Text('合計（税込） ビタミン C'),
-                              ]),
-                            ),
-                            SizedBox(width: 10),
-                            DefaultTextStyle(
-                              style: Styles.nutritionValue,
-                              child: Column(
-                                children: [
-                                  Text(
-                                      '${model.subtotalNutrition.energy.toStringAsFixed(0)} Kcal'),
-                                  Text(
-                                      '${model.subtotalNutrition.protein.toStringAsFixed(1)} g'),
-                                  Text(
-                                      '${model.subtotalNutrition.fat.toStringAsFixed(1)} g'),
-                                  Text(
-                                      '${model.subtotalNutrition.carbohydrates.toStringAsFixed(1)} g'),
-                                  Text(
-                                      '${model.subtotalNutrition.salt.toStringAsFixed(1)} g'),
-                                  Text(
-                                      '${model.subtotalNutrition.calcium.toStringAsFixed(1)} mg'),
-                                  Text(
-                                      '${model.subtotalNutrition.veg.toStringAsFixed(1)} g'),
-                                  Text(
-                                      '${model.subtotalNutrition.iron.toStringAsFixed(1)} mg'),
-                                  Text(
-                                      '${model.subtotalNutrition.vitA.toStringAsFixed(1)} μg'),
-                                  Text(
-                                      '${model.subtotalNutrition.vitB1.toStringAsFixed(1)} mg'),
-                                  Text(
-                                      '${model.subtotalNutrition.vitB2.toStringAsFixed(1)} mg'),
-                                  Text(
-                                      '${model.subtotalNutrition.vitC.toStringAsFixed(1)} mg'),
-                                ],
-                              ),
-                            ),
+                        DataTable(
+                          dataRowHeight: 20,
+                          columns: const [
+                            DataColumn(label: Text('栄養素')),
+                            DataColumn(label: Text('合計')),
                           ],
-                        )
+                          rows: [
+                            DataRow(cells: [
+                              DataCell(Text('カロリー')),
+                              DataCell(Text(
+                                  '${model.subtotalNutrition.energy.toStringAsFixed(0)} Kcal')),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text('タンパク質')),
+                              DataCell(Text(
+                                  '${model.subtotalNutrition.protein.toStringAsFixed(1)} g')),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text('脂質')),
+                              DataCell(Text(
+                                  '${model.subtotalNutrition.fat.toStringAsFixed(1)} g')),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text('炭水化物')),
+                              DataCell(Text(
+                                  '${model.subtotalNutrition.carbohydrates.toStringAsFixed(1)} g')),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text('食塩相当量')),
+                              DataCell(Text(
+                                  '${model.subtotalNutrition.salt.toStringAsFixed(1)} g')),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text('カルシウム')),
+                              DataCell(Text(
+                                  '${model.subtotalNutrition.calcium.toStringAsFixed(1)} mg')),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text('野菜量')),
+                              DataCell(Text(
+                                  '${model.subtotalNutrition.veg.toStringAsFixed(1)} g')),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text('鉄')),
+                              DataCell(Text(
+                                  '${model.subtotalNutrition.iron.toStringAsFixed(1)} mg')),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text('ビタミン A')),
+                              DataCell(Text(
+                                  '${model.subtotalNutrition.vitA.toStringAsFixed(1)} μg')),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text('ビタミン B1')),
+                              DataCell(Text(
+                                  '${model.subtotalNutrition.vitB1.toStringAsFixed(1)} mg')),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text('ビタミン B2')),
+                              DataCell(Text(
+                                  '${model.subtotalNutrition.vitB2.toStringAsFixed(1)} mg')),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text('ビタミン C')),
+                              DataCell(Text(
+                                  '${model.subtotalNutrition.vitC.toStringAsFixed(1)} mg')),
+                            ]),
+                          ],
+                        ),
+
+                        // Row(
+                        //   children: [
+                        //     DefaultTextStyle(
+                        //       style: Styles.nutritionName,
+                        //       child: Column(children: [
+                        //         Text('合計（税込） カロリー'),
+                        //         Text('合計（税込） タンパク質'),
+                        //         Text('合計（税込） 脂質'),
+                        //         Text('合計（税込） 炭水化物'),
+                        //         Text('合計（税込） 食塩相当量'),
+                        //         Text('合計（税込） カルシウム'),
+                        //         Text('合計（税込） 野菜量'),
+                        //         Text('合計（税込） 鉄'),
+                        //         Text('合計（税込） ビタミン A'),
+                        //         Text('合計（税込） ビタミン B1'),
+                        //         Text('合計（税込） ビタミン B2'),
+                        //         Text('合計（税込） ビタミン C'),
+                        //       ]),
+                        //     ),
+                        //     SizedBox(width: 10),
+                        //     DefaultTextStyle(
+                        //       style: Styles.nutritionValue,
+                        //       child: Column(
+                        //         children: [
+                        //           Text(
+                        //               '${model.subtotalNutrition.energy.toStringAsFixed(0)} Kcal'),
+                        //           Text(
+                        //               '${model.subtotalNutrition.protein.toStringAsFixed(1)} g'),
+                        //           Text(
+                        //               '${model.subtotalNutrition.fat.toStringAsFixed(1)} g'),
+                        //           Text(
+                        //               '${model.subtotalNutrition.carbohydrates.toStringAsFixed(1)} g'),
+                        //           Text(
+                        //               '${model.subtotalNutrition.salt.toStringAsFixed(1)} g'),
+                        //           Text(
+                        //               '${model.subtotalNutrition.calcium.toStringAsFixed(1)} mg'),
+                        //           Text(
+                        //               '${model.subtotalNutrition.veg.toStringAsFixed(1)} g'),
+                        //           Text(
+                        //               '${model.subtotalNutrition.iron.toStringAsFixed(1)} mg'),
+                        //           Text(
+                        //               '${model.subtotalNutrition.vitA.toStringAsFixed(1)} μg'),
+                        //           Text(
+                        //               '${model.subtotalNutrition.vitB1.toStringAsFixed(1)} mg'),
+                        //           Text(
+                        //               '${model.subtotalNutrition.vitB2.toStringAsFixed(1)} mg'),
+                        //           Text(
+                        //               '${model.subtotalNutrition.vitC.toStringAsFixed(1)} mg'),
+                        //         ],
+                        //       ),
+                        //     ),
+                        //   ],
+                        // )
                       ],
                     )
                   ],
@@ -135,7 +204,10 @@ class _ShoppingCartTabState extends State<ShoppingCartTab> {
         return CustomScrollView(
           slivers: <Widget>[
             const CupertinoSliverNavigationBar(
-              largeTitle: Text('カート'),
+              largeTitle: Text('カート',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 113, 107, 107),
+                  )),
             ),
             SliverSafeArea(
               top: false,
@@ -172,7 +244,7 @@ class ShoppingCartItem extends StatelessWidget {
     final row = SafeArea(
       top: false,
       bottom: false,
-      child: CupertinoListTile(
+      child: ListTile(
         leading: ClipRRect(
           borderRadius: BorderRadius.circular(4),
           child: Image.network(
@@ -182,19 +254,19 @@ class ShoppingCartItem extends StatelessWidget {
             height: 40,
           ),
         ),
-        leadingSize: 40,
+        // leadingSize: 40,
         title: Text(
           product.name_jp,
-          style: Styles.productRowItemName,
+          // style: Styles.productRowItemName,
         ),
         subtitle: Text(
           '${quantity > 1 ? '$quantity x ' : ''}'
           '${formatter.format(product.price)}',
-          style: Styles.productRowItemPrice,
+          // style: Styles.productRowItemPrice,
         ),
         trailing: Text(
           formatter.format(quantity * product.price),
-          style: Styles.productRowItemName,
+          // style: Styles.productRowItemName,
         ),
       ),
     );

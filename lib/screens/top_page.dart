@@ -65,17 +65,17 @@ class _TopPageState extends State<TopPage> {
           child: const MainPage(),
         ),
         Container(
-          color: Colors.green,
+          // color: Colors.green,
           alignment: Alignment.center,
           child: const TimetablePage(),
         ),
         Container(
-          color: Colors.blue,
+          // color: Colors.blue,
           alignment: Alignment.center,
           child: const AnonymousBoard(),
         ),
         Container(
-          color: Colors.black,
+          // color: Colors.black,
           alignment: Alignment.center,
           child: const CafeteriaPage(),
         ),

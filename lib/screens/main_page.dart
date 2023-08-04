@@ -11,13 +11,13 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: false,
-        title: Text('ホーム',
-            style: TextStyle(
-              color: Colors.white,
-            )),
-        backgroundColor: Colors.black,
-      ),
+          centerTitle: false,
+          title: Text('ホーム',
+              style: TextStyle(
+                color: Colors.white,
+              )),
+          backgroundColor: const Color.fromARGB(255, 32, 30, 30),
+          automaticallyImplyLeading: false),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Center(

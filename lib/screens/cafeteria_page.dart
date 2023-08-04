@@ -11,11 +11,9 @@ class CafeteriaPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: CafeteriaAppBar(),
-        body: const ProductListTab(), // NEW
-      ),
+    return Scaffold(
+      appBar: CafeteriaAppBar(),
+      body: const ProductListTab(), // NEW
     );
   }
 }
@@ -33,13 +31,23 @@ class CafeteriaAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       centerTitle: false,
-      title: Text('OIC Cafeteria'),
-      backgroundColor: Colors.black,
+      title: Text(
+        'OIC Cafeteria',
+        style: TextStyle(
+          color: Colors.white,
+        ),
+      ),
+      backgroundColor: const Color.fromARGB(255, 32, 30, 30),
+      automaticallyImplyLeading: false,
       actions: [
         Row(
           children: [
-            Paragraph(
-                '合計（税込）: ${context.select((AppStateModel m) => m.totalCost).toStringAsFixed(0)}¥'),
+            Text(
+              '合計: ${context.select((AppStateModel m) => m.totalCost).toStringAsFixed(0)}¥  ',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
             IconButton(
               icon: const Icon(Icons.cleaning_services_outlined),
               onPressed: () {

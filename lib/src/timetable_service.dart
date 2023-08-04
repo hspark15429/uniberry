@@ -122,7 +122,7 @@ class TimetableService {
               width: 300,
               height: 250,
               child: CupertinoPicker(
-                backgroundColor: Colors.white,
+                // backgroundColor: Colors.white,
                 itemExtent: 30,
                 scrollController:
                     FixedExtentScrollController(initialItem: currentMajor),

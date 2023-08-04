@@ -25,7 +25,7 @@ class ProductRowItem extends StatelessWidget {
         bottom: 8,
         right: 8,
       ),
-      child: CupertinoListTile(
+      child: ListTile(
         leading: ClipRRect(
           borderRadius: BorderRadius.circular(4),
           child: InkWell(
@@ -43,7 +43,8 @@ class ProductRowItem extends StatelessWidget {
             ),
           ),
         ),
-        leadingSize: 68,
+        visualDensity: VisualDensity(vertical: -4),
+        // leadingSize: 68,
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
