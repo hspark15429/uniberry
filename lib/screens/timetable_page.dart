@@ -228,7 +228,7 @@ class _TimetablePageState extends State<TimetablePage> {
                           textAlign: TextAlign.center,
                         ),
                         Text(
-                          "Credits",
+                          "単位",
                           style: TextStyle(fontSize: 15.0),
                           textAlign: TextAlign.center,
                         ),
@@ -300,9 +300,16 @@ class _TimetablePageState extends State<TimetablePage> {
     }
   }
 
+  String truncate(String text, {length = 30, omission = '...'}) {
+    if (length >= text.length) {
+      return text;
+    }
+    return text.replaceRange(length, text.length, omission);
+  }
+
   Widget _buildCell(
     String cellIndex, {
-    double height = 80,
+    double height = 87,
     double width = 50,
     color = Colors.white,
     bool interactable = false,
@@ -316,7 +323,8 @@ class _TimetablePageState extends State<TimetablePage> {
       if (dialogResult!.isEmpty) return;
       setState(() {
         if (dialogResult.contains('Save'))
-          localTimetable[cellIndex] = dialogResult.substring(4).split('|')[0];
+          localTimetable[cellIndex] =
+              (dialogResult.substring(4)).split('|')[0].toString();
         else if (dialogResult == 'Delete')
           localTimetable[cellIndex] = "";
         else
@@ -362,7 +370,10 @@ class _TimetablePageState extends State<TimetablePage> {
                     child: ElevatedButton(
                         child: Text(
                           localTimetable[cellIndex]!,
-                          style: TextStyle(fontSize: 7, color: Colors.black),
+                          style: TextStyle(
+                              fontSize: 9,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
                         ),
                         onPressed: _openEntryDialog,
                         style: ButtonStyle(

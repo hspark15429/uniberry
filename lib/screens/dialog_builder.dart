@@ -10,10 +10,10 @@ Future<String?> timetableEntryDialogBuilder(
   return showDialog<String>(
     context: context,
     builder: (BuildContext context) {
-      String searchResult = currentLecture;
+      String searchResult = currentLecture; // currentLecture;
       return StatefulBuilder(builder: (context, setState) {
         return WillPopScope(
-          onWillPop: () async => false,
+          onWillPop: () async => true,
           child: Dialog.fullscreen(
             child: Container(
               child: Column(
