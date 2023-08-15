@@ -156,6 +156,7 @@ class App extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       routerConfig: _router,
+      debugShowCheckedModeBanner: false,
 
       // Add the localization delegates
       localizationsDelegates: [
