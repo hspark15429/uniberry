@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 
 import 'model/app_state_model.dart';
 import 'model/product.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
 class ProductRowItem extends StatelessWidget {
   const ProductRowItem({

@@ -7,6 +7,8 @@ import 'package:flutter/services.dart';
 import 'product.dart';
 import 'products_repository.dart';
 
+import 'package:firebase_storage/firebase_storage.dart';
+
 class AppStateModel extends foundation.ChangeNotifier {
   // All the available products.
   List<Product> _availableProducts = [];
@@ -183,6 +185,8 @@ Future<List<Product>> loadMenuItems() async {
 
   List<dynamic> menuData = jsonDecode(jsonString);
   for (var menu in menuData) {
+    // print(await fetchUrlFromStorage(menu['image']));
+
     allMenuItems.add(
       Product(
         category: categoryMapping[menu['category']] == null
@@ -192,7 +196,7 @@ Future<List<Product>> loadMenuItems() async {
         name_jp: menu['name_jp'],
         name_en: menu['name_en'],
         price: menu['price'],
-        image: menu['image'],
+        image: menu['image_appUrl'],
         evaluation: Evaluation(
           good: menu['evaluation']['good'],
           average: menu['evaluation']['average'],
@@ -221,8 +225,11 @@ Future<List<Product>> loadMenuItems() async {
 }
 
 Future<String> fetchJsonFromUrl() async {
-  final response = await http.get(Uri.parse(
-      'https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menuitems3.json?alt=media&token=6aa2f59f-1253-4a9f-828d-61bfb9be69fc'));
+  FirebaseStorage storage = FirebaseStorage.instance;
+  Reference pathReference = storage.ref('menu/menu.json');
+  String url = await pathReference.getDownloadURL();
+
+  final response = await http.get(Uri.parse(url));
 
   if (response.statusCode == 200) {
     // If the server returns a 200 OK response, then parse the JSON.
@@ -231,4 +238,11 @@ Future<String> fetchJsonFromUrl() async {
     // If the server did not return a 200 OK response, then throw an exception.
     throw Exception('Failed to load data from server');
   }
+}
+
+Future<String> fetchUrlFromStorage(String path) async {
+  FirebaseStorage storage = FirebaseStorage.instance;
+  Reference pathReference = storage.ref(path);
+  String url = await pathReference.getDownloadURL();
+  return url;
 }
