@@ -17,7 +17,7 @@ for tr in tr_tags:
     td_tags = tr.find_all('td')
     data = {
         "schools": td_tags[0].text.split(","), # td_tags[0].text,
-        "course": {"href": td_tags[1].a["href"], "titles": [text.split(':')[1] for text in td_tags[1].text.split(" § ")]},
+        "course": {"href": r"https://ct.ritsumei.ac.jp/"+td_tags[1].a["href"], "titles": [text.split(':')[1] for text in td_tags[1].text.split(" § ")]},
         "codes": [text.split(':')[0] for text in td_tags[1].text.split(" § ")],
         "term": td_tags[2].text,
         "periods": td_tags[3].text.split(","),

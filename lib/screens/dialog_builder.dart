@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gtk_flutter/screens/main_page.dart';
 import 'package:gtk_flutter/screens/search_page.dart';
 import 'package:gtk_flutter/src/widgets.dart';
 
@@ -69,9 +70,40 @@ Future<String?> timetableEntryDialogBuilder(
                   child: Row(
                     children: [
                       Flexible(
-                          child: Text(newLecture.isEmpty
-                              ? '講義名: $currentLecture'
-                              : '講義名: $newLecture')),
+                        child: Text(newLecture.isEmpty
+                            ? '講義名: $currentLecture'.split('@')[0]
+                            : '講義名: $newLecture'.split('@')[0]),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                SafeArea(
+                  child: Row(
+                    children: [
+                      Visibility(
+                        visible: newLecture.isEmpty
+                            ? currentLecture.split('@').length >= 2
+                            : newLecture.split('@').length >= 2,
+                        child: Flexible(
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                                right: 24, left: 24, bottom: 4),
+                            child: ListTile(
+                              leading:
+                                  CircleAvatar(child: Icon(Icons.event_note)),
+                              title: Text('Syllabus'),
+                              onTap: () => openUrl(
+                                newLecture.isEmpty
+                                    ? '${currentLecture.split('@').length >= 2 ? currentLecture.split('@')[1] : ""}'
+                                    : '${newLecture.split('@').length >= 2 ? newLecture.split('@')[1] : ""}',
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),

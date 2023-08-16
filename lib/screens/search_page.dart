@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 class CustomSearchDelegate extends SearchDelegate {
   List<String> searchTerms = [];
   final cellText;
+  late List<dynamic> lectureData;
 
   CustomSearchDelegate({required this.cellText}) {
     // print(cellText);
@@ -29,7 +30,7 @@ class CustomSearchDelegate extends SearchDelegate {
             .toList()
             .contains(int.parse(cellText))) {
           String term =
-              "${lecture['course']['titles']} | ${lecture['professors']} | ${lecture['codes']}";
+              "${lecture['course']['titles']} | ${lecture['professors']} | ${lecture['codes']}@${lecture['course']['href']}";
           if (lecture['schools'].contains(_schoolList[_schoolIndex]) &&
               lecture['term'].contains('秋セメスター')) searchTerms.add(term);
         }
@@ -72,7 +73,7 @@ class CustomSearchDelegate extends SearchDelegate {
       itemBuilder: (context, index) {
         var result = matchQuery[index];
         return ListTile(
-          title: Text(result),
+          title: Text(result.split('@')[0]),
           onTap: () => close(context, result),
         );
       },
@@ -92,7 +93,7 @@ class CustomSearchDelegate extends SearchDelegate {
       itemBuilder: (context, index) {
         var result = matchQuery[index];
         return ListTile(
-          title: Text(result),
+          title: Text(result.split('@')[0]),
           onTap: () => close(context, result),
         );
       },

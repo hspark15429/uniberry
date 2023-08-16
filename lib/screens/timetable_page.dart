@@ -323,8 +323,7 @@ class _TimetablePageState extends State<TimetablePage> {
       if (dialogResult!.isEmpty) return;
       setState(() {
         if (dialogResult.contains('Save'))
-          localTimetable[cellIndex] =
-              (dialogResult.substring(4)).split('|')[0].toString();
+          localTimetable[cellIndex] = (dialogResult.substring(4)).toString();
         else if (dialogResult == 'Delete')
           localTimetable[cellIndex] = "";
         else
@@ -369,7 +368,7 @@ class _TimetablePageState extends State<TimetablePage> {
                     height: height,
                     child: ElevatedButton(
                         child: Text(
-                          localTimetable[cellIndex]!,
+                          localTimetable[cellIndex]!.split('|')[0].toString(),
                           style: TextStyle(
                               fontSize: 9,
                               color: Colors.white,
