@@ -110,7 +110,7 @@ class _MyBoxState extends State<MyBox> {
                 child: IconButton(
                   icon: Icon(Icons.edit),
                   onPressed: () async {
-                    widget.content = await showDialog(
+                    String? _newContent = await showDialog(
                       // this is to show the dialog popup
                       context: context,
                       builder: (BuildContext context) {
@@ -167,13 +167,15 @@ class _MyBoxState extends State<MyBox> {
                         );
                       },
                     );
-                    print(widget.content);
-                    setState(() {
-                      TimetableService.uploadBottomInfo(
-                        widget.content,
-                        index: 2,
-                      );
-                    });
+                    if (_newContent != null && _newContent != '') {
+                      setState(() {
+                        widget.content = _newContent;
+                        TimetableService.uploadBottomInfo(
+                          widget.content,
+                          index: 2,
+                        );
+                      });
+                    }
                   },
                 ),
               )
