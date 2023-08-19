@@ -79,17 +79,30 @@ class TimetableService {
     return bottomInfo;
   }
 
-  static void uploadBottomInfo(bottomInfo) {
+  static void uploadBottomInfo(bottomInfo, {int index = -1}) {
     FirebaseFirestore.instance
         .collection('users')
         .where('uid', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
         .get()
         .then((QuerySnapshot querySnapshot) {
       if (querySnapshot.docs.isNotEmpty) {
-        for (var doc in querySnapshot.docs) {
-          doc.reference.update({'GPA': bottomInfo[0]});
-          doc.reference.update({'credits': bottomInfo[1]});
-          doc.reference.update({'notes': bottomInfo[2]});
+        if (index >= 0) {
+          for (var doc in querySnapshot.docs) {
+            switch (index) {
+              case 0:
+                doc.reference.update({'GPA': bottomInfo});
+              case 1:
+                doc.reference.update({'credits': bottomInfo});
+              case 2:
+                doc.reference.update({'notes': bottomInfo});
+            }
+          }
+        } else {
+          for (var doc in querySnapshot.docs) {
+            doc.reference.update({'GPA': bottomInfo[0]});
+            doc.reference.update({'credits': bottomInfo[1]});
+            doc.reference.update({'notes': bottomInfo[2]});
+          }
         }
       } else {
         print('No documents found for this user.');

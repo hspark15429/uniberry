@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gtk_flutter/model/app_state.dart';
 import 'package:gtk_flutter/src/timetable_service.dart';
+import 'package:gtk_flutter/src/widgets.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'dart:math' as math;
@@ -203,23 +204,16 @@ class _TimetablePageState extends State<TimetablePage> {
                 ),
               ],
             ),
-            SizedBox(height: 20),
-            Consumer<ApplicationState>(builder: (context, appState, _) {
-              List<String> _schoolList = ["経営学部", "総合心理学部", "政策科学部"];
-              return Text(
-                "専攻: ${_schoolList[appState.schoolIndex]}",
-                textAlign: TextAlign.start,
-              );
-            }),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             SafeArea(
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(width: 10),
                   Table(
                     border: TableBorder.all(),
                     defaultColumnWidth:
-                        FixedColumnWidth(MediaQuery.of(context).size.width / 5),
+                        FixedColumnWidth(MediaQuery.of(context).size.width / 4),
                     children: [
                       TableRow(children: [
                         Text(
@@ -233,7 +227,7 @@ class _TimetablePageState extends State<TimetablePage> {
                           textAlign: TextAlign.center,
                         ),
                         Text(
-                          "Notes",
+                          "専攻",
                           style: TextStyle(fontSize: 15.0),
                           textAlign: TextAlign.center,
                         ),
@@ -261,17 +255,20 @@ class _TimetablePageState extends State<TimetablePage> {
                             ..text = bottomInfo[1],
                           style: TextStyle(fontSize: 15.0),
                         ),
-                        TextField(
-                          onSubmitted: (value) => {
-                            bottomInfo[2] = value,
-                            setState(() {
-                              TimetableService.uploadBottomInfo(bottomInfo);
-                            })
-                          },
-                          controller: TextEditingController()
-                            ..text = bottomInfo[2],
-                          style: TextStyle(fontSize: 15.0),
-                          // textAlign: TextAlign.right,
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 14.0),
+                          child: Consumer<ApplicationState>(
+                              builder: (context, appState, _) {
+                            List<String> _schoolList = [
+                              "経営学部",
+                              "総合心理学部",
+                              "政策科学部"
+                            ];
+                            return Text(
+                              "${_schoolList[appState.schoolIndex]}",
+                              textAlign: TextAlign.center,
+                            );
+                          }),
                         ),
                       ]),
                     ],
@@ -280,6 +277,7 @@ class _TimetablePageState extends State<TimetablePage> {
                 ],
               ),
             ),
+            MyBox(title: "Notes", content: bottomInfo[2]),
           ],
         ),
       ),
@@ -403,6 +401,23 @@ class _TimetablePageState extends State<TimetablePage> {
             ),
           ),
       ]),
+    );
+  }
+
+  TextEditingController _controller =
+      TextEditingController(text: "Festive Leave");
+  bool _isReadOnly = true;
+//These are initialize at the top
+
+  Widget _buildEditableTextBox() {
+    return Container(
+      // margin: const EdgeInsets.all(15.0),
+      padding: const EdgeInsets.all(3.0),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.blueAccent),
+        borderRadius: BorderRadius.all(Radius.circular(5.0)),
+      ),
+      child: Text('My Awesome Border'),
     );
   }
 }
