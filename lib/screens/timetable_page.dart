@@ -300,9 +300,18 @@ class _TimetablePageState extends State<TimetablePage> {
                               "人間科学研究科",
                               "食マネジメント研究科",
                             ];
-                            return Text(
-                              "${_schoolList[appState.schoolIndex]}",
-                              textAlign: TextAlign.center,
+                            return GestureDetector(
+                              onTap: () => {
+                                TimetableService.showPicker(
+                                    context,
+                                    context
+                                        .read<ApplicationState>()
+                                        .getSchoolIndex)
+                              },
+                              child: Text(
+                                "${_schoolList[appState.schoolIndex]}",
+                                textAlign: TextAlign.center,
+                              ),
                             );
                           }),
                         ),

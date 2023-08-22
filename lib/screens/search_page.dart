@@ -65,6 +65,7 @@ class CustomSearchDelegate extends SearchDelegate {
 
     for (var lecture in lectureData) {
       if (lecture['periods'][0].isNotEmpty) {
+        // print(lecture['periods'][0]);
         if (lecture['periods']
             .map((period) => convertPeriodToInt(period))
             .toList()
