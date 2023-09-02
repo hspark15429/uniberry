@@ -39,7 +39,7 @@ class MainPage extends StatelessWidget {
                       const EdgeInsets.only(right: 24, left: 24, bottom: 4),
                   child: ListTile(
                     leading: CircleAvatar(child: Icon(Icons.event_note)),
-                    title: Text('学年歴'),
+                    title: Text('学年暦'),
                     subtitle: Text('年間スケジュール'),
                     onTap: () => openUrl(
                         'https://www.ritsumei.ac.jp/profile/info/calendar/'),

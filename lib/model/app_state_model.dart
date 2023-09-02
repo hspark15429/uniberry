@@ -185,7 +185,7 @@ Future<List<Product>> loadMenuItems() async {
 
   List<dynamic> menuData = jsonDecode(jsonString);
   for (var menu in menuData) {
-    // print(await fetchUrlFromStorage(menu['image']));
+    print(await fetchUrlFromStorage(menu['image']));
 
     allMenuItems.add(
       Product(
