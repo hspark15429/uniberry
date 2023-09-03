@@ -6,40 +6,9 @@ import time
 import json
 from bs4 import BeautifulSoup
 
-appUrl_list = [r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814350.png?alt=media&token=acd3f5e3-91b0-477d-a162-1df350bf50fb",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814354.png?alt=media&token=261a2a08-34ab-4a23-8669-1b22ee6221aa",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814274.png?alt=media&token=e8559703-8c2f-468c-9cb0-be58657a1de0",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814067.png?alt=media&token=5b5a28d4-e605-42fe-b395-5d0af8386b04",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814298.png?alt=media&token=152439ef-b97f-45c6-9052-bc0dabee84a3",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814490.png?alt=media&token=42358c9f-dfbd-4645-8072-91af2f3bb700",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814407.png?alt=media&token=816aa967-05ad-4c9f-8c2c-53558427f28e",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814530.png?alt=media&token=b3d75ac1-43ce-45f8-91b5-37b8bb9be008",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814447.png?alt=media&token=dea4de5c-3c73-4b35-be28-44574821faca",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814556.png?alt=media&token=33622a4d-9915-41f3-8c0e-00bd1f09c38f",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814451.png?alt=media&token=7164d6d1-9980-4350-90ec-ab0752c87a71",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814453.png?alt=media&token=bbdd1f84-16f5-4f1d-86b8-8284604115d9",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814455.png?alt=media&token=11f86a06-a388-4083-8865-8063a31f054e",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814456.png?alt=media&token=eb50e040-00a5-44b6-8ad5-53a9378759d4",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814468.png?alt=media&token=8888252a-f2c2-4c3a-a9b8-b8e38f52154f",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814458.png?alt=media&token=20734a87-fba1-400a-9fab-1867731ee0ed",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814457.png?alt=media&token=f23ead8c-bba4-4932-b9f9-ce1e78b5f757",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F819380.png?alt=media&token=d961a0f5-326d-4ecf-99a9-8a0193245c42",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F819355.png?alt=media&token=73bd4be2-b375-4d7c-86fe-2d83797bc909",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F819354.png?alt=media&token=74d1b6b6-2367-488c-8cf2-9f4543d09f30",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F819381.png?alt=media&token=9a5b062a-d008-4cad-8c74-9e396adab951",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F819429.png?alt=media&token=9f878037-39dd-4821-bc87-e1a1547ed63e",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F819079.png?alt=media&token=25150e98-c8a8-41c4-aca0-4c83af609c88",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F819043.png?alt=media&token=22479c78-133b-4ad7-bb12-17c7f89c4c30",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F819253.png?alt=media&token=8e003959-343d-4d83-9aa1-d7f81eda3331",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F819272.png?alt=media&token=4be17995-b718-4c2c-b9c7-bd11cd4d2f68",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814702.png?alt=media&token=6f033b63-d1ee-416f-8433-b77d68fa23f8",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814808.png?alt=media&token=4a33799d-89fb-4ddd-aafc-5cc0e94d28c9",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814813.png?alt=media&token=c7b38028-e3c5-4d04-a945-5eb98dbb91a4",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F650313_456453.png?alt=media&token=0b39541a-695e-4549-846a-53dbed414cfc",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814817.png?alt=media&token=f78fcd6c-94c9-4578-88cc-4c6b962a12e9",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814816.png?alt=media&token=72b7ec3f-3668-4edd-b8e8-f8d6ee9ce6c4",
-r"https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menu%2Fpics%2F814818.png?alt=media&token=e738c7ef-d336-43a6-aef8-f5556588fedc"
-]
+from menuGetImageUrl import fetch_url_from_storage, upload_to_storage, delete_files_in_folder
+
+
 
 
 def download_file(url, target_folder):
@@ -133,6 +102,10 @@ def extract_li_tags_from_html_url(url):
 # Replace 'your_file.html' with your actual html file path
 category_tags = extract_li_tags_from_html_file('menuraw.html')
 data_list = []
+
+# clear the menu/pics folder in Firebase Storage
+delete_files_in_folder('menu/pics')
+
 for category_tag in category_tags:
     category = category_tag.text.strip()
 
@@ -148,11 +121,25 @@ for category_tag in category_tags:
 
         data2 = extract_li_tags_from_html_url("https://west2-univ.jp/sp/" + a_tag.get('href'))
 
+        # Download the image START
+        url = a_tag.find('img').get('src')
+        target_folder = 'assets/foodpics'
+        os.makedirs(target_folder, exist_ok=True)
+
+        download_file(url, target_folder)
+        # Download the image END
+
+        # Upload the image to Firebase Storage START
+        local_path = a_tag.find('img').get('src').replace("https://west2-univ.jp/menu_img/png_sp", "assets/foodpics")
+        cloud_path = a_tag.find('img').get('src').replace("https://west2-univ.jp/menu_img/png_sp", "menu/pics")
+        upload_to_storage(local_path, cloud_path)
+        # Upload the image to Firebase Storage END
+
         data = {
             "id" : data_list.__len__(),
             "link": "https://west2-univ.jp/sp/" + a_tag.get('href'),
             "image": a_tag.find('img').get('src').replace("https://west2-univ.jp/menu_img/png_sp", "menu/pics"),
-            "image_appUrl" : appUrl_list[data_list.__len__()],
+            "image_appUrl" : fetch_url_from_storage(a_tag.find('img').get('src').replace("https://west2-univ.jp/menu_img/png_sp", "menu/pics")),
             "image_origin": a_tag.find('img').get('src'),
             "name_jp": h3_tag.contents[0],
             "name_en": h3_tag.find('span').text,
@@ -167,25 +154,20 @@ for category_tag in category_tags:
         }
 
         data.update(data2)
-        
-
-        # url = a_tag.find('img').get('src')
-        # target_folder = 'assets/foodpics'
-        # os.makedirs(target_folder, exist_ok=True)
-
-        # download_file(url, target_folder)
-        
         data_list.append(data) 
-        
 
 json_data = json.dumps(data_list, ensure_ascii=False, indent=4)
-
-# with open('output2.html', 'a') as f:
-#     for tr in li_tags:
-#         f.write(str(tr))
-#         f.write('\n')
 
 with open('menu.json', 'w') as json_file:
     json_file.write(json_data)
 
+upload_to_storage('menu.json', 'menu/menu.json')
 
+"""
+input: weekly cronjob?
+output: menu.json file uploaded to firestore
+
+current process:
+	1. copy entire expanded page to menuraw.html --> can't, manual
+	2. run menu.py(it download, upload, and delete files in Firebase Storage with pictures and menu.json)
+"""
