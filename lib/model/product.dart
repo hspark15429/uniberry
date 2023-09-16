@@ -9,8 +9,20 @@ enum Category {
   quickbite,
 }
 
+enum Cafeteria {
+  OIC,
+  BKC1,
+  BKC2,
+  BKC3,
+  KIC1,
+  KIC2,
+  KIC3,
+  all,
+}
+
 class Product {
   const Product({
+    required this.cafeteria,
     required this.category,
     required this.id,
     // required this.id,
@@ -27,6 +39,7 @@ class Product {
     required this.origin,
   });
 
+  final Cafeteria cafeteria;
   final Category category;
   final int id;
   final int price;

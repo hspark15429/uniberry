@@ -7,7 +7,7 @@ import 'model/product.dart';
 import 'product_row_item.dart'; // NEW
 
 class ProductListTab extends StatelessWidget {
-  const ProductListTab({super.key});
+  ProductListTab({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,15 +42,13 @@ class ProductListTab extends StatelessWidget {
               ));
             }
           }
+
           return list;
         }
 
         return CustomScrollView(
           semanticChildCount: products.length,
           slivers: <Widget>[
-            // const CupertinoSliverNavigationBar(
-            //   largeTitle: Center(child: Text('OIC Cafeteria')),
-            // ),
             SliverSafeArea(
               // ADD from here...
               top: false,
@@ -62,6 +60,7 @@ class ProductListTab extends StatelessWidget {
                 ),
               ),
             ), // ...to here.
+            // circular progress indicator
           ],
         );
       },

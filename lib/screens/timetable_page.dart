@@ -122,27 +122,28 @@ class _TimetablePageState extends State<TimetablePage> {
                   //     });
                 }),
             IconButton(
-                icon: const Icon(CupertinoIcons.bars),
-                tooltip: '時間割リスト',
-                onPressed: () {
-                  // handle the press
-                  showDialog(
-                      context: context,
-                      builder: (context) {
-                        return AlertDialog(
-                          title: Text('時間割リスト'),
-                          content: Text('時間割リストから選択 '),
-                          actions: List<Widget>.generate(
-                            6,
-                            (index) => TextButton(
-                              onPressed: () =>
-                                  timetableSwitch(context, index: index + 1),
-                              child: Text(getTimetableByIndex(index)),
-                            ),
+              icon: const Icon(CupertinoIcons.bars),
+              tooltip: '時間割リスト',
+              onPressed: () {
+                // handle the press
+                showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: Text('時間割リスト'),
+                        content: Text('時間割リストから選択 '),
+                        actions: List<Widget>.generate(
+                          6,
+                          (index) => TextButton(
+                            onPressed: () =>
+                                timetableSwitch(context, index: index + 1),
+                            child: Text(getTimetableByIndex(index)),
                           ),
-                        );
-                      });
-                })
+                        ),
+                      );
+                    });
+              },
+            ),
           ]),
       body: SingleChildScrollView(
         child: Column(

@@ -54,6 +54,7 @@ dependencies:
   shrine_images: ^2.0.2
   firebase_storage: ^11.2.5
   http: ^1.1.0
+  shared_preferences: ^2.2.1
 
 dependency_overrides:
   firebase_ui_auth:
@@ -93,8 +94,6 @@ flutter:
     - assets/school3.png
     - assets/school4.png
     - assets/lectures.json
-    - assets/menuitems.json
-    - assets/foodpics/
 
 
 

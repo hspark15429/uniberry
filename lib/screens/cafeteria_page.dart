@@ -4,23 +4,40 @@ import 'package:gtk_flutter/shopping_cart_tab.dart';
 import 'package:gtk_flutter/src/widgets.dart';
 import 'package:provider/provider.dart'; // NEW
 import '../model/app_state_model.dart';
+import '../model/product.dart';
 import '../product_list_tab.dart'; // NEW
 
-class CafeteriaPage extends StatelessWidget {
+class CafeteriaPage extends StatefulWidget {
   const CafeteriaPage({super.key});
+
+  @override
+  State<CafeteriaPage> createState() => _CafeteriaPageState();
+}
+
+class _CafeteriaPageState extends State<CafeteriaPage> {
+  Key productListTabKey = UniqueKey(); // Create a unique key for ProductListTab
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CafeteriaAppBar(),
-      body: const ProductListTab(), // NEW
+      appBar: CafeteriaAppBar(onReload: _reloadProductList),
+      body: ProductListTab(key: productListTabKey), // NEW
     );
+  }
+
+  _reloadProductList() {
+    setState(() {
+      productListTabKey = UniqueKey(); // Generate a new unique key
+    });
   }
 }
 
 class CafeteriaAppBar extends StatelessWidget implements PreferredSizeWidget {
+  final VoidCallback onReload;
+
   const CafeteriaAppBar({
     super.key,
+    required this.onReload,
   });
 
   @override
@@ -28,11 +45,15 @@ class CafeteriaAppBar extends StatelessWidget implements PreferredSizeWidget {
       Size.fromHeight(kToolbarHeight); // default AppBar height
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(
+    BuildContext context,
+  ) {
+    String _cafeteriaName = context.select(
+        (AppStateModel m) => getCafeteriaByIndex(m.selectedCafeteria.index));
     return AppBar(
       centerTitle: false,
       title: Text(
-        'OIC Cafeteria',
+        _cafeteriaName,
         style: TextStyle(
           color: Colors.white,
         ),
@@ -70,9 +91,52 @@ class CafeteriaAppBar extends StatelessWidget implements PreferredSizeWidget {
                 );
               },
             ),
+            IconButton(
+              icon: const Icon(CupertinoIcons.bars),
+              tooltip: 'Select Cafeteria',
+              onPressed: () {
+                // handle the press
+                showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: Text('カフェテリアを選択してください'),
+                        content: Text('カフェテリアを選択してください'),
+                        actions: List<Widget>.generate(
+                          8,
+                          (index) => TextButton(
+                            onPressed: () => {
+                              Provider.of<AppStateModel>(context, listen: false)
+                                  .setCafeteria(Cafeteria.values[index]),
+                              Navigator.of(context).pop(),
+                              onReload(),
+                            },
+                            // timetableSwitch(context, index: index + 1),
+
+                            child: Text(getCafeteriaByIndex(index)),
+                          ),
+                        ),
+                      );
+                    });
+              },
+            ),
           ],
         ),
       ],
     );
   }
+}
+
+String getCafeteriaByIndex(int index) {
+  List<String> _cafeteriaList = [
+    "OIC Cafeteria",
+    "ユニオンカフェテリア",
+    "リンクカフェテリア",
+    "ユニオンフードコート",
+    "以学館食堂E-platz",
+    "諒友館食堂",
+    "存心館食堂",
+    "ALL"
+  ];
+  return _cafeteriaList[index];
 }
