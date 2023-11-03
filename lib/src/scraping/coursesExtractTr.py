@@ -30,10 +30,5 @@ for tr in tr_tags:
 
 json_data = json.dumps(data_list, ensure_ascii=False, indent=4)
 
-# with open('output2.html', 'a') as f:
-#     for tr in tr_tags:
-#         f.write(str(tr))
-#         f.write('\n')
-
 with open('courses.json', 'w') as json_file:
     json_file.write(json_data)
