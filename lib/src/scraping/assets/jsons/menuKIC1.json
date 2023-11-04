@@ -2,49 +2,46 @@
     {
         "cafeteria": "KIC1",
         "id": 0,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814279",
-        "image": "menu/pics/814279.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814279.png?Expires=1727004838&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=Oevbhz4R86tJYHMgAmvMrbpZbs9uPzvrxc%2BaVCbWMgkQx2ijgQZ9umttWlSPV7R2zxqpBTtqi5g2mXFyPvfaWCSLpyMc4axtN6iR6CUfw4qjnAMCKowveHSsJpvp38MMznjUhVBmAtcgbb%2FQaXQHcK7AVYomO2aCJqJommnJY1ri38a4x0xTnJvnO0KJ%2B8eNmP1VUYKy%2Bbg%2FNaSF5R0E05C9j%2BJCTbBqFQr25PCs5s53lFA4e0Dc31b8osC%2Fz0qscJ0Nd%2FqEq04V4tq2r1qrrtx08Ux2TXGPD61uQRe0S7NatG71QAJ%2BTeODCP18r998eE1J%2FYsYcpUaa7SmQ2Z%2BEQ%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814279.png",
-        "name_jp": "チキン甘辛ステーキ",
-        "name_en": "Grilled fried chicken",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814280",
+        "image": "menu/pics/814280.png",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814280.png?Expires=1730602250&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=i5x1b04MSKMLgpOF6VmybVQvWUDnFPQMah0jXdrHpTKhu8g51PlEtpFcYDOUO8fZt%2FrzTPZHzkgWbKiid6utZmvJh41aTHSGECCTVoaqecCQ%2FGew5WSSVQFnudlfkk2416kCtpFbXpHR5x4ldKqG39zFnHoMuqaMSO2lkF66M4NsprcgyAiGElWzYtlqxW64FXIWqEIFQ981hYC0xDHY%2Bw%2BdXVtwMM%2FWya9J5pWJSfgw%2B6UwWfr1BHDK5SOcG09JKwfyeS57OoRjlfv%2BNjbA188BG8Yol00nUDdQmIrkOFyQK%2Bj4MlYX5LhA1IS92bVWgHLMGqhd92v%2FFvTzKD4P7g%3D%3D",
+        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814280.png",
+        "name_jp": "ジューシー唐揚げ",
+        "name_en": "Fried chicken",
         "price": 363,
         "evaluation": {
-            "good": 9,
-            "average": 0,
-            "bad": 0
+            "good": 5,
+            "average": 2,
+            "bad": 1
         },
         "category": "主菜 Main dish",
         "nutrition": {
-            "energy": 516.0,
-            "protein": 29.2,
-            "fat": 22.5,
-            "carbohydrates": 46.1,
-            "salt": 3.4,
-            "calcium": 36.0,
+            "energy": 391.0,
+            "protein": 25.5,
+            "fat": 25.8,
+            "carbohydrates": 15.3,
+            "salt": 1.8,
+            "calcium": 25.0,
             "veg": 33.0,
-            "iron": 1.1,
-            "vitA": 62.0,
-            "vitB1": 0.13,
-            "vitB2": 0.32,
-            "vitC": 21.0
+            "iron": 1.2,
+            "vitA": 54.0,
+            "vitB1": 0.14,
+            "vitB2": 0.21,
+            "vitC": 19.0
         },
         "allergy": [
-            "soybean",
-            "sesame",
-            "egg",
+            "chicken",
             "wheat",
-            "seafood",
-            "chicken"
+            "soybean"
         ],
-        "origin": "鶏肉（中国）"
+        "origin": "鶏肉（タイ）"
     },
     {
         "cafeteria": "KIC1",
         "id": 1,
         "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814041",
         "image": "menu/pics/814041.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814041.png?Expires=1727004839&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=BVGeY0CT23CZx6zks9L%2BekEGzfuHxSEuXMiGXcpRrxEiM8XrN6lLWoV4We8gmXreG8OnQWMrBxwJI5dufnEPXP1Ybo8JaZldhDjKUvRLJKZnMMm5d376egbvC5%2BFH4uAI1Hbe6214Dpi1%2FqX%2FyN5rI7ODndPcnCNMEoo%2Bq0%2B2diEBiGAZoe%2FehuZ3yyIVklmrViBNoH70mJxDdrw7zVezSUOnDVZqWZKOTRr1Pi5rP%2B3kRA8BCSyu6FAqz1F5wtFGPmxAwntEKcnVnjYzvkuhpUhnqneg2aD5VBdzVO%2BfrsXeS88tbhtY17kQYFOLxevGsXCJhObweRDEqpTk%2B9WdQ%3D%3D",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814041.png?Expires=1730602250&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=fCVGFLfd%2FM9JBYaZeLnlYpMNgjePC70DDEbz8WR4I0TIjse8I5dEt05wlwCZmzbM9jk9VNTcJwCY8pvVDCqBI3KrymvSFX0UX5hKkb9zLGH5b6UOMvwoA%2BiguvBRykYMAYSjDesXIXrGzsRHol56xm5AuFRPUv5YeZmjnPl%2B%2FjMqzMPSASeKx8UXs0bdPA6NVdV0F7jlqF8Qhc%2FM1Bw580Eprv0vGeXDDo7eV8%2F395wlgRMJ0AxWJ6CtrN%2BeYCgVmA51Ro7O8zO8Hln5YA2TgdhmBKxcBrYwrEkFf3RDi8Q2VVIj1lQUK8%2FkzojOZbTPf5xlm2dn3wW6nYQI80x5lQ%3D%3D",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814041.png",
         "name_jp": "ローストンカツデミソース",
         "name_en": "Fried pork cutlet with demiglace sauce",
@@ -70,144 +67,143 @@
             "vitC": 14.0
         },
         "allergy": [
+            "chicken",
             "soybean",
             "pork",
-            "milk",
             "egg",
-            "wheat",
             "beef",
-            "chicken"
+            "milk",
+            "wheat"
         ],
         "origin": "豚肉（アメリカ、その他）"
     },
     {
         "cafeteria": "KIC1",
         "id": 2,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814184",
-        "image": "menu/pics/814184.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814184.png?Expires=1727004839&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=EfDbhb9bgDrqYCV0S%2B2sV9SGBBiZpXh9FJ7NOPx2kjMzPtT5dm8axaiD8NK5JShe2mw7nF3fVRKaTDuJYt88x0qR5sJdBM1gCEge2rFD8Wr4s0puM06PgU6t%2FEB%2B2sevELAuc5PiUe61%2FZtxsxVhnd7BBXyhUkRqv2qEDRyIQYWkPjnqRwqhcl7TViRGntYWBmRSkRSNA4O83MUfInVrilEDYWbLs6KvOCW03og9DSSbgrvR4izENO0m%2Bo6hURyBnEhAlM3yWL4bt3Er97AXPWviSOIPH%2Bkxw1j4bERnZHy8yrL0wwmr3YnYBCDGJ8bLCtnJORSflAq%2F5bIGxxA2rg%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814184.png",
-        "name_jp": "鶏からおろしポン酢",
-        "name_en": "Fried chicken with grated Japanese radishsauce",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814012",
+        "image": "menu/pics/814012.png",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814012.png?Expires=1730602251&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=Ry23UxqwdT%2BsFFBRCzxfQRZb8goPqX3WcBswv1pKKpM5wDFyjzJ993zsY6QDrHgArfNHcmQtwCTRM30cCDEY9Fr%2FxebqQZlGmefrt52YlKLnWbq78E7nvRYmJfeezsXF15OdrGnJnvzDZtallbdYdkw9HgeDy8HmwJc6dyYS62FjgYVTNr2LyfxGtTxvhEMDT%2FDpfaL%2B6w%2FpIvMuNCybXP4XYxrl57uWNoiu9gRNV16%2Fxs1RNvgAogQplvYBhhbufHfoiMd5P6X7yAoWwC3GzCQ1Mu2%2BQvEeodIvU0ZchdRhbOHCj4Pv3U%2B1eqOWoCXYPhbyKQ%2BAoXdHBTzt0B2oSg%3D%3D",
+        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814012.png",
+        "name_jp": "ササミチーズタルタルソース",
+        "name_en": "Fried chicken cutlet and cheese with tartarsauce",
         "price": 275,
         "evaluation": {
-            "good": 40,
+            "good": 4,
             "average": 1,
-            "bad": 0
+            "bad": 2
         },
         "category": "主菜 Main dish",
         "nutrition": {
-            "energy": 341.0,
-            "protein": 13.0,
-            "fat": 20.1,
-            "carbohydrates": 24.9,
-            "salt": 3.0,
-            "calcium": 37.0,
-            "veg": 55.0,
-            "iron": 0.8,
-            "vitA": 27.0,
-            "vitB1": 0.1,
-            "vitB2": 0.13,
-            "vitC": 17.0
+            "energy": 449.0,
+            "protein": 14.4,
+            "fat": 32.7,
+            "carbohydrates": 25.6,
+            "salt": 1.9,
+            "calcium": 88.0,
+            "veg": 33.0,
+            "iron": 0.6,
+            "vitA": 36.0,
+            "vitB1": 0.07,
+            "vitB2": 0.1,
+            "vitC": 15.0
         },
         "allergy": [
+            "chicken",
             "soybean",
-            "milk",
             "egg",
-            "wheat",
-            "chicken"
+            "milk",
+            "wheat"
         ],
-        "origin": "鶏肉（タイ）"
+        "origin": "鶏肉（国産）チーズ（ニュージーランド、その他）キャベツ（国産）"
     },
     {
         "cafeteria": "KIC1",
         "id": 3,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814190",
-        "image": "menu/pics/814190.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814190.png?Expires=1727004840&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=AiCdrn5rvJxuts3%2B19lDhWjQh2PVZvg4VBmmfwzv8gIZaAb2zWb9Coy6LA10NQST6X7cmyKvBL1D%2F1HizGlj%2Bi74cMYBxg7veNgu%2Fs%2BNWTdEQFlyZnymDkfrWQ7bxjl8ZBkkAeMx%2Bg3ZGHZHD4EUnfxh6%2BAY2xU5sWzCVouuy4tFU8DJ4C2LwnBxMabFQAPLsu%2Fo%2BRcscmkdXspmq4jV6secr13f94SqPeuOIXX%2ByMIzKzumgPA1%2B%2BpWpVJuAU3AWnrR8Dwywct7gQgUp38nYatxJ8GDUlKLFu7CoR%2B1A4bztMp4W%2BrNlBiuLGTWZn3r9fZhPsQ9wahrrfFY9R185A%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814190.png",
-        "name_jp": "油淋ハンバーグ",
-        "name_en": "Hamburg steak with chinese sour and soysauce based sauce",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814111",
+        "image": "menu/pics/814111.png",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814111.png?Expires=1730602251&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=jXppAXuYyBVQZ7lVOvHFNRX0mXyp7%2F%2BMaBRrg4sM7xC2V6nfWfEB0586dG1PAj%2FFKDprhOJKWshlCCI5pvnU5t1Jl5ZE0MnWpRal66bx4OO17STm0MoI4s3lcc49qDgC3FBLtn33ltUpZAUokuzEAaXRbrMuIYcB5CBsh%2F74EtVU%2B7QEs5FHCLo7GC29Oaz0nfAHGAYe5P6x%2Bq%2FxASvfVs2IEhQ2Ti8rYObYCorHDshYJv1JLmf8yYNX7jF6h3jVcAC8KEWd9eV6rlCKL9ok7OCJjcV28UXMyRJL6oXV%2BWiiP%2FIPxfN3lcnP7q%2FINa%2B4O01Sphl%2B0ILvrGUScZmDIQ%3D%3D",
+        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814111.png",
+        "name_jp": "ねぎ塩ハンバーグ",
+        "name_en": "Hamburg steak with vegetable and salt sauce",
         "price": 275,
         "evaluation": {
-            "good": 0,
+            "good": 55,
             "average": 0,
             "bad": 0
         },
         "category": "主菜 Main dish",
         "nutrition": {
-            "energy": 248.0,
-            "protein": 15.7,
-            "fat": 12.6,
-            "carbohydrates": 17.3,
-            "salt": 2.1,
-            "calcium": 50.0,
-            "veg": 61.0,
-            "iron": 1.4,
-            "vitA": 23.0,
+            "energy": 252.0,
+            "protein": 15.2,
+            "fat": 13.4,
+            "carbohydrates": 17.2,
+            "salt": 2.2,
+            "calcium": 55.0,
+            "veg": 71.0,
+            "iron": 1.5,
+            "vitA": 29.0,
             "vitB1": 0.13,
             "vitB2": 0.14,
             "vitC": 19.0
         },
         "allergy": [
+            "chicken",
             "soybean",
-            "sesame",
-            "mackerel",
-            "milk",
-            "wheat",
             "beef",
-            "chicken"
+            "milk",
+            "sesame",
+            "wheat"
         ],
         "origin": "鶏肉（国産）玉葱（中国）"
     },
     {
         "cafeteria": "KIC1",
         "id": 4,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814044",
-        "image": "menu/pics/814044.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814044.png?Expires=1727004840&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=BqvL%2BG1ceVkYjhr0kotlpp78Gm2RkN2GcVm0JNwBqPtWmAoJ9AyygSmmFLEXkh8KgyJ206GDQ9toDUcQG0AXI6Xx9bLJKLYvPER%2BApcUi4j2Qs4bmDQfKYapY7RptBgvU%2FBYoctZ6fimWA%2FlXz22NxoRhJVT7FPciuE4OzugSKY1jG2w4zCaW0dfrFB8%2FA98TPIDAo5%2BzYtixXLKJvRi64xm%2B1lorVLL1FLAV%2BqYh3HHL6XrZ%2FUNEZxVNaAF9Wb5%2Fwwwod2DQnSQdgRfVqDa7UJyTiH9jZ2paPB3nvAnNA2%2ByuZ%2FJ4oLMM9mWc2JOhCIJ%2Bq%2FHOm%2B9gFAOT2KZ3qLUg%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814044.png",
-        "name_jp": "豚もやし炒め",
-        "name_en": "Stir fried pork and vegetables",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814107",
+        "image": "menu/pics/814107.png",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814107.png?Expires=1730602252&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=X%2BTmRM%2Fq2Fnph1BeeLaC2KoqgyMUkvd9BedCD%2FmTY%2BIO09pHYGvHGYomneCSnozbAc8UvU0t8cZIxWQk5Yh6oQFrUn4tpP0VNvCMtUGdpxgtKhoJVjEXPFwxiupSnK641yRaHgQYz9cUwBuz0ArkFQlOVkMbzzZ0Vzry%2FBRRFj68OfgAGSJqlgv3avqtIMQf7MyghIkoBCIMRtMabAYiNRVZk63qlcGoE7fMZxZY%2BXukvadd%2BqJWlDRhzlh6rGA%2FJ%2FjYA2T2hNhgDXrBjzmX0LWjaxlOS6CzbDpbSCC0znrgSNNmS1T4cUomklE9gQNMqjbqz68xC3RIGvgiBmpxAw%3D%3D",
+        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814107.png",
+        "name_jp": "鶏ちゃん焼",
+        "name_en": "Stir fried chicken and vegetables",
         "price": 275,
         "evaluation": {
-            "good": 0,
+            "good": 41,
             "average": 0,
             "bad": 0
         },
         "category": "主菜 Main dish",
         "nutrition": {
-            "energy": 311.0,
-            "protein": 15.2,
-            "fat": 20.6,
-            "carbohydrates": 19.3,
-            "salt": 1.8,
-            "calcium": 57.0,
-            "veg": 195.0,
-            "iron": 1.4,
-            "vitA": 11.0,
-            "vitB1": 0.42,
-            "vitB2": 0.22,
-            "vitC": 21.0
+            "energy": 227.0,
+            "protein": 15.5,
+            "fat": 10.9,
+            "carbohydrates": 18.6,
+            "salt": 2.2,
+            "calcium": 60.0,
+            "veg": 138.0,
+            "iron": 1.3,
+            "vitA": 33.0,
+            "vitB1": 0.13,
+            "vitB2": 0.18,
+            "vitC": 50.0
         },
         "allergy": [
+            "orange",
+            "chicken",
             "soybean",
             "sesame",
-            "pork",
-            "apple",
             "wheat"
         ],
-        "origin": "もやし（国産）豚肉（スペイン）玉葱（国産）"
+        "origin": "鶏肉（中国）キャベツ（国産）"
     },
     {
         "cafeteria": "KIC1",
         "id": 5,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814021",
-        "image": "menu/pics/814021.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814021.png?Expires=1727004841&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=gHbl3by30EkOXpLHkIKUf9%2FZucRMtkNn1xvo7b86apa%2BaPzlSKUf5YO6f14suhGz5FIzToNqed6tjkkqVG%2BEhdjHg6fe8N1v%2FqBxbONgaQchdTZEbDRlpFYd0moG0eEGFsulonkml043erIC6FqhkbPSr3h4lQMDBzs0sMxVMtcX7Vajz3pAJ1Pd0vzOt8f%2FptPHs1niodESvu7Uu0GF1xM2ryn%2BduHPZCMOE%2F7cqlcATsWUAEszSkk9XEvYFx7jAOUXU3g189g%2F9dbBgqpGcI4BQN0ZXhIOMO0KVUbijQFozMzW01beCpUN8Mq9unovW3kUNmYCjw9HPuIRVpcqTQ%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814021.png",
-        "name_jp": "鶏醤油ちゃんこ煮",
-        "name_en": "Simmered chicken and vegetables in soy sauce based soup",
+        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814060",
+        "image": "menu/pics/814060.png",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814060.png?Expires=1730602252&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=GohPlumisomKJGUfkB2jRyeQ682T4Kn0UWtpah3ICSraUDCt5mcVBLAlC%2B4ExieJkjvIlCf%2Fmyt6G%2BhZsNUQ7QRPCmC%2F3Aa9a5RL7rJhVv%2FywJ9iOWsubusdVaY2y%2FV8TPr4r3F%2Fm3Imfr35LDO8gKP98iWNmiyTQwubOay5Vp65Oink3ZbR5FmMOf2Sbfo4U%2BKZpnThHd%2F%2FC2h0uIICHe6h18mXIJmLVysYRWooXuUXldhCBaCyZJA4zgWub2BXuldrjVFjg001Zlk6cfPCXGbuOX1Pi9n%2BZTYShtY9yp%2Bgx9gOHCL3dmOF5co5KvrrLqxFY9xAkfeRu6b6U8rmew%3D%3D",
+        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814060.png",
+        "name_jp": "麻婆豆腐",
+        "name_en": "Simmered bean curd and pork in spicy soup",
         "price": 275,
         "evaluation": {
             "good": 0,
@@ -216,108 +212,35 @@
         },
         "category": "主菜 Main dish",
         "nutrition": {
-            "energy": 175.0,
-            "protein": 10.1,
-            "fat": 8.6,
-            "carbohydrates": 16.5,
-            "salt": 3.4,
-            "calcium": 75.0,
-            "veg": 197.0,
-            "iron": 1.2,
-            "vitA": 178.0,
-            "vitB1": 0.13,
+            "energy": 269.0,
+            "protein": 15.2,
+            "fat": 17.1,
+            "carbohydrates": 15.8,
+            "salt": 3.3,
+            "calcium": 69.0,
+            "veg": 2.0,
+            "iron": 2.9,
+            "vitA": 35.0,
+            "vitB1": 0.27,
             "vitB2": 0.13,
-            "vitC": 46.0
+            "vitC": 1.0
         },
         "allergy": [
+            "chicken",
             "soybean",
-            "mackerel",
-            "wheat",
-            "chicken"
+            "pork",
+            "sesame",
+            "gelatin",
+            "wheat"
         ],
-        "origin": "鶏肉（ブラジル）もやし（国産）キャベツ（国産）"
+        "origin": "豆腐（大豆：カナダ、アメリカ）"
     },
     {
         "cafeteria": "KIC1",
         "id": 6,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814295",
-        "image": "menu/pics/814295.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814295.png?Expires=1727004841&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=ed00Rff94efF9howD5PqkmbjU5sGDjs3UeEYnyzp9KfUfX0hffB%2FRaulOPeBOAjEY5OS0U3sboe%2B3gfy9P3QRr%2Bi0UPsNwlN0UI7%2BPPF9wsasRYV7hvQ5a%2B%2Bb4Ue2KY03sTgyOfG0x4j9Gs7dJushCgkP1PiXeCs1r%2BlDS2uKAvaCdOU2VYGkzLyxdI3IpXSx1s9f4ReODyTftqE2f%2F7PJcYs1vb%2FHuJUJR60VCCW1H8hwA1Dj4c48%2FIuMOCXlF2wSypqqmOud3jc7EGOv4o8gfZ53chZtw9pYXgKxuaUN%2FfWKBTd93Y6KdJOxagczg8%2FmZOeGfH9oCLYMPpnKapEg%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814295.png",
-        "name_jp": "ししゃもフライ",
-        "name_en": "Fried capelin",
-        "price": 187,
-        "evaluation": {
-            "good": 0,
-            "average": 0,
-            "bad": 0
-        },
-        "category": "主菜 Main dish",
-        "nutrition": {
-            "energy": 137.0,
-            "protein": 6.0,
-            "fat": 8.5,
-            "carbohydrates": 8.4,
-            "salt": 0.8,
-            "calcium": 82.0,
-            "veg": 0.0,
-            "iron": 0.5,
-            "vitA": 37.0,
-            "vitB1": 0.02,
-            "vitB2": 0.1,
-            "vitC": 1.0
-        },
-        "allergy": [
-            "soybean",
-            "egg",
-            "wheat"
-        ],
-        "origin": "カラフトししゃも（ノルウェー、アイスランド、その他）"
-    },
-    {
-        "cafeteria": "KIC1",
-        "id": 7,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814325",
-        "image": "menu/pics/814325.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814325.png?Expires=1727004841&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=cUhQIDeEOaKX27bvhBUfBpe%2BTDY5TbLchQOqS0Dv1Xr%2FATDzsQZDKtvTGDSGWM6JHOE8YdMDRNLP7Wbv5q%2Bfz7CrD0Wy4xFGzn4tf%2Fz25awwAiB6WfyBAnTZCnBQ1T1IXCdWvASDN1a5Hwdy4klWBlXk0s0t%2BS1h%2F7Avt3J7O%2FFG2kN8FNmC6pBZaQvi%2FK5eQuEWFtU0Dh8DDvVevQgZEojVwCgvYwF%2B8vcdRGKh5x2EVkxmvzkBSvYbsStrTaVA%2B97h0Cg7pRs%2Bat0h4ZQImRfcoL6Vjy8U%2FRzYPxkzYCZaWDQGk5CJzw9R8cQqvfaC7jSVgv3CvFK%2FVhgYE4jiFA%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814325.png",
-        "name_jp": "蒸し鶏ビーンズサラダ",
-        "name_en": "Steamed chicken and boiled beans salad",
-        "price": 187,
-        "evaluation": {
-            "good": 1,
-            "average": 0,
-            "bad": 0
-        },
-        "category": "主菜 Main dish",
-        "nutrition": {
-            "energy": 92.0,
-            "protein": 9.9,
-            "fat": 2.0,
-            "carbohydrates": 9.2,
-            "salt": 0.3,
-            "calcium": 45.0,
-            "veg": 67.0,
-            "iron": 1.0,
-            "vitA": 7.0,
-            "vitB1": 0.13,
-            "vitB2": 0.08,
-            "vitC": 27.0
-        },
-        "allergy": [
-            "soybean",
-            "egg",
-            "wheat",
-            "chicken"
-        ],
-        "origin": "キャベツ（国産）鶏肉（中国）"
-    },
-    {
-        "cafeteria": "KIC1",
-        "id": 8,
         "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814297",
         "image": "menu/pics/814297.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814297.png?Expires=1727004842&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=ej8Nqa6XFCxw6vCHHZnuJDinz8u%2BbZgzGK03A8LxMa8bMRjHL0DIQyeGRD8x1xYJpvQ3hC08FpSlKYjxeGPsyqte0MIonSK69bA8xeN5R81j2uvU0qdBBP4KzxtKrBhJP0p9NqBKSKSLeglND2Y9i%2FZZWyQaTCFxSw%2Fr%2BZ3VBgQ3UyRS5ytjLGqzHGlX%2BXYGk2Y9n8LY6x9C76QHeoXm%2F3NvSZEmBgj2ErztYqsEh47Lt6TYDMPOv0qdmciR6RwHarvm%2FcH%2BbLN5bNrZ3r3suEXdvpPLNTSRxNV5L6wlUGq4OW1nOb6%2BSgbKR46CZsfxJx43jXIHbPewdSXyX9DgJw%3D%3D",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814297.png?Expires=1730602253&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=u1XR2MtDDX9sSwBAzVFtnJ9U8omTl6vtiHvyOVtawxy5E6JwYyEyxBFjj965vl%2ByHe%2Ft3eZ95pDUYUkVRgbpdx4nI137cHC76ixiBDfXTXitiFZSQ3of%2BC%2FcVdtwgo5fGKMzYCepSDPcV1WkpUeZBzzO9MMlsz8sEgRPCJPoTySYS%2FhlLWYpxdBlxytbYnHursbJzcfPLGjtCUJy8EtJU1LMIqonpnWz9agyTM59T4bD5NSYeLONzPUyfyDUXhE3Cl%2FD5R8rxOFCDsUoseB0AGsFCo6HTIQIBXLDm%2FNLBESXVPDXug5mDkTBhEHfAfArG9DzzEqIEndXfEVCHXKJDQ%3D%3D",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814297.png",
         "name_jp": "鯖味噌煮",
         "name_en": "Simmered mackerel in soy miso",
@@ -343,18 +266,18 @@
             "vitC": 1.0
         },
         "allergy": [
+            "wheat",
             "soybean",
-            "mackerel",
-            "wheat"
+            "mackerel"
         ],
-        "origin": "鯖（国産）"
+        "origin": "鯖（ノルウェー）"
     },
     {
         "cafeteria": "KIC1",
-        "id": 9,
+        "id": 7,
         "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814444",
         "image": "menu/pics/814444.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814444.png?Expires=1727004842&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=LyEe%2Bw4H3at3xRgRtsq2ZOWSQ46nAj%2B15OsrcFVxyswf%2FvFhbKREl%2FXig3RURN%2B4GTGVtKJGycwZJvR60Smytk8Wf3xJ1%2Fj1q5HSdXwrvHqmpCSANO%2BtigIj%2F75Tm%2BQ9UPAuYoPAtdFo%2Fhg5mhBESsjgvZlzxXKa11pvzbNQmtUxRXlEjat8M27N%2FWfb6rByBtquHyXWlvrvNnFx%2FjON3D2QCN8D%2BAKEa7jfl%2BZbT6FySKPBJlqhJkhHhLA7vOwXoRQPtANVzDDZggXqpoxvnOffnT%2FPnaye3JZHNZtelCy57T6ODoPasNkl4RL0aK519F2mYOLw7TQ5Q%2BEQUkuvKg%3D%3D",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814444.png?Expires=1730602253&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=E8g0UhD35hUbJluDqY5QhVgatcr1t1KUJB4FE%2FlUJ1D%2BfK%2FW7bO%2BIsMZf9JYI2PR6UOZXBUBTJTrMC0dtLFc4muVmfaKa0vIyT%2BQ5rBUZUz38G4pHvBEzB1OuFhzMa5kni10nSx%2FbX36VIo8LiagJ50t1pO1iFNUC5RpToAVeP%2FVwiabWKuGGowE5Yw%2Fk0ND1LHB3X%2FoD5ALrtTpM24uFWav4CmDT46DrbFZRNHkjbcR5WiuIFNQX8n4DHC4%2B%2FMSgsesPaFmeIF5aIe6Czg5gVQDx0dViT0pFXGDwAUhxsM1dX4e2yLQ1TLy7bTjB%2Bkc1sBXWsHREIJa26P0TMEYvQ%3D%3D",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814444.png",
         "name_jp": "スパイスチキンサラダ",
         "name_en": "Steamed chicken and vegetables",
@@ -380,65 +303,64 @@
             "vitC": 18.0
         },
         "allergy": [
-            "soybean",
-            "egg",
+            "chicken",
             "wheat",
-            "chicken"
+            "soybean",
+            "egg"
         ],
         "origin": "キャベツ（国産）鶏肉（中国）"
     },
     {
         "cafeteria": "KIC1",
-        "id": 10,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814408",
-        "image": "menu/pics/814408.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814408.png?Expires=1727004843&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=sd9OCThW%2F97%2BdaVfard%2FIYPUg%2B31zqn2o6slnQBr8Rs%2FfbtsJGgH9Reuh8TMjHR9qJ91ZcKuOz2fCi7RT%2FoTevPx77wWoMD9zz4JoNAc2S1tVmz%2F6pIXN0BwWMQ8Xxqur6HspAtKLJpWY%2FcIKmLSQcdlc%2BgRRjkZx3Yg2nPsdGYxQo5KT2WZYqiqOmSO5G5zw2bo0Cv5jo14i23UfB%2FFfkuj1x5OfczlX%2BMfRtw5CpCTxDhGNTyuPo8O4q%2Bs%2BMF26pkgu1vIGS5CxTd6qzyxk3YoMLpo2g4o5bwcmYuYePJ7DqN%2FfFTumMUOpE9h1vcytTtV2HD2r9t911Ow9TFIEw%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814408.png",
-        "name_jp": "春巻き",
-        "name_en": "Fried pork eggroll",
+        "id": 8,
+        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814409",
+        "image": "menu/pics/814409.png",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814409.png?Expires=1730602253&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=jzljOkggZ4k1KXb6VgNoCtJz2rMR7qXrGIp2YlJTr1HNiKvNOKflvRcY0LCjBO%2F74zKiSD6jCtakWuEt4ZR%2FZTnmOEv3MFabhC9VK%2F3H2E6FzRzzubMNlCfyYVDJmVlXmyqbf%2BGtLg%2Bd6VHd7%2FcyCCB%2FTKv%2BNxL1TqQbQ%2FdUc2oqZoC%2F9ypxoGkFJYE96jUro4y%2Bez7%2F6lwpckKdIwGFSlqC%2BMdXcD%2BAGkK84%2Bw0A1Q1knGR09T2X%2BQI0byBB2M5cQyQyK1zDFjHjSTyb7cIrjJ%2FbMEAKOPyZx0HUjSU0SXJgCe2dacyO3QW752f3CoGldMO8q%2FcOKBs0GHlJcvgsQ%3D%3D",
+        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814409.png",
+        "name_jp": "南瓜コロッケ",
+        "name_en": "Fried pumpkin croquette",
         "price": 121,
         "evaluation": {
-            "good": 1,
+            "good": 3,
             "average": 0,
             "bad": 0
         },
         "category": "副菜 Side dish",
         "nutrition": {
-            "energy": 305.0,
-            "protein": 3.9,
-            "fat": 23.1,
-            "carbohydrates": 20.7,
-            "salt": 1.0,
-            "calcium": 16.0,
-            "veg": 13.0,
-            "iron": 0.4,
-            "vitA": 11.0,
+            "energy": 207.0,
+            "protein": 2.0,
+            "fat": 13.7,
+            "carbohydrates": 19.5,
+            "salt": 0.4,
+            "calcium": 7.0,
+            "veg": 15.0,
+            "iron": 0.3,
+            "vitA": 43.0,
             "vitB1": 0.04,
-            "vitB2": 0.03,
-            "vitC": 2.0
+            "vitB2": 0.02,
+            "vitC": 8.0
         },
         "allergy": [
             "soybean",
-            "sesame",
-            "pork",
-            "wheat",
-            "shrimp",
-            "chicken"
+            "egg",
+            "beef",
+            "milk",
+            "wheat"
         ],
-        "origin": "竹の子（中国、ベトナム、その他）"
+        "origin": "じゃが芋（国産）かぼちゃ（国産、ニュージーランド、その他）"
     },
     {
         "cafeteria": "KIC1",
-        "id": 11,
+        "id": 9,
         "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814524",
         "image": "menu/pics/814524.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814524.png?Expires=1727004843&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=Ckhc2u1KwFbE%2FAc9tZOK%2F1nafUrQ7kHEbIxoDj848tNoD81IsQ5ipJePlOcwcV0MypDHm5eY7gzfg0Di4WstoaDk07kQb5%2B%2F2v%2FiJ6eQ%2BdL6lFQg0U4a4y23HVvNF8erre5xfJXOL8kGADLcFIsQKLrvELzGrR7PVq%2BD608ZyZPcuPR5UqhfNPotpwYmcXZTcFH7%2Fvp6%2FjMc1C4RtjOHNGE5zwgF2%2BNZOayP32ubU0Pl%2BzXaLlyJoYOcZTk4ygdy%2BNesHdMocIEFGWqHC5InLSJl0XCeaPc%2FMBwA%2BVljxR4DwkF3UjsHjU6KgZF4wyg0khUKblaU7bpPCucc9kZY%2Fg%3D%3D",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814524.png?Expires=1730602254&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=NXthvq5dO428hTzHxs4MxhBLvMxVRyplpmLv32LVvGrb9bGJedMq10wOIrxRDGyIg5ZZQCcYYE5I3mOXgyinBOCWIfTLOavyZxcNN5%2FIRcVPTnOGi12M0tcjjNgO1RzQSKkg6MtQLMePPOUPZuQQQSDGg0pv8mgsGXowTBWjMm2ulI5eeSmBjsRUENEZIkLOAdXjCtXrgJIgVeiv6LBVKRlWzLMISq%2FoqUXhoV3WHuP3kw6KvduT0H0IlrNOChquEUPJQvRZdM5gqOyXQEx5xdaPDAvRbYHyooP51OuJqoUzAoGznj1tjQjic86PjjJ1%2BOwbk9JFBjEcm03bS%2FcA8A%3D%3D",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814524.png",
         "name_jp": "鶏きも煮",
         "name_en": "Simmered chicken liver in soy sauce and sugar",
         "price": 99,
         "evaluation": {
-            "good": 7,
+            "good": 8,
             "average": 0,
             "bad": 0
         },
@@ -458,24 +380,24 @@
             "vitC": 9.0
         },
         "allergy": [
-            "soybean",
+            "chicken",
             "wheat",
-            "chicken"
+            "soybean"
         ],
         "origin": "鶏肝（国産）"
     },
     {
         "cafeteria": "KIC1",
-        "id": 12,
+        "id": 10,
         "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814447",
         "image": "menu/pics/814447.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814447.png?Expires=1727004844&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=Bc5DRgrLiy10OzCPkd9CSkM4SJNBGA26pb0coyxZGZexpO2ok3CPD1h9tNrVySfBqgnZQyqw9oaPwPOYXRLwa71b6KEGwe8nkskA1pzmoGWPA5UeaKogH2hAxXiy02gV6HBTF5uS8O2oX3pzLHNBTZbt4nVbqzO%2FfU871ZTUZ6jvE%2FayVjGmS%2FhQhJ5BZbMOJknoEVCP2In3%2B05VCAwv5zMhcg1HQ%2Bbq2KhSRbJeyz5ia6ba%2B30Excuuc34Zht4z5PkCu2WNVUAdT3JIb3Htm9i0XhI34IEQ1WVjmrHGvNiYM7Ufiy4yzZ%2BY6nXt2ur2cWg9h%2FkbwtzpIpFwgwk%2FcQ%3D%3D",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814447.png?Expires=1730602254&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=RnL%2BqmMAQ8uf%2BJeEaN%2BPZXCyH7lgR3OLiF6StGSJOHfSWXPY2lU7Dfk%2BF8DTbNq%2BlFBTS3RuZxgoJUjyQzcxxcDHj9hYl1kKs3un6RoruUWXBA7m%2FtybQ23UHKxW8F8mAOpdyRnftcolMhOUyi0twUeBppVXsAVHeUQfviwL5gCMIjjzLsZ2CdtScxYMqXZ2a%2FZAryz2G14rTOYrwwc3vNvHqBr%2Fh1nbKebRS2vgQHj3PO8%2BpsBR8aOBaNExY9xlFTqbALCSS7Eg%2BJC7QdjLkjE5t4r724u0rc2z5uFwUTAB%2B8TOkzkSuUNVIVoE5jAw431rf8sUYhrpfNVS8UNx7w%3D%3D",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814447.png",
         "name_jp": "オクラ巣ごもり玉子",
         "name_en": "Okra and half boiled egg with soy sauce",
         "price": 99,
         "evaluation": {
-            "good": 393,
+            "good": 399,
             "average": 1,
             "bad": 4
         },
@@ -496,132 +418,128 @@
         },
         "allergy": [
             "soybean",
+            "wheat",
             "mackerel",
-            "egg",
-            "wheat"
+            "egg"
         ],
         "origin": "鶏卵（国産）オクラ（インドネシア）"
     },
     {
         "cafeteria": "KIC1",
-        "id": 13,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814544",
-        "image": "menu/pics/814544.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814544.png?Expires=1727004844&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=k9dc08STW7cJ4%2F5ysJ%2BQFMfwuQEYVcqyN2lSEH4Qh7GFlH6YqIpvWfvogA%2FZJXF4c7qd6%2FPShHSqEbATXhVg%2B%2FDqq4vcgRYCepx3eSI6RSRqIuFygtC59UiH8nz%2FqhQOUjHuDJKemnb4f3HNzlI1tIIhrhzE8%2Bj0t8zNEDNqluTkjV8NIjKKehREnhAc6XuEIHigpkUNw73dplbxx%2FkkrOlohYCoaQJz8eVhRhgcKFNVlgbZA0vOo6%2ByNqMSCbKggiTNbGYDZKHbAVUMRntdL0O%2FAJvX641JcHfQO6Nevkt7ZjM9QGfo5eJVTmpzeg1MRZvFPCNn99mwGaWbFaKVmQ%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814544.png",
-        "name_jp": "そぼろきんぴらごぼう",
-        "name_en": "Stir fried burdock with minced chickenin in soy sauce and sugar",
+        "id": 11,
+        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814410",
+        "image": "menu/pics/814410.png",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814410.png?Expires=1730602255&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=L0%2F7wnYv3%2BkMIax2LsB5cvnNnRsEKfc1LJhfj25lI7Q73qqf06zJyv%2BEvJMk8PmQpHXPiaSVmXWjVsyzAjCtCJyHg1QuVIOQEdPewEtnQCuMH2n%2BiB94oRQQtaizEnnTrZFxiU09Qczh3pAOGAL%2FAW0%2FrsuZen9Xj359bWbw1xdEJTxU8KTW9hHQWSSCqTSUBxY%2Bjvu%2BMo5wv64kpETGiiPie%2BebPALIP1WaSDjpwce14sr5hwEtBIZeUWsd5h8VGQcSBHkXpyEH1%2FofkJBZXNVdl07EbjX%2BPMJ%2FH5%2Bb%2Faieq%2BYam4s5eSLykzEDVJrUB5EjH7VEArj%2FeVJdnXyxSg%3D%3D",
+        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814410.png",
+        "name_jp": "ほうれん草ひじき和え",
+        "name_en": "Boiled spinachhijikia kind of edible seaweedfreezedried tofuand dried young sardines",
         "price": 99,
         "evaluation": {
-            "good": 2,
+            "good": 73,
             "average": 0,
-            "bad": 0
+            "bad": 2
         },
         "category": "副菜 Side dish",
         "nutrition": {
-            "energy": 95.0,
-            "protein": 6.6,
-            "fat": 2.5,
-            "carbohydrates": 11.4,
-            "salt": 0.9,
-            "calcium": 39.0,
+            "energy": 59.0,
+            "protein": 5.0,
+            "fat": 2.0,
+            "carbohydrates": 5.2,
+            "salt": 0.7,
+            "calcium": 51.0,
             "veg": 23.0,
-            "iron": 1.0,
-            "vitA": 2.0,
-            "vitB1": 0.08,
+            "iron": 0.7,
+            "vitA": 111.0,
+            "vitB1": 0.02,
             "vitB2": 0.05,
-            "vitC": 1.0
+            "vitC": 4.0
         },
         "allergy": [
-            "soybean",
             "wheat",
-            "chicken"
+            "soybean",
+            "mackerel"
         ],
-        "origin": "午房（中国、台湾）鶏肉（国産、その他）"
+        "origin": "ほうれん草（中国、その他）ひじき（中国、韓国、その他）"
     },
     {
         "cafeteria": "KIC1",
-        "id": 14,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814493",
-        "image": "menu/pics/814493.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814493.png?Expires=1727004845&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=M8AxDfUBfCre2Mxve7XOzZaocNgurXJ6PWIMHiIXXq7HDwB8hb1LhxjUa4XRbU4LfTuGQGy7OUynh9Ue%2B74wxu22J1%2BUBalH0%2FyyinPFlKSWVm0oZ%2BCOndY8KkaEwstYj2pkvVf19mjN2W%2BeI9073TFq1ibSH3Jf7cPGFHAWdiXSaMYJFKvq7M9a2i3cOHfhn0rzSWSA4s8z%2BA7uxqPRAOSm58RiBFctAKQbNQ332HEsA6GcGvtxluZJZwCvwyZm46ka0KzIGUVQi75ANKlN2IwXL6Df89n9Lp3iLD9w4xUUd2dQdwZfJsmrJ%2F8W8MeH8rmEvNosRhr1WXfmbiqkqA%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814493.png",
-        "name_jp": "ほうれん草ごまナムル",
-        "name_en": "Boiled spinach with sesame and simmered dried radish strips in Japanese soup",
+        "id": 12,
+        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814413",
+        "image": "menu/pics/814413.png",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814413.png?Expires=1730602255&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=vgam98vXBjrtWgLxtpvtE%2FcGOhyQBWPhFVjPFGSp9T7k8L5K%2FlMpgWo8T7Gy1%2BI03ROHj4msU%2F6Gz%2Bc9GZ%2BqXtcsrMKgpHdzxEntgLDRu8sMkCO7IeJrACLcTrG6ZaMibdeUp6L3cNgDCqJSu1KmK7OmkTEuqvKOqb3FyYaHJfsG9BAxRduBVwq%2FhTV7evppEjAqb5EvgwSLIF%2FJFaIINl6hBCeNX3oC6Ub4CLkIEpUSd6dG4xt8PKRWM9%2FE35aKaQ48disV9BklQWkhh2R%2BXsHEekiI2UcKlBrh7tBHxldwRYz%2FwDDF4VaAZ%2FuxMPZUPt0ChJ%2F7ZYM%2BZFEySFD1YQ%3D%3D",
+        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814413.png",
+        "name_jp": "ブロッコリーピーナッツ和え",
+        "name_en": "Boiled broccoli with peanut paste",
         "price": 99,
         "evaluation": {
-            "good": 1,
-            "average": 0,
-            "bad": 1
-        },
-        "category": "副菜 Side dish",
-        "nutrition": {
-            "energy": 45.0,
-            "protein": 1.9,
-            "fat": 2.6,
-            "carbohydrates": 3.9,
-            "salt": 0.6,
-            "calcium": 59.0,
-            "veg": 52.0,
-            "iron": 0.6,
-            "vitA": 148.0,
-            "vitB1": 0.03,
-            "vitB2": 0.04,
-            "vitC": 5.0
-        },
-        "allergy": [
-            "soybean",
-            "sesame",
-            "mackerel",
-            "milk",
-            "wheat",
-            "seafood"
-        ],
-        "origin": "ほうれん草（国産）切干大根（中国、その他）"
-    },
-    {
-        "cafeteria": "KIC1",
-        "id": 15,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814505",
-        "image": "menu/pics/814505.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814505.png?Expires=1727004845&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=QyzrOeyu4sQPWS5xDFICwe0BmU0VZrms%2FmKKuSFE%2FGy6rVbKbtcoi2uPqMKFTlqlkU%2FFTOOnx9vN1%2Fq0JR6afe9uJSC%2BAW0eN17Sbk8u3D8hNaAD2eiGKIFSahiOsuSJSofYVQrlVwEYt1Uglihmhdl2aupWUj5qlZICUkYxDkSBRMwXBij3Mp6370jYKN3EscWEaPl2VkkY0weYGburoU8xNciwKOtcgcJDPS6rnSS1yac9I2k%2F5nyG0jBsrmKHppJoqMCXAVaBj8DjY%2F4UBWlzgQdSUxScbxP1tC2RIUuG2UPwXz7A3KfJIa8FAEyiIqtJa%2BqImJqZnolE8imZJA%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814505.png",
-        "name_jp": "さっぱり揚げ出し茄子",
-        "name_en": "Fried eggplant with grated Japanese radish sauce and soysauce",
-        "price": 99,
-        "evaluation": {
-            "good": 104,
+            "good": 4,
             "average": 0,
             "bad": 0
         },
         "category": "副菜 Side dish",
         "nutrition": {
-            "energy": 139.0,
-            "protein": 1.3,
-            "fat": 12.1,
-            "carbohydrates": 8.1,
-            "salt": 0.8,
-            "calcium": 23.0,
-            "veg": 93.0,
-            "iron": 0.4,
-            "vitA": 2.0,
+            "energy": 44.0,
+            "protein": 3.7,
+            "fat": 1.7,
+            "carbohydrates": 5.5,
+            "salt": 0.5,
+            "calcium": 31.0,
+            "veg": 71.0,
+            "iron": 0.7,
+            "vitA": 49.0,
             "vitB1": 0.05,
+            "vitB2": 0.06,
+            "vitC": 39.0
+        },
+        "allergy": [
+            "peanut",
+            "wheat",
+            "soybean"
+        ],
+        "origin": "ブロッコリー（中国）"
+    },
+    {
+        "cafeteria": "KIC1",
+        "id": 13,
+        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814412",
+        "image": "menu/pics/814412.png",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814412.png?Expires=1730602255&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=gqyJzXSge%2Fk%2BQiCG3rMkfGgW74kTIvc%2B%2BIFb87%2BqbGI%2Boo9h3v%2B6btepLQNehxh%2FMatbkuJF27zvrhoW%2BlIRncNGKLo0govt37Fk4OOO6ePJySTx4n3LHrIqxCsscZScjFkWYJvJT1ZxOhs3QBj3W36T%2Bdk0HFXBr9YveAjeLvwx9kQz1IeubNUBt3Mo%2BhexvsNqopk0gxNkWDt9xwsgQwFz3wNMBvAZrONULWNvY5BTc6H6w2WLmMvvJD5aDRfUzKo3oi1TSG3j4yhz0%2FOrI9uoDFAbVRFf3WxLL%2BkrMTEjiaazHc2j77mbE5P%2B4cwnknqgolJbSKkhTcwSJc%2Fl0Q%3D%3D",
+        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814412.png",
+        "name_jp": "ねぎだくもやしナムル",
+        "name_en": "Boiled bean sprouts seaweed and leek with salt based sauce",
+        "price": 99,
+        "evaluation": {
+            "good": 34,
+            "average": 0,
+            "bad": 0
+        },
+        "category": "副菜 Side dish",
+        "nutrition": {
+            "energy": 39.0,
+            "protein": 1.5,
+            "fat": 1.9,
+            "carbohydrates": 5.0,
+            "salt": 0.7,
+            "calcium": 32.0,
+            "veg": 57.0,
+            "iron": 0.4,
+            "vitA": 16.0,
+            "vitB1": 0.03,
             "vitB2": 0.03,
             "vitC": 7.0
         },
         "allergy": [
-            "soybean",
-            "mackerel",
-            "wheat"
+            "wheat",
+            "sesame"
         ],
-        "origin": "なす（中国）"
+        "origin": "もやし（国産）わかめ（中国）"
     },
     {
         "cafeteria": "KIC1",
-        "id": 16,
+        "id": 14,
         "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814434",
         "image": "menu/pics/814434.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814434.png?Expires=1727004845&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=VAYaUbECRSSbPh9XUP9aIUHQ4A7i3xeqDm%2BY5lnmpKKwCWIHuVU7Gicw0BiZWCx%2Fx%2Fug3ps%2FJcWQ2avlzudlmR79aSOOIsqZiZrpftZqKVzLGhzkYzCOZAEh8uo0ElQrF%2B2TMH0nm1LS1driEFv70IQonSbXYf59NNvQDHlWcGA7FSPrsV8qXS03TpsPCUoq1Fcs5b%2FJb%2Byvu39mOgIQ%2FxCyqWmn9SQ%2B9yzRbBo%2BeO%2FNcd3fJg%2B6Ro3QyGIlW4k4wHdC08tX%2BcTb3d9ceWIG2gWeg6q2u9IqJxs%2F%2FUov%2BO3J8nAT0RX%2BHVP4B%2FNR3NIdk5HzlKydlpRj00D1UiOwEg%3D%3D",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814434.png?Expires=1730602256&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=QTxhYPXjBHd2AWhJxPEego2xc3xhR5zQC%2Bro1pVeB%2B3QVFTifDsGmzi%2Frs3w8H1HQm53vSMCIZZeYoZjzV7%2FWEuQcK8yrLMvuCnMN9e9TTWIYtADOkmT%2BPEGq%2Bqui%2FC0YCGPe%2BFRR4FAc6FWLY1uKc39C9aVGOYU4j6BDci4KkLX7Pl0HY%2Brk6yhcFg%2FPVKDm64E8nLaneaqzZm3OkLvJqWxJLXyFwpdGm8bbgqsaOz5V4KQpX6jnG3d16BPyY%2BX805%2B4WJZp8RxdG3G94SEZvLuN4uTntdAH7boFpVPKY4xg4mrXKSZ%2BGpMVkGgUk0Qu6s%2F93%2B2ELbQXKhMZSC7hQ%3D%3D",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814434.png",
         "name_jp": "ほうれん草",
         "name_en": "Boiled spinach",
@@ -651,47 +569,10 @@
     },
     {
         "cafeteria": "KIC1",
-        "id": 17,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814453",
-        "image": "menu/pics/814453.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814453.png?Expires=1727004846&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=oHVeKss%2B7KD3jR1M3s5l7oPtlj3QCUJbDehZVltf0dCBcfrDiiOPnndbTDcvZfoQTXUfozY4Etm2A%2FxVDfczadccWyl7uVU%2B64xhskoatuLwZ%2FP2%2FKoxdwOYu55ozPe%2FJGmayJFlxZf5TmNJ5I6SLEN3kDi2%2BHEtD4FtzXRd6jfH7v6KfX91quzfZ7g0SnF%2BvM9bH6nAdUJm9Y2fN2DFuPXKnkHTq6vIrpskshygii4Vzp4bxKegwaPZcTRkUwksGEnwKnhQzbmLTK1A49l96vGrIwiTMvntddbtNqmIeYUs9iSlmpKS2mAjo%2FGk5HR478oxHo5qMHR5aP2NAUpWUg%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814453.png",
-        "name_jp": "だし巻き",
-        "name_en": "Omlet with japanese soup",
-        "price": 77,
-        "evaluation": {
-            "good": 7,
-            "average": 0,
-            "bad": 1
-        },
-        "category": "副菜 Side dish",
-        "nutrition": {
-            "energy": 98.0,
-            "protein": 6.2,
-            "fat": 6.1,
-            "carbohydrates": 3.5,
-            "salt": 1.0,
-            "calcium": 25.0,
-            "veg": 0.0,
-            "iron": 0.8,
-            "vitA": 111.0,
-            "vitB1": 0.04,
-            "vitB2": 0.04,
-            "vitC": 0.0
-        },
-        "allergy": [
-            "soybean",
-            "egg",
-            "wheat"
-        ],
-        "origin": "鶏卵（国産、その他）"
-    },
-    {
-        "cafeteria": "KIC1",
-        "id": 18,
+        "id": 15,
         "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814451",
         "image": "menu/pics/814451.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814451.png?Expires=1727004846&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=O%2FbU3aTe5BptUWpemflv%2FdOVxADK7o7oiB%2Fa4RruNYH0a8sRSEccvZuVYSde0KSClDKWUNqOM62U4gQ8FP3K%2BeDLDTxsJZKrBFLcHjSlQTha49KhhbNXanXhz3OgIi81ypnhElq4w4MrVd0AHdiUFnyB%2BqSdhB25nZEGpRQkmgFUYDMa%2B5aDdnE5oJ%2FY25z2iE8ywqeOfQd79ftwBHXUUnfK6xtLgACZ%2BKMA1BVfDnHgu9zqh0pAV73fjaiMG%2FQCXFY8fLtIKsqj%2FvdIempzTbJR8o1xP4mG8iviPujVAHmKyii0WDckb%2BseygkgMA4ITgiLcRpowJR%2Bbx6aakDwiA%3D%3D",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814451.png?Expires=1730602256&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=OfjpSdnstrJd54Cfw3KzELmM8UAKvT8UtgYUO9BqsxJWue2iRGvt2GH4s647k885nDOEyPFeqRyceW7Y1zqRLBWcKtQGJt7O8wSdBTXjWPJsers84rs6ltHH4n7UUWd4gMMcgD%2F3Ams%2B7keBApMqmvpe%2BOlVsAJHuHBvCvgO3%2BdRJ3ElTCggZZL7XPpcJ50VBOKEqrREt2O5HG2xWEQ5jSXYtVaBYVnRy8WsdmByZSYpyM0MRx4bTC7GpcYmjC8oSdnaCKeqnEZFTozS0Osl%2FLcQJE26xwgUi6Z1xIbTGxq6ML4vaf4Rp%2B1jlGrSgQ0EES7T674zjm0ET1z%2FM6Gwkw%3D%3D",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814451.png",
         "name_jp": "ひじき煮",
         "name_en": "Simmered hijikia kind of edible seaweed in Japanese soup",
@@ -717,22 +598,58 @@
             "vitC": 0.0
         },
         "allergy": [
-            "soybean",
-            "wheat",
             "chicken",
-            "seafood"
+            "seafood",
+            "wheat",
+            "soybean"
         ],
         "origin": "ひじき（中国）大豆（中国、カナダ、他）"
     },
     {
         "cafeteria": "KIC1",
-        "id": 19,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814420",
-        "image": "menu/pics/814420.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814420.png?Expires=1727004847&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=u%2FuvYakeYba90Wq1kgcWIm%2FXN4xMeQs9e8x3IY1d%2F2f%2Fygs8sIA1K%2BQUbHybFZrqXK7XOD75M8byrBSCaW6uTPXpEDB2lXDSlI3xSOCoUiyIoKglpO4sLKBmS6CMRlM6XcGqKtsVdBdREqfik9sC7HZ%2BVfTsd2%2BtuFtpl%2Bau6U1nqht2vbUbWZySh9s%2Bi9elp%2BOOzRq2SaqnuZ%2FhWD%2BzCFqACcPDtSassvfEzaT6TcPR%2By%2BWxWMhpZifWGOi2xeZoQLOQWssCPj17%2BTPetaQfksZZ18HcvPZ%2F7TJ4AA2SzQAb3%2BjozKSM0MZILr%2FSazY%2FGYMNmFTt9JBn6wYTVBnXQ%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814420.png",
-        "name_jp": "南瓜サラダ",
-        "name_en": "Pumpkin salad with mayonnaise based sauce",
+        "id": 16,
+        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814551",
+        "image": "menu/pics/814551.png",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814551.png?Expires=1730602257&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=DOprhmPSeM94SPAoaMpXmtgTzX5oGj4zY5e8a7blEWc%2By%2FDHMM5sA66KhCanXaiASJ0UAr8Lf%2F9PxzDMVRw5OLNuJjbUJX857JiCoC%2BdPmAp2zQPF4bWR%2F26jptSGkBELTBGZQi4WsC1cAE0mYPiT7YzyH%2FgqTQM3QxHGTsvW8n59IDspnnI%2FlgddedLVhvaHuYz7z4b0jYQP2oE0HwnQIvmZslRuniM2AXauwHLG%2FYvkeZVhFKswKNsKgKnJQT8mn4DsIggZAlOTV%2FZUEpq4cHHcXYsLdnJEfzhY1XG%2BOJHst7COOjYxaNXZHD1w%2BcSR0fa0r9yYm7qOCPeGMGc6g%3D%3D",
+        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814551.png",
+        "name_jp": "ポテトサラダ",
+        "name_en": "Potato salad with mayonnaise based sauce",
+        "price": 77,
+        "evaluation": {
+            "good": 67,
+            "average": 0,
+            "bad": 0
+        },
+        "category": "副菜 Side dish",
+        "nutrition": {
+            "energy": 98.0,
+            "protein": 0.9,
+            "fat": 6.0,
+            "carbohydrates": 10.0,
+            "salt": 0.6,
+            "calcium": 3.0,
+            "veg": 3.0,
+            "iron": 0.1,
+            "vitA": 16.0,
+            "vitB1": 0.03,
+            "vitB2": 0.01,
+            "vitC": 6.0
+        },
+        "allergy": [
+            "soybean",
+            "egg"
+        ],
+        "origin": "じゃが芋（国産、その他）"
+    },
+    {
+        "cafeteria": "KIC1",
+        "id": 17,
+        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814454",
+        "image": "menu/pics/814454.png",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814454.png?Expires=1730602258&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=nKn3VpsklstQglJ2IpWexq0vK3HWvKGln9%2FXNQ%2FoLFNaWIT%2FzIdRTUuB9jPjsmrATF%2Bzc19neAtfeqVHqckwAAIWigBDyWCvUPkmU%2BhBDInHVibr9Wg3HKkKLg2try0drm5evX8BUd9O2bcVpAVm0K2gvmxybbTY4FBaEegrUfIn0%2Flc4316u%2BQ54xI66eiTY986HoCvuH1Zm9dk%2BKliFYyTesOvsgH9rkb0M2rqUygH6R6nWGfj0uxQuPqcJBNKVPLhddqVWDXnBqUGHt%2BlNSIF0IMmlcB9di0h53xfoVGLNz5smxCp7jZjxhdm%2FXl0M78gsLITX2K5hqYDOFD4QQ%3D%3D",
+        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814454.png",
+        "name_jp": "スライスオクラ",
+        "name_en": "Okra",
         "price": 77,
         "evaluation": {
             "good": 3,
@@ -741,107 +658,34 @@
         },
         "category": "副菜 Side dish",
         "nutrition": {
-            "energy": 104.0,
+            "energy": 15.0,
             "protein": 1.1,
-            "fat": 7.0,
-            "carbohydrates": 9.0,
-            "salt": 0.3,
-            "calcium": 7.0,
-            "veg": 33.0,
-            "iron": 0.2,
-            "vitA": 112.0,
-            "vitB1": 0.03,
-            "vitB2": 0.04,
-            "vitC": 14.0
-        },
-        "allergy": [
-            "soybean",
-            "egg",
-            "wheat",
-            "milk"
-        ],
-        "origin": "南瓜（ニュージーランド、その他）"
-    },
-    {
-        "cafeteria": "KIC1",
-        "id": 20,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814455",
-        "image": "menu/pics/814455.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814455.png?Expires=1727004847&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=uKZi67fts7KyJS22ybqK0WJEdVNExM5pimBD7PKvHQJIEu2SVgA3jbB8aACPYgVtupM8DjmXPMjGQs%2FEJuWnKbT7Tg83%2FdU8P9FpAKM7HpGERVsm7F3mxh%2FJlJ644p54hey34VXGLeFnNktiFdGCIDTtdDhr4SZvbcwdZ9JMyczQJCTSfkg%2FgiwzPRohJEisDxQYmID75vU85eGlQ0H1IlnIxKxA2%2BgUWtv%2FThSfo3VR%2B2eK1eCAzlFUOo1OrzdqHAfLKX9dkv%2Fjay0w1Anvt115b%2BUTmPprbsSnhFB%2BCqL%2FOKV0TMA%2FYgF1KiByQc55AtPpLCIGCwe1ZQG00GJLmw%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814455.png",
-        "name_jp": "冷奴",
-        "name_en": "Tofu with ginger leek",
-        "price": 55,
-        "evaluation": {
-            "good": 2,
-            "average": 0,
-            "bad": 0
-        },
-        "category": "副菜 Side dish",
-        "nutrition": {
-            "energy": 47.0,
-            "protein": 4.4,
-            "fat": 2.9,
-            "carbohydrates": 2.0,
-            "salt": 0.1,
-            "calcium": 26.0,
-            "veg": 1.0,
-            "iron": 1.0,
-            "vitA": 1.0,
-            "vitB1": 0.09,
-            "vitB2": 0.03,
-            "vitC": 8.0
-        },
-        "allergy": [
-            "soybean"
-        ],
-        "origin": "豆腐（大豆：カナダ、アメリカ）"
-    },
-    {
-        "cafeteria": "KIC1",
-        "id": 21,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814460",
-        "image": "menu/pics/814460.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814460.png?Expires=1727004848&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=G7yI0dSK%2BDQNo6kULxqjrs3ZErCC79e3Dzv%2BZWLq9rXGXMSmKz9n4lRea9ZIA7FGZ7PNmFLLYKc1XqEKXXMTkVsBqp%2FnnmP6ZcJiZI8UeGikhtppT7msCwhvQkPIEcCc7lX39wYCYZPT01TG4elYZXUMU2APCYHwdHZ7PqcKIHb7TdBYVyn5HDrlfmE9Ky3TPfFXAn2XBUPtV513pMcXA9rDIsQ1oouSSXOUuGPdF9bRyt1XK%2Fn3XTILy1x5RGMvHDSlwMSOOzX9U4g6%2FTielUP4Ypwfpju4bYDG%2FH4b8A3HJRsVSHz1FonbcdZbaznAQ2zEOtgQhOugORXVYN0Jxw%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814460.png",
-        "name_jp": "ミニサラダ",
-        "name_en": "Cabbage and potherb mustard salad",
-        "price": 55,
-        "evaluation": {
-            "good": 1,
-            "average": 0,
-            "bad": 0
-        },
-        "category": "副菜 Side dish",
-        "nutrition": {
-            "energy": 6.0,
-            "protein": 0.3,
             "fat": 0.1,
-            "carbohydrates": 1.6,
+            "carbohydrates": 3.8,
             "salt": 0.0,
-            "calcium": 11.0,
-            "veg": 33.0,
-            "iron": 0.1,
-            "vitA": 7.0,
-            "vitB1": 0.01,
-            "vitB2": 0.01,
-            "vitC": 9.0
+            "calcium": 45.0,
+            "veg": 50.0,
+            "iron": 0.3,
+            "vitA": 30.0,
+            "vitB1": 0.05,
+            "vitB2": 0.05,
+            "vitC": 4.0
         },
         "allergy": [],
-        "origin": "キャベツ（国産）大根（国産）"
+        "origin": "オクラ（インドネシア）"
     },
     {
         "cafeteria": "KIC1",
-        "id": 22,
+        "id": 18,
         "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814400",
         "image": "menu/pics/814400.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814400.png?Expires=1727004848&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=N00pYiDdqCN6eHEf7obfTeruFCHEVP6dm8Isx6kNcAPOkcrwYmfMc%2BOJPZ8msNj3IWRwn7CfDDfKQPyjS%2BKeJ%2Fl8ZH9C9c7lza7QY5Eyl1sBlFG%2BGw6Nh1w2J3U5KYhfpeNqdZWAiucPrrEJJvMywiv9ZDZ4753y9vGGucq7QaaPqLLWoR15FplYnRNycc0e0VTlKnr0e3R8VAW4kSd3caMpS7pSbwHUGcxcZ1Koof1gukK3qY2PAq67n3h9wVdn4A7RnftYIzdBRHj4FpzTVMbzQ1EtJ2t4isbd3JY99Kd%2FKOHZXzLO1imGt%2Fqlg95qXQJ4y1wYYcg8FJrz3BCHgw%3D%3D",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814400.png?Expires=1730602259&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=kCB7l0HfiZwshRgYUCwU6iwvMrip6LTwpflLSzx9o3I%2FItJ7%2Fm78eQRSgQUDC6a1bZ%2FsD2tLLue84VctgQN6xrMjVxZQKzXpmVkz7fTZYPglRb57T0s%2BzEJi2shqWVSlsNawTboy%2FaKlcey88H5Pxa90kHzMcBwDA9u2hh9ow1XHmiShKLtszLeBoxQF2ynOy%2F2LiK1438oxNgXBQd64cDn1UnTP6Z0Vyrx%2BMqTGNKrKAAkCYn8sZw6YN4coz51G4BdQPmNqB1L%2BhF3rwO8yC%2Fy4fFdDGAMrqnWNtpfc9N5L9qZFdBbA8LLR6f5C7E2oG8c3NhkAhouj2Sbqizhrow%3D%3D",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814400.png",
         "name_jp": "豚汁",
         "name_en": "Miso soup with pork vegetables",
         "price": 121,
         "evaluation": {
-            "good": 209,
+            "good": 210,
             "average": 0,
             "bad": 0
         },
@@ -868,10 +712,10 @@
     },
     {
         "cafeteria": "KIC1",
-        "id": 23,
+        "id": 19,
         "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814458",
         "image": "menu/pics/814458.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814458.png?Expires=1727004849&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=tZb%2FCQZCRe%2FcW1l6nxD7%2FW%2FL%2BE0salvioeyPPjqF36ju75XV%2Firx2v92tZCepSUzEBS4UBNMIZ5AnwLCSBSDXVx3LQMFsSqiQ%2BfEu9je39vkDx1cTPepp1Go%2BMcU2OnKFtl0qsMmUQyufwnF8vwNfatChJZo%2FbDQ7HX4p16TjRPYmD8RxR27dFrMTMnZY%2BrgKdgxBJhTeEa2s1G6TGGjcg8PMUd0jwNRR8HOMY4ng60tX5ocr5H49sWR%2BcaPDwfKLWseN%2FpDNGuGc0D5FalxY1y62THAkyO1Yy%2Ffh%2BGcDaFrkAS9fzxxxXvHJjJp%2Bm8hmygFR97rLuQmfqJZs49tIQ%3D%3D",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814458.png?Expires=1730602259&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=FmdNIyw7p2TupQZVf7Ou5gTLmVa2HuBOt%2BP5BaqLyWhLa%2B%2BewP7CUuNTmcMITz8w8WYhWuLCz6UeVNS92tNkfGGLVBjpaJmvUldcsctB4M4lByK30lvgbBtZvKnXV4TiOSJPZPSs%2BwGaRRqLCNBaPyDpzR%2FTqqaHc4RdzrzHATEigpz5jQmDw9Uu2b6e68XQdCXCNjwOH%2FrZcnZ5IOuhGjtHq2hdtLFNAD1niRQ4I72v4oRwOkfbQfogMndjJU62s10qx1b%2BUMcyDt6tJ1nv8gFdreuUbONKNaCO2RolA6E%2Fml1M46iL5OTCsM6RUafwmeH%2FcALA3iy1cS6DAAhvNA%3D%3D",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814458.png",
         "name_jp": "味噌汁",
         "name_en": "Miso soup",
@@ -903,13 +747,13 @@
     },
     {
         "cafeteria": "KIC1",
-        "id": 24,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=819431",
-        "image": "menu/pics/819431.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819431.png?Expires=1727004849&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=dO7%2F%2FOk0tbQSzKnmhA9CiMLi8Ki9MpxYUvqksn6SjLOFlFosc7s981xT5FkifpNO7aiXUtdR0Wh7XlrO%2FwQorq3v1oA0VSbyAVCVJqjR%2FhdHJLkBXel0eCcbeUm95ZazqZIWf4E5QycV8YBQ59jHeDEPxWkPsZOJINeKSx%2FJv5%2FjMi8arAO1OYWUGT1eiqFI3ZDvZz90lUCdT0sD3FLI89oihQ0ZptHju%2FR83sETjEo1wq48jgGaHd7xnGoPCScIdk92x%2F0ROUzDdSF9TFXdgO800N6bfvMvpXceFFg4SY0xAGfnKZL4uXq8hzv0cYmliEl3lgsCliGOt7UdfTK6MA%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/819431.png",
-        "name_jp": "ちく天あんかけうどん",
-        "name_en": "Hot whitewheat noodles with fried roll of grilled fish paste in Japanese thick soup",
+        "id": 20,
+        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=819502",
+        "image": "menu/pics/819502.png",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819502.png?Expires=1730602260&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=IKmP0iGLUbWtgrlBWQwt%2BCpvOsiVBCpSXxR%2BuEctI%2BVtM9dTYxqiXDP4k9toZimg8HPhXUf%2FX7Avuivn7Abl7sLzRtAjGiakIW4n8fF6PbxVmZod83Knha%2BHP8QreuITDkTawmDHHjwPPlMJBOAfKuXCRz4x9eRSwzfvL6Y2qZEEFlDAopj57MVuJ7J3qGFzkpDs2cf1NS%2FCRofWbH6%2BSY0TDrnWcgl7ZZtdk8rxanjcxz0vdltOGayF3W77CVGnxg%2BihhiMKWaS3EMfQ1nQ28VU1VEtjAILtdFujB98u8C7uaroXb9vCozQpyBzQCOigTf5K%2BnNbWhRUHqJG%2FbQLw%3D%3D",
+        "image_origin": "https://west2-univ.jp/menu_img/png_sp/819502.png",
+        "name_jp": "鶏天うどん",
+        "name_en": "Hot whitewheat noodles with fried chicken in Japanese soup",
         "price": 363,
         "evaluation": {
             "good": 0,
@@ -918,74 +762,35 @@
         },
         "category": "麺類 Noodles",
         "nutrition": {
-            "energy": 535.0,
-            "protein": 12.4,
-            "fat": 11.0,
-            "carbohydrates": 96.2,
-            "salt": 5.2,
-            "calcium": 68.0,
+            "energy": 503.0,
+            "protein": 20.3,
+            "fat": 9.8,
+            "carbohydrates": 83.7,
+            "salt": 5.1,
+            "calcium": 33.0,
             "veg": 5.0,
             "iron": 1.0,
-            "vitA": 7.0,
-            "vitB1": 0.07,
-            "vitB2": 0.16,
-            "vitC": 22.0
+            "vitA": 11.0,
+            "vitB1": 0.11,
+            "vitB2": 0.12,
+            "vitC": 4.0
         },
         "allergy": [
+            "chicken",
             "soybean",
-            "mackerel",
-            "milk",
             "egg",
+            "milk",
+            "mackerel",
             "wheat"
         ],
-        "origin": "うどん（国産）竹輪磯部揚げ（国産）"
+        "origin": "うどん（国産）鶏肉（中国）"
     },
     {
         "cafeteria": "KIC1",
-        "id": 25,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=819432",
-        "image": "menu/pics/819432.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819432.png?Expires=1727004850&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=GjFuLzNB%2Fx%2F9BE4QgpvR3fAHowWDmf6z2H4RTOGwiiE%2BwRVEW0NaArMDs1dLCYLOkDmY9wu5DjtDHOJkofnXGn5%2F2jRRkgb0gLGx73vOnqwHBcm23Hh2aHewZGM4WzQRiFdeSFH%2FprFQ2BXdSPsAI8V1FbClhLdDakTBAbZ4J1AmV85VK2G5PVhZkA4iy5%2FJehJlRLcQ%2F9hL6qoD0%2BfFGTdcbsmr90MAsJO2zuV4q%2BTbZ7uInXtzA207daRRo2TcroTkByfD2S4HahodBUnmQLiDbCg2CDdSrNWXgJi1XjtC4TIoRCqbm4iOFBOyZkofTSl9IOyWVK9iWqyLSHfedQ%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/819432.png",
-        "name_jp": "ちく天あんかけそば",
-        "name_en": "Hot buckwheat noodles with fried roll of grilled fish paste in Japanese thick soup",
-        "price": 363,
-        "evaluation": {
-            "good": 0,
-            "average": 0,
-            "bad": 0
-        },
-        "category": "麺類 Noodles",
-        "nutrition": {
-            "energy": 525.0,
-            "protein": 18.5,
-            "fat": 11.7,
-            "carbohydrates": 86.3,
-            "salt": 4.4,
-            "calcium": 68.0,
-            "veg": 5.0,
-            "iron": 1.9,
-            "vitA": 7.0,
-            "vitB1": 0.12,
-            "vitB2": 0.17,
-            "vitC": 22.0
-        },
-        "allergy": [
-            "soybean",
-            "mackerel",
-            "milk",
-            "buckwheat",
-            "egg",
-            "wheat"
-        ],
-        "origin": "そば（国産）竹輪磯部揚げ（国産）"
-    },
-    {
-        "cafeteria": "KIC1",
-        "id": 26,
+        "id": 21,
         "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=819316",
         "image": "menu/pics/819316.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819316.png?Expires=1727004850&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=clrkXO%2FadVoW%2Bn%2BCxib2gJ5um4IJBY1y6XpqDFNPhXPTtDrAYxJu1wi%2BVVMxr6y8RNgXvd95zunJSwezayQKhT4UDMq4p0qB9457PXVNwLMfWqCx3zo8n1bJTqEy1N47SNXZ7pJ2weKefuy0XixOmYSi%2Fv56sImbREvViowKw%2BixvinGOzcCa5l6L8K1h3kzjHkg%2BPFmfTy%2FjqQp4i1HF%2Br9LBqklfbUnA08Pfug%2BTG169Qp0z8gapMgXNNBJHyEsIVfiLvhvjCvhftnjZJY6BKmIs%2B0l9q8UqyYswNfDBugwaQkU5KF1o3sKO%2Fly8nQi%2B%2Bai%2BNJP8fJowSYkl%2F6sg%3D%3D",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819316.png?Expires=1730602260&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=PBlPaGszbskFz%2FE4K94P1DURwfrIaEPZDzt%2FcYAq4rglC3ygnQxdFy23WxOgfzz2iU%2Fi1uK3pObKE%2Bohkz12I6emHZL3eFJWmx%2Fck4J0OhYK%2FsdYMPhQea43Npe5kvBObmFX9wEuK%2FH11hcJWlwdkcBwWqn8XcYY%2Fqv5j4XwchH6HVbIqq%2BX%2BrjApzsbBoaNl0ELIpc0DFQ47rlDWZmpl2Yv9qJpKaeoUyZY3MVUVN0Zg2cVT77ftsNb%2FSuZk4YtDMetrrFv79Xx345W18B%2FHKVTjyFoJbxv7ET0G71Hgd61Z1bUmIyC3f1dpCv%2BG2mBvDcuaAp0MF6cK%2BCIeouKCw%3D%3D",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/819316.png",
         "name_jp": "温玉ぶっかけうどん",
         "name_en": "Hot whitewheat noodles with half boiled egg and ginger with sugar and soy sauce",
@@ -1012,57 +817,18 @@
         },
         "allergy": [
             "soybean",
+            "wheat",
             "mackerel",
-            "egg",
-            "wheat"
+            "egg"
         ],
         "origin": "うどん（国産）鶏卵（国産）"
     },
     {
         "cafeteria": "KIC1",
-        "id": 27,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=819317",
-        "image": "menu/pics/819317.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819317.png?Expires=1727004850&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=qjoPExQ8%2F0oxQNQ7eZk6lz9vH%2FaXInp0SjGSncopBhqeJ9WouD3tARNl%2FStiOkym17EcAaGX3i4jCraij2lHA0Gl47C7vBSUA5k9EOefr9M%2FeHLhsKs1MSOMznzIOho54QbXtnS3BFvcN%2FVnnXnI8N4B1BcemVWOki189bn5tLpq2vlT9VHwFWRG2F%2Fab2%2B%2F9eVgtsrDT0i977CoWJXL%2FE%2FKrXNTGYkeBuq1vXB29WVseHUT2VVSrpSERyqWhcI48BeiTJL0Wa7%2BzU130ClV7cxfD8K%2Bxcy7hrIjSwUl%2Fo%2FsBnq7ox7p%2Bexc0hzgh9lG9mCwE%2BJRv6YHa8etmwI7Pg%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/819317.png",
-        "name_jp": "温玉ぶっかけそば",
-        "name_en": "Hot buckwheat noodles with half boiled egg and ginger with sugar and soy sauce",
-        "price": 319,
-        "evaluation": {
-            "good": 0,
-            "average": 0,
-            "bad": 0
-        },
-        "category": "麺類 Noodles",
-        "nutrition": {
-            "energy": 400.0,
-            "protein": 20.6,
-            "fat": 8.4,
-            "carbohydrates": 62.0,
-            "salt": 2.5,
-            "calcium": 57.0,
-            "veg": 5.0,
-            "iron": 2.8,
-            "vitA": 94.0,
-            "vitB1": 0.13,
-            "vitB2": 0.28,
-            "vitC": 21.0
-        },
-        "allergy": [
-            "soybean",
-            "mackerel",
-            "buckwheat",
-            "egg",
-            "wheat"
-        ],
-        "origin": "そば（国産）鶏卵（国産）"
-    },
-    {
-        "cafeteria": "KIC1",
-        "id": 28,
+        "id": 22,
         "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=819393",
         "image": "menu/pics/819393.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819393.png?Expires=1727004851&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=ENGtZn6HxwL6jhlw0BkFrhHJUAxvyrw74Fd7%2B4ZAT95Tsp%2BZYrDkLsXKMnE%2Fclxhnk%2F0AYT6bCuo79hlYHMpbtCuVk09EccDPV0rJZU6aQDvTtfFSPceAiXq%2FzUarVDgFgmzGeVQgs8YQ77yolX2kg0qVv7WQQXKFbE2zV7z1cHjys3WzlQyumEMxxJwjMWOewSKpfzueB8JrQlf3l%2BiQH6P0c%2BW8AV8i4Ebt0CMupVV2TTsUomH6bDq6xUkboehd4Uwgy3QC9A6uFr%2FivVhH6JNZozcChP%2BxmS11UogyOpN%2FyVwHS%2FxAGhFSp62sL2Mc4yFouUmQyhCMqz00mSWcg%3D%3D",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819393.png?Expires=1730602260&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=UysMlzv9%2BdE4F4zp%2BBLZkxdX8a%2FxwM7pWYcohsPiocOnMmhqHaKbXYz%2FPjeWds93OsiNn1y4L%2FVtOZVIfvrkGFeobCxj8Y3F0gFVBwuPiIZUkkPfwl%2BNgDVhUbhE%2FC6vVOu96M8lmSAv1sV4CEDrM2WtT8mZbpwKlNYav2gsJVzFsT7U6XLZ26T%2BtzIDFAozPxdaH%2F9LJfawKcN9MTmwTTyxjFMc2GhF0ejB03S6qVWNN9JmQ1jplDfm7nAaHiZvgENbjOb%2BDUwAs4lsSBiB7Lcdej6o1Rt226EaidrGlJ2k6cOq1TfZe%2F8BLgx7dinKCCqqzL3jTVPIzt3%2Bo25hxg%3D%3D",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/819393.png",
         "name_jp": "きつねうどん",
         "name_en": "Hot whitewheat noodles with fried bean curd in Japanese soup",
@@ -1088,57 +854,18 @@
             "vitC": 2.0
         },
         "allergy": [
+            "wheat",
             "soybean",
-            "mackerel",
-            "wheat"
+            "mackerel"
         ],
         "origin": "うどん（国産）油揚げ（国産）"
     },
     {
         "cafeteria": "KIC1",
-        "id": 29,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=819394",
-        "image": "menu/pics/819394.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819394.png?Expires=1727004851&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=ftD7ooPlt%2BTBaMntEjpqxmpDU0hQgobTc7pSJdistY9ayHnOl7PG2QNo8NU06YVYs7Tv8Z%2B0orEoDujRuADVmPo7Nab0t5M3CCTaPol2cNrrb6NArzs0rv%2BtPpB7KnSdWuzp%2BqHhtUhjw9b%2BfYp4io81AZcdf%2BcmH3WDuzip%2BPNrOuM%2BRRFutYsImDwC2SsR2jnNinlieSC5HnbfSiKyDzWzyloMBrR8ydPPSwCSi2GPhYNCI3gj%2BHOpLpRgMrplxoDZ9XTo2ezB3misja6cB883WgWN6KncqI6to7OZKgWEpmR9txbWGS9WzmPNpN6Ry4KFgBdDlT1QE1q5Em0xkA%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/819394.png",
-        "name_jp": "きつねそば",
-        "name_en": "Hot buckwheat noodles with fried bean curd in Japanese soup",
-        "price": 319,
-        "evaluation": {
-            "good": 0,
-            "average": 0,
-            "bad": 0
-        },
-        "category": "麺類 Noodles",
-        "nutrition": {
-            "energy": 421.0,
-            "protein": 19.4,
-            "fat": 8.0,
-            "carbohydrates": 68.2,
-            "salt": 4.1,
-            "calcium": 79.0,
-            "veg": 5.0,
-            "iron": 2.2,
-            "vitA": 6.0,
-            "vitB1": 0.11,
-            "vitB2": 0.07,
-            "vitC": 2.0
-        },
-        "allergy": [
-            "soybean",
-            "mackerel",
-            "buckwheat",
-            "egg",
-            "wheat"
-        ],
-        "origin": "そば（国産）油揚げ（国産）"
-    },
-    {
-        "cafeteria": "KIC1",
-        "id": 30,
+        "id": 23,
         "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=819328",
         "image": "menu/pics/819328.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819328.png?Expires=1727004852&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=EVQLNeONCi0qDJt6RQUnmwquiyEkNGIgTJZPUJBtWNlE6rsKLXqmKo7qiu4s2y3HjFx14R94A2y1oQyrBPysrYkoOZ126nA7aIQceUXD1imIVVKaNrqsD7Sjon%2FoEqa1dMNNF1PPvIk%2FGe%2Byhg4qr23ISVM1lRkc6jRqSnVKjxGRpPhh02XlmiJx1698CHuLl63JLVNhA3rZL%2FmhErbUwi7q2uWJuJXF80Zcs3KdSI%2BWGiKITtpOUNUfAtIcLOYpcf4Op7WriW8CGKbaGyxve8lLizJuTtiuhbs0AdNcRGC6kJhR6DdepyyJ0UGeyH7gVxyYkf6%2B6OgMwVWBt1M9YQ%3D%3D",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819328.png?Expires=1730602261&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=qnl0YRLEjHCWZOvIE%2FEfhcmlNUcNy%2BrdzdvNNFL4ynZCT0AHu%2Bom5n5JwWlKyHThfkxOH4fpwSRJaZtqTAmSxR2%2Fb0hY61Kuub7hf5lulHMtuwY4%2BQyBE%2FuAsMM6lJhLGQKQd9UPjx86XYQ9azJ%2F9fQSJrWZdCmS8A7z0rO8ff9dvSAHcEFfT4ejt7%2FgG6tiJkAwmHMm0nIwg1I9gOlI8f0%2F41NMoTp%2FqJoaUxU1I4AXJupWWByyLQ6GU8BazeuGzwrC2pheCUdV0GxNSgo%2Fo5iPLOO%2Bzxhl5eOnaNK3dVUO9BLmdwMtitYpFiGbI6C6ecjtkNDNSnaX1aoqpOnZ1w%3D%3D",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/819328.png",
         "name_jp": "かけうどん",
         "name_en": "Hot whitewheat noodles in Japanese soup",
@@ -1164,218 +891,100 @@
             "vitC": 2.0
         },
         "allergy": [
+            "wheat",
             "soybean",
-            "mackerel",
-            "wheat"
+            "mackerel"
         ],
         "origin": "うどん（国産）"
     },
     {
         "cafeteria": "KIC1",
-        "id": 31,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=819329",
-        "image": "menu/pics/819329.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819329.png?Expires=1727004852&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=HZmxcrNoMLTtntAkQwra70qGVpc3V1%2Bp8oPO9Ri7ou8e4POw4KeIIa4CZVLMtDjKElsyRZwRF8iHAfVmOorGv1gYHDIqYCIrUX5GwMA8fw61QhbqEZNe%2BLr8vOx9GJ2zbxiNwCVtRHzhqWq1ANIrQOTerDiCUhfUF5AzNiT10alkd5uQKkdm3WHR5b3MdHR9nk3gzFhQVYdfYGfpHhLTxnYFysIunVG7UXHyVcn8bDUApcDHfB7Mlk5ndQAja%2BNz3%2B6%2BU%2BHeo%2BnYat4vs2ozo6Ze7iJd%2B2KwtOL5GYC8Ez2lVFwtJj9%2B3GDFH%2FYkn8ZxqyTA%2FFdm%2FbUB4Xy20DVzrw%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/819329.png",
-        "name_jp": "かけそば",
-        "name_en": "Hot buckwheat noodles in Japanese soup",
-        "price": 231,
-        "evaluation": {
-            "good": 0,
-            "average": 0,
-            "bad": 0
-        },
-        "category": "麺類 Noodles",
-        "nutrition": {
-            "energy": 321.0,
-            "protein": 13.6,
-            "fat": 2.0,
-            "carbohydrates": 62.5,
-            "salt": 3.4,
-            "calcium": 26.0,
-            "veg": 5.0,
-            "iron": 1.6,
-            "vitA": 6.0,
-            "vitB1": 0.1,
-            "vitB2": 0.06,
-            "vitC": 2.0
-        },
-        "allergy": [
-            "soybean",
-            "mackerel",
-            "buckwheat",
-            "egg",
-            "wheat"
-        ],
-        "origin": "そば（国産）"
-    },
-    {
-        "cafeteria": "KIC1",
-        "id": 32,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=819452",
-        "image": "menu/pics/819452.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819452.png?Expires=1727004853&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=GHZZLql5VQ0l8VTQ%2FPFnuESqAFc3hpBsj0BCHvWMSaHCKZkYkM%2F2b9d2%2FqDh1MUUPvF0TUZAe7rwKYPIVg%2FsKz0oSjA6ucrIiJew%2BWRyRpIV9KE8wqDsWbEIiUdzHafbVUxwHlUmPcncZ7BLCJxPqgsPRAeH5EFkkpNuUEWCScp%2BAnYg8clZi96o1FPscpRsHJggingT9nnDUSombAepNa5T6P0ZNiKN0AScmh6yvLRtsiJD1mhlFQHPNZeiWshs62%2BG6WkB7FMHtPd3AiVf%2FOhgDhvgHj2hXZjTw4GJop0W%2BIehKmGjVNLbnWdMD31ynvdpYcRGbISL7vCuuiHnYg%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/819452.png",
-        "name_jp": "蒸し鶏ごま味噌ラーメン",
-        "name_en": "Hot Chinese noodles with steamed chicken and corn and sesame bean in soy Miso based soup",
-        "price": 429,
-        "evaluation": {
-            "good": 0,
-            "average": 0,
-            "bad": 0
-        },
-        "category": "麺類 Noodles",
-        "nutrition": {
-            "energy": 511.0,
-            "protein": 26.7,
-            "fat": 8.6,
-            "carbohydrates": 82.9,
-            "salt": 6.4,
-            "calcium": 110.0,
-            "veg": 30.0,
-            "iron": 2.6,
-            "vitA": 13.0,
-            "vitB1": 0.24,
-            "vitB2": 0.17,
-            "vitC": 5.0
-        },
-        "allergy": [
-            "soybean",
-            "sesame",
-            "pork",
-            "egg",
-            "wheat",
-            "chicken"
-        ],
-        "origin": "中華麺（国産）鶏肉（中国）"
-    },
-    {
-        "cafeteria": "KIC1",
-        "id": 33,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=819352",
-        "image": "menu/pics/819352.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819352.png?Expires=1727004853&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=QTpvktEhbRXfX1YLO6cNguHno%2Ff3LNJVpIzbmQK35HWThZZhW5ffxkuqxlUFRDB3fFoZYvZZ4z%2FeYKs2FhH1x2Jhq2AT4bP%2BgHEGPjVKG9F69p4RTUwOgjm4xdvhBztqKH9n5KUtR4dSuYyucYaEiHTq0hJqwMmSA2O8j83ZOiia0U70jll9nVlUaS6b3Z%2FBzibGudw70s2RuxGdwJsww1uP8lpaZu2%2Fm421oTJfDeRX0JDSuTN9VSgFRb5KVxquAEWmqqn%2Fv7B2PPHoTwCbSSBmHBZsCtv%2BVSXsQnGrULughn7rCd8nH52ab6hpw2GF4dlpOEQ4kShF2voGHG1fwg%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/819352.png",
-        "name_jp": "塩ラーメン",
-        "name_en": "Hot Chinese noodles with roasted pork and bean sprout in salt based soup",
+        "id": 24,
+        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=819348",
+        "image": "menu/pics/819348.png",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819348.png?Expires=1730602263&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=ve6OXB9vDrCowY0E%2Bpo7NvyeqjRGTMnkSjRzj8PagDAxkcZiekNomCOjJa0D2loQ%2Fx3mTufFl3pnbVJ4Gze6Ot2ytPZFiw5AUGr7m25I5pHfWGtAz%2F7mLo7RNXWj91JRjfi0d22O%2Fg%2FjDvxPQ03ypa1j%2FcRNS0J7EaIqU1Mx0MUe%2BvdR5CjrVyVHpLSKTSf2iGkJiegdgjB0fBV%2Bjc22bVnNagIGUBHaxOVw1D6JsIR4Naj8tibxUbyRenEkCTJ15uAnWT0iYqGUu6vc%2FXDLCyExsb0l64VcFZaGzOLZZwzwFIVImWHGsTbT%2BGeaZefu4YunylWOhZnvBhqJI6nPew%3D%3D",
+        "image_origin": "https://west2-univ.jp/menu_img/png_sp/819348.png",
+        "name_jp": "味噌ラーメン",
+        "name_en": "Hot Chinese noodles with roasted pork and bean sprout in soy Miso based soup",
         "price": 385,
         "evaluation": {
-            "good": 1,
+            "good": 2,
             "average": 0,
             "bad": 0
         },
         "category": "麺類 Noodles",
         "nutrition": {
-            "energy": 400.0,
-            "protein": 16.8,
-            "fat": 5.9,
-            "carbohydrates": 69.9,
-            "salt": 5.9,
-            "calcium": 29.0,
+            "energy": 459.0,
+            "protein": 19.8,
+            "fat": 8.3,
+            "carbohydrates": 76.3,
+            "salt": 6.4,
+            "calcium": 52.0,
             "veg": 43.0,
-            "iron": 1.0,
-            "vitA": 8.0,
-            "vitB1": 0.23,
-            "vitB2": 0.1,
+            "iron": 2.0,
+            "vitA": 9.0,
+            "vitB1": 0.25,
+            "vitB2": 0.13,
             "vitC": 5.0
         },
         "allergy": [
             "soybean",
-            "sesame",
             "pork",
-            "milk",
             "egg",
-            "gelatin",
+            "milk",
+            "sesame",
             "wheat"
         ],
         "origin": "中華麺（国産）もやし（国産）焼豚（豚肉：デンマーク、オランダ、その他）"
     },
     {
         "cafeteria": "KIC1",
-        "id": 34,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=819016",
-        "image": "menu/pics/819016.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819016.png?Expires=1727004854&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=LtVYE%2FOT9qL%2BWSKSGi10HCzrJ%2BS6OjfVzSgiiFxCypRkrf3tH93ym9qcchSqJGmqDoSyOfdp0sT3a1mDZbwWFWi39v9FnnYipLdTObZYly3RloGP%2B5fswpwLxlUAREp5ZyJ68y3CtMUfsXiabBmabTDwCukZ6x7fHHiZnLSWKsqe0sStlJ3D0Og3z462lY48ojBuiFdGhMd5G4vBFqcDrokgWKegLFtUbwL2B3DWt8tw39EPCT%2FRQQYYDDTorPuZzaRYwrIhJ4HbCUtiAA4v2KMeuZCZJmcVAXaHVQQxlxPUBxx643%2F3sCwA8lJs8%2BfUomOeFOdtCI1rHZ8LjRlQeg%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/819016.png",
-        "name_jp": "鶏づくし食べラー丼",
-        "name_en": "Bowl of rice with steamed chicken and half boiled egg topped with garlic oil",
+        "id": 25,
+        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=650328_455002",
+        "image": "menu/pics/650328_455002.png",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/650328_455002.png?Expires=1730602263&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=BIzpoZ3KHoAAKiBTldH8AUbhGeZ%2Bpt023gGSrkN3YeEOjTJgsHXzx8J1DlzM7GPshyMZfVN1DV2zBP8P02qc5E92XNjmIEMKL5d0K9IIp%2BydRq1PNpQnQW6SSvHU%2FFLQsvdH%2B1rBvyvpg5tvOpTQdSY1FidtDMlqsS%2BxbsHKQ1JQGg1k9Q%2FVaQFG3UMZTG8PSYyjQ8YD6qajYYVlS1Fsnr%2FXFEpAA%2F0DIafkgc%2FRzTsnzV1cMJRIRkvYoWwzK%2BT9zu5swY%2FAuEXC%2BCLHwnjmVRklgu26NIBlCRxOcNpFnQD%2B5vjPzv0Twk4BEXObEZlI81DU%2B0w33fOkK6lRuzm3qw%3D%3D",
+        "image_origin": "https://west2-univ.jp/menu_img/png_sp/650328_455002.png",
+        "name_jp": "企）キャリアあげあげ麻婆丼",
+        "name_en": "",
         "price": 473,
         "evaluation": {
-            "good": 1,
-            "average": 0,
+            "good": 0,
+            "average": 1,
             "bad": 0
         },
         "category": "丼・カレー Rice bowl / Curry",
         "nutrition": {
-            "energy": 744.0,
-            "protein": 30.9,
-            "fat": 24.4,
-            "carbohydrates": 104.9,
-            "salt": 2.4,
-            "calcium": 45.0,
-            "veg": 5.0,
-            "iron": 1.9,
-            "vitA": 121.0,
-            "vitB1": 0.15,
-            "vitB2": 0.33,
-            "vitC": 3.0
+            "energy": 832.0,
+            "protein": 23.0,
+            "fat": 30.2,
+            "carbohydrates": 117.6,
+            "salt": 4.3,
+            "calcium": 43.0,
+            "veg": 0.0,
+            "iron": 1.4,
+            "vitA": 47.0,
+            "vitB1": 0.17,
+            "vitB2": 0.17,
+            "vitC": 1.0
         },
         "allergy": [
+            "chicken",
             "soybean",
-            "sesame",
-            "milk",
-            "egg",
-            "wheat",
-            "chicken"
-        ],
-        "origin": "米（国産）鶏肉（中国、国産、ブラジル、その他）鶏卵（国産）"
-    },
-    {
-        "cafeteria": "KIC1",
-        "id": 35,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=819043",
-        "image": "menu/pics/819043.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819043.png?Expires=1727004854&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=rLogGzJL476uqebPfjnC4UiWXH11YV9TWD93UjeXttfynHHHDByssF2j2ts0shtVkYWImuMQdmwk7oBZlTXlxQ3pxWdiiTJXxP%2BLZWz0KwcMJQSzzmAgu4xkKUYLm7quhcpGoU5GOy2CoMnIkWoIs%2FP25N2O3QfG%2Br4FvpsMboVSSHmt4J5zeC6VFH5WjjEpKY9vUNpMRxq1fsbVvAPn%2FWjgFERxCvcI33NdCy9%2BVJOijKVOeubHjaTSsQo2xT5bWijp1%2FrTZ7ROGk%2F6pMdRMAKX%2FpSwuma%2FVfPLkEX20W3%2FgFv6vM85NaQ3Sc401G1riyKypAtA0MOS9mh7asm5Yw%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/819043.png",
-        "name_jp": "塩だれカツ丼",
-        "name_en": "Bowl of rice with fried pork cutlet with salt based sauce",
-        "price": 418,
-        "evaluation": {
-            "good": 31,
-            "average": 0,
-            "bad": 1
-        },
-        "category": "丼・カレー Rice bowl / Curry",
-        "nutrition": {
-            "energy": 727.0,
-            "protein": 18.2,
-            "fat": 24.9,
-            "carbohydrates": 110.6,
-            "salt": 2.4,
-            "calcium": 35.0,
-            "veg": 30.0,
-            "iron": 0.9,
-            "vitA": 27.0,
-            "vitB1": 0.38,
-            "vitB2": 0.11,
-            "vitC": 14.0
-        },
-        "allergy": [
-            "soybean",
-            "sesame",
             "pork",
-            "milk",
             "egg",
+            "milk",
+            "sesame",
+            "gelatin",
             "wheat"
         ],
-        "origin": "米（国産）豚肉（チリ、その他）"
+        "origin": "-"
     },
     {
         "cafeteria": "KIC1",
-        "id": 36,
+        "id": 26,
         "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=819253",
         "image": "menu/pics/819253.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819253.png?Expires=1727004854&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=nnOuffI%2F71PQckrpJaeouk9kL2vI2EhDqOhpCNWJEz9AJb3nnJNVZnI57IhnkX9wM1hMTW%2BNqO06dIXnnLRqDf61CPOGlSqlnznCGUPSs0uwLuVYyuRKBaMLgZXga41j%2BLWfCZe2hTnBoSbNz%2FAZ2Z2w3lzBMpmE7CsPXkCkvoGateX7MO4duoB9LHlaXVR2T85mIs96rcVRKcilYV0pTeeZM6XSbLPniiY335W8CWfud8dbRIvAY7ynjTYXWquu7%2BEyhWu0gUuGszIXoyOxh1JGBS6HaIsAdcnTs51YzrxbdEm1aJ234CWA2YwSBn5kosHP4b3q9XdAFtrLkH44nA%3D%3D",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819253.png?Expires=1730602264&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=pRPSXUIxCEnMGUuD0NxmBcASVnw1Fn5U8SFQW6d4PXp2glbvrOnsB087FsyWRiTPmH1QeN4fgQVtk07ZbbCMvDj92wwepfvANFTnCkPV8Fdo0eVq0fNvlTI6xCm0xtlk5XO5SAAlSVnt5gdXt%2Fl6RDKuC%2F5kg5glgVuDTnxD6zXhG65ETx7fb%2BgRA4w%2FaUaMS1e%2B%2FYqioIWAK3N7JTxw34EokvO8A4mOhKkjIeJGBGkAyg4mI7pzW5D4c0RF9Z9k9AAJOkolH1vVlabSlaCYTG8YJLQuHHAuIjTk9n5Hw3UmikwmSCQN25ZkZd42eQFQZtRwrU5LO6rx5sSjvgNjPA%3D%3D",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/819253.png",
         "name_jp": "ロースカツカレー",
         "name_en": "Curry rice with fried pork cutlet",
@@ -1401,23 +1010,23 @@
             "vitC": 1.0
         },
         "allergy": [
+            "chicken",
             "soybean",
-            "sesame",
             "pork",
-            "milk",
             "egg",
-            "wheat",
             "beef",
-            "chicken"
+            "milk",
+            "sesame",
+            "wheat"
         ],
         "origin": "米（国産）豚肉（チリ、その他）"
     },
     {
         "cafeteria": "KIC1",
-        "id": 37,
+        "id": 27,
         "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=819272",
         "image": "menu/pics/819272.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819272.png?Expires=1727004855&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=TJAiD5YfP8iSPdUvalul2cm7l2UM4XAExBkgQPellPdJcGA4Dl2k9H3cEW4kRWaOf0GidfAfiMI6domRcA6x4OTJLIi3WMNgqDKI8kCxudYHStsZIs6l7zeRKwiMaqKrPBLbnBYeMNgL6NxBnhto3YA8R%2B%2BSxG6Or1Mw5gHDOvADR9dFQjSg3OfZHLSoMnMgYVI0OEsXt6jNfjwx%2BZYQSfqrgk5T7Ed%2BVKYU%2BQck1xTAl60nfVxBQeWWmO%2FWzA9%2Bs8ZfHQMfJ0qW4srn9LYffQ6KUKm8epVnP4slovhpP2IczkWNlo3%2BjjmwbzEwxby7vuoWE%2FrnLJpNY47xFxOYLQ%3D%3D",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/819272.png?Expires=1730602264&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=qPsBb1h7W1ygwyHxCBMWick%2BUFmpwCGr29rGJFPd9%2Fqf0jzGRV8tbebVVDuOEvatthzEeWa82zcEaGHdVUC3uY0gpyoMF9%2BuYfXceaFkBqg%2FMdJKHf6otqdzInCAsxZkuiVftpO6VCvbL0MgkjHzv6WpTFCSQtwYltu9MlQVfIZK3wKc0YEKXhmo%2F90QbmFZbwcMDJwnmzHIQKR9%2BF104JIAaohuCglZAQYs57JZ7Jd7%2FCNO%2FWmM68RvLqV5Z5BLNwYhLKgJsVxrDC8imtk7l%2FYsdM%2FcPinXtUjGr6ahEqvk0wsodad54Oy92AOY7CniOr28ns%2BbskaW6wAT%2BP%2F03g%3D%3D",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/819272.png",
         "name_jp": "カレーライス",
         "name_en": "Curry rice",
@@ -1443,27 +1052,27 @@
             "vitC": 1.0
         },
         "allergy": [
+            "chicken",
             "soybean",
-            "sesame",
             "pork",
-            "wheat",
             "beef",
-            "chicken"
+            "sesame",
+            "wheat"
         ],
         "origin": "米（国産）じゃが芋（国産）人参（国産）"
     },
     {
         "cafeteria": "KIC1",
-        "id": 38,
+        "id": 28,
         "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814702",
         "image": "menu/pics/814702.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814702.png?Expires=1727004856&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=bWsxkpgWPMdnzCrOOFn87dLMuUIej3sdW7um5bIQr89G9z4kFQx5trwuSMJoPODu91G%2BBva%2BKis4WtCdsrAsqvjDfv2rbV1Poa8SlfIUrnoNxmynf87Tc4uXPIlk6sFFDZlXYYXZytSOynifDjYHK1jyqHgjyZOXtBulns4zU7BpGBEB128spYb4qu68tSSk63w4jZP9af8tssEF5Ua70fBev8UJ1lH8VmtrHxGWSofnkHs5l6P1XXDgZblGm4es9kjACQE2HOrthi7iakIRZpimO97pA4KSnkLYETJyN7NR1nBX7n12PVNsLKoHfLRC2oKfxOJZohDzFmLiSJJGfA%3D%3D",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814702.png?Expires=1730602264&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=X5COwDeDGjab52A%2FBV2PUjhUguw8b%2BmVyAdt6h9NHeGng0p8z72F%2BLvfRjE%2FGiOi63PmFDGDij%2BNqsnS9Nw6xa8BFB%2B8IJ1nhsRMdPODoyIRFUEKqcIXVYXhhioyhYY15nogo0%2BYxA4IrOCFUO9yBQ6c%2BA2uWvbE9OP%2BM4D49i6qd2oOH3aXrt2US5ZlwXsC5hJ%2BxB5rW12TM01IduP07ZJ3%2B%2FAZWu59pEOvsQABLNkYnLtt10N0usaUXlrG2HBc6j0RKRuSqYKBX5v0w6%2BK8rLLSyhGQ0%2Beiad1F03K8EHDaMWGMXDusHgfjLemYl%2FlKkM85G%2BZTckCP9%2B2N%2FhTlQ%3D%3D",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814702.png",
         "name_jp": "ライス",
         "name_en": "Boiled rice",
         "price": 115,
         "evaluation": {
-            "good": 19,
+            "good": 20,
             "average": 1,
             "bad": 1
         },
@@ -1487,10 +1096,10 @@
     },
     {
         "cafeteria": "KIC1",
-        "id": 39,
+        "id": 29,
         "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814845",
         "image": "menu/pics/814845.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814845.png?Expires=1727004856&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=pUqjEJ9m%2FJMjvS648dZX9Vz5KpKp6NkJuCixAbruG7Fb8tPmS%2B%2BQYq%2FMKyRyH%2F6TCwuuU1mDWoMH7sS3OvWEwp%2F2KTUNgbwxPGBXA3rzpBi3gXtMTtKQ0bZ82UWT6TUWtS8XYdEN0yUBpNpKJDu9V9qbLYg547CiNPXmnshD2c5IIcTnwOFgwoL9GHd7eYHzvRAgpr7LSafddMexUfdtwNowI3zEe7L%2F1T%2BC%2BLNCk25wizNid7njtB6Rza1PVxuZxvmG221t%2B%2FQuSMTMiODIau8oK%2FzjCghwvOrxYXuRZmsQ2OOCoAbyVVklHTAF0QrGihgUhg7LuyNE1XvwJLMBzw%3D%3D",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814845.png?Expires=1730602265&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=ase6Hxy14uRLmgCLdLb2FRJC46M1G2XkLqsSnbsCec6FYMOWELlF7s7VVqHHmJ72dtLoWUHNumLJ%2FzDkKL4DrQKN8OqhygyQYYTxLW3vWW6D7SQ6MgzzZR%2F0HExD%2BzV4HDAy%2FMGHcHWQYXaTXo5aTbHGgzu%2BtCT2ea3qQvlGk362TNyItAB3ZlqXMZnpc3R7ffZaXq4yBvquueZndjr1CiNEYiEqbH8Gg3qO598WeeHq2gio7gv6egtpdUpPFCpngrd%2BoRVixJcNWYb7MOw15n05HOvybIQ2y%2B2%2BcO1yt6RZ8mqqbksEImszrNY%2BrQUruB3l5V7x3lhxn1aITf%2BmPw%3D%3D",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814845.png",
         "name_jp": "生チョコケーキ",
         "name_en": "Raw chocolate cake",
@@ -1516,61 +1125,64 @@
             "vitC": 0.0
         },
         "allergy": [
-            "soybean",
-            "egg",
+            "milk",
             "wheat",
-            "milk"
+            "soybean",
+            "egg"
         ],
         "origin": "ホイップクリーム（国産）"
     },
     {
         "cafeteria": "KIC1",
-        "id": 40,
-        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814808",
-        "image": "menu/pics/814808.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814808.png?Expires=1727004857&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=YxjVCrZwldtYILTpQQJFIA1Mtq%2BiWiXm57l1lRIK1Cj0OKPdYxB2gb7L7cuJf5jjv3QPPOs4Xfq0w14HzqN2QtfMiPHvZyUNTisfYa5hHGwcfwxuO59LgzWsx2GGGggCzJbLb5rC5P1VsEgPIZvzgbH6FFhacZUTRW5pxiTdhj9Tsr%2B0yrDAfBiExdTzSQGbRF7l6rJx7Os0H1fxeqY7%2Fpejk4duXh9dAvTDMxYFcMNlRkdS%2B4rzIxoGReCil8CQnx11WEMwa3Ajq4ta9ATvSJL8DXMLBx3Yg2bmGg%2BWk1yX%2Fmga77xYXloerCK%2B7LHWuMC55zYggCCM5wdxbJiRJA%3D%3D",
-        "image_origin": "https://west2-univ.jp/menu_img/png_sp/814808.png",
-        "name_jp": "フルーツヨーグルト",
-        "name_en": "Yogurt with peach pineapple orange",
-        "price": 121,
+        "id": 30,
+        "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=650328_455004",
+        "image": "menu/pics/650328_455004.png",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/650328_455004.png?Expires=1730602265&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=SeHCAMC9vlxkVj2aJr%2FQk%2BnCN49UIfVMbLTs%2FuR2P0rYvFJoZAfkQHgsOAfJx7smhvMuLm7cL3irzio6VhMuQLUVhBfw1Aw2c6Mp5hUf1mJEbvgZ4crjYKaXX9MdcUSsSgfRJmd0xUhPRvTdqWT6cKapsc4vnQwtmTMNJwdBTyhCqXQdAiO1g3j4Kmz5uByZLZ5hvPup8iFkzkF0Ah0zk%2Few%2FJu7oVYfd6NmxoAvdjMuJXdF4IPWzDqL9TyfMcS4PPkRuxmMoO4KhM4n3mWGP%2FOSyfX9tFUv1o1WSskvvzWTpQuwJl9aU43gKRoGHOGKDAw3tcT6fwqKl02fwyr8eA%3D%3D",
+        "image_origin": "https://west2-univ.jp/menu_img/png_sp/650328_455004.png",
+        "name_jp": "企）大学院ワッフル",
+        "name_en": "",
+        "price": 165,
         "evaluation": {
-            "good": 4,
+            "good": 1,
             "average": 0,
             "bad": 0
         },
         "category": "デザート Dessert",
         "nutrition": {
-            "energy": 78.0,
-            "protein": 2.7,
-            "fat": 2.2,
-            "carbohydrates": 12.9,
-            "salt": 0.1,
-            "calcium": 89.0,
+            "energy": 274.0,
+            "protein": 3.0,
+            "fat": 13.4,
+            "carbohydrates": 35.8,
+            "salt": 0.2,
+            "calcium": 24.0,
             "veg": 0.0,
-            "iron": 0.1,
-            "vitA": 29.0,
+            "iron": 0.4,
+            "vitA": 16.0,
             "vitB1": 0.04,
-            "vitB2": 0.1,
-            "vitC": 20.0
+            "vitB2": 0.06,
+            "vitC": 6.0
         },
         "allergy": [
-            "peach",
-            "milk"
+            "soybean",
+            "egg",
+            "milk",
+            "almond",
+            "wheat"
         ],
-        "origin": "生乳（国産）みかん（中国）黄桃（中国）"
+        "origin": "-"
     },
     {
         "cafeteria": "KIC1",
-        "id": 41,
+        "id": 31,
         "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814835",
         "image": "menu/pics/814835.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814835.png?Expires=1727004857&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=f%2BN1LDCN4VpI3yb0nN%2BJ2JVuYMKzVJpHFBgWwFCXN5XYTnP1Qe4dNQL9Gg8HejYUsBxxf0KRBjRB3cJgnC1irIYTnCKACNJSPvJsiNg69r3oSvZnqk2L%2FBMmb2ksrkgGSbqnoUyPOg%2BTsyxcm8PpUiiOZ87oKBjjYeI1Oj1tsT1AlqmBUs%2BbhCUUZ4EsdPufE2YOKHDsjvPARmEskNdo8FIHVGY1qdclQjfHoJj5H6uPuWlkmyoTkm4Hox%2BMjHc5b6r7qWwP1%2FqQvNbF4AOhW0pn0ZhzsTLi6NWfXHNBAuZLWRqa8uYspGOaHCYNla5WcPow1MmdSBiJB8x7uUUtCw%3D%3D",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814835.png?Expires=1730602266&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=SrIyO3nGrJswIWV7F%2BKiSH0RntKpSCjNLfT0H%2Bq8X%2FPnMsIewPL6oOHfY1AR4TfENsaEB%2BkjdGOL8VtVT8At%2FmRWNdlORolv%2B3e4OCn3x4uUi%2BEfqbFPHh%2FmksyWXblTra0WCAdqvK1R61QKI7xKJv1O7u8bfVI1vDQxxayWYsyZOULvZYW49IzaMepogeXQMuKXDmXgGnmZ2COZ0Zgf1ICWA2UiwaBPha%2BIyFdCxHzV5dvCtTpi2UisGBF%2BdZBZkuSdcCUyC28Y4c6R3a0RP%2FGVXu3ODZWfc0NkSZaAm9oLliEXuKMDfipmeQynCdqMoGnVualNTXlzwvE60J6xPQ%3D%3D",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814835.png",
         "name_jp": "かりんとう饅頭",
         "name_en": "Friedbuns crispy dough with whipped cream",
         "price": 121,
         "evaluation": {
-            "good": 4,
+            "good": 5,
             "average": 0,
             "bad": 0
         },
@@ -1596,10 +1208,10 @@
     },
     {
         "cafeteria": "KIC1",
-        "id": 42,
+        "id": 32,
         "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814813",
         "image": "menu/pics/814813.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814813.png?Expires=1727004858&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=tKfkgE99xSneF%2FKHNKGr39rM1P48p6HngqW%2B2q2cP3YQuF26z%2BTWLauuQ3txig8mRlvhZs%2FMaGi8R7iLKnQkasmiDIgx50wGUf5GM2cGX93K4CqHABX%2BvJRGltAQLnC1IXXDOjnxDDeANfVGhBVpKdSxXM38I%2BqtvR6NYlAwcJUQ3OdhuBN41TJqzFTVHYcl%2FzlbwkWB4zbp4VGRnMyKZuwNeT5wGhM%2Bx5hlo4dpDRD1SGPvxm%2Bt2k1MxW%2BljOQwKrGml0fuuvRQpdjfWTSpySdJrBHpCrrpq5OBmNuWQ5ZIC0DgpQkhwQOipKNeaD036jD3ZLZvEb92BRD11Uilfg%3D%3D",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814813.png?Expires=1730602266&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=dNeYN%2BAkUaza8fmRAsvKyeMmUksv8szeqYF4t%2FRc5ZMQT0E8IJ86II4JHpAdP44no3VSrDtV3z90vnxH1JGYwUkqqRlZbRjYlSmNULnZoaKnUgaz1MGQae14sZWvJPsLeDFFooVTFjDLtKVlhRXTtIpkXU6Ag2i6GK1tBt18eGLlA3rhiFIUkz2NLquOQ4ofR%2Fs0%2BoeKdHV%2FEHSf21wbgl41SQoQQMk4OMytYJpbMWV9UsCE8tloY9%2FSdwHhnXQVfaVPp9DUsp2eiGhBolp27%2FFCPmtcNC8jW8p0uHkMRnyy%2BwCBxBpxXYF%2FY7hgaoW1sybmJz6MiC8dEGtNowZvhw%3D%3D",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814813.png",
         "name_jp": "焼きプリンタルト",
         "name_en": "Pudding pie",
@@ -1625,25 +1237,25 @@
             "vitC": 0.0
         },
         "allergy": [
-            "soybean",
-            "egg",
+            "milk",
             "wheat",
-            "milk"
+            "soybean",
+            "egg"
         ],
         "origin": "タルト（国産）"
     },
     {
         "cafeteria": "KIC1",
-        "id": 43,
+        "id": 33,
         "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814817",
         "image": "menu/pics/814817.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814817.png?Expires=1727004858&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=uudSe5NdCqIxOyJ3fWWS2ArngSpfyroxrelxzLvGEmuSNcWw9dpiBp03A5WqBhHnrNCrvyelezLvewEFyrUnMPP%2FhIeg9pk4xSPA6xT6EWwBjo%2BVUIEsSjuxUZ07BHqJVNHWvc70wgylr5AJZze8NSYzD3FrpHXforE7rqMYjTkiTpc60J5rxcyLyVyPKezuiC%2FscgRp0O%2B%2BGUmS6CQC0ylPtK6bmRFvApylIMrPegjw%2FigeWP8dKuEkt%2BvSwf4F8D7oDEWR8AoJsCGky7B6k3FsrdTE83s5Xhu2X2Q%2FIvHdSDoVQLA98sI84Dl52XFedu9O4VCU61iB3GGHjMI3rQ%3D%3D",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814817.png?Expires=1730602266&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=nWzCcml5KDE0YZ7MAQ9zJ60oDt2QWyL1rNZq%2FVQSximiEyhcvCxOYR0oCCqqba20BjMBfZLMcSbOYmb1yiUVTCp9i%2Fh1BXzKvFTwC9rC9Pvr7VcCezyAeF%2Fa%2BlQVU85z5xI%2BerXT%2BJUAeiK68FPzoskWrxAYmZs6gR%2BJDZhUqRx8rOY4Dc4jBNLggEzUBxwlu8cm%2FZK8bDXQTe%2BqUtsVUZjVjBxwu7WT3zqcwb0VzPDMN4rFa8A1AZc7QxvHwacg70HMFgB0ylbGFpw3ufe7xP75f0D%2F7xjLeXVpUpThj0HO%2Bo8yTClJTN12X6EetrTUVGMr2HA7It7KRXuviBVrhw%3D%3D",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814817.png",
         "name_jp": "大学芋",
         "name_en": "Fried sweetpotato with sugar",
         "price": 99,
         "evaluation": {
-            "good": 14,
+            "good": 15,
             "average": 1,
             "bad": 0
         },
@@ -1667,10 +1279,10 @@
     },
     {
         "cafeteria": "KIC1",
-        "id": 44,
+        "id": 34,
         "link": "https://west2-univ.jp/sp/detail.php?t=650321&c=814816",
         "image": "menu/pics/814816.png",
-        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814816.png?Expires=1727004859&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=iyCgGrmPtc4OhrUWln9TAAfW7gBznWijpKRM7cZSw1TO0VIs3zu6ELKjiiQ1dadXMcqA27lU9xBN4Imr%2B4X%2BnXExPBFXmPUacxtRP6mIGa2x0N6GFsM8mr8%2BuwTu1CYwBdEdnGnj%2FD3I5xOXsd%2B0pxQZ80YRARL3h2TnNEf0AHNvTHMx3LrTftEZEbG8okffhSYNF%2BfkGmLa0wPH3FiYNvquOcXHMn%2BVITeb4a030NrAb0G224rC2iNbSWlCmr6jmghuBY%2FIHNIxkBDmH91IMjTwZAW6k9rx24wFHUvIJ8dOplP3M17kLQV8nBlXje5m2f6ST%2FCgfSLShQp7aO78lQ%3D%3D",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/814816.png?Expires=1730602267&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=Ae95oPw4Sd4STGMGCN4mbtBUzWJ1M8E5ZuhRVsMD%2FYqdDqIACy%2B6wHv5YXX7QVYYQS3J8dxcHezZRgRihC58jVuko2qVJnYTir1yXQ78thIyHjYlEMx7KokTee%2B8Gg4FWpjbJguSjg40Bwzj5RVuLNbtdG1y%2BTJtPRDVQZQELvrgM2bTErs%2B45IJ2jc2H4%2BWdxjBTrmcBFqEOwUc6BfcMuktE4V948M4%2Bvl5NXg7gmnKc1RMhBtI81dQKvCqZ7sMWzTnjzUaNM%2F2YEhU%2F73dxXrlfJXP06GcNdgHboljtR3sFqg96ArosxqkKt9fCjTckvQGMhG1iQhLzcfmhmhpQw%3D%3D",
         "image_origin": "https://west2-univ.jp/menu_img/png_sp/814816.png",
         "name_jp": "牛乳",
         "name_en": "Milk",

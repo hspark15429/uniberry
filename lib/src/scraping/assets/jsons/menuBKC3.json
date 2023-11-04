@@ -1,0 +1,201 @@
+[
+    {
+        "cafeteria": "BKC3",
+        "id": 0,
+        "link": "https://west2-univ.jp/sp/detail.php?t=650315&c=650315_456400",
+        "image": "menu/pics/650315_456400.png",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/650315_456400.png?Expires=1730602774&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=V3ncl2JwD3kuocECqfwScaJqqbFUs424wbMjdkoiZF5oWBQqgd23C4Fi2hYDxSEqsZ38XGM0Jn1exXKjxeWeoTjVzqIYutNquuyQniTJgEYtn4KjHvtq53e8h47Efc872AXUxzDVb310mnmi3WRk%2FcMdL9hKb3BRqZLLTEE2D%2FGJWTK0JCfrvkWAQ5rw1R2Y9dOM5x20gz9NH%2Be3o03Ba3zcjVJpkLPZfElT1o5r0TpzGhPetJmA5xbBiCWKyKConRXYjiDWn5J3r1J9PnGQ9dCqZvS1peyYmwiJak8HLJlJsa9Z3eCORZc6CTdAlscmOd5HO8BKb79iNc2xnknSEQ%3D%3D",
+        "image_origin": "https://west2-univ.jp/menu_img/png_sp/650315_456400.png",
+        "name_jp": "油淋鶏定食(中）",
+        "name_en": "",
+        "price": 495,
+        "evaluation": {
+            "good": 0,
+            "average": 0,
+            "bad": 0
+        },
+        "category": "ユニオン2F 定食メニュー",
+        "nutrition": {
+            "energy": 1005.0,
+            "protein": 39.9,
+            "fat": 39.5,
+            "carbohydrates": 113.1,
+            "salt": 3.8,
+            "calcium": 49.0,
+            "veg": 3.0,
+            "iron": 0.0,
+            "vitA": 0.0,
+            "vitB1": 0.0,
+            "vitB2": 0.0,
+            "vitC": 0.0
+        },
+        "allergy": [
+            "sesame",
+            "chicken",
+            "wheat",
+            "soybean"
+        ],
+        "origin": "-"
+    },
+    {
+        "cafeteria": "BKC3",
+        "id": 1,
+        "link": "https://west2-univ.jp/sp/detail.php?t=650315&c=650315_456413",
+        "image": "menu/pics/650315_456413.png",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/650315_456413.png?Expires=1730602775&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=DgodyzO61bPpr4PilaZy9Uy3gAMRCXWDgMS7yqkBCEGKW1KslOz%2FcRTsJpHvKjUpkKNXoPdEGPvrol0fIHVeADzqxrgxnYbI909jYIvnxKpfa3kAEDFCKYj6G3o1Z2YZHSvPkUFXRpoA%2BYJuUGIStwNaNOeUsgdz1Ca7u%2B8W%2FtegJUcFz3qSmy8FbBQ%2BUPKYaQ5YrSA64u4QqOtNwVBSfv1MiOgDGmGQHM9PBWWQgQ33gd1B3ABxeoXn90aYz1sNWS5EdOofqGkpJPmV4oeyvNBg5aha9YA%2BxKh7jsBm7fIMdFW618mIbUI7EjnxQNcZo0SafdQNnavibzH0mNvB9A%3D%3D",
+        "image_origin": "https://west2-univ.jp/menu_img/png_sp/650315_456413.png",
+        "name_jp": "チキン山賊焼き定食（中）",
+        "name_en": "",
+        "price": 495,
+        "evaluation": {
+            "good": 0,
+            "average": 0,
+            "bad": 0
+        },
+        "category": "ユニオン2F 定食メニュー",
+        "nutrition": {
+            "energy": 857.0,
+            "protein": 40.3,
+            "fat": 28.9,
+            "carbohydrates": 99.7,
+            "salt": 4.1,
+            "calcium": 50.0,
+            "veg": 0.0,
+            "iron": 0.0,
+            "vitA": 0.0,
+            "vitB1": 0.0,
+            "vitB2": 0.0,
+            "vitC": 0.0
+        },
+        "allergy": [
+            "chicken",
+            "sesame",
+            "wheat",
+            "pork",
+            "soybean"
+        ],
+        "origin": "-"
+    },
+    {
+        "cafeteria": "BKC3",
+        "id": 2,
+        "link": "https://west2-univ.jp/sp/detail.php?t=650315&c=650315_456450",
+        "image": "menu/pics/650315_456450.png",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/650315_456450.png?Expires=1730602777&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=pdUA8gaqx%2BtJal%2BqVi%2BHfVa%2BeCqIupfgXuMQiXLkaUR5TODtqOedVJbxU4N7iK6DiFYtJbD8E1FHlU%2F2COZJvBemGvLyCViSoNVIv81YU4z%2BOyJA1KlzVPDgl9MuNsfxLNtbpmwyoU9fAd%2BKSo4dgOrjmkjartGeseckrIkUvL1RLiYtFhJ5XzsheNy%2Bx1GOkfwSPnov%2BUIEyPSLPjSIvNResYDvBX1VrjMDDDHaBzNXckoiW7kHD8B7cdCut4JkRKJQGce5BRTWUl33iTHtQKpYygHvePufGfpIOI6xSTeKa7BXwKA4lFQPt9OU7f488BY8tBwy0WOv0cphTppqnQ%3D%3D",
+        "image_origin": "https://west2-univ.jp/menu_img/png_sp/650315_456450.png",
+        "name_jp": "豚肉ねぎ塩レモン炒め(中）",
+        "name_en": "",
+        "price": 462,
+        "evaluation": {
+            "good": 0,
+            "average": 0,
+            "bad": 0
+        },
+        "category": "ユニオン2F 定食メニュー",
+        "nutrition": {
+            "energy": 831.0,
+            "protein": 30.6,
+            "fat": 27.3,
+            "carbohydrates": 108.1,
+            "salt": 3.9,
+            "calcium": 75.0,
+            "veg": 135.0,
+            "iron": 0.0,
+            "vitA": 0.0,
+            "vitB1": 0.0,
+            "vitB2": 0.0,
+            "vitC": 0.0
+        },
+        "allergy": [
+            "sesame",
+            "wheat",
+            "pork",
+            "soybean",
+            "apple"
+        ],
+        "origin": "-"
+    },
+    {
+        "cafeteria": "BKC3",
+        "id": 3,
+        "link": "https://west2-univ.jp/sp/detail.php?t=650315&c=650315_456531",
+        "image": "menu/pics/650315_456531.png",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/650315_456531.png?Expires=1730602779&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=lUZ%2FItRnxWEdxSjUpBbZ%2B8U4aSA3NHvP7GUUo3pNwtFs%2F%2F6wYIVu16mB5K85SYtsVszh6oYuK0mKslbFW8Jx6P5Wmhh9fAmRFAKnHzezRZ4H3k3qBsJiI6t9QkLOxKZ96RMGf3Qavuug5m0%2BrS4wDIs6GNT9shaMlt8%2BNV23T2STilnAQ1u%2FlBmvpUurWs%2FuT9HcqCVDQg8xNsT%2BBPHuOayya66qDyFvo7wie2s3fHke4InPwroQFifwi6urdGWUgek7FzkxMJsT7Q2fc%2BUeBQMlOqNJ8iDGpADNWGvVQ5KvCwSR%2BM5Sm7xbcnW6MDV6V%2F7%2BiuEWImlH7Kq96NHG0w%3D%3D",
+        "image_origin": "https://west2-univ.jp/menu_img/png_sp/650315_456531.png",
+        "name_jp": "カニカマ豚骨天津飯",
+        "name_en": "",
+        "price": 462,
+        "evaluation": {
+            "good": 0,
+            "average": 0,
+            "bad": 0
+        },
+        "category": "ユニオン2F 定食メニュー",
+        "nutrition": {
+            "energy": 811.0,
+            "protein": 29.6,
+            "fat": 34.4,
+            "carbohydrates": 99.8,
+            "salt": 4.6,
+            "calcium": 115.0,
+            "veg": 13.0,
+            "iron": 2.4,
+            "vitA": 309.0,
+            "vitB1": 0.15,
+            "vitB2": 0.58,
+            "vitC": 2.0
+        },
+        "allergy": [
+            "egg",
+            "wheat",
+            "sesame",
+            "milk",
+            "soybean",
+            "crab",
+            "beef",
+            "gelatin"
+        ],
+        "origin": "-"
+    },
+    {
+        "cafeteria": "BKC3",
+        "id": 4,
+        "link": "https://west2-univ.jp/sp/detail.php?t=650315&c=650315_456547",
+        "image": "menu/pics/650315_456547.png",
+        "image_appUrl": "https://storage.googleapis.com/fir-flutter-codelab-39c7d.appspot.com/menu/pics/650315_456547.png?Expires=1730602781&GoogleAccessId=firebase-adminsdk-a25ao%40fir-flutter-codelab-39c7d.iam.gserviceaccount.com&Signature=KQtyZBIgp5jnXtKzpHrv0%2FuuZ5tKOImvRfWOauAKSTf9V9ZKO77egt9M7Ds0HYZNWkeXQHAhsWXLyrKdRrHAmf6e1amFJGQQamHhPmsXZdIEfDG%2FGjV1w6WRoijbjZ%2B7Ez1tTPRbVEozAl5ZaE8mnrh0G3o4IkBAvuZPSCH05hDQNmE%2BD%2BbJ08uIymrqTECam0p92sx%2B6Wm5y4fMNCIcVrCwYQJrMjgP%2Fb%2FNPEo6uSqP2s%2FyPziw7E2YScwIDlqjnsH%2BFOJ8QGH5PUPL27HEgvMgCASub1NkRiJHFOnFbQ4z1IJKpMMmaZUgbrQ18V9U9r0NF7TuJZr%2FXMdgj2%2FdHg%3D%3D",
+        "image_origin": "https://west2-univ.jp/menu_img/png_sp/650315_456547.png",
+        "name_jp": "石焼　豚塩カルビビビンバ",
+        "name_en": "",
+        "price": 561,
+        "evaluation": {
+            "good": 0,
+            "average": 0,
+            "bad": 0
+        },
+        "category": "ユニオン2F 定食メニュー",
+        "nutrition": {
+            "energy": 750.0,
+            "protein": 21.5,
+            "fat": 26.6,
+            "carbohydrates": 112.3,
+            "salt": 1.8,
+            "calcium": 126.0,
+            "veg": 132.0,
+            "iron": 3.2,
+            "vitA": 464.0,
+            "vitB1": 0.45,
+            "vitB2": 0.42,
+            "vitC": 17.0
+        },
+        "allergy": [
+            "chicken",
+            "egg",
+            "wheat",
+            "sesame",
+            "pork",
+            "soybean",
+            "seafood"
+        ],
+        "origin": "-"
+    }
+]

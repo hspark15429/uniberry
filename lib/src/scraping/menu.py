@@ -9,16 +9,16 @@ from bs4 import BeautifulSoup
 from menuGetImageUrl import fetch_url_from_storage, upload_to_storage, delete_files_in_folder
 
 cafeteria_names = [
-    "KIC3",
-    "KIC2",
-    "KIC1",
-    # "BKC3",
-    "BKC2",
-    "BKC1",
-    "OIC"
+    # "KIC3",
+    # "KIC2",
+    # "KIC1",
+    "BKC3",
+    # "BKC2",
+    # "BKC1",
+    # "OIC"
 ]
 
-
+# Downloads files from the specified url to the specified folder
 def download_file(url, target_folder):
     response = requests.get(url, stream=True)
     filename = os.path.join(target_folder, url.split("/")[-1])
@@ -32,6 +32,7 @@ def download_file(url, target_folder):
     else:
         print("Failed to download file:", url)
 
+# Extracts the <li> tags from the specified html file and returns them as a list
 def extract_li_tags_from_html_file(file_path):
     with open(file_path, 'r') as html_file:
         soup = BeautifulSoup(html_file, 'html.parser')
@@ -39,6 +40,7 @@ def extract_li_tags_from_html_file(file_path):
     category_tags = soup.find_all('p', class_='toggleTitle open')
     return category_tags
 
+# Extracts the <li> tags from the specified html url and returns them as a list
 def extract_li_tags_from_html_url(url):
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -93,6 +95,7 @@ def extract_li_tags_from_html_url(url):
 
     return data
 
+# rawHtml menu files to json
 def menu_html_to_json(rawhtml, cafeteria_name):
     # Replace 'your_file.html' with your actual html file path
     category_tags = extract_li_tags_from_html_file("assets/rawHtmls/"+rawhtml)
@@ -154,6 +157,7 @@ def menu_html_to_json(rawhtml, cafeteria_name):
     json_data = json.dumps(data_list, ensure_ascii=False, indent=4)
     return json_data
 
+# rawHtml menu files to json and upload to firebase storage
 def html_to_json():
     for cafeteria_name in cafeteria_names:
         rawhtml = "menuraw" + cafeteria_name + ".html"
@@ -163,6 +167,7 @@ def html_to_json():
         upload_to_storage("assets/jsons/menu" + cafeteria_name + ".json", 'menu/menu' + cafeteria_name + ".json")
 
 """
+cd /Users/hanpark/development/uniberry/lib/src/scraping
 export GOOGLE_APPLICATION_CREDENTIALS="/Users/hanpark/development/keys/fir-flutter-codelab-39c7d-firebase-adminsdk-a25ao-1df95655ac.json"
 """
 
