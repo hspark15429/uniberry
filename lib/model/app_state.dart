@@ -19,7 +19,7 @@ class ApplicationState extends ChangeNotifier {
   bool _loggedIn = false;
   bool get loggedIn => _loggedIn;
 
-  int _timetableIndex = 1;
+  int _timetableIndex = 0;
   int get timetableIndex => _timetableIndex;
   set timetableIndex(int value) {
     _timetableIndex = value;

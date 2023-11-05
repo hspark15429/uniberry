@@ -67,7 +67,7 @@ class _TimetablePageState extends State<TimetablePage> {
     return Scaffold(
       appBar: AppBar(
           title: Text(
-            getTimetableByIndex(_timetableIndex - 1),
+            getTimetableByIndex(_timetableIndex),
             style: TextStyle(
               color: Colors.white,
             ),
@@ -136,7 +136,7 @@ class _TimetablePageState extends State<TimetablePage> {
                           6,
                           (index) => TextButton(
                             onPressed: () =>
-                                timetableSwitch(context, index: index + 1),
+                                timetableSwitch(context, index: index),
                             child: Text(getTimetableByIndex(index)),
                           ),
                         ),
@@ -508,7 +508,7 @@ String getTimetableByIndex(int index) {
     "2024年春学期",
     "2024年秋学期",
     "2025年春学期",
-    "",
+    "2025年秋学期",
     ""
   ];
   return _timetableList[index];
