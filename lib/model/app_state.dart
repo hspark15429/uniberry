@@ -6,6 +6,7 @@ import 'package:firebase_auth/firebase_auth.dart'
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../firebase_options.dart';
 import 'guest_book_message.dart';
@@ -26,7 +27,7 @@ class ApplicationState extends ChangeNotifier {
     notifyListeners();
   }
 
-  int schoolIndex = 0;
+  late int schoolIndex;
   int get getSchoolIndex => schoolIndex;
   set setSchoolIndex(int value) {
     schoolIndex = value;
@@ -102,6 +103,8 @@ class ApplicationState extends ChangeNotifier {
       }
       notifyListeners();
     });
+    final prefs = await SharedPreferences.getInstance();
+    schoolIndex = prefs.getInt('schoolIndex') ?? 0;
   }
 
   Future<DocumentReference> addMessageToGuestBook(String message) {

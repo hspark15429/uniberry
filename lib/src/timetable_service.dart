@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:gtk_flutter/model/app_state.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class TimetableService {
   static int getCurrentTimeSlot() {
@@ -180,9 +181,11 @@ class TimetableService {
                   Text("人間科学研究科"),
                   Text("食マネジメント研究科"),
                 ],
-                onSelectedItemChanged: (value) {
+                onSelectedItemChanged: (value) async {
                   _selectedMajor = value;
                   context.read<ApplicationState>().setSchoolIndex = value;
+                  final prefs = await SharedPreferences.getInstance();
+                  await prefs.setInt('schoolIndex', value);
                 },
               ),
             ));

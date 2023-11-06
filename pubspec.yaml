@@ -54,7 +54,7 @@ dependencies:
   shrine_images: ^2.0.2
   firebase_storage: ^11.2.5
   http: ^1.1.0
-  shared_preferences: ^2.2.1
+  shared_preferences: ^2.2.2
 
 dependency_overrides:
   firebase_ui_auth:
