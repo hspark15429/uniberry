@@ -68,9 +68,16 @@ class StyledButton extends StatelessWidget {
 }
 
 class MyBox extends StatefulWidget {
-  MyBox({super.key, required this.title, required this.content});
   final String title;
   String content;
+  final Function(String) onUpdate;
+
+  MyBox({
+    super.key,
+    required this.title,
+    required this.content,
+    required this.onUpdate,
+  });
 
   @override
   State<MyBox> createState() => _MyBoxState();
@@ -170,6 +177,7 @@ class _MyBoxState extends State<MyBox> {
                     if (_newContent != null && _newContent != '') {
                       setState(() {
                         widget.content = _newContent;
+                        widget.onUpdate(_newContent);
                         TimetableService.uploadBottomInfo(
                           widget.content,
                           index: 2,

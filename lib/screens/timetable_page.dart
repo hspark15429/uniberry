@@ -56,6 +56,12 @@ class _TimetablePageState extends State<TimetablePage> {
     // loadServerBottomInfo();
   }
 
+  void updateBottomInfo(int index, String newValue) {
+    setState(() {
+      bottomInfo[index] = newValue;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     // save current timetable to firestore
@@ -323,7 +329,11 @@ class _TimetablePageState extends State<TimetablePage> {
                 ],
               ),
             ),
-            MyBox(title: "Notes", content: bottomInfo[2]),
+            MyBox(
+              title: "Notes",
+              content: bottomInfo[2],
+              onUpdate: (newValue) => updateBottomInfo(2, newValue),
+            ),
           ],
         ),
       ),
