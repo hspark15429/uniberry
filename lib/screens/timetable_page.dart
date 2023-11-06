@@ -5,6 +5,7 @@ import 'package:gtk_flutter/src/timetable_service.dart';
 import 'package:gtk_flutter/src/widgets.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:math' as math;
 
 import 'dialog_builder.dart';
@@ -344,6 +345,8 @@ class _TimetablePageState extends State<TimetablePage> {
       {required int index}) async {
     {
       context.read<ApplicationState>().timetableIndex = index;
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setInt('timetableIndex', index);
       _timetableIndex = index;
       final _newTimetable =
           await TimetableService.getServerTimetable(_timetableIndex);

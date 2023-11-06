@@ -20,7 +20,7 @@ class ApplicationState extends ChangeNotifier {
   bool _loggedIn = false;
   bool get loggedIn => _loggedIn;
 
-  int _timetableIndex = 0;
+  late int _timetableIndex;
   int get timetableIndex => _timetableIndex;
   set timetableIndex(int value) {
     _timetableIndex = value;
@@ -105,6 +105,7 @@ class ApplicationState extends ChangeNotifier {
     });
     final prefs = await SharedPreferences.getInstance();
     schoolIndex = prefs.getInt('schoolIndex') ?? 0;
+    _timetableIndex = prefs.getInt('timetableIndex') ?? 0;
   }
 
   Future<DocumentReference> addMessageToGuestBook(String message) {
