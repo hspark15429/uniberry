@@ -11,4 +11,5 @@ menu.py:
 Conclusion(all you need to do is below):
     cd /Users/hanpark/development/uniberry/lib/src/scraping
     export GOOGLE_APPLICATION_CREDENTIALS="/Users/hanpark/development/keys/fir-flutter-codelab-39c7d-firebase-adminsdk-a25ao-1df95655ac.json"
-    Run playwright_menu.py 
+    (check playwright_menu and menu.py's cafeteria names that are effective)
+    python playwright_menu.py 

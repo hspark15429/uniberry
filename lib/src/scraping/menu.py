@@ -9,13 +9,13 @@ from bs4 import BeautifulSoup
 from menuGetImageUrl import fetch_url_from_storage, upload_to_storage, delete_files_in_folder
 
 cafeteria_names = [
-    # "KIC3",
-    # "KIC2",
-    # "KIC1",
-    "BKC3",
-    # "BKC2",
-    # "BKC1",
-    # "OIC"
+    "KIC3",
+    "KIC2",
+    "KIC1",
+    # "BKC3",
+    "BKC2",
+    "BKC1",
+    "OIC"
 ]
 
 # Downloads files from the specified url to the specified folder
