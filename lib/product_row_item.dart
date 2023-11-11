@@ -7,6 +7,8 @@ import 'model/app_state_model.dart';
 import 'model/product.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 
+import 'package:cached_network_image/cached_network_image.dart';
+
 class ProductRowItem extends StatelessWidget {
   const ProductRowItem({
     required this.product,
@@ -36,8 +38,8 @@ class ProductRowItem extends StatelessWidget {
               openUrl(
                   'https://west2-univ.jp/sp/detail.php?t=650337&c=${match!.group(1)}');
             },
-            child: Image.network(
-              product.image,
+            child: CachedNetworkImage(
+              imageUrl: product.image,
               fit: BoxFit.cover,
               width: 68,
               height: 68,

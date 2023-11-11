@@ -476,8 +476,8 @@
 				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = XNC8Z55PL2;
 				ENABLE_BITCODE = NO;
-				FLUTTER_BUILD_NAME = 1.2.2;
-				FLUTTER_BUILD_NUMBER = 5;
+				FLUTTER_BUILD_NAME = 1.2.3;
+				FLUTTER_BUILD_NUMBER = 6;
 				INFOPLIST_FILE = Runner/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Uniberry for Ritsumeikan University";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
@@ -668,8 +668,8 @@
 				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = XNC8Z55PL2;
 				ENABLE_BITCODE = NO;
-				FLUTTER_BUILD_NAME = 1.2.2;
-				FLUTTER_BUILD_NUMBER = 5;
+				FLUTTER_BUILD_NAME = 1.2.3;
+				FLUTTER_BUILD_NUMBER = 6;
 				INFOPLIST_FILE = Runner/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Uniberry for Ritsumeikan University";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
@@ -704,8 +704,8 @@
 				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = XNC8Z55PL2;
 				ENABLE_BITCODE = NO;
-				FLUTTER_BUILD_NAME = 1.2.2;
-				FLUTTER_BUILD_NUMBER = 5;
+				FLUTTER_BUILD_NAME = 1.2.3;
+				FLUTTER_BUILD_NUMBER = 6;
 				INFOPLIST_FILE = Runner/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Uniberry for Ritsumeikan University";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
