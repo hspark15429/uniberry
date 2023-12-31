@@ -8,7 +8,7 @@ async def run(playwright, cafeteria_name, url):
     context = await browser.new_context()
     page = await context.new_page()
     await page.goto(url)
-    await page.get_by_text("副菜 Side dish").click()
+    # await page.get_by_text("副菜 Side dish").click()
     await page.get_by_text("麺類 Noodles").click()
     await page.get_by_text("丼・カレー Rice bowl / Curry").click()
     await page.get_by_text("デザート Dessert").click()
