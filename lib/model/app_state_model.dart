@@ -7,12 +7,15 @@ import 'package:flutter/services.dart';
 import 'product.dart';
 import 'products_repository.dart';
 
+import 'package:firebase_storage/firebase_storage.dart';
+
 class AppStateModel extends foundation.ChangeNotifier {
   // All the available products.
   List<Product> _availableProducts = [];
 
   // The currently selected category of products.
   Category _selectedCategory = Category.all;
+  Cafeteria _selectedCafeteria = Cafeteria.OIC;
 
   // The IDs and quantities of products currently in the cart.
   final _productsInCart = <int, int>{};
@@ -30,6 +33,10 @@ class AppStateModel extends foundation.ChangeNotifier {
 
   Category get selectedCategory {
     return _selectedCategory;
+  }
+
+  Cafeteria get selectedCafeteria {
+    return _selectedCafeteria;
   }
 
   // Totaled prices of the items in the cart.
@@ -102,10 +109,10 @@ class AppStateModel extends foundation.ChangeNotifier {
   }
 
   // Returns a copy of the list of available products, filtered by category.
-  List<Product> getProducts() => switch (_selectedCategory) {
-        Category.all => List.from(_availableProducts),
+  List<Product> getProducts() => switch (_selectedCafeteria) {
+        Cafeteria.all => List.from(_availableProducts),
         _ => _availableProducts
-            .where((p) => p.category == _selectedCategory)
+            .where((p) => p.cafeteria == _selectedCafeteria)
             .toList(),
       };
 
@@ -152,15 +159,20 @@ class AppStateModel extends foundation.ChangeNotifier {
   }
 
   // Loads the list of available products from the repo.
-  void loadProducts() async {
+  void loadProducts({Category cat = Category.all}) async {
     ProductsRepository repository =
         ProductsRepository(products: await loadMenuItems());
-    _availableProducts = repository.loadProducts(Category.all);
+    _availableProducts = repository.loadProducts(cat);
     notifyListeners();
   }
 
   void setCategory(Category newCategory) {
     _selectedCategory = newCategory;
+    notifyListeners();
+  }
+
+  void setCafeteria(Cafeteria cafeteria) {
+    _selectedCafeteria = cafeteria;
     notifyListeners();
   }
 }
@@ -179,50 +191,79 @@ Future<List<Product>> loadMenuItems() async {
     "Quickbite": Category.quickbite,
   };
 
-  String jsonString = await fetchJsonFromUrl();
+  final cafeteriaMapping = {
+    "OIC": Cafeteria.OIC,
+    "BKC1": Cafeteria.BKC1,
+    "BKC2": Cafeteria.BKC2,
+    "BKC3": Cafeteria.BKC3,
+    "KIC1": Cafeteria.KIC1,
+    "KIC2": Cafeteria.KIC2,
+    "KIC3": Cafeteria.KIC3,
+    "All": Cafeteria.all,
+  };
 
-  List<dynamic> menuData = jsonDecode(jsonString);
-  for (var menu in menuData) {
-    allMenuItems.add(
-      Product(
-        category: categoryMapping[menu['category']] == null
-            ? Category.all
-            : categoryMapping[menu['category']]!,
-        id: menu['id'],
-        name_jp: menu['name_jp'],
-        name_en: menu['name_en'],
-        price: menu['price'],
-        image: menu['image'],
-        evaluation: Evaluation(
-          good: menu['evaluation']['good'],
-          average: menu['evaluation']['average'],
-          bad: menu['evaluation']['bad'],
+  List<String> filepaths = [
+    'menu/menuOIC.json',
+    'menu/menuBKC1.json',
+    'menu/menuBKC2.json',
+    'menu/menuBKC3.json',
+    'menu/menuKIC1.json',
+    'menu/menuKIC2.json',
+    'menu/menuKIC3.json',
+  ];
+
+  for (String filepath in filepaths) {
+    String jsonString = await fetchJsonFromUrl(filepath);
+
+    List<dynamic> menuData = jsonDecode(jsonString);
+    for (var menu in menuData) {
+      allMenuItems.add(
+        Product(
+          cafeteria: cafeteriaMapping[menu['cafeteria']] == null
+              ? Cafeteria.all
+              : cafeteriaMapping[menu['cafeteria']]!,
+          category: categoryMapping[menu['category']] == null
+              ? Category.all
+              : categoryMapping[menu['category']]!,
+          id: menu['id'],
+          name_jp: menu['name_jp'],
+          name_en: menu['name_en'],
+          price: menu['price'],
+          image: menu['image_appUrl'],
+          evaluation: Evaluation(
+            good: menu['evaluation']['good'],
+            average: menu['evaluation']['average'],
+            bad: menu['evaluation']['bad'],
+          ),
+          nutrition: Nutrition(
+            energy: menu['nutrition']['energy'],
+            protein: menu['nutrition']['protein'],
+            fat: menu['nutrition']['fat'],
+            carbohydrates: menu['nutrition']['carbohydrates'],
+            salt: menu['nutrition']['salt'],
+            calcium: menu['nutrition']['calcium'],
+            veg: menu['nutrition']['veg'],
+            iron: menu['nutrition']['iron'],
+            vitA: menu['nutrition']['vitA'],
+            vitB1: menu['nutrition']['vitB1'],
+            vitB2: menu['nutrition']['vitB2'],
+            vitC: menu['nutrition']['vitC'],
+          ),
+          allergy: menu['allergy'],
+          origin: menu['origin'],
         ),
-        nutrition: Nutrition(
-          energy: menu['nutrition']['energy'],
-          protein: menu['nutrition']['protein'],
-          fat: menu['nutrition']['fat'],
-          carbohydrates: menu['nutrition']['carbohydrates'],
-          salt: menu['nutrition']['salt'],
-          calcium: menu['nutrition']['calcium'],
-          veg: menu['nutrition']['veg'],
-          iron: menu['nutrition']['iron'],
-          vitA: menu['nutrition']['vitA'],
-          vitB1: menu['nutrition']['vitB1'],
-          vitB2: menu['nutrition']['vitB2'],
-          vitC: menu['nutrition']['vitC'],
-        ),
-        allergy: menu['allergy'],
-        origin: menu['origin'],
-      ),
-    );
+      );
+    }
   }
   return allMenuItems;
 }
 
-Future<String> fetchJsonFromUrl() async {
-  final response = await http.get(Uri.parse(
-      'https://firebasestorage.googleapis.com/v0/b/fir-flutter-codelab-39c7d.appspot.com/o/menuitems3.json?alt=media&token=6aa2f59f-1253-4a9f-828d-61bfb9be69fc'));
+Future<String> fetchJsonFromUrl(filepath) async {
+  FirebaseStorage storage = FirebaseStorage.instance;
+  Reference pathReference = storage.ref(filepath);
+  String url = await pathReference.getDownloadURL();
+
+  final response = await http.get(Uri.parse(url));
 
   if (response.statusCode == 200) {
     // If the server returns a 200 OK response, then parse the JSON.
@@ -231,4 +272,11 @@ Future<String> fetchJsonFromUrl() async {
     // If the server did not return a 200 OK response, then throw an exception.
     throw Exception('Failed to load data from server');
   }
+}
+
+Future<String> fetchUrlFromStorage(String path) async {
+  FirebaseStorage storage = FirebaseStorage.instance;
+  Reference pathReference = storage.ref(path);
+  String url = await pathReference.getDownloadURL();
+  return url;
 }

@@ -6,6 +6,8 @@ import 'package:firebase_ui_localizations/firebase_ui_localizations.dart'; // ne
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart'; // new
 import 'package:gtk_flutter/color_schemes.g.dart';
+import 'package:gtk_flutter/screens/main_page.dart';
+import 'package:gtk_flutter/screens/timetable_page.dart';
 import '../src/jp.dart'; // new
 
 import 'package:go_router/go_router.dart'; // new
@@ -33,6 +35,14 @@ void main() {
 
 // Add GoRouter configuration outside the App class
 final _router = GoRouter(
+  // redirect: (BuildContext context, GoRouterState state) {
+  //   final isAuthenticated =  // your logic to check if user is authenticated
+  //   if (!isAuthenticated) {
+  //     return '/';
+  //   } else {
+  //     return null; // return "null" to display the intended route without redirecting
+  //   }
+  // },
   routes: [
     GoRoute(
       path: '/',
@@ -70,19 +80,21 @@ final _router = GoRouter(
                       'timetables': {
                         for (var i = 1; i <= 10; i++) 'timetable$i': {"1": ""}
                       },
+                      'bottomInfo': ["", "", ""]
                     }).then((value) {
                       print("User Added");
+                      if (!user.emailVerified) {
+                        user.sendEmailVerification();
+                        const snackBar = SnackBar(
+                            content: Text(
+                                'Please check your email to verify your email address'));
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      }
                     }).catchError((error) {
                       print("Failed to add user: $error");
                     });
                   }
-                  // if (!user.emailVerified) {
-                  //   user.sendEmailVerification();
-                  //   const snackBar = SnackBar(
-                  //       content: Text(
-                  //           'Please check your email to verify your email address'));
-                  //   ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                  // }
+
                   context.go('/');
                 })),
               ],
@@ -126,6 +138,7 @@ final _router = GoRouter(
   ],
 );
 // end of GoRouter configuration
+GoRouter get router => _router;
 
 // Change MaterialApp to MaterialApp.router and add the routerConfig
 class App extends StatelessWidget {
@@ -133,14 +146,19 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Brightness brightnessValue =
+        MediaQuery.of(context).platformBrightness;
     return MaterialApp.router(
       title: 'Uniberry',
       theme: ThemeData(
         useMaterial3: true,
-        colorScheme: lightColorScheme,
+        colorScheme: brightnessValue == Brightness.dark
+            ? darkColorScheme
+            : lightColorScheme,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       routerConfig: _router,
+      debugShowCheckedModeBanner: false,
 
       // Add the localization delegates
       localizationsDelegates: [

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:gtk_flutter/model/app_state.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class TimetableService {
   static int getCurrentTimeSlot() {
@@ -79,17 +80,30 @@ class TimetableService {
     return bottomInfo;
   }
 
-  static void uploadBottomInfo(bottomInfo) {
+  static void uploadBottomInfo(bottomInfo, {int index = -1}) {
     FirebaseFirestore.instance
         .collection('users')
         .where('uid', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
         .get()
         .then((QuerySnapshot querySnapshot) {
       if (querySnapshot.docs.isNotEmpty) {
-        for (var doc in querySnapshot.docs) {
-          doc.reference.update({'GPA': bottomInfo[0]});
-          doc.reference.update({'credits': bottomInfo[1]});
-          doc.reference.update({'notes': bottomInfo[2]});
+        if (index >= 0) {
+          for (var doc in querySnapshot.docs) {
+            switch (index) {
+              case 0:
+                doc.reference.update({'GPA': bottomInfo});
+              case 1:
+                doc.reference.update({'credits': bottomInfo});
+              case 2:
+                doc.reference.update({'notes': bottomInfo});
+            }
+          }
+        } else {
+          for (var doc in querySnapshot.docs) {
+            doc.reference.update({'GPA': bottomInfo[0]});
+            doc.reference.update({'credits': bottomInfo[1]});
+            doc.reference.update({'notes': bottomInfo[2]});
+          }
         }
       } else {
         print('No documents found for this user.');
@@ -122,18 +136,56 @@ class TimetableService {
               width: 300,
               height: 250,
               child: CupertinoPicker(
-                backgroundColor: Colors.white,
+                // backgroundColor: Colors.white,
                 itemExtent: 30,
                 scrollController:
                     FixedExtentScrollController(initialItem: currentMajor),
                 children: const [
-                  Text('경영학부'),
-                  Text('심리학부'),
-                  Text('정책과학부'),
+                  Text("法学部"),
+                  Text("経済学部"),
+                  Text("経営学部"),
+                  Text("産業社会学部"),
+                  Text("国際関係学部"),
+                  Text("政策科学部"),
+                  Text("文学部"),
+                  Text("映像学部"),
+                  Text("総合心理学部"),
+                  Text("理工学部"),
+                  Text("グローバル教養学部"),
+                  Text("食マネジメント学部"),
+                  Text("情報理工学部"),
+                  Text("生命科学部"),
+                  Text("薬学部"),
+                  Text("スポーツ健康科学部"),
+                  Text("法学研究科"),
+                  Text("経済学研究科"),
+                  Text("経営学研究科"),
+                  Text("社会学研究科"),
+                  Text("国際関係研究科"),
+                  Text("政策科学研究科"),
+                  Text("文学研究科"),
+                  Text("映像研究科"),
+                  Text("理工学研究科"),
+                  Text("情報理工学研究科"),
+                  Text("生命科学研究科"),
+                  Text("薬学研究科"),
+                  Text("スポーツ健康科学研究科"),
+                  Text("応用人間科学研究科"),
+                  Text("先端総合学術研究科"),
+                  Text("言語教育情報研究科"),
+                  Text("法務研究科"),
+                  Text("テクノロジー・マネジメント研究科"),
+                  Text("経営管理研究科"),
+                  Text("公務研究科"),
+                  Text("教職研究科"),
+                  Text("人間科学研究科"),
+                  Text("食マネジメント研究科"),
                 ],
-                onSelectedItemChanged: (value) {
+                onSelectedItemChanged: (value) async {
                   _selectedMajor = value;
                   context.read<ApplicationState>().setSchoolIndex = value;
+                  final prefs = await SharedPreferences.getInstance();
+                  await prefs.setInt('schoolIndex', value);
                 },
               ),
             ));

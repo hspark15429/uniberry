@@ -1,0 +1,407 @@
+<body>
+    <header>
+      <span id="logo"><a href="ritsmei.php"><img src="images/univ.png" alt="UNIV coop"></a></span>
+      <h1 id="title"><a href="index.php?t=650315"><span class="tenpoSml3">立命館生協ユニオンフードコート</span><span></span></a></h1>
+    </header>
+
+    <div id="content">
+
+
+
+    <div class="modal js-modal">
+      <div class="modal__bg js-modal-close"></div>
+      <div class="modal__content">
+        <p>メニューの評価(顔のアイコン)を選択して、「評価する」ボタンを押してください。</p>
+        <div class="evalSelect">
+          <form method="post" action="test.php" name="rating">
+            <label>
+              <input type="radio" name="inp_rate" value="a" class="evalIcon">
+              <span class="evalIcon1"></span><span>メチャ推し</span>
+            </label>
+            <label>
+              <input type="radio" name="inp_rate" value="b" class="evalIcon">
+              <span class="evalIcon2"></span><span>オススメ</span>
+            </label>
+            <label>
+              <input type="radio" name="inp_rate" value="c" class="evalIcon">
+              <span class="evalIcon3"></span><span>いまいっぽ</span>
+            </label>
+            <input type="hidden" name="ratingid" value="">
+            <input type="hidden" name="ratingtenpo" value="650315">
+          </form>
+        </div>
+        <div class="evalBtn">
+          <a class="js-modal-close" href="">閉じる</a>
+          <a class="" href="javascript:void(0);" onclick="AjaxRatingSubmit();">評価する</a>
+        </div>
+      </div>
+    </div>
+
+      <div id="storeInfo">営業時間 11時～14時 土日閉店 </div>
+
+      <!-- タブメニュー -->
+      <div class="hr"></div>
+      <ul class="tab clearfix">
+        <li><a href="index.php?t=650315">Recommended<br><span>おすすめ</span></a></li>
+        <li><a href="news.php?t=650315">News<br><span>おしらせ</span></a></li>
+        <li class="tabActive"><a href="menu.php?t=650315">Menu<br><span>メニュー</span></a></li>
+        <li><a href="rank.php?t=650315">Ranking<br><span>ランキング</span></a></li>
+      </ul>
+
+      <div class="area">
+
+        <!-- メニュー -->
+        <div id="menuList" class="show target">
+          <div id="menu">
+<p class="iconMytray"><a href="#myTrayTitle"><img src="images/icon_mytray.png"></a></p>
+            <h2><img src="images/menu.png" alt="おすすめメニュー"></h2>
+            <p class="menuText">メニュー入れ替え中につき、コメニュリニューアル中</p>
+
+
+
+<script>
+$(function(){
+$(document).on("click", "#on_bunrui1", function(){
+var Loaded = $('#on_bunrui1').next().find('.Loaded');
+if(Loaded[0]){
+  console.log(Loaded[0]);
+}else{
+  console.log('読み込む');
+  $('#on_bunrui1+.catMenu').load('menu_load.php?t=650315&a=on_bunrui1').trigger('create');
+}
+    });
+});
+</script>
+
+
+            <!-- ユニオン2F　定食メニュー -->
+            <p class="toggleTitle open" id="on_bunrui1">ユニオン2F　定食メニュー</p>
+            <div class="catMenu" style="display: block;">
+<div class="Loaded"></div>
+
+              <ul>
+
+
+                <li>
+                  <a href="detail.php?t=650315&amp;c=650315_456400">
+                    <!-- 売り切れレイヤー -->
+                    <p class="sold "></p>
+                    <!-- 売り切れレイヤーここまで -->
+                    <img src="https://west2-univ.jp/menu_img/png_sp/650315_456400.png" alt="">
+                    <div class="icon-l iconMenu"></div>
+                    <h3>油淋鶏定食(中）<span></span><span class="price">¥495</span></h3>
+                    <div class="evaluation">
+                      <div class="eval1"><i class="fas fa-smile-beam"></i><span id="rate_a_650315_456400">0</span></div>
+                      <div class="eval2"><i class="fas fa-meh"></i><span id="rate_b_650315_456400">0</span></div>
+                      <div class="eval3"><i class="fas fa-frown"></i><span id="rate_c_650315_456400">0</span></div>
+                      <div class="btnArea">
+                      <div id="rating650315_456400" class="js-modal-open ajax-modal-open" onclick="listmodalon('650315_456400'); return false;">評価する</div>
+                      <input type="checkbox" class="add-tray-checkbox" id="tray650315_456400" onchange="trayinout('650315_456400',$(this).prop('checked'))"><label for="tray650315_456400" class="add-tray-btn-label"></label>
+
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="detail.php?t=650315&amp;c=650315_456413">
+                    <!-- 売り切れレイヤー -->
+                    <p class="sold "></p>
+                    <!-- 売り切れレイヤーここまで -->
+                    <img src="https://west2-univ.jp/menu_img/png_sp/650315_456413.png" alt="">
+                    <div class="icon-l iconMenu"></div>
+                    <h3>チキン山賊焼き定食（中）<span></span><span class="price">¥495</span></h3>
+                    <div class="evaluation">
+                      <div class="eval1"><i class="fas fa-smile-beam"></i><span id="rate_a_650315_456413">0</span></div>
+                      <div class="eval2"><i class="fas fa-meh"></i><span id="rate_b_650315_456413">0</span></div>
+                      <div class="eval3"><i class="fas fa-frown"></i><span id="rate_c_650315_456413">0</span></div>
+                      <div class="btnArea">
+                      <div id="rating650315_456413" class="js-modal-open ajax-modal-open" onclick="listmodalon('650315_456413'); return false;">評価する</div>
+                      <input type="checkbox" class="add-tray-checkbox" id="tray650315_456413" onchange="trayinout('650315_456413',$(this).prop('checked'))"><label for="tray650315_456413" class="add-tray-btn-label"></label>
+
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="detail.php?t=650315&amp;c=650315_456450">
+                    <!-- 売り切れレイヤー -->
+                    <p class="sold "></p>
+                    <!-- 売り切れレイヤーここまで -->
+                    <img src="https://west2-univ.jp/menu_img/png_sp/650315_456450.png" alt="">
+                    <div class="icon-l iconMenu"></div>
+                    <h3>豚肉ねぎ塩レモン炒め(中）<span></span><span class="price">¥462</span></h3>
+                    <div class="evaluation">
+                      <div class="eval1"><i class="fas fa-smile-beam"></i><span id="rate_a_650315_456450">0</span></div>
+                      <div class="eval2"><i class="fas fa-meh"></i><span id="rate_b_650315_456450">0</span></div>
+                      <div class="eval3"><i class="fas fa-frown"></i><span id="rate_c_650315_456450">0</span></div>
+                      <div class="btnArea">
+                      <div id="rating650315_456450" class="js-modal-open ajax-modal-open" onclick="listmodalon('650315_456450'); return false;">評価する</div>
+                      <input type="checkbox" class="add-tray-checkbox" id="tray650315_456450" onchange="trayinout('650315_456450',$(this).prop('checked'))"><label for="tray650315_456450" class="add-tray-btn-label"></label>
+
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="detail.php?t=650315&amp;c=650315_456531">
+                    <!-- 売り切れレイヤー -->
+                    <p class="sold "></p>
+                    <!-- 売り切れレイヤーここまで -->
+                    <img src="https://west2-univ.jp/menu_img/png_sp/650315_456531.png" alt="">
+                    <div class="icon-l iconMenu"></div>
+                    <h3>カニカマ豚骨天津飯<span></span><span class="price">¥462</span></h3>
+                    <div class="evaluation">
+                      <div class="eval1"><i class="fas fa-smile-beam"></i><span id="rate_a_650315_456531">0</span></div>
+                      <div class="eval2"><i class="fas fa-meh"></i><span id="rate_b_650315_456531">0</span></div>
+                      <div class="eval3"><i class="fas fa-frown"></i><span id="rate_c_650315_456531">0</span></div>
+                      <div class="btnArea">
+                      <div id="rating650315_456531" class="js-modal-open ajax-modal-open" onclick="listmodalon('650315_456531'); return false;">評価する</div>
+                      <input type="checkbox" class="add-tray-checkbox" id="tray650315_456531" onchange="trayinout('650315_456531',$(this).prop('checked'))"><label for="tray650315_456531" class="add-tray-btn-label"></label>
+
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="detail.php?t=650315&amp;c=650315_456547">
+                    <!-- 売り切れレイヤー -->
+                    <p class="sold "></p>
+                    <!-- 売り切れレイヤーここまで -->
+                    <img src="https://west2-univ.jp/menu_img/png_sp/650315_456547.png" alt="">
+                    <div class="icon-l iconMenu"></div>
+                    <h3>石焼　豚塩カルビビビンバ<span></span><span class="price">¥561</span></h3>
+                    <div class="evaluation">
+                      <div class="eval1"><i class="fas fa-smile-beam"></i><span id="rate_a_650315_456547">0</span></div>
+                      <div class="eval2"><i class="fas fa-meh"></i><span id="rate_b_650315_456547">0</span></div>
+                      <div class="eval3"><i class="fas fa-frown"></i><span id="rate_c_650315_456547">0</span></div>
+                      <div class="btnArea">
+                      <div id="rating650315_456547" class="js-modal-open ajax-modal-open" onclick="listmodalon('650315_456547'); return false;">評価する</div>
+                      <input type="checkbox" class="add-tray-checkbox" id="tray650315_456547" onchange="trayinout('650315_456547',$(this).prop('checked'))"><label for="tray650315_456547" class="add-tray-btn-label"></label>
+
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+
+              </ul>
+
+</div>
+
+<script>
+// Ajaxモーダル一覧のオンクリック用（動的読込でDOM再構築ができないため）
+function listmodalon(id){
+
+       $('.js-modal').fadeIn();
+        //var id = $(this).attr("id").replace(/rating/g,'');
+        //alert('this is '+id);
+        $('input:hidden[name="ratingid"]').val(id);
+        //return false;
+}
+</script>
+
+<script>
+
+//初期読み込み時もトレイ表示
+$(function(){
+$('.myTrayReset').hide();
+myTrayShow();
+myTrayCalc();
+});
+
+
+// トレイクッキー追加
+function trayinout(mncd,chk){
+
+//形式　west2tray000001: "/814280/12346/55555"
+
+//現状
+  let now=$.cookie('west2tray650315');
+  if(now ==undefined){
+    now="";
+  }
+  if(chk){//追加
+    $.cookie('west2tray650315',now+'/'+mncd, { expires: 1 })
+    }else{//削除
+    //$('#fadeout'+mncd).slideUp(10);
+    let deled=now.replace( '/'+mncd,"" );
+    $.cookie('west2tray650315',deled, { expires: 1 })
+    }
+
+//トレイ状態の変更
+    myTrayShow();
+    myTrayCalc();
+  };
+
+
+
+//トレイ表示件数
+var traycnt=0
+
+//トレイ部分の表示///////////////////////////////////////////////////////////
+function myTrayShow(){
+//一回消す
+$('.myTrayMenu ul').html('');
+
+//JSなら
+//console.log($.cookie())
+
+//現状
+  let now=$.cookie('west2tray650315');
+  if(now ==undefined){
+    now="";
+  }
+
+
+//もしクッキーがカラなら
+if(!now){
+$('.myTrayMenu ul').html('<p class="myTrayDf">ここにトレイに追加したメニューが表示されます。</p>');
+$('.myTrayReset').hide();
+return;
+}
+
+
+//トレイ表示。1メニューずつget取り込み
+//$('.myTrayMenu ul').html(now);
+
+var allcode = now.split('/');
+console.log(allcode);
+
+
+
+$.each(allcode, function(index, val) {
+  if(val){//一個目はカラなので
+
+console.log(val+'と');
+
+ //デモモードの時は&ki_or_gu=ki&week=1&demo=1などが必要 demoaddquery
+$.get('get1menu.php?t=650315&c='+val+'',getFunc);
+
+  }//__if val
+});//___each
+
+
+};////////////////////////////////////////////////////////////
+
+
+//最終トレイ、1メニューずつ表示
+function getFunc(myData, myStatus){
+      traycnt=traycnt+1;
+      $('.myTrayMenu ul').append(myData)
+
+      
+};
+
+
+//トータル計算の表示///////////////////////////////////////////////////////////
+function myTrayCalc(){
+//一回消す
+$('.myTray ul').html('');
+
+//現状
+  let now=$.cookie('west2tray650315');
+  if(now ==undefined){
+    now="";
+  }
+
+//もしクッキーがカラなら
+if(!now){
+$('.myTray ul').html('<p class="myTrayDf">栄養素の合計値が表示されます。</p>');
+$('.myTrayReset').hide();
+return;
+}
+
+var allcode = now.split('/');
+
+ //デモモードの時は&ki_or_gu=ki&week=1&demo=1などが必要 demoaddquery
+$.get('get1total.php?t=650315',getCalc);
+
+
+};////////////////////////////////////////////////////////////
+
+//最終計算結果一発表示
+function getCalc(myData, myStatus){
+      $('.myTray ul').append(myData)
+//トレイをリセットする　の表示
+$('.myTrayReset').show();
+
+
+};
+
+//トレイをリセット
+function resetTray(){
+
+//全チェックを外す
+$('input[type="checkbox"]').removeAttr('checked').prop('checked', false);
+
+$.cookie('west2tray650315',undefined);
+$.cookie('west2tray650315',"", {expires: -1})
+$('.myTrayReset').fadeOut(1000);
+myTrayShow();
+myTrayCalc();
+}
+
+
+
+</script>
+
+
+
+            <div id="myTrayTitle"></div>
+            <p class="myTrayTitle">Myトレー</p>
+            <div class="myTrayMenu">
+<ul><p class="myTrayDf">ここにトレイに追加したメニューが表示されます。</p></ul>
+</div>
+
+
+
+            <p class="myTrayTotalTitle">Myトレーの合計値</p>
+<div class="myTray">
+            <ul class="detail"><p class="myTrayDf">栄養素の合計値が表示されます。</p></ul>
+            </div>
+            <p class="myTrayReset" style="display: none;">
+<span>数値に※印が表示されている項目は、Myトレーの一部メニューの栄養値が都合により算出できないため合算されていません。</span><br>
+<a href="javascript:void(0);" onclick="resetTray()">トレーをリセットする</a>
+</p>
+
+
+
+        </div>
+
+      </div>
+
+<!-- /22991022141/Comenuフッター -->
+<div style="margin:30px auto; text-align:center;">
+<!-- <div style="font-size: 18px;">広告</div> -->
+<div id="div-gpt-ad-1694568783761-0" style="min-width: 320px; min-height: 100px;">
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1694568783761-0'); });
+  </script>
+<div id="google_ads_iframe_/22991022141/Comenuフッター_0__container__" style="border: 0pt none; width: 320px; height: 0px;"></div></div>
+</div>
+
+    </div>
+
+    <footer>
+      <a id="pagetop" href="#" style="display: none;"><img src="images/top.png" alt="トップへ"></a>
+      <div class="cl"></div>
+      <img src="images/CoCoMe.png" class="ftrLogo">
+      <p>Copyright © 立命館生協ユニオンフードコート All Rights Reserved.</p>
+    </footer>
+  
+
+    <script>
+
+//メニュー１つ目をオープン
+$(function(){
+$('.toggleTitle').eq(0).trigger("click");
+});
+
+    </script><iframe src="https://2aa882cb9738c8faf9408bdc26e84fc0.safeframe.googlesyndication.com/safeframe/1-0-40/html/container.html" style="visibility: hidden; display: none;"></iframe>
+
+
+</div></body>

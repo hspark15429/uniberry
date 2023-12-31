@@ -11,13 +11,13 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: false,
-        title: Text('Main Page',
-            style: TextStyle(
-              color: Colors.white,
-            )),
-        backgroundColor: Colors.black,
-      ),
+          centerTitle: false,
+          title: Text('ホーム',
+              style: TextStyle(
+                color: Colors.white,
+              )),
+          backgroundColor: const Color.fromARGB(255, 32, 30, 30),
+          automaticallyImplyLeading: false),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Center(
@@ -28,9 +28,9 @@ class MainPage extends StatelessWidget {
                   padding:
                       const EdgeInsets.only(right: 24, left: 24, bottom: 4),
                   child: ListTile(
-                    leading: CircleAvatar(child: Text('A')),
-                    title: Text('Manaba'),
-                    subtitle: Text('Supporting text'),
+                    leading: CircleAvatar(child: Icon(Icons.mode_edit)),
+                    title: Text('Manaba+R'),
+                    subtitle: Text('課題・お知らせの確認'),
                     onTap: () => openUrl('https://ct.ritsumei.ac.jp/ct/'),
                   ),
                 ),
@@ -38,9 +38,9 @@ class MainPage extends StatelessWidget {
                   padding:
                       const EdgeInsets.only(right: 24, left: 24, bottom: 4),
                   child: ListTile(
-                    leading: CircleAvatar(child: Text('B')),
-                    title: Text('학사력'),
-                    subtitle: Text('Supporting text'),
+                    leading: CircleAvatar(child: Icon(Icons.event_note)),
+                    title: Text('学年暦'),
+                    subtitle: Text('年間スケジュール'),
                     onTap: () => openUrl(
                         'https://www.ritsumei.ac.jp/profile/info/calendar/'),
                   ),
@@ -49,9 +49,9 @@ class MainPage extends StatelessWidget {
                   padding:
                       const EdgeInsets.only(right: 24, left: 24, bottom: 4),
                   child: ListTile(
-                    leading: CircleAvatar(child: Text('C')),
-                    title: Text('학부수업스케줄'),
-                    subtitle: Text('Supporting text'),
+                    leading: CircleAvatar(child: Icon(Icons.insert_invitation)),
+                    title: Text('授業スケジュール'),
+                    subtitle: Text('授業日確認'),
                     onTap: () => openUrl(
                         'https://www.ritsumei.ac.jp/file.jsp?id=562469'),
                   ),
@@ -60,9 +60,10 @@ class MainPage extends StatelessWidget {
                   padding:
                       const EdgeInsets.only(right: 24, left: 24, bottom: 4),
                   child: ListTile(
-                    leading: CircleAvatar(child: Text('D')),
-                    title: Text('대학도서관'),
-                    subtitle: Text('Supporting text'),
+                    leading:
+                        CircleAvatar(child: Icon(Icons.auto_stories_outlined)),
+                    title: Text('図書館'),
+                    subtitle: Text('図書検索・貸出・延長'),
                     onTap: () => openUrl(
                         'https://runners.ritsumei.ac.jp/opac/opac_search/?lang=0'),
                   ),
@@ -71,9 +72,10 @@ class MainPage extends StatelessWidget {
                   padding:
                       const EdgeInsets.only(right: 24, left: 24, bottom: 4),
                   child: ListTile(
-                    leading: CircleAvatar(child: Text('E')),
-                    title: Text('학교홈페이지'),
-                    subtitle: Text('Supporting text'),
+                    leading: CircleAvatar(
+                        child: Icon(Icons.account_balance_outlined)),
+                    title: Text('大学ホームページ'),
+                    subtitle: Text('大学ニュース、イベント配信'),
                     onTap: () => openUrl('https://en.ritsumei.ac.jp/'),
                   ),
                 ),
@@ -83,7 +85,7 @@ class MainPage extends StatelessWidget {
                       const EdgeInsets.only(right: 24, left: 24, bottom: 4),
                   child: ElevatedButton(
                     onPressed: () => context.go('/'),
-                    child: Text('Back'),
+                    child: Text('戻る'), // 'back'
                   ),
                 ),
               ],
@@ -100,44 +102,5 @@ Future<void> openUrl(String url) async {
   if (!await launchUrl(_url, mode: LaunchMode.externalApplication)) {
     // <--
     throw Exception('Could not launch $_url');
-  }
-}
-
-class ListTileExample extends StatelessWidget {
-  const ListTileExample({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('ListTile Sample')),
-      body: ListView(
-        children: const <Widget>[
-          ListTile(
-            leading: CircleAvatar(child: Text('A')),
-            title: Text('Headline'),
-            subtitle: Text('Supporting text'),
-            trailing: Icon(Icons.favorite_rounded),
-          ),
-          Divider(height: 0),
-          ListTile(
-            leading: CircleAvatar(child: Text('B')),
-            title: Text('Headline'),
-            subtitle: Text(
-                'Longer supporting text to demonstrate how the text wraps and how the leading and trailing widgets are centered vertically with the text.'),
-            trailing: Icon(Icons.favorite_rounded),
-          ),
-          Divider(height: 0),
-          ListTile(
-            leading: CircleAvatar(child: Text('C')),
-            title: Text('Headline'),
-            subtitle: Text(
-                "Longer supporting text to demonstrate how the text wraps and how setting 'ListTile.isThreeLine = true' aligns leading and trailing widgets to the top vertically with the text."),
-            trailing: Icon(Icons.favorite_rounded),
-            isThreeLine: true,
-          ),
-          Divider(height: 0),
-        ],
-      ),
-    );
   }
 }

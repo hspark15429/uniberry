@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:gtk_flutter/main.dart';
+import 'package:gtk_flutter/model/app_state.dart';
 
 import 'package:gtk_flutter/screens/anonymous_board.dart';
 import 'package:gtk_flutter/screens/cafeteria_page.dart';
 import 'package:gtk_flutter/screens/main_page.dart';
 import 'package:gtk_flutter/screens/timetable_page.dart';
+import 'package:provider/provider.dart';
 
 class TopPage extends StatefulWidget {
   const TopPage({Key? key}) : super(key: key);
@@ -16,7 +19,18 @@ class _TopPageState extends State<TopPage> {
   int currentPageIndex = 0;
 
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    // Check if the user is authenticated when the widget is initialized
+    if (!isUserAuthenticated(context)) {
+      WidgetsBinding.instance?.addPostFrameCallback((_) {
+        router.go('/'); // navigate to "/"
+      });
+    }
     return Scaffold(
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: (int index) {
@@ -28,19 +42,19 @@ class _TopPageState extends State<TopPage> {
         destinations: const <Widget>[
           NavigationDestination(
             icon: Icon(Icons.home),
-            label: 'Main',
+            label: 'ホーム',
           ),
           NavigationDestination(
             icon: Icon(Icons.school),
-            label: 'TimeTable',
+            label: '時間割',
           ),
           NavigationDestination(
             icon: Icon(Icons.forum),
-            label: 'Chat',
+            label: '匿名チャット',
           ),
           NavigationDestination(
             icon: Icon(Icons.ramen_dining),
-            label: 'Cafeteria',
+            label: '学食メニュー',
           ),
         ],
       ),
@@ -51,21 +65,26 @@ class _TopPageState extends State<TopPage> {
           child: const MainPage(),
         ),
         Container(
-          color: Colors.green,
+          // color: Colors.green,
           alignment: Alignment.center,
           child: const TimetablePage(),
         ),
         Container(
-          color: Colors.blue,
+          // color: Colors.blue,
           alignment: Alignment.center,
           child: const AnonymousBoard(),
         ),
         Container(
-          color: Colors.black,
+          // color: Colors.black,
           alignment: Alignment.center,
           child: const CafeteriaPage(),
         ),
       ][currentPageIndex],
     );
+  }
+
+  bool isUserAuthenticated(BuildContext context) {
+    final appState = context.read<ApplicationState>();
+    return appState.loggedIn;
   }
 }

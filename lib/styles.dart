@@ -41,8 +41,12 @@ abstract class Styles {
     color: CupertinoColors.inactiveGray,
   );
 
-  static const TextStyle nutrition = TextStyle(
+  static const TextStyle nutritionValue = TextStyle(
     fontSize: 10,
+    color: CupertinoColors.inactiveGray,
+  );
+  static const TextStyle nutritionName = TextStyle(
+    fontSize: 8,
     color: CupertinoColors.inactiveGray,
   );
 

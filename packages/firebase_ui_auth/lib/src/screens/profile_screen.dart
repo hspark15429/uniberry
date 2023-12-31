@@ -374,14 +374,14 @@ class _EmailVerificationBadgeState extends State<_EmailVerificationBadge> {
                   Subtitle(
                     text: state == EmailVerificationState.sent ||
                             state == EmailVerificationState.pending
-                        ? 'Verification email sent'
-                        : 'Email is not verified',
+                        ? "確認メールが送信されました" // 'Verification email sent'
+                        : "学校メールが正しくありません。", //'Email is not verified',
                     fontWeight: FontWeight.bold,
                   ),
                   if (state == EmailVerificationState.pending) ...[
                     const SizedBox(height: 8),
                     const Text(
-                      'Please check your email and click the link to verify your email address.',
+                      "メールを確認し、リンクをクリックしてメール アドレスを確認してください。", //'Please check your email and click the link to verify your email address.',
                     ),
                   ]
                 ],
@@ -409,30 +409,30 @@ class _EmailVerificationBadgeState extends State<_EmailVerificationBadge> {
                     variant: ButtonVariant.text,
                     materialColor: Theme.of(context).colorScheme.error,
                     cupertinoColor: CupertinoColors.destructiveRed,
-                    text: 'Dismiss',
+                    text: "閉じる", // 'Dismiss',
                     onPressed: () {
                       setState(service.dismiss);
                     },
                   ),
-                if (state != EmailVerificationState.sent)
-                  LoadingButton(
-                    isLoading: state == EmailVerificationState.sending,
-                    label: 'Send verification email',
-                    onTap: () {
-                      service.sendVerificationEmail(
-                        platform,
-                        widget.actionCodeSettings,
-                      );
-                    },
-                  )
-                else
-                  UniversalButton(
-                    variant: ButtonVariant.text,
-                    text: 'Ok',
-                    onPressed: () {
-                      setState(service.dismiss);
-                    },
-                  )
+                // if (state != EmailVerificationState.sent)
+                //   LoadingButton(
+                //     isLoading: state == EmailVerificationState.sending,
+                //     label: 'Send verification email',
+                //     onTap: () {
+                //       service.sendVerificationEmail(
+                //         platform,
+                //         widget.actionCodeSettings,
+                //       );
+                //     },
+                //   )
+                // else
+                //   UniversalButton(
+                //     variant: ButtonVariant.text,
+                //     text: 'Ok',
+                //     onPressed: () {
+                //       setState(service.dismiss);
+                //     },
+                //   )
               ],
             )
         ],
@@ -885,6 +885,13 @@ class ProfileScreen extends MultiProviderScreen {
           onSignInRequired: () {
             return _reauthenticate(context);
           },
+        ),
+        Padding(
+          padding: const EdgeInsets.only(right: 24, left: 24, bottom: 4),
+          child: ElevatedButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: const Text('戻る'), // 'back'
+          ),
         ),
       ],
     );

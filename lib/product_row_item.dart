@@ -5,6 +5,9 @@ import 'package:provider/provider.dart';
 
 import 'model/app_state_model.dart';
 import 'model/product.dart';
+import 'package:firebase_storage/firebase_storage.dart';
+
+import 'package:cached_network_image/cached_network_image.dart';
 
 class ProductRowItem extends StatelessWidget {
   const ProductRowItem({
@@ -25,7 +28,7 @@ class ProductRowItem extends StatelessWidget {
         bottom: 8,
         right: 8,
       ),
-      child: CupertinoListTile(
+      child: ListTile(
         leading: ClipRRect(
           borderRadius: BorderRadius.circular(4),
           child: InkWell(
@@ -35,15 +38,16 @@ class ProductRowItem extends StatelessWidget {
               openUrl(
                   'https://west2-univ.jp/sp/detail.php?t=650337&c=${match!.group(1)}');
             },
-            child: Image.network(
-              product.image,
+            child: CachedNetworkImage(
+              imageUrl: product.image,
               fit: BoxFit.cover,
               width: 68,
               height: 68,
             ),
           ),
         ),
-        leadingSize: 68,
+        visualDensity: VisualDensity(vertical: -4),
+        // leadingSize: 68,
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

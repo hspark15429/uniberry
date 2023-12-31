@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gtk_flutter/model/app_state.dart';
 import 'package:gtk_flutter/src/timetable_service.dart';
+import 'package:gtk_flutter/src/widgets.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:math' as math;
 
 import 'dialog_builder.dart';
@@ -55,6 +57,12 @@ class _TimetablePageState extends State<TimetablePage> {
     // loadServerBottomInfo();
   }
 
+  void updateBottomInfo(int index, String newValue) {
+    setState(() {
+      bottomInfo[index] = newValue;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     // save current timetable to firestore
@@ -63,222 +71,271 @@ class _TimetablePageState extends State<TimetablePage> {
     //   index: _timetableIndex,
     // );
     // TimetableService.uploadBottomInfo(bottomInfo);
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-            title: Text('Timetable$_timetableIndex'),
-            backgroundColor: Colors.black,
-            actions: [
-              IconButton(
-                  icon: const Icon(Icons.cleaning_services_outlined),
-                  tooltip: 'Clean up',
-                  onPressed: () {
-                    setState(() {
-                      localTimetable = {
-                        for (int i = 1; i <= 25; i++) i.toString(): ""
-                      };
-                      TimetableService.uploadTimetable(
-                        timetable: localTimetable,
-                        index: _timetableIndex,
+    return Scaffold(
+      appBar: AppBar(
+          title: Text(
+            getTimetableByIndex(_timetableIndex),
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
+          backgroundColor: const Color.fromARGB(255, 32, 30, 30),
+          automaticallyImplyLeading: false,
+          actions: [
+            IconButton(
+                icon: const Icon(Icons.cleaning_services_outlined),
+                tooltip: 'Clean up',
+                onPressed: () {
+                  setState(() {
+                    localTimetable = {
+                      for (int i = 1; i <= 25; i++) i.toString(): ""
+                    };
+                    TimetableService.uploadTimetable(
+                      timetable: localTimetable,
+                      index: _timetableIndex,
+                    );
+                  });
+                }),
+            IconButton(
+                icon: const Icon(CupertinoIcons.settings),
+                tooltip: 'More options',
+                onPressed: () {
+                  // handle the press
+                  TimetableService.showPicker(
+                      context, context.read<ApplicationState>().getSchoolIndex);
+                  // showModalBottomSheet(
+                  //     context: context,
+                  //     builder: (builder) {
+                  //       return Wrap(
+                  //         children: [
+                  //           ListTile(
+                  //             leading: Icon(Icons.settings),
+                  //             title: Text('Select Major'),
+                  //             onTap: () {
+                  //               selectedMajor =
+                  //                   TimetableService.showPicker(context, 0);
+                  //             },
+                  //           ),
+                  //           // ListTile(
+                  //           //   leading: Icon(Icons.copy),
+                  //           //   title: Text('Copy Link'),
+                  //           // ),
+                  //           // ListTile(
+                  //           //   leading: Icon(Icons.edit),
+                  //           //   title: Text('Edit'),
+                  //           // ),
+                  //         ],
+                  //       );
+                  //     });
+                }),
+            IconButton(
+              icon: const Icon(CupertinoIcons.bars),
+              tooltip: '時間割リスト',
+              onPressed: () {
+                // handle the press
+                showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: Text('時間割リスト'),
+                        content: Text('時間割リストから選択 '),
+                        actions: List<Widget>.generate(
+                          6,
+                          (index) => TextButton(
+                            onPressed: () =>
+                                timetableSwitch(context, index: index),
+                            child: Text(getTimetableByIndex(index)),
+                          ),
+                        ),
                       );
                     });
-                  }),
-              IconButton(
-                  icon: const Icon(CupertinoIcons.settings),
-                  tooltip: 'More options',
-                  onPressed: () {
-                    // handle the press
-                    TimetableService.showPicker(context,
-                        context.read<ApplicationState>().getSchoolIndex);
-                    // showModalBottomSheet(
-                    //     context: context,
-                    //     builder: (builder) {
-                    //       return Wrap(
-                    //         children: [
-                    //           ListTile(
-                    //             leading: Icon(Icons.settings),
-                    //             title: Text('Select Major'),
-                    //             onTap: () {
-                    //               selectedMajor =
-                    //                   TimetableService.showPicker(context, 0);
-                    //             },
-                    //           ),
-                    //           // ListTile(
-                    //           //   leading: Icon(Icons.copy),
-                    //           //   title: Text('Copy Link'),
-                    //           // ),
-                    //           // ListTile(
-                    //           //   leading: Icon(Icons.edit),
-                    //           //   title: Text('Edit'),
-                    //           // ),
-                    //         ],
-                    //       );
-                    //     });
-                  }),
-              IconButton(
-                  icon: const Icon(CupertinoIcons.bars),
-                  tooltip: 'Timetable List',
-                  onPressed: () {
-                    // handle the press
-                    showDialog(
-                        context: context,
-                        builder: (context) {
-                          return AlertDialog(
-                            title: Text('Timetable List'),
-                            content: Text('Select a timetable to view'),
-                            actions: List<Widget>.generate(
-                              5,
-                              (index) => TextButton(
-                                onPressed: () =>
-                                    timetableSwitch(context, index: index + 1),
-                                child: Text('Timetable ${index + 1}'),
-                              ),
-                            ),
-                          );
-                        });
-                  })
-            ]),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Row(
-                children: <Widget>[
-                  Expanded(
-                    flex: 1,
-                    child: LayoutBuilder(
-                      builder: (context, constraints) => Table(
-                        border: TableBorder.all(),
-                        children: [
-                          TableRow(children: [
-                            _buildCell('', height: 50),
-                          ]),
-                          TableRow(children: [
-                            _buildCell('09:00\n10:30'),
-                          ]),
-                          TableRow(children: [
-                            _buildCell('10:40\n12:10'),
-                          ]),
-                          TableRow(children: [
-                            _buildCell('13:00\n14:30'),
-                          ]),
-                          TableRow(children: [
-                            _buildCell('14:40\n16:10'),
-                          ]),
-                          TableRow(children: [
-                            _buildCell('16:20\n17:50'),
-                          ])
-                        ],
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    flex: 8,
-                    child: LayoutBuilder(builder: (context, constraints) {
-                      double expandedWidth = constraints.maxWidth * 0.2;
-                      return Table(
-                        border: TableBorder.all(),
-                        children: [
-                          TableRow(children: [
-                            _buildCell('Mon', height: 50),
-                            _buildCell('Tue', height: 50),
-                            _buildCell('Wed', height: 50),
-                            _buildCell('Thur', height: 50),
-                            _buildCell('Fri', height: 50),
-                          ]),
-                          // 25 cells in total
-                          for (int i = 0; i <= 4; i++)
-                            TableRow(children: [
-                              for (int j = 1; j <= 5; j++)
-                                _buildCell('${i * 5 + j}',
-                                    width: expandedWidth, interactable: true)
-                            ]),
-                        ],
-                      );
-                    }),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
-              SafeArea(
-                child: Row(
-                  children: [
-                    SizedBox(width: 10),
-                    Table(
-                      defaultColumnWidth: FixedColumnWidth(
-                          MediaQuery.of(context).size.width / 5),
+              },
+            ),
+          ]),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Row(
+              children: <Widget>[
+                Expanded(
+                  flex: 1,
+                  child: LayoutBuilder(
+                    builder: (context, constraints) => Table(
+                      border: TableBorder.all(),
                       children: [
                         TableRow(children: [
-                          Text(
-                            "GPA",
-                            style: TextStyle(fontSize: 15.0),
-                          ),
-                          Text(
-                            "Credits",
-                            style: TextStyle(fontSize: 15.0),
-                          ),
-                          Text(
-                            "Notes",
-                            style: TextStyle(fontSize: 15.0),
-                            textAlign: TextAlign.center,
-                          ),
+                          _buildCell('', height: 50),
                         ]),
                         TableRow(children: [
-                          TableCell(child: SizedBox(height: 20)),
-                          TableCell(child: SizedBox(height: 20)),
-                          TableCell(child: SizedBox(height: 20)),
+                          _buildCell('09:00\n10:30'),
                         ]),
                         TableRow(children: [
-                          TextField(
-                            onChanged: (value) => {
-                              bottomInfo[0] = value,
-                              setState(() {
-                                TimetableService.uploadBottomInfo(bottomInfo);
-                              })
-                            },
-                            controller: TextEditingController()
-                              ..text = bottomInfo[0],
-                            style: TextStyle(fontSize: 15.0),
-                          ),
-                          TextField(
-                            onChanged: (value) => {
-                              bottomInfo[1] = value,
-                              setState(() {
-                                TimetableService.uploadBottomInfo(bottomInfo);
-                              })
-                            },
-                            controller: TextEditingController()
-                              ..text = bottomInfo[1],
-                            style: TextStyle(fontSize: 15.0),
-                          ),
-                          TextField(
-                            onChanged: (value) => {
-                              bottomInfo[2] = value,
-                              setState(() {
-                                TimetableService.uploadBottomInfo(bottomInfo);
-                              })
-                            },
-                            controller: TextEditingController()
-                              ..text = bottomInfo[2],
-                            style: TextStyle(fontSize: 15.0),
-                            // textAlign: TextAlign.right,
-                          ),
+                          _buildCell('10:40\n12:10'),
                         ]),
+                        TableRow(children: [
+                          _buildCell('13:00\n14:30'),
+                        ]),
+                        TableRow(children: [
+                          _buildCell('14:40\n16:10'),
+                        ]),
+                        TableRow(children: [
+                          _buildCell('16:20\n17:50'),
+                        ])
                       ],
                     ),
-                    Spacer(),
-                    Consumer<ApplicationState>(builder: (context, appState, _) {
-                      List<String> _schoolList = ["경영학부", "심리학부", "정책과학부"];
-                      return Text(
-                        "School: ${_schoolList[appState.schoolIndex]}",
-                        textAlign: TextAlign.start,
-                      );
-                    }),
-                    SizedBox(width: 20)
-                  ],
+                  ),
                 ),
+                Expanded(
+                  flex: 8,
+                  child: LayoutBuilder(builder: (context, constraints) {
+                    double expandedWidth = constraints.maxWidth * 0.2;
+                    return Table(
+                      border: TableBorder.all(),
+                      children: [
+                        TableRow(children: [
+                          _buildCell('月', height: 50),
+                          _buildCell('火', height: 50),
+                          _buildCell('水', height: 50),
+                          _buildCell('木', height: 50),
+                          _buildCell('金', height: 50),
+                        ]),
+                        // 25 cells in total
+                        for (int i = 0; i <= 4; i++)
+                          TableRow(children: [
+                            for (int j = 1; j <= 5; j++)
+                              _buildCell('${i * 5 + j}',
+                                  width: expandedWidth, interactable: true)
+                          ]),
+                      ],
+                    );
+                  }),
+                ),
+              ],
+            ),
+            SizedBox(height: 10),
+            SafeArea(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(width: 10),
+                  Table(
+                    border: TableBorder.all(),
+                    defaultColumnWidth:
+                        FixedColumnWidth(MediaQuery.of(context).size.width / 4),
+                    children: [
+                      TableRow(children: [
+                        Text(
+                          "GPA",
+                          style: TextStyle(fontSize: 15.0),
+                          textAlign: TextAlign.center,
+                        ),
+                        Text(
+                          "単位",
+                          style: TextStyle(fontSize: 15.0),
+                          textAlign: TextAlign.center,
+                        ),
+                        Text(
+                          "専攻",
+                          style: TextStyle(fontSize: 15.0),
+                          textAlign: TextAlign.center,
+                        ),
+                      ]),
+                      TableRow(children: [
+                        TextField(
+                          onSubmitted: (value) => {
+                            bottomInfo[0] = value,
+                            setState(() {
+                              TimetableService.uploadBottomInfo(bottomInfo);
+                            })
+                          },
+                          controller: TextEditingController()
+                            ..text = bottomInfo[0],
+                          style: TextStyle(fontSize: 15.0),
+                        ),
+                        TextField(
+                          onSubmitted: (value) => {
+                            bottomInfo[1] = value,
+                            setState(() {
+                              TimetableService.uploadBottomInfo(bottomInfo);
+                            })
+                          },
+                          controller: TextEditingController()
+                            ..text = bottomInfo[1],
+                          style: TextStyle(fontSize: 15.0),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 14.0),
+                          child: Consumer<ApplicationState>(
+                              builder: (context, appState, _) {
+                            List<String> _schoolList = [
+                              "法学部",
+                              "経済学部",
+                              "経営学部",
+                              "産業社会学部",
+                              "国際関係学部",
+                              "政策科学部",
+                              "文学部",
+                              "映像学部",
+                              "総合心理学部",
+                              "理工学部",
+                              "グローバル教養学部",
+                              "食マネジメント学部",
+                              "情報理工学部",
+                              "生命科学部",
+                              "薬学部",
+                              "スポーツ健康科学部",
+                              "法学研究科",
+                              "経済学研究科",
+                              "経営学研究科",
+                              "社会学研究科",
+                              "国際関係研究科",
+                              "政策科学研究科",
+                              "文学研究科",
+                              "映像研究科",
+                              "理工学研究科",
+                              "情報理工学研究科",
+                              "生命科学研究科",
+                              "薬学研究科",
+                              "スポーツ健康科学研究科",
+                              "応用人間科学研究科",
+                              "先端総合学術研究科",
+                              "言語教育情報研究科",
+                              "法務研究科",
+                              "テクノロジー・マネジメント研究科",
+                              "経営管理研究科",
+                              "公務研究科",
+                              "教職研究科",
+                              "人間科学研究科",
+                              "食マネジメント研究科",
+                            ];
+                            return GestureDetector(
+                              onTap: () => {
+                                TimetableService.showPicker(
+                                    context,
+                                    context
+                                        .read<ApplicationState>()
+                                        .getSchoolIndex)
+                              },
+                              child: Text(
+                                "${_schoolList[appState.schoolIndex]}",
+                                textAlign: TextAlign.center,
+                              ),
+                            );
+                          }),
+                        ),
+                      ]),
+                    ],
+                  ),
+                  SizedBox(width: 20)
+                ],
               ),
-            ],
-          ),
+            ),
+            MyBox(
+              title: "Notes",
+              content: bottomInfo[2],
+              onUpdate: (newValue) => updateBottomInfo(2, newValue),
+            ),
+          ],
         ),
       ),
     );
@@ -288,6 +345,8 @@ class _TimetablePageState extends State<TimetablePage> {
       {required int index}) async {
     {
       context.read<ApplicationState>().timetableIndex = index;
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setInt('timetableIndex', index);
       _timetableIndex = index;
       final _newTimetable =
           await TimetableService.getServerTimetable(_timetableIndex);
@@ -298,9 +357,16 @@ class _TimetablePageState extends State<TimetablePage> {
     }
   }
 
+  String truncate(String text, {length = 30, omission = '...'}) {
+    if (length >= text.length) {
+      return text;
+    }
+    return text.replaceRange(length, text.length, omission);
+  }
+
   Widget _buildCell(
     String cellIndex, {
-    double height = 80,
+    double height = 87,
     double width = 50,
     color = Colors.white,
     bool interactable = false,
@@ -314,7 +380,7 @@ class _TimetablePageState extends State<TimetablePage> {
       if (dialogResult!.isEmpty) return;
       setState(() {
         if (dialogResult.contains('Save'))
-          localTimetable[cellIndex] = dialogResult.substring(4);
+          localTimetable[cellIndex] = (dialogResult.substring(4)).toString();
         else if (dialogResult == 'Delete')
           localTimetable[cellIndex] = "";
         else
@@ -332,7 +398,7 @@ class _TimetablePageState extends State<TimetablePage> {
       height: height,
       // if text matches cellNow, it should have the current time indicator
       child: Stack(children: [
-        Center(child: Text(cellIndex)),
+        Center(child: Text(cellIndex, style: TextStyle(color: Colors.black))),
         // if the cell is a slot and has no entry, it's an interactable white cell,
         // if it has an entry, it has a colored button instead
         if (_canHaveEntry)
@@ -359,17 +425,21 @@ class _TimetablePageState extends State<TimetablePage> {
                     height: height,
                     child: ElevatedButton(
                         child: Text(
-                          localTimetable[cellIndex]!,
-                          style: TextStyle(fontSize: 8),
+                          localTimetable[cellIndex]!.split('|')[0].toString(),
+                          style: TextStyle(
+                              fontSize: 9,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
                         ),
                         onPressed: _openEntryDialog,
                         style: ButtonStyle(
+                          padding: MaterialStateProperty.all(EdgeInsets.all(5)),
                           backgroundColor: MaterialStateProperty.all<Color>(
                               getColorByIndex(int.parse(cellIndex))),
                           shape:
                               MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30.0),
+                              borderRadius: BorderRadius.circular(0.0),
                             ),
                           ),
                         )),
@@ -390,6 +460,23 @@ class _TimetablePageState extends State<TimetablePage> {
             ),
           ),
       ]),
+    );
+  }
+
+  TextEditingController _controller =
+      TextEditingController(text: "Festive Leave");
+  bool _isReadOnly = true;
+//These are initialize at the top
+
+  Widget _buildEditableTextBox() {
+    return Container(
+      // margin: const EdgeInsets.all(15.0),
+      padding: const EdgeInsets.all(3.0),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.blueAccent),
+        borderRadius: BorderRadius.all(Radius.circular(5.0)),
+      ),
+      child: Text('My Awesome Border'),
     );
   }
 }
@@ -426,3 +513,16 @@ List<Color> colors = [
   Colors.indigoAccent,
   Colors.blueAccent
 ];
+
+String getTimetableByIndex(int index) {
+  List<String> _timetableList = [
+    "2023年春学期",
+    "2023年秋学期",
+    "2024年春学期",
+    "2024年秋学期",
+    "2025年春学期",
+    "2025年秋学期",
+    ""
+  ];
+  return _timetableList[index];
+}
