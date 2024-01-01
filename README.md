@@ -1,6 +1,8 @@
 
 <img src="https://github.com/hspark15429/uniberry/blob/main/assets/icon.png" width="300">
-[![Install](apple.png)](https://itunes.apple.com/us/app/conjugar/id1236500467?mt=8)
+
+[![Install](assets/appstoredownload.svg)](https://itunes.apple.com/us/app/conjugar/id1236500467?mt=8)
+[![Install](assets/playstoredownload.png)](https://itunes.apple.com/us/app/conjugar/id1236500467?mt=8)
 
 # Uniberry
 
