@@ -45,4 +45,4 @@ app.*.map.json
 
 lib/firebase_options.dart
 assets/foodpics/
-lib/src/scraping/assets/foodpics/
+lib/src/scraping/assets/
