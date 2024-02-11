@@ -6,7 +6,6 @@ import 'package:gtk_flutter/src/widgets.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'dart:math' as math;
 
 import 'dialog_builder.dart';
 
@@ -86,6 +85,7 @@ class _TimetablePageState extends State<TimetablePage> {
                 icon: const Icon(Icons.cleaning_services_outlined),
                 tooltip: 'Clean up',
                 onPressed: () {
+                  
                   setState(() {
                     localTimetable = {
                       for (int i = 1; i <= 25; i++) i.toString(): ""
