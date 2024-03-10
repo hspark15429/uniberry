@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:gtk_flutter/model/app_state.dart';
 import 'package:gtk_flutter/guest_book.dart';
+import 'package:gtk_flutter/model/app_state.dart';
 import 'package:gtk_flutter/src/widgets.dart';
 import 'package:provider/provider.dart';
+
+import 'Chat/dm_list_page.dart';
 
 class AnonymousBoard extends StatefulWidget {
   const AnonymousBoard({super.key});
@@ -26,8 +28,23 @@ class _AnonymousBoardState extends State<AnonymousBoard> {
               color: Colors.white,
             ),
           ),
+          
           backgroundColor: const Color.fromARGB(255, 32, 30, 30),
-          automaticallyImplyLeading: false),
+         automaticallyImplyLeading: false,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.list),
+            onPressed: () {
+              // 여기에서 DMListPage로 이동하는 로직을 추가합니다.
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DMListPage()),
+              );
+            },
+          ),
+        ],
+      ),
+          
       body: Column(
         children: [
           Padding(
@@ -100,5 +117,6 @@ class _AnonymousBoardState extends State<AnonymousBoard> {
         ],
       ),
     );
+    
   }
 }

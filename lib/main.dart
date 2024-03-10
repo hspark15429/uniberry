@@ -2,18 +2,14 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart'; // new
 import 'package:firebase_ui_localizations/firebase_ui_localizations.dart'; // new
-
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart'; // new
-import 'package:gtk_flutter/color_schemes.g.dart';
-import 'package:gtk_flutter/screens/main_page.dart';
-import 'package:gtk_flutter/screens/timetable_page.dart';
-import '../src/jp.dart'; // new
-
 import 'package:go_router/go_router.dart'; // new
+import 'package:gtk_flutter/color_schemes.g.dart';
 import 'package:gtk_flutter/screens/top_page.dart';
 import 'package:provider/provider.dart'; // new
 
+import '../src/jp.dart'; // new
 import 'model/app_state.dart'; // new
 import 'model/app_state_model.dart';
 import 'screens/home_page.dart';

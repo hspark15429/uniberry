@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gtk_flutter/shopping_cart_tab.dart';
-import 'package:gtk_flutter/src/widgets.dart';
 import 'package:provider/provider.dart'; // NEW
+
 import '../model/app_state_model.dart';
 import '../model/product.dart';
 import '../product_list_tab.dart'; // NEW

@@ -1,13 +1,11 @@
 import 'dart:convert';
-import 'package:http/http.dart' as http;
 
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/foundation.dart' as foundation;
-import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
 
 import 'product.dart';
 import 'products_repository.dart';
-
-import 'package:firebase_storage/firebase_storage.dart';
 
 class AppStateModel extends foundation.ChangeNotifier {
   // All the available products.
@@ -108,6 +106,8 @@ class AppStateModel extends foundation.ChangeNotifier {
     });
   }
 
+  get selectedProduct => null;
+
   // Returns a copy of the list of available products, filtered by category.
   List<Product> getProducts() => switch (_selectedCafeteria) {
         Cafeteria.all => List.from(_availableProducts),
@@ -175,6 +175,12 @@ class AppStateModel extends foundation.ChangeNotifier {
     _selectedCafeteria = cafeteria;
     notifyListeners();
   }
+
+  void removeItem(id) {}
+
+  getCartItems() {}
+
+  void decrementSelectedProduct() {}
 }
 
 Future<List<Product>> loadMenuItems() async {

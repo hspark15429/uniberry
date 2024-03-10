@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gtk_flutter/screens/main_page.dart';
 import 'package:gtk_flutter/screens/search_page.dart';
-import 'package:gtk_flutter/src/widgets.dart';
 
 Future<String?> timetableEntryDialogBuilder(
   BuildContext context, {
@@ -114,4 +112,7 @@ Future<String?> timetableEntryDialogBuilder(
       });
     },
   );
+}
+
+openUrl(String s) {
 }

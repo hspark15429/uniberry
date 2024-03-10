@@ -56,6 +56,23 @@ dependencies:
   http: ^1.1.0
   shared_preferences: ^2.2.2
   cached_network_image: ^3.3.0
+  image_picker: ^1.0.7
+  flutter_chat_types: ^3.6.2
+  file_picker: ^6.1.1
+  chat_gpt_sdk: ^3.0.1
+  fl_chart: ^0.66.2
+  table_calendar: ^3.0.9
+  flutter_colorpicker: ^1.0.3
+  dots_indicator: ^3.0.0
+  page_view_dot_indicator: ^2.3.0
+  flutter_keyboard_visibility: ^6.0.0
+  stream_chat_flutter: ^7.0.2
+  qr_flutter: ^4.1.0
+  flutter_svg: ^2.0.10+1
+  ## nfc_manager: ^3.3.0
+  flutter_nfc_kit: ^3.4.2
+  smooth_page_indicator: ^1.1.0
+  flutter_datetime_picker_plus: ^2.1.0
 
 dependency_overrides:
   firebase_ui_auth:
@@ -95,6 +112,11 @@ flutter:
     - assets/school3.png
     - assets/school4.png
     - assets/lectures.json
+    - assets/立命館1.jpg
+    - assets/PARKJAEJIN.jpg
+    - assets/qrcodeex.png
+    
+
 
 
 
